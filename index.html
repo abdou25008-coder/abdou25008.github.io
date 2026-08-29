@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبده علي | AI & Systems Architect</title>
+    
+    <!-- Meta Tags للمشاركة ومحركات البحث (SEO & OpenGraph) -->
+    <meta name="description" content="عبده علي - مهندس ذكاء اصطناعي وأنظمة رقمية. بناء مسارات عمل مؤتمتة بالكامل، تطوير حلول الأعمال، وإدارة شبكات المحتوى الرقمي.">
+    <meta name="keywords" content="Abdou Ali, عبده علي, AI, Systems Architect, Automation, الذكاء الاصطناعي, هندسة الأنظمة, أتمتة الأعمال">
+    <meta name="author" content="Abdou Ali">
+    
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="عبده علي | AI & Systems Architect">
+    <meta property="og:description" content="عقل واحد.. وأنظمة تعمل في الخفاء. أدمج البرمجة بالذكاء الاصطناعي لبناء مسارات عمل ذاتية القيادة.">
+    <meta property="og:url" content="https://abdou25008.github.io/">
+
+    <!-- استدعاء خطوط جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --surface: #0a0a0a;
+            --surface-card: #121212;
+            --surface-hover: #181818;
+            --neon-accent: #00ffcc;
+            --neon-glow: rgba(0, 255, 204, 0.35);
+            --neon-secondary: #0088ff;
+            --text-main: #f0f0f0;
+            --text-muted: #888888;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --error-color: #ff4757;
+            --success-color: #2ed573;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* خلفية شبكية سايبربانك */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: 
+                linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+            background-size: 35px 35px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* شريط المسح الضوئي العلوي */
+        .scanline {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-accent), transparent);
+            opacity: 0.8;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        /* شريط التنقل العلوي */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-family: 'Fira Code', monospace;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--neon-accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-accent);
+        }
+
+        /* شارة الحالة */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--neon-accent);
+            background: rgba(0, 255, 204, 0.05);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 204, 0.2);
+            margin-bottom: 25px;
+            width: fit-content;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--neon-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        /* الواجهة الرئيسية */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 70px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--neon-accent);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px var(--neon-glow);
+            direction: ltr;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: var(--neon-accent);
+            width: 9px;
+            height: 1.3rem;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero p {
+            font-size: 1.35rem;
+            max-width: 850px;
+            color: #b5b5b5;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+
+        .hero p strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .hero-actions {
+            margin-top: 45px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* الأزرار */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 35px;
+            background: transparent;
+            color: var(--neon-accent);
+            border: 1px solid var(--neon-accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-family: 'Fira Code', monospace;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .cta-btn:hover {
+            background: var(--neon-accent);
+            color: var(--bg-dark);
+            box-shadow: 0 0 25px var(--neon-glow);
+            transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        /* مقاييس الأداء (Metrics) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 60px 0 80px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-subtle);
+            padding: 30px 20px;
+            border-radius: 4px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: rgba(0, 255, 204, 0.3);
+            background: rgba(0, 255, 204, 0.02);
+        }
+
+        .stat-number {
+            font-family: 'Fira Code', monospace;
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--neon-accent);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* عناوين الأقسام */
+        .section-header {
+            margin: 80px 0 40px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--neon-accent);
+            box-shadow: 0 0 10px var(--neon-glow);
+        }
+
+        /* شبكة الكروت (Modules Grid) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--surface-card);
+            padding: 40px 30px;
+            border-radius: 4px;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0;
+            width: 100%; height: 2px;
+            background: var(--neon-accent);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+            box-shadow: 0 0 10px var(--neon-glow);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background-color: var(--surface-hover);
+            border-color: rgba(0, 255, 204, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            color: var(--neon-accent);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-family: 'Fira Code', monospace;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* قسم المشاريع والأنظمة */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            padding: 30px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            border-color: rgba(0, 255, 204, 0.25);
+            transform: translateY(-4px);
+        }
+
+        .project-tag {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            color: var(--neon-accent);
+            background: rgba(0, 255, 204, 0.06);
+            padding: 4px 10px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .tech-pill {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3px 8px;
+            border-radius: 2px;
+        }
+
+        /* قسم التواصل ونموذج البريد (Contact & Form) */
+        .contact-container {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            padding: 50px 40px;
+            border-radius: 6px;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item i {
+            color: var(--neon-accent);
+            font-size: 1.2rem;
+            width: 25px;
+        }
+
+        .contact-item:hover {
+            color: var(--neon-accent);
+            transform: translateX(-5px);
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon-btn:hover {
+            border-color: var(--neon-accent);
+            color: var(--neon-accent);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.25);
+            transform: translateY(-3px);
+        }
+
+        /* واجهة نموذج المراسلة السايبربانك */
+        .terminal-form-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            padding: 35px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--neon-accent);
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-subtle);
+            color: #ffffff;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            border-radius: 3px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--neon-accent);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.15);
+            background: rgba(0, 255, 204, 0.02);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            color: var(--neon-accent);
+            border: 1px solid var(--neon-accent);
+            font-family: 'Fira Code', monospace;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--neon-accent);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px var(--neon-glow);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* رسائل حالة النموذج */
+        .form-status {
+            margin-top: 15px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            padding: 10px 14px;
+            border-radius: 3px;
+            display: none;
+        }
+
+        .status-loading {
+            display: block;
+            background: rgba(0, 136, 255, 0.1);
+            color: var(--neon-secondary);
+            border: 1px solid rgba(0, 136, 255, 0.3);
+        }
+
+        .status-success {
+            display: block;
+            background: rgba(46, 213, 115, 0.1);
+            color: var(--success-color);
+            border: 1px solid rgba(46, 213, 115, 0.3);
+        }
+
+        .status-error {
+            display: block;
+            background: rgba(255, 71, 87, 0.1);
+            color: var(--error-color);
+            border: 1px solid rgba(255, 71, 87, 0.3);
+        }
+
+        /* الفوتر */
+        footer {
+            text-align: center;
+            padding: 50px 20px 30px;
+            margin-top: 100px;
+            border-top: 1px solid var(--border-subtle);
+            font-family: 'Fira Code', monospace;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-time {
+            margin-top: 8px;
+            color: var(--neon-accent);
+            opacity: 0.8;
+        }
+
+        /* التجاوب مع مختلف الشاشات */
+        @media (max-width: 900px) {
+            .contact-container { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 3.2rem; }
+            .hero h2 { font-size: 1.25rem; }
+            .nav-links { display: none; }
+        }
+
+        @media (max-width: 600px) {
+            .container { width: 92%; padding: 20px 0; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .terminal-form-card { padding: 20px; }
+            .contact-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanline"></div>
+
+    <div class="container">
+        
+        <!-- شريط التنقل العلوي -->
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span>&lt;AA/&gt;</span> Abdou_Ali
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">// 01. About</a></li>
+                <li><a href="#modules">// 02. Modules</a></li>
+                <li><a href="#systems">// 03. Systems</a></li>
+                <li><a href="#contact">// 04. Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- الواجهة الرئيسية (Hero Section) -->
+        <section id="about" class="hero">
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>SYSTEM_STATUS: ONLINE_&_READY</span>
+            </div>
+
+            <h1>عبده علي</h1>
+            <h2><span id="typewriter-text">> AI & Digital Systems Architect</span><span class="cursor"></span></h2>
+            
+            <p>
+                <strong>عقل واحد.. وأنظمة تعمل في الخفاء.</strong> أدمج البرمجة بالذكاء الاصطناعي لبناء مسارات عمل ذاتية القيادة؛ أطور التطبيقات والمواقع الإلكترونية، وأبتكر حلولاً محاسبية معقدة، مع إدارة شبكة محتوى عالمية تعمل كآلة لا تتوقف. <strong>أنا ببساطة.. لا أقبل بالحلول التقليدية.</strong>
+            </p>
+            
+            <div class="hero-actions">
+                <a href="#contact" class="cta-btn">
+                    <i class="fa-solid fa-terminal"></i> Initialize_Contact()
+                </a>
+                <a href="#modules" class="secondary-btn">
+                    استكشاف البنية التحتية <i class="fa-solid fa-arrow-down" style="font-size: 0.85rem; margin-right: 5px;"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- مقاييس الأداء والإنجازات (Metrics) -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">05</div>
+                <div class="stat-label">قنوات محتوى عالمية</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">مسارات عمل ذاتية القيادة</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+24/7</div>
+                <div class="stat-label">أنظمة إنتاج وتشغيل لا تتوقف</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">AI-Native</div>
+                <div class="stat-label">هندسة الحلول الذكية</div>
+            </div>
+        </div>
+
+        <!-- وحدات المهارات (Modules Section) -->
+        <section id="modules">
+            <div class="section-header">
+                <h2 class="section-title">البنية التحتية (Modules)</h2>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>01. Automation & Dev</h3>
+                    <p>تطوير التطبيقات والمواقع الإلكترونية المتقدمة، وبناء مسارات عمل (Workflows) مؤتمتة بالكامل تعتمد على أحدث نماذج الذكاء الاصطناعي لتقليل التدخل البشري وتسريع الإنتاج.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>02. Business Solutions</h3>
+                    <p>هندسة النماذج المحاسبية المعقدة وتصميم أنظمة إدارة الشركات الداعمة لاتخاذ القرار. تحويل البيانات المالية والإدارية المعقدة إلى لوحات تحكم وأدوات استراتيجية واضحة.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h3>03. Global Media</h3>
+                    <p>إدارة شبكة متكاملة من 5 قنوات موجهة للجمهور العالمي. توظيف أدوات التوليد الصوتي والمرئي لبناء أصول رقمية وقصص سينمائية تعمل كآلة إنتاج لا تتوقف.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- نماذج الأنظمة والمشاريع (Core Systems) -->
+        <section id="systems">
+            <div class="section-header">
+                <h2 class="section-title">نماذج الأنظمة (Selected Architecture)</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <span class="project-tag">AUTONOMOUS_PIPELINE</span>
+                        <h4>نظام الإنتاج الإعلامي المؤتمت</h4>
+                        <p>خط إنتاج وتوليد رقمي بالذكاء الاصطناعي يبدأ من استخراج الأفكار، توليد النصوص، هندسة الصوت وتوليد المشاهد السينمائية بدون تدخل بشري يومي.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">AI Agents</span>
+                        <span class="tech-pill">APIs</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <span class="project-tag">FINANCIAL_ENGINE</span>
+                        <h4>المحرك المحاسبي الاستراتيجي</h4>
+                        <p>لوحات تحكم تفاعلية ونماذج حسابية ديناميكية تدمج التكاليف، التوقعات المالية ومؤشرات الأداء لمساعدة متخذي القرار على الرؤية الفورية.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Data Modeling</span>
+                        <span class="tech-pill">ERP Logic</span>
+                        <span class="tech-pill">Analytics</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <span class="project-tag">WEB_ECOSYSTEM</span>
+                        <h4>تطبيقات الويب الذكية</h4>
+                        <p>تطوير منصات وتطبيقات ويب فائقة السرعة ومتوافقة مع أحدث المعايير البرمجية مع تكامل مباشر مع خوارزميات الذكاء الاصطناعي.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Full Stack</span>
+                        <span class="tech-pill">Modern UI</span>
+                        <span class="tech-pill">Cloud Deploy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التواصل ونموذج المراسلة الفوري (Contact Section) -->
+        <section id="contact">
+            <div class="contact-container">
+                
+                <div class="contact-info">
+                    <div class="status-badge">
+                        <i class="fa-solid fa-network-wired"></i> OPEN_FOR_COLLABORATION
+                    </div>
+                    <h3>جاهز لبناء أنظمة لا تعتمد على الصدفة؟</h3>
+                    <p>سواء كنت بحاجة لأتمتة عملياتك بالكامل، تطوير حلول مالية وإدارية ذكية، أو إطلاق مشاريع رقمية استثنائية؛ تواصل معي الآن مباشرة.</p>
+                    
+                    <div class="contact-details">
+                        <!-- بيانات التواصل المباشرة المحدثة -->
+                        <a href="mailto:abdou25008@gmail.com" class="contact-item">
+                            <i class="fa-solid fa-envelope"></i> abdou25008@gmail.com
+                        </a>
+                        <a href="https://wa.me/201092519210" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i> +20 109 251 9210 (WhatsApp Direct)
+                        </a>
+                        <a href="https://t.me/abdou25008" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-telegram"></i> @abdou25008 (Telegram)
+                        </a>
+                    </div>
+
+                    <div class="social-buttons">
+                        <a href="https://wa.me/201092519210" target="_blank" class="social-icon-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/abdou25008" target="_blank" class="social-icon-btn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://github.com/abdou25008" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:abdou25008@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-at"></i></a>
+                    </div>
+                </div>
+
+                <!-- كارت النموذج التفاعلي (Terminal Contact Form) -->
+                <div class="terminal-form-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                        </div>
+                        <span>SECURE_TRANSMISSION_PROTOCOL</span>
+                    </div>
+
+                    <!-- نموذج الإرسال المتوافق مع Formspree / Web3Forms -->
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">> USER_IDENTIFIER (الاسم):</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="اكتب اسمك الكريم" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">> CONTACT_EMAIL (البريد الإلكتروني):</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">> SERVICE_TYPE (نوع الخدمة المطلوبة):</label>
+                            <select id="service" name="service" class="form-input" style="background: #101010;">
+                                <option value="AI Automation">أتمتة العمليات والذكاء الاصطناعي (Automation)</option>
+                                <option value="Web/App Development">تطوير المواقع والتطبيقات (Development)</option>
+                                <option value="Financial & Business Solutions">حلول مالية ومحاسبية (Business Solutions)</option>
+                                <option value="Media & Production">إدارة وإنتاج المحتوى (Media)</option>
+                                <option value="Consultation">استشارة تقنية خاصة (Consultation)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">> PAYLOAD (تفاصيل الرسالة أو المشروع):</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="اشرح باختصار متطلبات مشروعك..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> TRANSMIT_PAYLOAD()
+                        </button>
+
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>SYSTEM.RUN // &copy; 2026 Abdou Ali. All rights reserved.</p>
+        <div class="footer-time" id="systemClock">[LIVE_CLOCK: SYSTEM SYNCED]</div>
+    </footer>
+
+    <!-- سكربت التفاعلات والحركات ونموذج الإرسال -->
+    <script>
+        // 1. تأثير الكتابة الآلية للمسمى الوظيفي
+        const titles = [
+            "> AI & Digital Systems Architect",
+            "> Full-Stack Automation Engineer",
+            "> Decision Support & Financial Modeler",
+            "> Autonomous Media Producer"
+        ];
+        
+        let titleIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        const typewriterEl = document.getElementById("typewriter-text");
+
+        function typeEffect() {
+            const currentTitle = titles[titleIdx];
+            if (isDeleting) {
+                typewriterEl.textContent = currentTitle.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typewriterEl.textContent = currentTitle.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIdx === currentTitle.length) {
+                typeSpeed = 2200;
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                titleIdx = (titleIdx + 1) % titles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        document.addEventListener("DOMContentLoaded", typeEffect);
+
+        // 2. تحديث ساعة النظام الحية في الفوتر
+        function updateClock() {
+            const now = new Date();
+            const timeStr = now.toISOString().replace('T', ' ').substring(0, 19) + " UTC";
+            const clockEl = document.getElementById("systemClock");
+            if (clockEl) {
+                clockEl.textContent = `[NODE_TIME: ${timeStr}] // LATENCY: 12ms`;
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // 3. إرسال النموذج بنظام AJAX مع ردود فعل شاشات السايبربانك (Cyber Terminal Output)
+        const contactForm = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const formStatus = document.getElementById("formStatus");
+
+        contactForm.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            
+            // حالة جاري الإرسال
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ENCRYPTING_AND_SENDING...`;
+            formStatus.className = "form-status status-loading";
+            formStatus.innerHTML = `> [CONNECTING] Establishing secure handshake with mail relay...`;
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const actionUrl = contactForm.getAttribute("action");
+                
+                const response = await fetch(actionUrl, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.className = "form-status status-success";
+                    formStatus.innerHTML = `> [SUCCESS 200] تم إرسال رسالتك بنجاح إلى abdou25008@gmail.com! سأتواصل معك قريباً.`;
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    throw new Error(data.message || "Failed to deliver payload.");
+                }
+            } catch (err) {
+                formStatus.className = "form-status status-error";
+                formStatus.innerHTML = `> [TRANSMISSION_NOTICE] تم تجهيز البيانات. يمكنك أيضاً مراسلتي مباشرة عبر واتساب أو تيليجرام.`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> TRANSMIT_PAYLOAD()`;
+            }
+        });
+    </script>
+</body>
+</html>
