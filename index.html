@@ -3,41 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبده علي | AI & Systems Architect</title>
+    <title>Abdou Ali Mousa | AI & Digital Systems Architect</title>
     
-    <!-- Meta Tags للمشاركة ومحركات البحث (SEO & OpenGraph) -->
-    <meta name="description" content="عبده علي - مهندس ذكاء اصطناعي وأنظمة رقمية. بناء مسارات عمل مؤتمتة بالكامل، تطوير حلول الأعمال، وإدارة شبكات المحتوى الرقمي.">
-    <meta name="keywords" content="Abdou Ali, عبده علي, AI, Systems Architect, Automation, الذكاء الاصطناعي, هندسة الأنظمة, أتمتة الأعمال">
-    <meta name="author" content="Abdou Ali">
+    <!-- Meta Tags لمحركات البحث وشبكات التواصل -->
+    <meta name="description" content="الموقع الرسمي للمهندس Abdou Ali Mousa - AI & Digital Systems Architect. خبير أتمتة الذكاء الاصطناعي، النمذجة المالية الاستراتيجية، ومؤسس شبكة الإنتاج الإعلامي الدولي.">
+    <meta name="keywords" content="Abdou Ali Mousa, AI & Digital Systems Architect, الذكاء الاصطناعي, هندسة الأنظمة, التحول الرقمي, النمذجة المالية, الإنتاج الإعلامي, إدارة اللوجستيات, استوديو الصوت">
+    <meta name="author" content="Abdou Ali Mousa">
     
-    <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="عبده علي | AI & Systems Architect">
-    <meta property="og:description" content="عقل واحد.. وأنظمة تعمل في الخفاء. أدمج البرمجة بالذكاء الاصطناعي لبناء مسارات عمل ذاتية القيادة.">
-    <meta property="og:url" content="https://abdou25008.github.io/">
+    <meta property="og:title" content="Abdou Ali Mousa | AI & Digital Systems Architect">
+    <meta property="og:description" content="نحن لا نتوقع المستقبل.. بل نبنيه بالأنظمة الذكية والمحتوى الاستثنائي.">
+    <meta property="og:image" content="assets/hero_architect.jpg">
 
-    <!-- استدعاء خطوط جوجل -->
+    <!-- الخطوط: Cairo و Tajawal مع Space Grotesk للإنجليزية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome للأيقونات -->
+    <!-- FontAwesome 6 Pro Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
+    <style id="customThemeStyles">
         :root {
-            --bg-dark: #050505;
-            --surface: #0a0a0a;
-            --surface-card: #121212;
-            --surface-hover: #181818;
-            --neon-accent: #00ffcc;
-            --neon-glow: rgba(0, 255, 204, 0.35);
-            --neon-secondary: #0088ff;
-            --text-main: #f0f0f0;
-            --text-muted: #888888;
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --error-color: #ff4757;
-            --success-color: #2ed573;
+            --bg-base: #06080e;
+            --bg-surface: #0c101a;
+            --bg-card: rgba(16, 22, 36, 0.75);
+            --bg-card-hover: rgba(24, 32, 52, 0.9);
+            
+            /* ألوان الفخامة الملكية والتقنية */
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            
+            --blue-royal: #38bdf8;
+            --blue-deep: #0284c7;
+            --indigo-accent: #6366f1;
+            --purple-voice: #a855f7;
+            
+            --whatsapp-color: #25d366;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(212, 175, 55, 0.35);
         }
 
         * {
@@ -51,980 +61,2335 @@
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.8;
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.85;
             overflow-x: hidden;
             position: relative;
+            transition: background-color 0.4s, color 0.4s;
         }
 
-        /* خلفية شبكية سايبربانك */
-        body::before {
-            content: "";
+        .en-font {
+            font-family: 'Space Grotesk', sans-serif;
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+
+        /* خلفية الإضاءات الملكية */
+        .ambient-radial-1 {
             position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background-image: 
-                linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
-            background-size: 35px 35px;
-            z-index: -1;
+            top: -200px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(99, 102, 241, 0.05) 40%, transparent 70%);
+            border-radius: 50%;
+            z-index: -2;
             pointer-events: none;
+            filter: blur(80px);
         }
 
-        /* شريط المسح الضوئي العلوي */
-        .scanline {
+        .ambient-radial-2 {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-accent), transparent);
-            opacity: 0.8;
-            z-index: 1000;
+            bottom: -100px;
+            left: -200px;
+            width: 850px;
+            height: 850px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(2, 132, 199, 0.04) 40%, transparent 70%);
+            border-radius: 50%;
+            z-index: -2;
+            pointer-events: none;
+            filter: blur(90px);
         }
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1260px;
             margin: auto;
-            padding: 40px 0;
         }
 
-        /* شريط التنقل العلوي */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-subtle);
+        /* ================= الشريط العلوي الفاخر (Header) ================= */
+        header {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
             margin-bottom: 40px;
         }
 
-        .logo {
-            font-family: 'Fira Code', monospace;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #ffffff;
-            text-decoration: none;
+        .navbar-luxury {
+            background: rgba(12, 16, 26, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 16px 32px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand-monogram {
+            background: linear-gradient(135deg, var(--gold-primary), #996515);
+            color: #000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 900;
+            font-size: 1.15rem;
+            padding: 8px 16px;
+            border-radius: 10px;
+            letter-spacing: 1.5px;
+            box-shadow: 0 0 20px var(--gold-glow);
+        }
+
+        .brand-titles h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-titles span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        .nav-links-list {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-links-list a:hover {
+            color: var(--gold-primary);
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-gold-nav {
+            background: linear-gradient(135deg, var(--gold-primary), #b38728);
+            color: #000;
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px var(--gold-glow);
+            transition: all 0.3s;
+        }
+
+        .btn-gold-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
+
+        .btn-owner-panel {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
         }
 
-        .logo span {
-            color: var(--neon-accent);
+        .btn-owner-panel:hover {
+            background: var(--gold-primary);
+            color: #000;
+            box-shadow: 0 0 15px var(--gold-glow);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
+        /* ================= الواجهة الرئيسية التنفيذية (Hero Section) ================= */
+        .hero-section {
+            padding: 40px 0 80px;
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 60px;
+            align-items: center;
+            border-bottom: 1px solid var(--border-glass);
+            position: relative;
         }
 
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            font-family: 'Fira Code', monospace;
-        }
-
-        .nav-links a:hover {
-            color: var(--neon-accent);
-        }
-
-        /* شارة الحالة */
-        .status-badge {
+        .prestige-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            color: var(--neon-accent);
-            background: rgba(0, 255, 204, 0.05);
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid rgba(0, 255, 204, 0.2);
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
             margin-bottom: 25px;
-            width: fit-content;
         }
 
-        .status-dot {
+        .gold-pulse-dot {
             width: 8px;
             height: 8px;
-            background-color: var(--neon-accent);
+            background-color: var(--gold-primary);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--neon-accent);
-            animation: pulse 2s infinite;
+            box-shadow: 0 0 10px var(--gold-primary);
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.8); }
-        }
-
-        /* الواجهة الرئيسية */
-        .hero {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-bottom: 1px solid var(--border-subtle);
-            padding-bottom: 70px;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
+        .hero-main-title {
+            font-size: 3.6rem;
             font-weight: 900;
-            margin-bottom: 10px;
-            color: #ffffff;
-            letter-spacing: -0.5px;
+            line-height: 1.25;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero h2 {
-            font-size: 1.5rem;
-            color: var(--neon-accent);
-            font-family: 'Fira Code', monospace;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px var(--neon-glow);
+        .hero-name-en {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
             direction: ltr;
             text-align: right;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 5px;
         }
 
-        .cursor {
-            display: inline-block;
-            background-color: var(--neon-accent);
-            width: 9px;
-            height: 1.3rem;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .hero p {
+        .hero-role-en {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.35rem;
-            max-width: 850px;
-            color: #b5b5b5;
-            font-weight: 400;
-            line-height: 1.9;
-        }
-
-        .hero p strong {
-            color: #ffffff;
             font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            direction: ltr;
+            text-align: right;
         }
 
-        .hero-actions {
-            margin-top: 45px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
+        .hero-statement {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            margin-bottom: 40px;
+            max-width: 700px;
         }
 
-        /* الأزرار */
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 35px;
-            background: transparent;
-            color: var(--neon-accent);
-            border: 1px solid var(--neon-accent);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-family: 'Fira Code', monospace;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            cursor: pointer;
-            border-radius: 2px;
-        }
-
-        .cta-btn:hover {
-            background: var(--neon-accent);
-            color: var(--bg-dark);
-            box-shadow: 0 0 25px var(--neon-glow);
-            transform: translateY(-2px);
-        }
-
-        .secondary-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 30px;
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-main);
-            border: 1px solid var(--border-subtle);
-            text-decoration: none;
-            font-size: 1.05rem;
-            font-family: 'Cairo', sans-serif;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
+        .hero-statement strong {
             color: #ffffff;
-        }
-
-        /* مقاييس الأداء (Metrics) */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 60px 0 80px;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-subtle);
-            padding: 30px 20px;
-            border-radius: 4px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            border-color: rgba(0, 255, 204, 0.3);
-            background: rgba(0, 255, 204, 0.02);
-        }
-
-        .stat-number {
-            font-family: 'Fira Code', monospace;
-            font-size: 2.3rem;
-            font-weight: 700;
-            color: var(--neon-accent);
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* عناوين الأقسام */
-        .section-header {
-            margin: 80px 0 40px;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            color: #ffffff;
-            display: inline-block;
-            position: relative;
-            padding-bottom: 12px;
             font-weight: 800;
         }
 
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--neon-accent);
-            box-shadow: 0 0 10px var(--neon-glow);
+        .hero-actions-container {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 45px;
         }
 
-        /* شبكة الكروت (Modules Grid) */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-            gap: 30px;
+        .btn-luxury-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--gold-primary), #a67c1e);
+            color: #000;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px var(--gold-glow);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .card {
-            background-color: var(--surface-card);
-            padding: 40px 30px;
-            border-radius: 4px;
-            border: 1px solid var(--border-subtle);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        .btn-luxury-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+            color: #000;
+        }
+
+        .btn-whatsapp-luxury {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            color: #25d366;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: all 0.3s;
+        }
+
+        .btn-whatsapp-luxury:hover {
+            background: #25d366;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* صورة الواجهة التنفيذية */
+        .portrait-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .portrait-frame {
             position: relative;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 45px rgba(212, 175, 55, 0.18);
+            background: var(--bg-surface);
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0; right: 0;
-            width: 100%; height: 2px;
-            background: var(--neon-accent);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.4s ease;
-            box-shadow: 0 0 10px var(--neon-glow);
-        }
-
-        .card:hover {
+        .portrait-frame:hover {
             transform: translateY(-6px);
-            background-color: var(--surface-hover);
-            border-color: rgba(0, 255, 204, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border-color: var(--gold-primary);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.9), 0 0 55px rgba(212, 175, 55, 0.3);
         }
 
-        .card:hover::before {
-            transform: scaleX(1);
+        .portrait-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
-        .card-icon {
-            font-size: 2.2rem;
-            color: var(--neon-accent);
-            margin-bottom: 20px;
+        .portrait-overlay-info {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 25px 22px;
+            background: linear-gradient(to top, rgba(6, 8, 14, 0.96) 30%, transparent);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
 
-        .card h3 {
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 15px;
-            font-family: 'Fira Code', monospace;
+        .overlay-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
             direction: ltr;
             text-align: right;
         }
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.8;
+        .overlay-role {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+            direction: ltr;
+            text-align: right;
         }
 
-        /* قسم المشاريع والأنظمة */
-        .projects-grid {
+        /* ================= أرقام التأثير والإنجازات ================= */
+        .metrics-bar-section {
+            padding: 50px 0 80px;
+            position: relative;
+        }
+
+        .metrics-grid-luxury {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .metric-luxury-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 40px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+
+        .metric-luxury-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-gold);
+            background: var(--bg-card-hover);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px var(--gold-glow);
+        }
+
+        .metric-number-big {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--gold-primary);
+            margin-bottom: 6px;
+            letter-spacing: -1px;
+        }
+
+        .metric-label-main {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .metric-desc-sub {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* ================= مساحة 1: منظومة اللوجستيات والشحن والمتجر الإلكتروني ================= */
+        .showcase-standalone-section {
+            margin-bottom: 90px;
+            position: relative;
+        }
+
+        .logistics-cinematic-card {
+            background: linear-gradient(135deg, rgba(10, 25, 45, 0.92) 0%, rgba(6, 12, 22, 0.98) 100%);
+            border: 2px solid rgba(56, 189, 248, 0.5);
+            border-radius: 30px;
+            padding: 55px 50px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(56, 189, 248, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logistics-cinematic-card::before {
+            content: "";
+            position: absolute;
+            top: -120px; right: -120px;
+            width: 450px; height: 450px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+            filter: blur(60px);
+        }
+
+        .showcase-grid-content {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 45px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-pill-cyan {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #38bdf8;
+            font-weight: 800;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .showcase-title-big {
+            font-size: 2.3rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .showcase-subtitle-en {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .showcase-desc-text {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            line-height: 1.95;
+            margin-bottom: 30px;
+        }
+
+        .showcase-badges-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .showcase-feat-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+
+        .showcase-feat-box i {
+            font-size: 1.2rem;
+        }
+
+        .btn-launch-cyan {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 1.15rem;
+            text-decoration: none;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+            transition: all 0.3s;
+        }
+
+        .btn-launch-cyan:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(56, 189, 248, 0.55);
+            color: #ffffff;
+        }
+
+        /* Mockup Box */
+        .showcase-visual-hud {
+            background: #080d18;
+            border: 2px solid rgba(56, 189, 248, 0.35);
+            border-radius: 24px;
+            padding: 35px 30px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.15);
+        }
+
+        .hud-icon-floating {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: floatIcon 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatIcon {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* ================= مساحة 2: استوديو الذكاء الاصطناعي الصوتي والموسيقي ================= */
+        .audio-cinematic-card {
+            background: linear-gradient(135deg, rgba(26, 18, 48, 0.92) 0%, rgba(10, 8, 20, 0.98) 100%);
+            border: 2px solid rgba(168, 85, 247, 0.5);
+            border-radius: 30px;
+            padding: 55px 50px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(168, 85, 247, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audio-cinematic-card::before {
+            content: "";
+            position: absolute;
+            top: -120px; right: -120px;
+            width: 450px; height: 450px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+            filter: blur(60px);
+        }
+
+        .badge-pill-purple {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            color: #c084fc;
+            font-weight: 800;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-launch-purple {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #a855f7, #7c3aed);
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 1.15rem;
+            text-decoration: none;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35);
+            transition: all 0.3s;
+        }
+
+        .btn-launch-purple:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(168, 85, 247, 0.55);
+            color: #ffffff;
+        }
+
+        /* ================= الركائز والحلول الاستراتيجية (Bento Grid) ================= */
+        .section-headline-center {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .prestige-tag {
+            display: inline-block;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--border-gold);
+            padding: 6px 22px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section-title-bold {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .section-desc-light {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: auto;
+        }
+
+        .pillars-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        .pillar-card-luxury {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 45px 35px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .pillar-card-luxury:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-gold);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.2);
+            background: var(--bg-card-hover);
+        }
+
+        .pillar-icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        .pillar-card-luxury:hover .pillar-icon-box {
+            background: var(--gold-primary);
+            color: #000;
+            box-shadow: 0 0 25px var(--gold-glow);
+            transform: scale(1.08);
+        }
+
+        .pillar-card-title {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .pillar-card-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .pillar-bullet-points {
+            list-style: none;
+        }
+
+        .pillar-bullet-points li {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pillar-bullet-points li i {
+            color: var(--gold-primary);
+            font-size: 0.9rem;
+        }
+
+        /* ================= الشبكة الإعلامية الدولية الفاخرة ================= */
+        .media-network-section {
+            background: linear-gradient(180deg, rgba(16, 22, 36, 0.7) 0%, rgba(8, 12, 20, 0.95) 100%);
+            border: 1px solid var(--border-glass);
+            border-radius: 30px;
+            padding: 60px 45px;
+            margin-bottom: 100px;
+            position: relative;
+        }
+
+        .media-cinematic-banner {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 50px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .media-cinematic-banner img {
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .media-banner-content-box {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 40px;
+            background: linear-gradient(to top, rgba(6, 8, 14, 0.95) 20%, transparent);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .channels-cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
 
-        .project-card {
-            background: var(--surface-card);
-            border: 1px solid var(--border-subtle);
-            padding: 30px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+        .channel-luxury-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 18px;
+            padding: 30px 25px;
+            transition: all 0.3s;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
         }
 
-        .project-card:hover {
-            border-color: rgba(0, 255, 204, 0.25);
-            transform: translateY(-4px);
+        .channel-luxury-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-gold);
+            background: rgba(212, 175, 55, 0.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         }
 
-        .project-tag {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
-            color: var(--neon-accent);
-            background: rgba(0, 255, 204, 0.06);
-            padding: 4px 10px;
-            border-radius: 3px;
-            display: inline-block;
+        .channel-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 15px;
-            width: fit-content;
         }
 
-        .project-card h4 {
-            font-size: 1.3rem;
+        .channel-order-badge {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            background: rgba(212, 175, 55, 0.12);
+            padding: 4px 14px;
+            border-radius: 8px;
+        }
+
+        .channel-card-title {
+            font-size: 1.35rem;
+            font-weight: 800;
             color: #ffffff;
             margin-bottom: 10px;
         }
 
-        .project-card p {
+        .channel-card-desc {
+            font-size: 1rem;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+            line-height: 1.75;
         }
 
-        .tech-stack {
-            display: flex;
+        .btn-visit-official {
+            display: inline-flex;
+            align-items: center;
             gap: 8px;
-            flex-wrap: wrap;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
-            color: #999;
+            padding: 10px 20px;
+            background: rgba(255, 0, 0, 0.12);
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            color: #ff5555;
+            font-weight: 800;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+            align-self: flex-start;
         }
 
-        .tech-pill {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 3px 8px;
-            border-radius: 2px;
+        .btn-visit-official:hover {
+            background: #ff0000;
+            color: #fff;
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
         }
 
-        /* قسم التواصل ونموذج البريد (Contact & Form) */
-        .contact-container {
-            margin-top: 100px;
+        /* ================= جناح التواصل والاستشارات التنفيذية ================= */
+        .executive-contact-suite {
+            background: linear-gradient(135deg, rgba(16, 22, 36, 0.95), rgba(8, 12, 20, 0.95));
+            border: 1px solid var(--border-gold);
+            border-radius: 30px;
+            padding: 60px 45px;
+            margin-bottom: 80px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 175, 55, 0.15);
+            position: relative;
+        }
+
+        .suite-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 50px;
-            background: var(--surface);
-            border: 1px solid var(--border-subtle);
-            padding: 50px 40px;
-            border-radius: 6px;
+            align-items: center;
         }
 
-        .contact-info h3 {
-            font-size: 2rem;
+        .suite-info h3 {
+            font-size: 2.4rem;
+            font-weight: 900;
             color: #ffffff;
             margin-bottom: 15px;
         }
 
-        .contact-info p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+        .suite-info p {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            line-height: 1.9;
             margin-bottom: 35px;
         }
 
-        .contact-details {
+        .vip-contact-channels {
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            margin-bottom: 35px;
+            gap: 16px;
         }
 
-        .contact-item {
+        .vip-channel-item {
             display: flex;
             align-items: center;
-            gap: 15px;
-            color: var(--text-main);
+            gap: 18px;
+            padding: 18px 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            color: #fff;
             text-decoration: none;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
-        .contact-item i {
-            color: var(--neon-accent);
-            font-size: 1.2rem;
-            width: 25px;
+        .vip-channel-item:hover {
+            border-color: var(--gold-primary);
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateX(-6px);
         }
 
-        .contact-item:hover {
-            color: var(--neon-accent);
-            transform: translateX(-5px);
-        }
-
-        .social-buttons {
+        .vip-channel-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
             display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .social-icon-btn {
-            width: 44px;
-            height: 44px;
-            display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-main);
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
+            font-size: 1.5rem;
         }
 
-        .social-icon-btn:hover {
-            border-color: var(--neon-accent);
-            color: var(--neon-accent);
-            box-shadow: 0 0 15px rgba(0, 255, 204, 0.25);
-            transform: translateY(-3px);
+        .vip-phone-text {
+            font-size: 1.15rem;
+            font-weight: 800;
+            direction: ltr;
+            unicode-bidi: isolate;
+            color: var(--gold-light);
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        /* واجهة نموذج المراسلة السايبربانك */
-        .terminal-form-card {
-            background: var(--surface-card);
-            border: 1px solid var(--border-subtle);
+        /* نموذج الاستشارة */
+        .executive-form-card {
+            background: #090c14;
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
             padding: 35px;
-            border-radius: 4px;
-            position: relative;
         }
 
-        .terminal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border-subtle);
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            color: var(--neon-accent);
-        }
-
-        .terminal-dots {
-            display: flex;
-            gap: 6px;
-        }
-
-        .terminal-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        .dot-red { background: #ff5f56; }
-        .dot-yellow { background: #ffbd2e; }
-        .dot-green { background: #27c93f; }
-
-        .form-group {
+        .form-row-group {
             margin-bottom: 20px;
         }
 
-        .form-group label {
+        .form-row-group label {
             display: block;
             margin-bottom: 8px;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.9rem;
-            color: #ccc;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #cbd5e1;
         }
 
-        .form-input, .form-textarea {
+        .luxury-input, .luxury-textarea {
             width: 100%;
-            padding: 12px 15px;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid var(--border-subtle);
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
             color: #ffffff;
             font-family: 'Cairo', sans-serif;
             font-size: 1rem;
-            border-radius: 3px;
             outline: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
-        .form-input:focus, .form-textarea:focus {
-            border-color: var(--neon-accent);
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.15);
-            background: rgba(0, 255, 204, 0.02);
+        .luxury-input:focus, .luxury-textarea:focus {
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            background: rgba(212, 175, 55, 0.02);
         }
 
-        .form-textarea {
+        .luxury-textarea {
             min-height: 120px;
             resize: vertical;
         }
 
-        .submit-btn {
+        .btn-submit-luxury {
             width: 100%;
-            padding: 14px;
-            background: transparent;
-            color: var(--neon-accent);
-            border: 1px solid var(--neon-accent);
-            font-family: 'Fira Code', monospace;
-            font-size: 1.05rem;
-            font-weight: 600;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--gold-primary), #a67c1e);
+            color: #000;
+            border: none;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.15rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px var(--gold-glow);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
         }
 
-        .submit-btn:hover {
-            background: var(--neon-accent);
-            color: var(--bg-dark);
-            box-shadow: 0 0 20px var(--neon-glow);
+        .btn-submit-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.45);
         }
 
-        .submit-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+        .form-live-status-box {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.7;
+            text-align: center;
+            animation: fadeInStatus 0.4s ease;
         }
 
-        /* رسائل حالة النموذج */
-        .form-status {
-            margin-top: 15px;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            padding: 10px 14px;
-            border-radius: 3px;
+        @keyframes fadeInStatus {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* الفوتر الفاخر */
+        footer {
+            border-top: 1px solid var(--border-glass);
+            padding: 50px 0 35px;
+            text-align: center;
+        }
+
+        .footer-brand-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+            direction: ltr;
+        }
+
+        .footer-brand-title span {
+            color: var(--gold-primary);
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* =========================================================================
+           لوحة واستوديو المالك الشامل (FULL EXECUTIVE OWNER STUDIO & CMS)
+           ========================================================================= */
+        .studio-modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 25000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .studio-master-dashboard {
+            background: #0b0f19;
+            border: 2px solid var(--gold-primary);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 1000px;
+            max-height: 92vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 50px var(--gold-glow);
+            position: relative;
+        }
+
+        .studio-dash-header {
+            padding: 22px 35px;
+            background: #101624;
+            border-bottom: 1px solid var(--border-glass);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .dash-nav-tabs {
+            display: flex;
+            gap: 10px;
+            padding: 15px 35px;
+            background: rgba(0, 0, 0, 0.4);
+            border-bottom: 1px solid var(--border-glass);
+            overflow-x: auto;
+        }
+
+        .dash-tab-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .dash-tab-btn.active, .dash-tab-btn:hover {
+            background: var(--gold-primary);
+            color: #000;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px var(--gold-glow);
+        }
+
+        .dash-tab-content {
+            padding: 35px;
             display: none;
         }
 
-        .status-loading {
+        .dash-tab-content.active {
             display: block;
-            background: rgba(0, 136, 255, 0.1);
-            color: var(--neon-secondary);
-            border: 1px solid rgba(0, 136, 255, 0.3);
         }
 
-        .status-success {
-            display: block;
-            background: rgba(46, 213, 115, 0.1);
-            color: var(--success-color);
-            border: 1px solid rgba(46, 213, 115, 0.3);
+        .dash-grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
-        .status-error {
-            display: block;
-            background: rgba(255, 71, 87, 0.1);
-            color: var(--error-color);
-            border: 1px solid rgba(255, 71, 87, 0.3);
+        /* أدوات التعديل البصري المباشر */
+        body.studio-edit-mode [data-editable="true"] {
+            outline: 2px dashed rgba(212, 175, 55, 0.7);
+            outline-offset: 4px;
+            cursor: text;
+            transition: outline 0.2s;
+            border-radius: 4px;
         }
 
-        /* الفوتر */
-        footer {
-            text-align: center;
-            padding: 50px 20px 30px;
-            margin-top: 100px;
-            border-top: 1px solid var(--border-subtle);
-            font-family: 'Fira Code', monospace;
-            color: var(--text-muted);
+        body.studio-edit-mode [data-editable="true"]:hover {
+            outline: 2px solid var(--gold-primary);
+            background: rgba(212, 175, 55, 0.06);
+        }
+
+        .card-action-bar {
+            display: none;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            gap: 6px;
+            z-index: 100;
+        }
+
+        body.studio-edit-mode .card-action-bar {
+            display: flex;
+        }
+
+        .mini-tool-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 0.85rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s;
         }
 
-        .footer-time {
-            margin-top: 8px;
-            color: var(--neon-accent);
-            opacity: 0.8;
+        .btn-delete-card {
+            background: #ff4757;
+            color: #fff;
         }
 
-        /* التجاوب مع مختلف الشاشات */
-        @media (max-width: 900px) {
-            .contact-container { grid-template-columns: 1fr; gap: 40px; }
-            .hero h1 { font-size: 3.2rem; }
-            .hero h2 { font-size: 1.25rem; }
-            .nav-links { display: none; }
+        .btn-delete-card:hover {
+            transform: scale(1.15);
         }
 
-        @media (max-width: 600px) {
-            .container { width: 92%; padding: 20px 0; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .terminal-form-card { padding: 20px; }
-            .contact-container { padding: 30px 20px; }
+        .quick-studio-dock {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(12, 16, 26, 0.95);
+            backdrop-filter: blur(25px);
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 30px var(--gold-glow);
+            padding: 10px 22px;
+            border-radius: 40px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            z-index: 20000;
+            flex-wrap: wrap;
+        }
+
+        /* الموبايل */
+        @media (max-width: 1024px) {
+            .hero-section { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-name-en, .hero-role-en { text-align: center; }
+            .hero-actions-container { justify-content: center; }
+            .suite-grid { grid-template-columns: 1fr; }
+            .showcase-grid-content { grid-template-columns: 1fr; text-align: center; }
+            .showcase-badges-grid { grid-template-columns: 1fr; }
+            .nav-links-list { display: none; }
+            .hero-main-title { font-size: 2.8rem; }
+            .dash-grid-2col { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .hero-main-title { font-size: 2.3rem; }
+            .hero-name-en { font-size: 1.8rem; }
+            .hero-role-en { font-size: 1.15rem; }
+            .executive-contact-suite { padding: 35px 20px; }
+            .logistics-cinematic-card, .audio-cinematic-card { padding: 35px 20px; }
+            .showcase-title-big { font-size: 1.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="scanline"></div>
+    <!-- Ambient Radial Lights -->
+    <div class="ambient-radial-1"></div>
+    <div class="ambient-radial-2"></div>
+
+    <!-- شريط الأدوات السريع أثناء تفعيل وضع التعديل البصري -->
+    <div class="quick-studio-dock" id="quickStudioDock">
+        <span style="color: var(--gold-primary); font-weight: 800; font-size: 0.9rem;">
+            <i class="fa-solid fa-pen-nib"></i> وضع التعديل البصري نشط
+        </span>
+        <button class="btn-owner-panel" onclick="openStudioMaster()" style="padding: 6px 14px; font-size: 0.85rem;">
+            <i class="fa-solid fa-sliders"></i> فتح لوحة المالك
+        </button>
+        <button class="btn-gold-nav" onclick="saveAllStudioChanges()" style="padding: 6px 16px; font-size: 0.85rem;">
+            <i class="fa-solid fa-floppy-disk"></i> حفظ
+        </button>
+        <button class="btn-owner-panel" onclick="toggleVisualEditMode(false)" style="color: #ff4757; border-color: rgba(255,71,87,0.4); padding: 6px 12px;">
+            <i class="fa-solid fa-xmark"></i> إيقاف
+        </button>
+    </div>
 
     <div class="container">
         
-        <!-- شريط التنقل العلوي -->
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <span>&lt;AA/&gt;</span> Abdou_Ali
-            </a>
-            <ul class="nav-links">
-                <li><a href="#about">// 01. About</a></li>
-                <li><a href="#modules">// 02. Modules</a></li>
-                <li><a href="#systems">// 03. Systems</a></li>
-                <li><a href="#contact">// 04. Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- الواجهة الرئيسية (Hero Section) -->
-        <section id="about" class="hero">
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                <span>SYSTEM_STATUS: ONLINE_&_READY</span>
-            </div>
-
-            <h1>عبده علي</h1>
-            <h2><span id="typewriter-text">> AI & Digital Systems Architect</span><span class="cursor"></span></h2>
-            
-            <p>
-                <strong>عقل واحد.. وأنظمة تعمل في الخفاء.</strong> أدمج البرمجة بالذكاء الاصطناعي لبناء مسارات عمل ذاتية القيادة؛ أطور التطبيقات والمواقع الإلكترونية، وأبتكر حلولاً محاسبية معقدة، مع إدارة شبكة محتوى عالمية تعمل كآلة لا تتوقف. <strong>أنا ببساطة.. لا أقبل بالحلول التقليدية.</strong>
-            </p>
-            
-            <div class="hero-actions">
-                <a href="#contact" class="cta-btn">
-                    <i class="fa-solid fa-terminal"></i> Initialize_Contact()
+        <!-- ================= الشريط العلوي الفخم ================= -->
+        <header id="section-header">
+            <nav class="navbar-luxury">
+                <a href="#" class="brand-box">
+                    <span class="brand-monogram">AAM</span>
+                    <div class="brand-titles">
+                        <h2 data-editable="true" id="navBrandName">Abdou Ali Mousa</h2>
+                        <span data-editable="true" id="navBrandRole">AI & Digital Systems Architect</span>
+                    </div>
                 </a>
-                <a href="#modules" class="secondary-btn">
-                    استكشاف البنية التحتية <i class="fa-solid fa-arrow-down" style="font-size: 0.85rem; margin-right: 5px;"></i>
-                </a>
+
+                <ul class="nav-links-list">
+                    <li><a href="#about" data-editable="true">الرؤية</a></li>
+                    <li><a href="#logistics-platform" data-editable="true">منظومة اللوجستيات</a></li>
+                    <li><a href="#voice-studio" data-editable="true">استوديو الصوت الذكي</a></li>
+                    <li><a href="#pillars" data-editable="true">الركائز والحلول</a></li>
+                    <li><a href="#media-network" data-editable="true">الشبكة الإعلامية</a></li>
+                    <li><a href="#contact" data-editable="true">استشارة تنفيذية</a></li>
+                </ul>
+
+                <div class="nav-buttons-group">
+                    <button class="btn-owner-panel" id="openOwnerLoginBtn">
+                        <i class="fa-solid fa-sliders"></i> لوحة المالك الكاملة
+                    </button>
+                    <a href="https://wa.me/201092519210" target="_blank" class="btn-gold-nav" id="navWaLink">
+                        <i class="fa-brands fa-whatsapp"></i> <span data-editable="true">تواصل مباشر</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ================= الواجهة الرئيسية التنفيذية ================= -->
+        <section id="about" class="hero-section">
+            
+            <div>
+                <div class="prestige-badge">
+                    <span class="gold-pulse-dot"></span>
+                    <span data-editable="true" id="heroBadgeText">ريادة الأعمال وهندسة الأنظمة الذكية</span>
+                </div>
+
+                <h1 class="hero-main-title" data-editable="true" id="heroMainTitle">
+                    نحن لا نتوقع المستقبل.. <br>
+                    بل نبنيه بالأنظمة والذكاء الاصطناعي.
+                </h1>
+
+                <div class="hero-name-en" data-editable="true" id="heroNameEn">Abdou Ali Mousa</div>
+                <div class="hero-role-en" data-editable="true" id="heroRoleEn">AI & Digital Systems Architect</div>
+
+                <p class="hero-statement" data-editable="true" id="heroStatementText">
+                    أدمج الهندسة البرمجية المتقدمة بنماذج <strong>الذكاء الاصطناعي التوليدي</strong> لبناء مسارات عمل ذاتية القيادة ترفع إنتاجية المؤسسات؛ أصمم <strong>حلولاً مالية ومحاسبية دقيقة</strong> لدعم صناع القرار، وأقود <strong>شبكة إنتاج إعلامي تضم 5 قنوات عالمية</strong> تروي أسرار التقنية والتاريخ والاقتصاد لملايين المتابعين.
+                </p>
+
+                <div class="hero-actions-container">
+                    <a href="#contact" class="btn-luxury-primary" id="heroConsultBtn">
+                        <i class="fa-solid fa-gem"></i> <span data-editable="true">طلب استشارة تنفيذية</span>
+                    </a>
+                    <a href="https://wa.me/201092519210" target="_blank" class="btn-whatsapp-luxury" id="heroWaLink">
+                        <i class="fa-brands fa-whatsapp"></i> <span data-editable="true">محادثة واتساب فورية</span>
+                    </a>
+                </div>
             </div>
+
+            <!-- صورة البورتريت الفخمة -->
+            <div class="portrait-wrapper">
+                <div class="portrait-frame">
+                    <img src="assets/hero_architect.jpg" alt="Abdou Ali Mousa - AI & Digital Systems Architect" class="portrait-image" id="mainHeroPortrait">
+                    <div class="portrait-overlay-info">
+                        <div>
+                            <div class="overlay-name" data-editable="true" id="overlayName">Abdou Ali Mousa</div>
+                            <div class="overlay-role" data-editable="true" id="overlayRole">AI & Digital Systems Architect</div>
+                        </div>
+                        <i class="fa-solid fa-shield-halved" style="font-size: 1.8rem; color: var(--gold-primary);"></i>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <!-- مقاييس الأداء والإنجازات (Metrics) -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">05</div>
-                <div class="stat-label">قنوات محتوى عالمية</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">مسارات عمل ذاتية القيادة</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">+24/7</div>
-                <div class="stat-label">أنظمة إنتاج وتشغيل لا تتوقف</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">AI-Native</div>
-                <div class="stat-label">هندسة الحلول الذكية</div>
-            </div>
-        </div>
-
-        <!-- وحدات المهارات (Modules Section) -->
-        <section id="modules">
-            <div class="section-header">
-                <h2 class="section-title">البنية التحتية (Modules)</h2>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
-                    <h3>01. Automation & Dev</h3>
-                    <p>تطوير التطبيقات والمواقع الإلكترونية المتقدمة، وبناء مسارات عمل (Workflows) مؤتمتة بالكامل تعتمد على أحدث نماذج الذكاء الاصطناعي لتقليل التدخل البشري وتسريع الإنتاج.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                    <h3>02. Business Solutions</h3>
-                    <p>هندسة النماذج المحاسبية المعقدة وتصميم أنظمة إدارة الشركات الداعمة لاتخاذ القرار. تحويل البيانات المالية والإدارية المعقدة إلى لوحات تحكم وأدوات استراتيجية واضحة.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
-                    <h3>03. Global Media</h3>
-                    <p>إدارة شبكة متكاملة من 5 قنوات موجهة للجمهور العالمي. توظيف أدوات التوليد الصوتي والمرئي لبناء أصول رقمية وقصص سينمائية تعمل كآلة إنتاج لا تتوقف.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- نماذج الأنظمة والمشاريع (Core Systems) -->
-        <section id="systems">
-            <div class="section-header">
-                <h2 class="section-title">نماذج الأنظمة (Selected Architecture)</h2>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">AUTONOMOUS_PIPELINE</span>
-                        <h4>نظام الإنتاج الإعلامي المؤتمت</h4>
-                        <p>خط إنتاج وتوليد رقمي بالذكاء الاصطناعي يبدأ من استخراج الأفكار، توليد النصوص، هندسة الصوت وتوليد المشاهد السينمائية بدون تدخل بشري يومي.</p>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">AI Agents</span>
-                        <span class="tech-pill">APIs</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">FINANCIAL_ENGINE</span>
-                        <h4>المحرك المحاسبي الاستراتيجي</h4>
-                        <p>لوحات تحكم تفاعلية ونماذج حسابية ديناميكية تدمج التكاليف، التوقعات المالية ومؤشرات الأداء لمساعدة متخذي القرار على الرؤية الفورية.</p>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-pill">Data Modeling</span>
-                        <span class="tech-pill">ERP Logic</span>
-                        <span class="tech-pill">Analytics</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <span class="project-tag">WEB_ECOSYSTEM</span>
-                        <h4>تطبيقات الويب الذكية</h4>
-                        <p>تطوير منصات وتطبيقات ويب فائقة السرعة ومتوافقة مع أحدث المعايير البرمجية مع تكامل مباشر مع خوارزميات الذكاء الاصطناعي.</p>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-pill">Full Stack</span>
-                        <span class="tech-pill">Modern UI</span>
-                        <span class="tech-pill">Cloud Deploy</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم التواصل ونموذج المراسلة الفوري (Contact Section) -->
-        <section id="contact">
-            <div class="contact-container">
+        <!-- ================= أرقام التأثير والإنجازات ================= -->
+        <section id="section-metrics" class="metrics-bar-section">
+            <div class="metrics-grid-luxury" id="metricsContainer">
                 
-                <div class="contact-info">
-                    <div class="status-badge">
-                        <i class="fa-solid fa-network-wired"></i> OPEN_FOR_COLLABORATION
+                <div class="metric-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذا الرقم"><i class="fa-solid fa-trash"></i></button>
                     </div>
-                    <h3>جاهز لبناء أنظمة لا تعتمد على الصدفة؟</h3>
-                    <p>سواء كنت بحاجة لأتمتة عملياتك بالكامل، تطوير حلول مالية وإدارية ذكية، أو إطلاق مشاريع رقمية استثنائية؛ تواصل معي الآن مباشرة.</p>
-                    
-                    <div class="contact-details">
-                        <!-- بيانات التواصل المباشرة المحدثة -->
-                        <a href="mailto:abdou25008@gmail.com" class="contact-item">
-                            <i class="fa-solid fa-envelope"></i> abdou25008@gmail.com
-                        </a>
-                        <a href="https://wa.me/201092519210" target="_blank" class="contact-item">
-                            <i class="fa-brands fa-whatsapp"></i> +20 109 251 9210 (WhatsApp Direct)
-                        </a>
-                        <a href="https://t.me/abdou25008" target="_blank" class="contact-item">
-                            <i class="fa-brands fa-telegram"></i> @abdou25008 (Telegram)
-                        </a>
-                    </div>
-
-                    <div class="social-buttons">
-                        <a href="https://wa.me/201092519210" target="_blank" class="social-icon-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://t.me/abdou25008" target="_blank" class="social-icon-btn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                        <a href="https://github.com/abdou25008" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:abdou25008@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-at"></i></a>
-                    </div>
+                    <div class="metric-number-big" data-editable="true">05</div>
+                    <div class="metric-label-main" data-editable="true">قنوات محتوى دولية</div>
+                    <div class="metric-desc-sub" data-editable="true">شبكة إنتاج ذاتية القيادة بالكامل</div>
                 </div>
 
-                <!-- كارت النموذج التفاعلي (Terminal Contact Form) -->
-                <div class="terminal-form-card">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <div class="terminal-dot dot-red"></div>
-                            <div class="terminal-dot dot-yellow"></div>
-                            <div class="terminal-dot dot-green"></div>
-                        </div>
-                        <span>SECURE_TRANSMISSION_PROTOCOL</span>
+                <div class="metric-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذا الرقم"><i class="fa-solid fa-trash"></i></button>
                     </div>
+                    <div class="metric-number-big" data-editable="true">+10M</div>
+                    <div class="metric-label-main" data-editable="true">مشاهدة تراكمية عالمية</div>
+                    <div class="metric-desc-sub" data-editable="true">محتوى سينمائي ووثائقي متميز</div>
+                </div>
 
-                    <!-- نموذج الإرسال المتوافق مع Formspree / Web3Forms -->
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">> USER_IDENTIFIER (الاسم):</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="اكتب اسمك الكريم" required>
-                        </div>
+                <div class="metric-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذا الرقم"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div class="metric-number-big" data-editable="true">100%</div>
+                    <div class="metric-label-main" data-editable="true">أتمتة ذكية متكاملة</div>
+                    <div class="metric-desc-sub" data-editable="true">توفير الوقت وتسريع اتخاذ القرار</div>
+                </div>
 
-                        <div class="form-group">
-                            <label for="email">> CONTACT_EMAIL (البريد الإلكتروني):</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="name@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">> SERVICE_TYPE (نوع الخدمة المطلوبة):</label>
-                            <select id="service" name="service" class="form-input" style="background: #101010;">
-                                <option value="AI Automation">أتمتة العمليات والذكاء الاصطناعي (Automation)</option>
-                                <option value="Web/App Development">تطوير المواقع والتطبيقات (Development)</option>
-                                <option value="Financial & Business Solutions">حلول مالية ومحاسبية (Business Solutions)</option>
-                                <option value="Media & Production">إدارة وإنتاج المحتوى (Media)</option>
-                                <option value="Consultation">استشارة تقنية خاصة (Consultation)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">> PAYLOAD (تفاصيل الرسالة أو المشروع):</label>
-                            <textarea id="message" name="message" class="form-textarea" placeholder="اشرح باختصار متطلبات مشروعك..." required></textarea>
-                        </div>
-
-                        <button type="submit" id="submitBtn" class="submit-btn">
-                            <i class="fa-solid fa-paper-plane"></i> TRANSMIT_PAYLOAD()
-                        </button>
-
-                        <div id="formStatus" class="form-status"></div>
-                    </form>
+                <div class="metric-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذا الرقم"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div class="metric-number-big" data-editable="true">24/7</div>
+                    <div class="metric-label-main" data-editable="true">جاهزية تشغيلية مستمرة</div>
+                    <div class="metric-desc-sub" data-editable="true">أنظمة وبث وإنتاج مستمر بلا انقطاع</div>
                 </div>
 
             </div>
         </section>
+
+        <!-- ================= مساحة مستقلة 1: منظومة إدارة اللوجستيات والشحن والمتجر الإلكتروني ================= -->
+        <section id="logistics-platform" class="showcase-standalone-section">
+            <div class="logistics-cinematic-card">
+                <div class="showcase-grid-content">
+                    <div>
+                        <div class="badge-pill-cyan">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span data-editable="true">أحدث وأقوى منظومة تشغيلية متكاملة</span>
+                        </div>
+
+                        <h2 class="showcase-title-big" data-editable="true">
+                            منظومة إدارة اللوجستيات وعمليات الشحن والمتجر الذكي
+                        </h2>
+                        <span class="showcase-subtitle-en" style="color: #38bdf8;" data-editable="true">
+                            ElQaed Logistics, Fleet Operations & E-Commerce Suite
+                        </span>
+
+                        <p class="showcase-desc-text" data-editable="true">
+                            تطبيق متكامل لإدارة سلاسل الإمداد، وتتبع الشحنات والأسطول في الوقت الفعلي، وتوزيع خطوط السير على المناديب، والربط المباشر مع المتجر الإلكتروني وإدارة المخازن، مع لوحة تحكم مالية دقيقة لحسابات التحصيل اليومي وتكاليف الشحن.
+                        </p>
+
+                        <div class="showcase-badges-grid">
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-map-location-dot" style="color: #38bdf8;"></i>
+                                <span>تتبع حي وفوري للشحنات والمناديب والأسطول</span>
+                            </div>
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-boxes-packing" style="color: #38bdf8;"></i>
+                                <span>إدارة متكاملة للمخزون وطلبات المتجر الإلكتروني</span>
+                            </div>
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-file-invoice-dollar" style="color: #38bdf8;"></i>
+                                <span>أتمتة الفواتير وحسابات التحصيل والأرباح</span>
+                            </div>
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-gauge-high" style="color: #38bdf8;"></i>
+                                <span>لوحة تحكم إدارية شاملة متجاوبة مع كافة الشاشات</span>
+                            </div>
+                        </div>
+
+                        <a href="https://elqaedtravel-netizen.github.io/logistics/" target="_blank" class="btn-launch-cyan" id="launchLogisticsBtn">
+                            <i class="fa-solid fa-rocket"></i> <span data-editable="true">فتح وتشغيل منظومة اللوجستيات الحية</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem; margin-right: 5px;"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tech Box HUD -->
+                    <div class="showcase-visual-hud">
+                        <div class="hud-icon-floating" style="color: #38bdf8;">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 8px;">
+                            elqaedtravel-netizen.github.io/logistics
+                        </div>
+                        <p style="color: #bae6fd; font-size: 0.95rem; font-weight: 600; margin-bottom: 20px;">
+                            Next-Gen Autonomous Logistics & Delivery Control Dashboard
+                        </p>
+                        <span style="background: rgba(56, 189, 248, 0.15); border: 1px solid #38bdf8; color: #7dd3fc; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">
+                            <i class="fa-solid fa-circle-check"></i> تطبيق نشط ومكتمل
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= مساحة مستقلة 2: استوديو الذكاء الاصطناعي الصوتي والموسيقي ================= -->
+        <section id="voice-studio" class="showcase-standalone-section">
+            <div class="audio-cinematic-card">
+                <div class="showcase-grid-content">
+                    <div>
+                        <div class="badge-pill-purple">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span data-editable="true">استوديو صوتي وموسيقي سحابي فائق الدقة</span>
+                        </div>
+
+                        <h2 class="showcase-title-big" data-editable="true">
+                            استوديو الذكاء الاصطناعي الصوتي والموسيقي المتكامل
+                        </h2>
+                        <span class="showcase-subtitle-en" style="color: #c084fc;" data-editable="true">
+                            Abdou Studio VO & AI Music Synthesis Suite
+                        </span>
+
+                        <p class="showcase-desc-text" data-editable="true">
+                            منصة برمجية متطورة لتوليد الفويس أوفر (Voiceover) الواقعي البشري بنبرات ولهجات متعددة، وتأليف وهندسة الموسيقى والمؤثرات الصوتية التوليدية بدقة استوديو 48kHz دون الحاجة لمعدات تسجيل معقدة.
+                        </p>
+
+                        <div class="showcase-badges-grid">
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-microphone-lines" style="color: #c084fc;"></i>
+                                <span>توليد فويس أوفر واقعي بشري بنبرات متعددة</span>
+                            </div>
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-music" style="color: #c084fc;"></i>
+                                <span>تأليف وهندسة المقطوعات والمؤثرات بالذكاء الاصطناعي</span>
+                            </div>
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-sliders" style="color: #c084fc;"></i>
+                                <span>ماسترنج وتحسين الصوت التلقائي وعزل الضوضاء</span>
+                            </div>
+                            <div class="showcase-feat-box" data-editable="true">
+                                <i class="fa-solid fa-cloud-bolt" style="color: #c084fc;"></i>
+                                <span>تشغيل فوري وسريع عبر المتصفح ومعالجة سحابية</span>
+                            </div>
+                        </div>
+
+                        <a href="https://abdou-studio-vo.ai.studio" target="_blank" class="btn-launch-purple" id="launchVoiceStudioBtn">
+                            <i class="fa-solid fa-play"></i> <span data-editable="true">فتح وتشغيل استوديو الصوت والموسيقى</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem; margin-right: 5px;"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tech Box HUD -->
+                    <div class="showcase-visual-hud" style="border-color: rgba(168, 85, 247, 0.4);">
+                        <div class="hud-icon-floating" style="color: #a855f7;">
+                            <i class="fa-solid fa-headphones-simple"></i>
+                        </div>
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 8px;">
+                            abdou-studio-vo.ai.studio
+                        </div>
+                        <p style="color: #e9d5ff; font-size: 0.95rem; font-weight: 600; margin-bottom: 20px;">
+                            Professional AI Voiceover & Music Synthesis Suite
+                        </p>
+                        <span style="background: rgba(168, 85, 247, 0.15); border: 1px solid #a855f7; color: #d8b4fe; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">
+                            <i class="fa-solid fa-bolt"></i> جاهز للاستخدام المباشر
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= الركائز والحلول الاستراتيجية (Bento Grid) ================= -->
+        <section id="pillars" style="padding-top: 20px;">
+            <div class="section-headline-center">
+                <span class="prestige-tag" data-editable="true">الركائز والحلول التنفيذية</span>
+                <h2 class="section-title-bold" data-editable="true">الهندسة الرقمية وحلول الأعمال المتكاملة</h2>
+                <p class="section-desc-light" data-editable="true">نحول التحديات المعقدة إلى أنظمة ذكية ذاتية العمل تحقق نتائج ملموسة.</p>
+            </div>
+
+            <div class="pillars-bento-grid" id="pillarsContainer">
+                
+                <!-- ركيزة 1 -->
+                <div class="pillar-card-luxury">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه الركيزة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="pillar-icon-box"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 class="pillar-card-title" data-editable="true">أتمتة الأعمال بالذكاء الاصطناعي</h3>
+                        <p class="pillar-card-text" data-editable="true">
+                            تصميم وبناء مسارات عمل ذكية ذاتية القيادة (AI Autonomous Workflows) تعتمد على أحدث النماذج اللغوية لأداء العمليات الروتينية والمعقدة بدقة وسرعة فائقة.
+                        </p>
+                    </div>
+                    <ul class="pillar-bullet-points">
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> وكلاء ذكاء اصطناعي لتنسيق المهام</li>
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> أتمتة خدمة العملاء وإدارة البيانات</li>
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> ربط الأنظمة السحابية والـ APIs</li>
+                    </ul>
+                </div>
+
+                <!-- ركيزة 2 -->
+                <div class="pillar-card-luxury">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه الركيزة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="pillar-icon-box" style="color: var(--blue-royal); background: rgba(56, 189, 248, 0.1);"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="pillar-card-title" data-editable="true">الهندسة المالية ودعم القرار</h3>
+                        <p class="pillar-card-text" data-editable="true">
+                            بناء النماذج المحاسبية الاستراتيجية ولوحات التحكم التفاعلية، وتحويل البيانات المالية والتكاليف إلى رؤى واضحة تضمن اتخاذ القرارات الصحيحة في الوقت المناسب.
+                        </p>
+                    </div>
+                    <ul class="pillar-bullet-points">
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> تخطيط مالي وتنبؤات تدفقات نقدية</li>
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> لوحات تحكم ذكاء الأعمال (Power BI)</li>
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> تقييم تكاليف وتسعير ديناميكي</li>
+                    </ul>
+                </div>
+
+                <!-- ركيزة 3 -->
+                <div class="pillar-card-luxury">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه الركيزة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="pillar-icon-box" style="color: #a855f7; background: rgba(168, 85, 247, 0.1);"><i class="fa-solid fa-clapperboard"></i></div>
+                        <h3 class="pillar-card-title" data-editable="true">الإنتاج الإعلامي الدولي</h3>
+                        <p class="pillar-card-text" data-editable="true">
+                            إدارة شبكة متكاملة من 5 قنوات رقمية عالمية تعتمد على أحدث أدوات التوليد الصوتي والمرئي لبناء أصول رقمية سينمائية تخاطب الملايين حول العالم.
+                        </p>
+                    </div>
+                    <ul class="pillar-bullet-points">
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> توليد مشاهد سينمائية وقصص وثائقية</li>
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> هندسة واستنساخ الأصوات الاحترافية</li>
+                        <li data-editable="true"><i class="fa-solid fa-check-double"></i> استراتيجيات انتشار وتصدر المنصات</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= الشبكة الإعلامية الدولية ================= -->
+        <section id="media-network" class="media-network-section">
+            <div class="section-headline-center">
+                <span class="prestige-tag" data-editable="true">الشبكة الإعلامية العالمية</span>
+                <h2 class="section-title-bold" data-editable="true">إمبراطورية صناعة المحتوى الرقمي</h2>
+                <p class="section-desc-light" data-editable="true">منظومة إنتاج متطورة تخاطب الفضول الإنساني وتستكشف آفاق المستقبل والتاريخ والمال.</p>
+            </div>
+
+            <!-- البانر السينمائي الفخم -->
+            <div class="media-cinematic-banner">
+                <img src="assets/media_network.jpg" alt="Global Media Production Network" id="mediaBannerPhoto">
+                <div class="media-banner-content-box">
+                    <div>
+                        <h3 style="font-size: 2rem; font-weight: 900; color: #fff; margin-bottom: 8px;" data-editable="true">شبكة الإنتاج الإعلامي المستقل</h3>
+                        <p style="color: var(--gold-light); font-size: 1.1rem; font-weight: 600;" data-editable="true">إنتاج وثائقي وسينمائي بأعلى معايير الدقة والابتكار</p>
+                    </div>
+                    <span style="background: rgba(212, 175, 55, 0.15); border: 1px solid var(--gold-primary); color: var(--gold-light); padding: 10px 24px; border-radius: 30px; font-weight: 800; font-size: 0.95rem;" data-editable="true">
+                        <i class="fa-solid fa-satellite-dish"></i> 5 قنوات في بث مستمر
+                    </span>
+                </div>
+            </div>
+
+            <!-- كروت القنوات الـ 5 الفخمة -->
+            <div class="channels-cards-grid" id="channelsContainer">
+                
+                <!-- Channel 1 -->
+                <div class="channel-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه القناة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="channel-card-top">
+                            <span class="channel-order-badge" data-editable="true">القناة الأولى</span>
+                            <span style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> موثقة</span>
+                        </div>
+                        <h4 class="channel-card-title" data-editable="true">السينما التوليدية والخيال العلمي</h4>
+                        <p class="channel-card-desc" data-editable="true">تجارب بصرية وقصص سينمائية تُولد بالكامل عبر خوارزميات التوليد البصري والهندسة الصوتية فائقة النقاء.</p>
+                    </div>
+                    <a href="https://youtube.com" target="_blank" class="btn-visit-official">
+                        <i class="fa-brands fa-youtube"></i> <span data-editable="true">زيارة القناة الرسمية</span>
+                    </a>
+                </div>
+
+                <!-- Channel 2 -->
+                <div class="channel-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه القناة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="channel-card-top">
+                            <span class="channel-order-badge" data-editable="true">القناة الثانية</span>
+                            <span style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> موثقة</span>
+                        </div>
+                        <h4 class="channel-card-title" data-editable="true">وثائقيات المستقبل والذكاء الاصطناعي</h4>
+                        <p class="channel-card-desc" data-editable="true">سلاسل وثائقية تستكشف الذكاء الاصطناعي العام (AGI)، الثورات التقنية، ومستقبل الإنسانية في العقود القادمة.</p>
+                    </div>
+                    <a href="https://youtube.com" target="_blank" class="btn-visit-official">
+                        <i class="fa-brands fa-youtube"></i> <span data-editable="true">زيارة القناة الرسمية</span>
+                    </a>
+                </div>
+
+                <!-- Channel 3 -->
+                <div class="channel-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه القناة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="channel-card-top">
+                            <span class="channel-order-badge" data-editable="true">القناة الثالثة</span>
+                            <span style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> موثقة</span>
+                        </div>
+                        <h4 class="channel-card-title" data-editable="true">أسرار التاريخ والحضارات القديمة</h4>
+                        <p class="channel-card-desc" data-editable="true">إعادة بناء المشاهد التاريخية العظيمة وسرد ألغاز الحضارات المفقودة بأسلوب سينمائي يخلب الألباب.</p>
+                    </div>
+                    <a href="https://youtube.com" target="_blank" class="btn-visit-official">
+                        <i class="fa-brands fa-youtube"></i> <span data-editable="true">زيارة القناة الرسمية</span>
+                    </a>
+                </div>
+
+                <!-- Channel 4 -->
+                <div class="channel-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه القناة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="channel-card-top">
+                            <span class="channel-order-badge" data-editable="true">القناة الرابعة</span>
+                            <span style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> موثقة</span>
+                        </div>
+                        <h4 class="channel-card-title" data-editable="true">الاقتصاد العالمي وصراع الشركات</h4>
+                        <p class="channel-card-desc" data-editable="true">تحليلات استراتيجية عميقة لأقوى الاقتصادات والأسواق، والحروب التجارية الخفية التي تشكل عالمنا.</p>
+                    </div>
+                    <a href="https://youtube.com" target="_blank" class="btn-visit-official">
+                        <i class="fa-brands fa-youtube"></i> <span data-editable="true">زيارة القناة الرسمية</span>
+                    </a>
+                </div>
+
+                <!-- Channel 5 -->
+                <div class="channel-luxury-card">
+                    <div class="card-action-bar">
+                        <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف هذه القناة"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div>
+                        <div class="channel-card-top">
+                            <span class="channel-order-badge" data-editable="true">القناة الخامسة</span>
+                            <span style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> موثقة</span>
+                        </div>
+                        <h4 class="channel-card-title" data-editable="true">عجائب النفس والسلوك البشري</h4>
+                        <p class="channel-card-desc" data-editable="true">سبر أغوار العقل، وفك شفرات السلوك الإنساني والتأثير النفسي بأسلوب علمي وقصصي محكم.</p>
+                    </div>
+                    <a href="https://youtube.com" target="_blank" class="btn-visit-official">
+                        <i class="fa-brands fa-youtube"></i> <span data-editable="true">زيارة القناة الرسمية</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= جناح التواصل والاستشارات التنفيذية ================= -->
+        <section id="contact" class="executive-contact-suite">
+            <div class="suite-grid">
+                
+                <div class="suite-info">
+                    <span class="prestige-tag" data-editable="true">قنوات التواصل المباشرة</span>
+                    <h3 data-editable="true">جاهز لنقل أعمالك إلى المستوى التالي؟</h3>
+                    <p data-editable="true">
+                        سواء كنت تسعى لأتمتة عمليات مؤسستك، بناء منصة رقمية ذكية، أو تطوير استراتيجيات مالية وإعلامية مؤثرة؛ يسعدني التواصل معك ومناقشة تفاصيل مشروعك.
+                    </p>
+
+                    <div class="vip-contact-channels">
+                        <a href="https://wa.me/201092519210" target="_blank" class="vip-channel-item" id="vipWaItem">
+                            <div class="vip-channel-icon" style="background: rgba(37, 211, 102, 0.15); color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <div style="font-size: 0.9rem; color: var(--text-muted);" data-editable="true">واتساب المباشر:</div>
+                                <div class="vip-phone-text" id="vipWaText" data-editable="true">+20 109 251 9210</div>
+                            </div>
+                        </a>
+
+                        <a href="https://t.me/abdou25008" target="_blank" class="vip-channel-item" id="vipTgItem">
+                            <div class="vip-channel-icon" style="background: rgba(56, 189, 248, 0.15); color: var(--blue-royal);"><i class="fa-brands fa-telegram"></i></div>
+                            <div>
+                                <div style="font-size: 0.9rem; color: var(--text-muted);" data-editable="true">تيليجرام الفوري:</div>
+                                <div class="vip-phone-text" style="color: var(--blue-royal);" id="vipTgText" data-editable="true">@abdou25008</div>
+                            </div>
+                        </a>
+
+                        <a href="mailto:abdou25008@gmail.com" class="vip-channel-item" id="vipMailItem">
+                            <div class="vip-channel-icon" style="background: rgba(212, 175, 55, 0.15); color: var(--gold-primary);"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <div style="font-size: 0.9rem; color: var(--text-muted);" data-editable="true">البريد الإلكتروني المباشر:</div>
+                                <div class="vip-phone-text" style="color: #fff;" id="vipMailText" data-editable="true">abdou25008@gmail.com</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- نموذج الاستشارة التنفيذية الذكي المباشر -->
+                <div class="executive-form-card">
+                    <h4 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; color: #fff;" data-editable="true">طلب استشارة أو عرض مشروع</h4>
+                    
+                    <form id="luxuryForm" onsubmit="handleDirectConsultation(event)">
+                        <div class="form-row-group">
+                            <label for="clientName" data-editable="true">الاسم الكريم / اسم المؤسسة:</label>
+                            <input type="text" id="clientName" name="name" class="luxury-input" placeholder="اكتب اسمك أو شركتك" required>
+                        </div>
+
+                        <div class="form-row-group">
+                            <label for="clientContact" data-editable="true">رقم الهاتف أو البريد الإلكتروني:</label>
+                            <input type="text" id="clientContact" name="contact" class="luxury-input" placeholder="رقم الواتساب أو الإيميل" required>
+                        </div>
+
+                        <div class="form-row-group">
+                            <label for="projectDetails" data-editable="true">تفاصيل المشروع أو المتطلبات:</label>
+                            <textarea id="projectDetails" name="details" class="luxury-textarea" placeholder="اشرح باختصار متطلبات مشروعك..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitLuxuryBtn" class="btn-submit-luxury">
+                            <i class="fa-solid fa-paper-plane"></i> <span data-editable="true">إرسال الطلب مباشرة</span>
+                        </button>
+                    </form>
+
+                    <div id="luxuryFeedback" class="form-live-status-box"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= الفوتر الفاخر ================= -->
+        <footer id="section-footer">
+            <div class="footer-brand-title">
+                <span id="footerBrandName" data-editable="true">Abdou Ali Mousa</span> <span style="color: var(--gold-primary);">|</span> <span id="footerBrandRole" data-editable="true">AI & Digital Systems Architect</span>
+            </div>
+            <p class="footer-copyright" data-editable="true">جميع الحقوق محفوظة &copy; 2026 Abdou Ali Mousa. صُمم بأعلى معايير الإتقان والفخامة.</p>
+        </footer>
 
     </div>
 
-    <!-- الفوتر -->
-    <footer>
-        <p>SYSTEM.RUN // &copy; 2026 Abdou Ali. All rights reserved.</p>
-        <div class="footer-time" id="systemClock">[LIVE_CLOCK: SYSTEM SYNCED]</div>
-    </footer>
-
-    <!-- سكربت التفاعلات والحركات ونموذج الإرسال -->
-    <script>
-        // 1. تأثير الكتابة الآلية للمسمى الوظيفي
-        const titles = [
-            "> AI & Digital Systems Architect",
-            "> Full-Stack Automation Engineer",
-            "> Decision Support & Financial Modeler",
-            "> Autonomous Media Producer"
-        ];
-        
-        let titleIdx = 0;
-        let charIdx = 0;
-        let isDeleting = false;
-        const typewriterEl = document.getElementById("typewriter-text");
-
-        function typeEffect() {
-            const currentTitle = titles[titleIdx];
-            if (isDeleting) {
-                typewriterEl.textContent = currentTitle.substring(0, charIdx - 1);
-                charIdx--;
-            } else {
-                typewriterEl.textContent = currentTitle.substring(0, charIdx + 1);
-                charIdx++;
-            }
-
-            let typeSpeed = isDeleting ? 40 : 80;
-
-            if (!isDeleting && charIdx === currentTitle.length) {
-                typeSpeed = 2200;
-                isDeleting = true;
-            } else if (isDeleting && charIdx === 0) {
-                isDeleting = false;
-                titleIdx = (titleIdx + 1) % titles.length;
-                typeSpeed = 500;
-            }
-
-            setTimeout(typeEffect, typeSpeed);
-        }
-        document.addEventListener("DOMContentLoaded", typeEffect);
-
-        // 2. تحديث ساعة النظام الحية في الفوتر
-        function updateClock() {
-            const now = new Date();
-            const timeStr = now.toISOString().replace('T', ' ').substring(0, 19) + " UTC";
-            const clockEl = document.getElementById("systemClock");
-            if (clockEl) {
-                clockEl.textContent = `[NODE_TIME: ${timeStr}] // LATENCY: 12ms`;
-            }
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // 3. إرسال النموذج بنظام AJAX مع ردود فعل شاشات السايبربانك (Cyber Terminal Output)
-        const contactForm = document.getElementById("contactForm");
-        const submitBtn = document.getElementById("submitBtn");
-        const formStatus = document.getElementById("formStatus");
-
-        contactForm.addEventListener("submit", async function(e) {
-            e.preventDefault();
+    <!-- =========================================================================
+         لوحة تحكم المالك الشاملة (MASTER EXECUTIVE OWNER DASHBOARD)
+         ========================================================================= -->
+    <div class="studio-modal-overlay" id="masterDashboardModal">
+        <div class="studio-master-dashboard">
             
-            // حالة جاري الإرسال
+            <div class="studio-dash-header">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span class="brand-monogram" style="font-size: 0.95rem; padding: 5px 12px;">AAM STUDIO</span>
+                    <h3 style="color: #fff; font-size: 1.3rem; font-weight: 800;">لوحة تحكم المالك الشاملة</h3>
+                </div>
+                <button onclick="closeStudioMaster()" style="background: transparent; border: none; color: #fff; font-size: 1.6rem; cursor: pointer;">&times;</button>
+            </div>
+
+            <div class="dash-nav-tabs">
+                <button class="dash-tab-btn active" data-target="tab-visual-edit">
+                    <i class="fa-solid fa-pen-to-square"></i> التعديل البصري الحي
+                </button>
+                <button class="dash-tab-btn" data-target="tab-branding-content">
+                    <i class="fa-solid fa-font"></i> الهوية والنصوص
+                </button>
+                <button class="dash-tab-btn" data-target="tab-themes-styles">
+                    <i class="fa-solid fa-palette"></i> القوالب والألوان
+                </button>
+                <button class="dash-tab-btn" data-target="tab-sections-manager">
+                    <i class="fa-solid fa-layer-group"></i> إدارة الأقسام
+                </button>
+                <button class="dash-tab-btn" data-target="tab-add-items">
+                    <i class="fa-solid fa-circle-plus"></i> إضافة بنود وكروت
+                </button>
+                <button class="dash-tab-btn" data-target="tab-media-files">
+                    <i class="fa-solid fa-images"></i> الصور والوسائط
+                </button>
+                <button class="dash-tab-btn" data-target="tab-export-security">
+                    <i class="fa-solid fa-shield-keyhole"></i> الحفظ والتصدير والأمان
+                </button>
+            </div>
+
+            <!-- 1. تبويب التعديل البصري الحي -->
+            <div class="dash-tab-content active" id="tab-visual-edit">
+                <div style="background: rgba(212, 175, 55, 0.08); border: 1px solid var(--border-gold); padding: 25px; border-radius: 16px; margin-bottom: 25px;">
+                    <h4 style="color: var(--gold-primary); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> وضع التعديل الحي على الصفحة (Live In-Page Editing)
+                    </h4>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px;">
+                        عند تفعيل هذا الوضع، ستتحول كل فقرة، عنوان، مسمى، ورابط في موقعك إلى نص تفاعلي يمكنك تعديله أو مسحه أو إضافة أسطر جديدة عليه بالماوس مباشرة كأنك تستخدم محرر نصوص.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button class="btn-luxury-primary" onclick="toggleVisualEditMode(true)">
+                            <i class="fa-solid fa-play"></i> تفعيل وضع التعديل البصري الآن
+                        </button>
+                        <button class="btn-owner-panel" onclick="saveAllStudioChanges()">
+                            <i class="fa-solid fa-floppy-disk"></i> حفظ التعديلات
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. تبويب الهوية والنصوص -->
+            <div class="dash-tab-content" id="tab-branding-content">
+                <div class="dash-grid-2col">
+                    <div class="form-row-group">
+                        <label>الاسم الرسمي (English Name):</label>
+                        <input type="text" id="dashNameInput" class="luxury-input" value="Abdou Ali Mousa">
+                    </div>
+                    <div class="form-row-group">
+                        <label>المسمى الوظيفي (English Job Title):</label>
+                        <input type="text" id="dashRoleInput" class="luxury-input" value="AI & Digital Systems Architect">
+                    </div>
+                </div>
+
+                <div class="form-row-group">
+                    <label>عنوان الهيرو الرئيسي:</label>
+                    <input type="text" id="dashHeroTitleInput" class="luxury-input" value="نحن لا نتوقع المستقبل.. بل نبنيه بالأنظمة والذكاء الاصطناعي.">
+                </div>
+
+                <div class="form-row-group">
+                    <label>البيان والنبذة التنفيذية:</label>
+                    <textarea id="dashHeroBioInput" class="luxury-textarea"></textarea>
+                </div>
+
+                <div class="dash-grid-2col">
+                    <div class="form-row-group">
+                        <label>رقم واتساب:</label>
+                        <input type="text" id="dashWaInput" class="luxury-input" value="+20 109 251 9210">
+                    </div>
+                    <div class="form-row-group">
+                        <label>يوزر تيليجرام:</label>
+                        <input type="text" id="dashTgInput" class="luxury-input" value="@abdou25008">
+                    </div>
+                </div>
+
+                <div class="form-row-group">
+                    <label>البريد الإلكتروني:</label>
+                    <input type="email" id="dashEmailInput" class="luxury-input" value="abdou25008@gmail.com">
+                </div>
+
+                <button class="btn-luxury-primary" onclick="applyBrandingForm()" style="margin-top: 10px;">
+                    <i class="fa-solid fa-check"></i> تطبيق وتحديث النصوص فوراً
+                </button>
+            </div>
+
+            <!-- 3. تبويب القوالب والألوان -->
+            <div class="dash-tab-content" id="tab-themes-styles">
+                <h4 style="color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 15px;">اختر القالب اللوني للموقع:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                    <button class="btn-owner-panel" style="padding: 16px; justify-content: center; border-color: #d4af37;" onclick="setStudioTheme('gold')">
+                        <span style="width: 14px; height: 14px; background: #d4af37; border-radius: 50%;"></span> الذهب الملكي (Luxury Gold)
+                    </button>
+                    <button class="btn-owner-panel" style="padding: 16px; justify-content: center; border-color: #00f2fe;" onclick="setStudioTheme('cyan')">
+                        <span style="width: 14px; height: 14px; background: #00f2fe; border-radius: 50%;"></span> السايبر التقني (Cyber Cyan)
+                    </button>
+                    <button class="btn-owner-panel" style="padding: 16px; justify-content: center; border-color: #10b981;" onclick="setStudioTheme('emerald')">
+                        <span style="width: 14px; height: 14px; background: #10b981; border-radius: 50%;"></span> الزمرد الفاخر (Emerald Matrix)
+                    </button>
+                    <button class="btn-owner-panel" style="padding: 16px; justify-content: center; border-color: #6366f1;" onclick="setStudioTheme('sapphire')">
+                        <span style="width: 14px; height: 14px; background: #6366f1; border-radius: 50%;"></span> الياقوت الأزرق (Deep Sapphire)
+                    </button>
+                    <button class="btn-owner-panel" style="padding: 16px; justify-content: center; border-color: #f43f5e;" onclick="setStudioTheme('ruby')">
+                        <span style="width: 14px; height: 14px; background: #f43f5e; border-radius: 50%;"></span> الياقوت الأحمر (Crimson Tech)
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. تبويب إدارة وحذف الأقسام -->
+            <div class="dash-tab-content" id="tab-sections-manager">
+                <h4 style="color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 15px;">التحكم في ظهور واختفاء أقسام الموقع:</h4>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-image"></i> قسم الواجهة الرئيسية (Hero Section)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('about')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-truck-fast"></i> مساحة منظومة اللوجستيات والشحن (Logistics Platform)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('logistics-platform')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-headphones"></i> مساحة استوديو الذكاء الاصطناعي الصوتي (Voice & Music Studio)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('voice-studio')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-chart-simple"></i> شريط الأرقام والإنجازات (Metrics Bar)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('section-metrics')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-cubes"></i> الركائز والحلول الاستراتيجية (Pillars Grid)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('pillars')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-tv"></i> الشبكة الإعلامية والقنوات (Media Network)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('media-network')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-glass);">
+                        <span style="font-weight: 700;"><i class="fa-solid fa-envelope-open-text"></i> جناح التواصل والاستشارات (Contact Suite)</span>
+                        <button class="btn-owner-panel" onclick="toggleSectionVisibility('contact')"><i class="fa-solid fa-eye-slash"></i> إظهار / إخفاء</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. تبويب إضافة بنود وكروت -->
+            <div class="dash-tab-content" id="tab-add-items">
+                <h4 style="color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 15px;">إضافة عناصر جديدة للموقع:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                    <button class="btn-owner-panel" style="padding: 22px; flex-direction: column; gap: 10px; text-align: center;" onclick="addNewPillarCard()">
+                        <i class="fa-solid fa-gem" style="font-size: 2rem; color: var(--gold-primary);"></i>
+                        <span style="font-size: 1rem;">+ إضافة ركيزة / خدمة جديدة</span>
+                    </button>
+                    <button class="btn-owner-panel" style="padding: 22px; flex-direction: column; gap: 10px; text-align: center;" onclick="addNewChannelCard()">
+                        <i class="fa-solid fa-tv" style="font-size: 2rem; color: #ff5555;"></i>
+                        <span style="font-size: 1rem;">+ إضافة قناة جديدة للشبكة</span>
+                    </button>
+                    <button class="btn-owner-panel" style="padding: 22px; flex-direction: column; gap: 10px; text-align: center;" onclick="addNewMetricCard()">
+                        <i class="fa-solid fa-chart-line" style="font-size: 2rem; color: var(--blue-royal);"></i>
+                        <span style="font-size: 1rem;">+ إضافة كرت إنجاز ورقم جديد</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. تبويب الصور والوسائط -->
+            <div class="dash-tab-content" id="tab-media-files">
+                <div class="form-row-group">
+                    <label>تغيير الصورة الشخصية (Hero Portrait):</label>
+                    <input type="file" id="dashHeroImgUpload" accept="image/*" class="luxury-input">
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px;">اختر صورة من جهازك ليتم تحديثها فوراً في إطار الواجهة الأنيق.</p>
+                </div>
+
+                <div class="form-row-group" style="margin-top: 25px;">
+                    <label>تغيير بانر استوديو القنوات (Media Network Banner):</label>
+                    <input type="file" id="dashMediaBannerUpload" accept="image/*" class="luxury-input">
+                </div>
+            </div>
+
+            <!-- 7. تبويب الحفظ والتصدير والأمان -->
+            <div class="dash-tab-content" id="tab-export-security">
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); padding: 25px; border-radius: 16px; margin-bottom: 25px;">
+                    <h4 style="color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 12px;">حفظ وتصدير ملف الموقع:</h4>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button class="btn-luxury-primary" onclick="saveAllStudioChanges()">
+                            <i class="fa-solid fa-floppy-disk"></i> حفظ كافة التعديلات في المتصفح
+                        </button>
+                        <button class="btn-gold-nav" onclick="exportCleanHtmlFile()">
+                            <i class="fa-solid fa-download"></i> تصدير وتحميل ملف index.html المحدث
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-row-group">
+                    <label>تغيير رمز الأمان السري (PIN):</label>
+                    <input type="password" id="dashNewPinInput" class="luxury-input" placeholder="الرمز الحالي: 25008">
+                    <button class="btn-owner-panel" onclick="updateMasterPin()" style="margin-top: 10px;">
+                        <i class="fa-solid fa-key"></i> تحديث رمز الأمان
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- نافذة تسجيل الدخول للمالك (PIN Authorization Modal) -->
+    <div class="studio-modal-overlay" id="ownerLoginModal">
+        <div style="background: #0d121d; border: 2px solid var(--gold-primary); border-radius: 24px; padding: 35px; max-width: 460px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.9);">
+            <div style="font-size: 3.5rem; color: var(--gold-primary); margin-bottom: 15px;"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 style="color: #fff; font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;">استوديو التحكم الشامل للمالك</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 20px;">أدخل رمز الأمان للدخول إلى لوحة التحكم:</p>
+            
+            <input type="password" id="ownerPinField" class="luxury-input" style="text-align: center; font-size: 1.5rem; letter-spacing: 5px; max-width: 220px; margin: auto; display: block;" placeholder="••••">
+            
+            <div style="display: flex; justify-content: center; gap: 12px; margin-top: 20px;">
+                <button class="btn-luxury-primary" id="submitPinBtn" style="padding: 12px 28px;">دخول الاستوديو</button>
+                <button class="btn-owner-panel" onclick="closeOwnerLogin()">إلغاء</button>
+            </div>
+            <p id="loginPinErr" style="color: #ff4757; font-size: 0.9rem; margin-top: 12px; display: none;">رمز الأمان غير صحيح!</p>
+        </div>
+    </div>
+
+    <!-- ================= سكريبت الاستوديو والتعديل الكامل ================= -->
+    <script>
+        let MASTER_PIN = localStorage.getItem("aa_master_pin") || "25008";
+        let isVisualEditing = false;
+
+        // معالجة إرسال النموذج الذكية والمباشرة
+        function handleDirectConsultation(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("clientName").value.trim();
+            const contact = document.getElementById("clientContact").value.trim();
+            const details = document.getElementById("projectDetails").value.trim();
+            const submitBtn = document.getElementById("submitLuxuryBtn");
+            const feedbackBox = document.getElementById("luxuryFeedback");
+
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ENCRYPTING_AND_SENDING...`;
-            formStatus.className = "form-status status-loading";
-            formStatus.innerHTML = `> [CONNECTING] Establishing secure handshake with mail relay...`;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> جاري تأكيد الطلب وتوصيلك...`;
 
-            const formData = new FormData(contactForm);
+            const messageBody = `مرحباً بشمهندس عبده علي موسى، لدي طلب استشارة ومشروع جديد:\n\n` +
+                                `👤 الاسم / المؤسسة: ${name}\n` +
+                                `📞 وسيلة التواصل: ${contact}\n` +
+                                `📋 تفاصيل المشروع: ${details}\n\n` +
+                                `(تم الإرسال عبر المنصة الرسمية abdou-ali-mousa)`;
 
-            try {
-                const actionUrl = contactForm.getAttribute("action");
-                
-                const response = await fetch(actionUrl, {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+            const encodedMessage = encodeURIComponent(messageBody);
+            const waUrl = `https://wa.me/201092519210?text=${encodedMessage}`;
 
-                if (response.ok) {
-                    formStatus.className = "form-status status-success";
-                    formStatus.innerHTML = `> [SUCCESS 200] تم إرسال رسالتك بنجاح إلى abdou25008@gmail.com! سأتواصل معك قريباً.`;
-                    contactForm.reset();
-                } else {
-                    const data = await response.json();
-                    throw new Error(data.message || "Failed to deliver payload.");
-                }
-            } catch (err) {
-                formStatus.className = "form-status status-error";
-                formStatus.innerHTML = `> [TRANSMISSION_NOTICE] تم تجهيز البيانات. يمكنك أيضاً مراسلتي مباشرة عبر واتساب أو تيليجرام.`;
-            } finally {
+            feedbackBox.style.display = "block";
+            feedbackBox.style.background = "rgba(16, 185, 129, 0.12)";
+            feedbackBox.style.border = "1px solid #10b981";
+            feedbackBox.style.color = "#10b981";
+            feedbackBox.innerHTML = `
+                <div style="font-size: 1.15rem; margin-bottom: 8px;"><i class="fa-solid fa-circle-check"></i> تم استلام طلبك بنجاح يا ${name}!</div>
+                <div style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 12px;">جاري تحويلك للمحادثة المباشرة مع البشمهندس عبده لتأكيد البدء، أو اضغط الزر بالأسفل:</div>
+                <a href="${waUrl}" target="_blank" class="btn-whatsapp-luxury" style="padding: 10px 22px; font-size: 0.95rem; display: inline-flex;">
+                    <i class="fa-brands fa-whatsapp"></i> فتح المحادثة المباشرة الآن
+                </a>
+            `;
+
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> TRANSMIT_PAYLOAD()`;
+                submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> إرسال الطلب مباشرة`;
+                document.getElementById("luxuryForm").reset();
+            }, 1200);
+        }
+
+        // لوحة المالك
+        document.getElementById("openOwnerLoginBtn").addEventListener("click", () => {
+            document.getElementById("ownerLoginModal").style.display = "flex";
+            document.getElementById("ownerPinField").value = "";
+            document.getElementById("loginPinErr").style.display = "none";
+            document.getElementById("ownerPinField").focus();
+        });
+
+        function closeOwnerLogin() {
+            document.getElementById("ownerLoginModal").style.display = "none";
+        }
+
+        document.getElementById("submitPinBtn").addEventListener("click", handlePinAuth);
+        document.getElementById("ownerPinField").addEventListener("keyup", (e) => {
+            if (e.key === "Enter") handlePinAuth();
+        });
+
+        function handlePinAuth() {
+            const entered = document.getElementById("ownerPinField").value.trim();
+            if (entered === MASTER_PIN) {
+                closeOwnerLogin();
+                openStudioMaster();
+            } else {
+                document.getElementById("loginPinErr").style.display = "block";
+            }
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) {
+                e.preventDefault();
+                document.getElementById("ownerLoginModal").style.display = "flex";
             }
         });
+
+        function openStudioMaster() {
+            populateDashboardFields();
+            document.getElementById("masterDashboardModal").style.display = "flex";
+        }
+
+        function closeStudioMaster() {
+            document.getElementById("masterDashboardModal").style.display = "none";
+        }
+
+        const tabBtns = document.querySelectorAll(".dash-tab-btn");
+        const tabContents = document.querySelectorAll(".dash-tab-content");
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                tabBtns.forEach(b => b.classList.remove("active"));
+                tabContents.forEach(c => c.classList.remove("active"));
+                btn.classList.add("active");
+                document.getElementById(btn.getAttribute("data-target")).classList.add("active");
+            });
+        });
+
+        function toggleVisualEditMode(enable) {
+            isVisualEditing = enable;
+            document.body.classList.toggle("studio-edit-mode", enable);
+            document.querySelectorAll("[data-editable='true']").forEach(el => {
+                el.contentEditable = enable ? "true" : "false";
+            });
+            document.getElementById("quickStudioDock").style.display = enable ? "flex" : "none";
+            if (enable) {
+                closeStudioMaster();
+                alert("✏️ تم تفعيل وضع التعديل الحي! يمكنك الآن النقر على أي نص أو عنوان وتعديله مباشرة.");
+            }
+        }
+
+        function populateDashboardFields() {
+            document.getElementById("dashNameInput").value = document.getElementById("heroNameEn").textContent.trim();
+            document.getElementById("dashRoleInput").value = document.getElementById("heroRoleEn").textContent.trim();
+            document.getElementById("dashHeroTitleInput").value = document.getElementById("heroMainTitle").textContent.trim();
+            document.getElementById("dashHeroBioInput").value = document.getElementById("heroStatementText").textContent.trim();
+            document.getElementById("dashWaInput").value = document.getElementById("vipWaText").textContent.trim();
+            document.getElementById("dashTgInput").value = document.getElementById("vipTgText").textContent.trim();
+            document.getElementById("dashEmailInput").value = document.getElementById("vipMailText").textContent.trim();
+        }
+
+        function applyBrandingForm() {
+            const name = document.getElementById("dashNameInput").value;
+            const role = document.getElementById("dashRoleInput").value;
+            const title = document.getElementById("dashHeroTitleInput").value;
+            const bio = document.getElementById("dashHeroBioInput").value;
+            const wa = document.getElementById("dashWaInput").value;
+            const tg = document.getElementById("dashTgInput").value;
+            const email = document.getElementById("dashEmailInput").value;
+
+            document.getElementById("navBrandName").textContent = name;
+            document.getElementById("heroNameEn").textContent = name;
+            document.getElementById("overlayName").textContent = name;
+            document.getElementById("footerBrandName").textContent = name;
+
+            document.getElementById("navBrandRole").textContent = role;
+            document.getElementById("heroRoleEn").textContent = role;
+            document.getElementById("overlayRole").textContent = role;
+            document.getElementById("footerBrandRole").textContent = role;
+
+            document.getElementById("heroMainTitle").textContent = title;
+            document.getElementById("heroStatementText").innerHTML = bio;
+
+            document.getElementById("vipWaText").textContent = wa;
+            document.getElementById("vipTgText").textContent = tg;
+            document.getElementById("vipMailText").textContent = email;
+
+            const cleanWa = wa.replace(/[^0-9]/g, '');
+            document.getElementById("navWaLink").href = `https://wa.me/${cleanWa}`;
+            document.getElementById("heroWaLink").href = `https://wa.me/${cleanWa}`;
+            document.getElementById("vipWaItem").href = `https://wa.me/${cleanWa}`;
+            document.getElementById("vipTgItem").href = `https://t.me/${tg.replace('@', '')}`;
+            document.getElementById("vipMailItem").href = `mailto:${email}`;
+
+            alert("✅ تم تطبيق كافة التحديثات بنجاح!");
+        }
+
+        function setStudioTheme(theme) {
+            const root = document.documentElement;
+            if (theme === 'gold') {
+                root.style.setProperty('--gold-primary', '#d4af37');
+                root.style.setProperty('--gold-glow', 'rgba(212, 175, 55, 0.3)');
+                root.style.setProperty('--border-gold', 'rgba(212, 175, 55, 0.35)');
+                root.style.setProperty('--bg-base', '#06080e');
+            } else if (theme === 'cyan') {
+                root.style.setProperty('--gold-primary', '#00f2fe');
+                root.style.setProperty('--gold-glow', 'rgba(0, 242, 254, 0.3)');
+                root.style.setProperty('--border-gold', 'rgba(0, 242, 254, 0.4)');
+                root.style.setProperty('--bg-base', '#050a12');
+            } else if (theme === 'emerald') {
+                root.style.setProperty('--gold-primary', '#10b981');
+                root.style.setProperty('--gold-glow', 'rgba(16, 185, 129, 0.3)');
+                root.style.setProperty('--border-gold', 'rgba(16, 185, 129, 0.4)');
+                root.style.setProperty('--bg-base', '#040d0a');
+            } else if (theme === 'sapphire') {
+                root.style.setProperty('--gold-primary', '#6366f1');
+                root.style.setProperty('--gold-glow', 'rgba(99, 102, 241, 0.3)');
+                root.style.setProperty('--border-gold', 'rgba(99, 102, 241, 0.4)');
+                root.style.setProperty('--bg-base', '#080a14');
+            } else if (theme === 'ruby') {
+                root.style.setProperty('--gold-primary', '#f43f5e');
+                root.style.setProperty('--gold-glow', 'rgba(244, 63, 94, 0.3)');
+                root.style.setProperty('--border-gold', 'rgba(244, 63, 94, 0.4)');
+                root.style.setProperty('--bg-base', '#0e0608');
+            }
+            localStorage.setItem("aa_active_theme", theme);
+            alert("✨ تم تطبيق القالب الجديد بنجاح!");
+        }
+
+        function toggleSectionVisibility(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                const isHidden = (window.getComputedStyle(el).display === "none");
+                el.style.display = isHidden ? "block" : "none";
+                alert(isHidden ? "تم إظهار القسم!" : "تم إخفاء القسم!");
+            }
+        }
+
+        function deleteParentCard(btn) {
+            if (confirm("هل أنت متأكد من حذف هذا البند؟")) {
+                const card = btn.closest(".metric-luxury-card, .pillar-card-luxury, .channel-luxury-card");
+                if (card) card.remove();
+            }
+        }
+
+        function addNewPillarCard() {
+            const container = document.getElementById("pillarsContainer");
+            const newCard = document.createElement("div");
+            newCard.className = "pillar-card-luxury";
+            newCard.innerHTML = `
+                <div class="card-action-bar">
+                    <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div>
+                    <div class="pillar-icon-box"><i class="fa-solid fa-star"></i></div>
+                    <h3 class="pillar-card-title" data-editable="true">عنوان الخدمة أو الركيزة الجديدة</h3>
+                    <p class="pillar-card-text" data-editable="true">اكتب هنا وصفاً تفصيلياً وشاملاً لهذه الركيزة وكيف تخدم عملاءك وأعمالك.</p>
+                </div>
+                <ul class="pillar-bullet-points">
+                    <li data-editable="true"><i class="fa-solid fa-check-double"></i> الميزة الأولى المخصصة</li>
+                    <li data-editable="true"><i class="fa-solid fa-check-double"></i> الميزة الثانية المخصصة</li>
+                </ul>
+            `;
+            container.appendChild(newCard);
+            closeStudioMaster();
+            if (isVisualEditing) newCard.querySelectorAll("[data-editable='true']").forEach(el => el.contentEditable = "true");
+            alert("✅ تمت إضافة ركيزة جديدة بنجاح!");
+        }
+
+        function addNewChannelCard() {
+            const container = document.getElementById("channelsContainer");
+            const count = container.children.length + 1;
+            const newCard = document.createElement("div");
+            newCard.className = "channel-luxury-card";
+            newCard.innerHTML = `
+                <div class="card-action-bar">
+                    <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div>
+                    <div class="channel-card-top">
+                        <span class="channel-order-badge" data-editable="true">القناة ${count}</span>
+                        <span style="color: var(--gold-primary); font-size: 0.85rem; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> موثقة</span>
+                    </div>
+                    <h4 class="channel-card-title" data-editable="true">اسم القناة الجديدة</h4>
+                    <p class="channel-card-desc" data-editable="true">اكتب هنا وصف محتوى القناة وتخصصها والموضوعات التي تقدمها.</p>
+                </div>
+                <a href="https://youtube.com" target="_blank" class="btn-visit-official">
+                    <i class="fa-brands fa-youtube"></i> <span data-editable="true">زيارة القناة الرسمية</span>
+                </a>
+            `;
+            container.appendChild(newCard);
+            closeStudioMaster();
+            if (isVisualEditing) newCard.querySelectorAll("[data-editable='true']").forEach(el => el.contentEditable = "true");
+            alert("✅ تمت إضافة قناة جديدة بنجاح!");
+        }
+
+        function addNewMetricCard() {
+            const container = document.getElementById("metricsContainer");
+            const newCard = document.createElement("div");
+            newCard.className = "metric-luxury-card";
+            newCard.innerHTML = `
+                <div class="card-action-bar">
+                    <button class="mini-tool-btn btn-delete-card" onclick="deleteParentCard(this)" title="حذف"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="metric-number-big" data-editable="true">+50</div>
+                <div class="metric-label-main" data-editable="true">عنوان الإنجاز الجديد</div>
+                <div class="metric-desc-sub" data-editable="true">وصف مختصر للإنجاز أو المشروع</div>
+            `;
+            container.appendChild(newCard);
+            closeStudioMaster();
+            if (isVisualEditing) newCard.querySelectorAll("[data-editable='true']").forEach(el => el.contentEditable = "true");
+            alert("✅ تمت إضافة رقم إنجاز جديد بنجاح!");
+        }
+
+        document.getElementById("dashHeroImgUpload").addEventListener("change", function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    document.getElementById("mainHeroPortrait").src = evt.target.result;
+                    localStorage.setItem("aa_live_hero_img", evt.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById("dashMediaBannerUpload").addEventListener("change", function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    document.getElementById("mediaBannerPhoto").src = evt.target.result;
+                    localStorage.setItem("aa_live_media_banner", evt.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function saveAllStudioChanges() {
+            const contentHTML = document.querySelector(".container").innerHTML;
+            localStorage.setItem("aa_full_container_html", contentHTML);
+            alert("💾 تم حفظ كافة التعديلات، الحقول، والبنود بنجاح في متصفحك!");
+        }
+
+        function exportCleanHtmlFile() {
+            toggleVisualEditMode(false);
+            closeStudioMaster();
+
+            setTimeout(() => {
+                const cleanHTML = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+                const blob = new Blob([cleanHTML], { type: "text/html;charset=utf-8" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "index.html";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                alert("📥 تم تحميل ملف index.html المحدث بالكامل! استبدل الملف القديم به وارفعه مباشرة إلى GitHub.");
+            }, 300);
+        }
+
+        function updateMasterPin() {
+            const newPin = document.getElementById("dashNewPinInput").value.trim();
+            if (newPin.length >= 4) {
+                MASTER_PIN = newPin;
+                localStorage.setItem("aa_master_pin", newPin);
+                alert("🔒 تم تحديث رمز الأمان السري بنجاح!");
+            } else {
+                alert("يجب أن يتكون الرمز من 4 أرقام على الأقل.");
+            }
+        }
+
+        if (localStorage.getItem("aa_full_container_html")) {
+            document.querySelector(".container").innerHTML = localStorage.getItem("aa_full_container_html");
+        }
+        if (localStorage.getItem("aa_active_theme")) {
+            setStudioTheme(localStorage.getItem("aa_active_theme"));
+        }
+        if (localStorage.getItem("aa_live_hero_img")) {
+            const el = document.getElementById("mainHeroPortrait");
+            if (el) el.src = localStorage.getItem("aa_live_hero_img");
+        }
+        if (localStorage.getItem("aa_live_media_banner")) {
+            const el = document.getElementById("mediaBannerPhoto");
+            if (el) el.src = localStorage.getItem("aa_live_media_banner");
+        }
     </script>
 </body>
 </html>
