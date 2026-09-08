@@ -1,2674 +1,1057 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Abdou Ali Mousa | AI & Digital Systems Engineer</title>
-    
-    <!-- Meta Tags (SEO & OpenGraph) -->
-    <meta name="description" content="الموقع الرسمي للمهندس Abdou Ali Mousa - AI & Digital Systems Engineer. أحوّل التعقيد إلى أنظمة ذكية، أتمتة مسارات العمل، والنمذجة المالية الاستراتيجية، وإدارة شبكة الإنتاج الإعلامي والقنوات الدولية.">
-    <meta name="keywords" content="Abdou Ali Mousa, AI & Digital Systems Engineer, الذكاء الاصطناعي, هندسة الأنظمة, أتمتة الأعمال, النمذجة المالية, اللوجستيات, استوديو الصوت, شبكة القنوات الإعلامية">
-    <meta name="author" content="Abdou Ali Mousa">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Abdou Ali Mousa | AI & Digital Systems Engineer">
-    <meta property="og:description" content="أحوّل التعقيد إلى أنظمة ذكية.. أبني حلولاً تعتمد على الذكاء الاصطناعي والأتمتة.">
-    <meta property="og:image" content="assets/hero_architect.jpg">
-
-    <!-- الخطوط: Cairo و Outfit و Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome 6 Pro Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style id="customThemeStyles">
-        :root {
-            /* نظام ألوان أنيق وفخم ومريح للعين */
-            --bg-base: #090a10;
-            --bg-surface: #10121d;
-            --bg-card: rgba(16, 19, 32, 0.85);
-            --bg-card-hover: rgba(24, 28, 48, 0.95);
-            
-            /* ألوان الإضاءة النيونية والذهبية الملكية */
-            --primary-purple: #8b5cf6;
-            --primary-purple-light: #a78bfa;
-            --primary-glow: rgba(139, 92, 246, 0.35);
-            
-            --primary-cyan: #06b6d4;
-            --primary-cyan-glow: rgba(6, 182, 212, 0.3);
-            
-            --gold-accent: #f59e0b;
-            --gold-light: #fbbf24;
-            --gold-glow: rgba(245, 158, 11, 0.35);
-            
-            --whatsapp-green: #25d366;
-            
-            --text-primary: #ffffff;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            
-            --border-glass: rgba(255, 255, 255, 0.09);
-            --border-purple: rgba(139, 92, 246, 0.35);
-            --border-cyan: rgba(6, 182, 212, 0.35);
-            --border-gold: rgba(245, 158, 11, 0.35);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            line-height: 1.9;
-            overflow-x: hidden;
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        .en-font {
-            font-family: 'Outfit', sans-serif;
-            direction: ltr;
-            unicode-bidi: isolate;
-        }
-
-        /* حاوية العرض المتكيفة: واسعة وفخمة على الحاسوب، وملء الشاشة على الهاتف */
-        .container {
-            width: 100%;
-            max-width: 1320px;
-            margin: auto;
-            padding: 0 30px;
-        }
-
-        /* هالات الإضاءة الخلفية */
-        .ambient-glow-top {
-            position: fixed;
-            top: -150px;
-            right: 15%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
-            pointer-events: none;
-            filter: blur(100px);
-        }
-
-        .ambient-glow-bottom {
-            position: fixed;
-            bottom: -150px;
-            left: 10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
-            pointer-events: none;
-            filter: blur(100px);
-        }
-
-        /* ================= 1. الشريط العلوي النظيف والمنسق ================= */
-        header {
-            position: sticky;
-            top: 15px;
-            z-index: 1000;
-            margin-bottom: 30px;
-            width: 100%;
-        }
-
-        .navbar-main {
-            background: rgba(14, 16, 28, 0.94);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid var(--border-glass);
-            border-radius: 100px;
-            height: 68px;
-            padding: 0 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
-            transition: all 0.3s ease;
-        }
-
-        .navbar-main:hover {
-            border-color: var(--border-purple);
-        }
-
-        .brand-section {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .brand-names {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-name-en {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: #ffffff;
-            line-height: 1.15;
-            letter-spacing: -0.3px;
-        }
-
-        .brand-title-sub {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--primary-cyan);
-            line-height: 1.2;
-            letter-spacing: 0.3px;
-        }
-
-        .nav-links-wrap {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            list-style: none;
-        }
-
-        .nav-links-wrap a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.92rem;
-            font-weight: 700;
-            padding: 8px 14px;
-            border-radius: 50px;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-        }
-
-        .nav-links-wrap a:hover {
-            color: #ffffff;
-            background: rgba(139, 92, 246, 0.18);
-        }
-
-        /* أزرار سريعة للهاتف في الهيدر */
-        .mobile-header-actions {
-            display: none;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-mobile-wa {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #25d366;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-mobile-menu {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid var(--border-glass);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
-        /* قائمة التنقل المنسدلة للهاتف */
-        .mobile-drawer-nav {
-            display: none;
-            position: fixed;
-            top: 85px;
-            left: 15px;
-            right: 15px;
-            background: rgba(13, 15, 26, 0.98);
-            backdrop-filter: blur(30px);
-            border: 1px solid var(--border-purple);
-            border-radius: 20px;
-            padding: 20px;
-            z-index: 999;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
-        }
-
-        .mobile-drawer-nav.open {
-            display: block;
-            animation: fadeInDown 0.3s ease;
-        }
-
-        .mobile-nav-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .mobile-nav-list a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 16px;
-            border-radius: 12px;
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-glass);
-        }
-
-        .mobile-nav-list a:hover {
-            background: rgba(139, 92, 246, 0.2);
-            border-color: var(--primary-purple);
-        }
-
-        /* ================= 2. واجهة الهيرو (Hero Section) ================= */
-        .hero-section-balanced {
-            padding: 20px 0 65px;
-            border-bottom: 1px solid var(--border-glass);
-            width: 100%;
-        }
-
-        .hero-grid-balanced {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 45px;
-            align-items: center;
-            width: 100%;
-        }
-
-        .hero-identity-box {
-            margin-bottom: 12px;
-        }
-
-        .hero-brand-name {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.4rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1.15;
-            letter-spacing: -0.3px;
-        }
-
-        .hero-brand-role {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary-purple-light);
-            letter-spacing: 0.5px;
-            margin-top: 4px;
-        }
-
-        .hero-headline-medium {
-            font-size: 2.3rem;
-            font-weight: 900;
-            line-height: 1.35;
-            color: #ffffff;
-            margin: 16px 0 14px;
-        }
-
-        /* النص المنسق الملتصق الموحد بخط واحد أنيق */
-        .hero-bio-unified {
-            font-size: 1.14rem;
-            color: var(--text-secondary);
-            line-height: 2.05;
-            margin-bottom: 20px;
-            max-width: 680px;
-        }
-
-        .hero-bio-unified strong {
-            color: #ffffff;
-            font-weight: 800;
-        }
-
-        .hero-tags-pill {
-            display: inline-block;
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid var(--border-purple);
-            color: var(--primary-purple-light);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.92rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            padding: 6px 18px;
-            border-radius: 30px;
-            margin-bottom: 25px;
-        }
-
-        .hero-buttons-row {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary-purple {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #8b5cf6, #6366f1);
-            color: #ffffff;
-            font-size: 1.02rem;
-            font-weight: 800;
-            text-decoration: none;
-            border-radius: 14px;
-            box-shadow: 0 10px 30px var(--primary-glow);
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary-purple:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.55);
-            color: #ffffff;
-        }
-
-        .btn-secondary-wa {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 26px;
-            background: rgba(37, 211, 102, 0.12);
-            border: 1px solid rgba(37, 211, 102, 0.35);
-            color: #25d366;
-            font-size: 1.02rem;
-            font-weight: 800;
-            text-decoration: none;
-            border-radius: 14px;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary-wa:hover {
-            background: #25d366;
-            color: #ffffff;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            transform: translateY(-3px);
-        }
-
-        /* إطار الصورة الشخصية الحقيقية بمقاس طولي فخم */
-        .hero-portrait-stage {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-
-        .hero-portrait-frame-lux {
-            width: 100%;
-            max-width: 420px;
-            height: 500px;
-            border-radius: 26px;
-            overflow: hidden;
-            border: 2px solid rgba(245, 158, 11, 0.4);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(245, 158, 11, 0.25);
-            position: relative;
-            background: #0d0f17;
-            transition: all 0.4s ease;
-        }
-
-        .hero-portrait-frame-lux:hover {
-            transform: translateY(-6px);
-            border-color: var(--gold-light);
-            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.95), 0 0 50px var(--gold-glow);
-        }
-
-        .hero-portrait-frame-lux img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            display: block;
-        }
-
-        .portrait-caption-tag {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            padding: 16px 20px;
-            background: linear-gradient(to top, rgba(10, 11, 18, 0.98) 50%, transparent);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* ================= 3. شريط الإحصائيات والأرقام (Metrics Strip) ================= */
-        .metrics-section {
-            padding: 40px 0 65px;
-            width: 100%;
-        }
-
-        .metrics-grid-modern {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            width: 100%;
-        }
-
-        .metric-card-box {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-glass);
-            border-radius: 18px;
-            padding: 26px 20px;
-            text-align: center;
-            transition: all 0.35s ease;
-        }
-
-        .metric-card-box:hover {
-            transform: translateY(-6px);
-            border-color: var(--primary-purple);
-            background: var(--bg-card-hover);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px var(--primary-glow);
-        }
-
-        .metric-number-big {
-            font-family: 'Outfit', sans-serif;
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ffffff 40%, #a78bfa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.1;
-            margin-bottom: 6px;
-        }
-
-        .metric-title {
-            font-size: 1.12rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 4px;
-        }
-
-        .metric-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* ================= 4. خدمات وحلول هندسية (Services Section) ================= */
-        .section-headline-block {
-            text-align: center;
-            margin-bottom: 45px;
-            width: 100%;
-        }
-
-        .section-pill-tag {
-            display: inline-block;
-            font-size: 0.9rem;
-            font-weight: 800;
-            color: var(--primary-purple-light);
-            background: rgba(139, 92, 246, 0.12);
-            border: 1px solid var(--border-purple);
-            padding: 5px 20px;
-            border-radius: 30px;
-            margin-bottom: 12px;
-        }
-
-        .section-title-large {
-            font-size: 2.3rem;
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 12px;
-            line-height: 1.35;
-        }
-
-        .section-desc-lead {
-            font-size: 1.12rem;
-            color: var(--text-secondary);
-            max-width: 740px;
-            margin: auto;
-            line-height: 1.9;
-        }
-
-        .services-grid-3col {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-            margin-bottom: 80px;
-            width: 100%;
-        }
-
-        .service-card-item {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-glass);
-            border-radius: 20px;
-            padding: 32px 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.35s ease;
-        }
-
-        .service-card-item:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-purple);
-            background: var(--bg-card-hover);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 30px var(--primary-glow);
-        }
-
-        .service-icon-box {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            background: rgba(139, 92, 246, 0.12);
-            border: 1px solid var(--border-purple);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary-purple-light);
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-
-        .service-card-item:hover .service-icon-box {
-            background: var(--primary-purple);
-            color: #ffffff;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transform: scale(1.08);
-        }
-
-        .service-card-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 12px;
-        }
-
-        .service-card-desc {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.85;
-            margin-bottom: 20px;
-        }
-
-        .service-bullet-points {
-            list-style: none;
-        }
-
-        .service-bullet-points li {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .service-bullet-points li i {
-            color: var(--primary-cyan);
-            font-size: 0.85rem;
-        }
-
-        /* ================= 5. المنصات التشغيلية الكبرى (Showcases) ================= */
-        .showcases-wrapper {
-            margin-bottom: 85px;
-            width: 100%;
-        }
-
-        .platform-box-lux {
-            background: linear-gradient(135deg, rgba(8, 18, 36, 0.94) 0%, rgba(6, 12, 22, 0.98) 100%);
-            border: 2px solid rgba(6, 182, 212, 0.45);
-            border-radius: 26px;
-            padding: 42px 38px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 45px var(--primary-cyan-glow);
-            margin-bottom: 35px;
-            width: 100%;
-        }
-
-        .platform-grid-inner {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 35px;
-            align-items: center;
-            width: 100%;
-        }
-
-        .platform-tag-cyan {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 18px;
-            background: rgba(6, 182, 212, 0.15);
-            border: 1px solid rgba(6, 182, 212, 0.4);
-            color: var(--primary-cyan);
-            font-weight: 800;
-            font-size: 0.88rem;
-            border-radius: 20px;
-            margin-bottom: 16px;
-        }
-
-        .platform-main-title {
-            font-size: 2.1rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1.35;
-            margin-bottom: 8px;
-        }
-
-        .platform-sub-en {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .platform-body-text {
-            font-size: 1.08rem;
-            color: var(--text-secondary);
-            line-height: 1.95;
-            margin-bottom: 24px;
-        }
-
-        .platform-specs-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 28px;
-        }
-
-        .platform-spec-card {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-glass);
-            border-radius: 12px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #e2e8f0;
-        }
-
-        .btn-launch-cyan {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #06b6d4, #2563eb);
-            color: #ffffff;
-            font-weight: 900;
-            font-size: 1.05rem;
-            text-decoration: none;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px var(--primary-cyan-glow);
-            transition: all 0.3s;
-        }
-
-        .btn-launch-cyan:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.6);
-            color: #ffffff;
-        }
-
-        .platform-box-purple {
-            background: linear-gradient(135deg, rgba(22, 14, 40, 0.94) 0%, rgba(10, 8, 20, 0.98) 100%);
-            border: 2px solid rgba(139, 92, 246, 0.45);
-            border-radius: 26px;
-            padding: 42px 38px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 45px var(--primary-glow);
-            width: 100%;
-        }
-
-        .platform-tag-purple {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 18px;
-            background: rgba(139, 92, 246, 0.15);
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            color: var(--primary-purple-light);
-            font-weight: 800;
-            font-size: 0.88rem;
-            border-radius: 20px;
-            margin-bottom: 16px;
-        }
-
-        .btn-launch-purple {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #8b5cf6, #6366f1);
-            color: #ffffff;
-            font-weight: 900;
-            font-size: 1.05rem;
-            text-decoration: none;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px var(--primary-glow);
-            transition: all 0.3s;
-        }
-
-        .btn-launch-purple:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6);
-            color: #ffffff;
-        }
-
-        .platform-wide-mockup {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 2px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
-            position: relative;
-            background: #080d18;
-            transition: all 0.4s ease;
-        }
-
-        .platform-wide-mockup:hover {
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95);
-        }
-
-        .platform-wide-mockup img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        /* ================= 6. قسم النماذج البرمجية والمشاريع المنفصل (Software Models & Prototypes) ================= */
-        .software-models-section {
-            padding: 30px 0 85px;
-            width: 100%;
-        }
-
-        .models-grid-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 26px;
-            width: 100%;
-        }
-
-        .model-project-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-glass);
-            border-radius: 22px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.4s ease;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-        }
-
-        .model-project-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-cyan);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.85), 0 0 30px var(--primary-cyan-glow);
-            background: var(--bg-card-hover);
-        }
-
-        .model-thumbnail-holder {
-            width: 100%;
-            height: 220px;
-            position: relative;
-            overflow: hidden;
-            background: #080a14;
-        }
-
-        .model-thumbnail-holder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            display: block;
-        }
-
-        .model-project-card:hover .model-thumbnail-holder img {
-            transform: scale(1.06);
-        }
-
-        .model-badge-top {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: rgba(10, 14, 28, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            font-size: 0.8rem;
-            font-weight: 800;
-            padding: 5px 12px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .model-content-box {
-            padding: 24px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .model-title-text {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        .model-desc-text {
-            font-size: 0.98rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 18px;
-        }
-
-        .model-tags-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 20px;
-        }
-
-        .model-tag-item {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-glass);
-            border-radius: 6px;
-            color: var(--primary-cyan);
-        }
-
-        .model-action-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 20px;
-            background: rgba(6, 182, 212, 0.12);
-            border: 1px solid rgba(6, 182, 212, 0.4);
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 0.95rem;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: all 0.3s;
-            width: 100%;
-        }
-
-        .model-action-btn:hover {
-            background: var(--primary-cyan);
-            color: #000000;
-            box-shadow: 0 8px 25px var(--primary-cyan-glow);
-        }
-
-        /* ================= 7. الشبكة الإعلامية العالمية (Global Media Network & 4 Shorts) ================= */
-        .media-enterprise-section {
-            background: linear-gradient(135deg, rgba(20, 15, 35, 0.7) 0%, rgba(10, 12, 24, 0.9) 100%);
-            border: 2px solid rgba(245, 158, 11, 0.35);
-            border-radius: 32px;
-            padding: 50px 40px;
-            margin-bottom: 85px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 45px rgba(245, 158, 11, 0.18);
-            width: 100%;
-        }
-
-        /* شبكة قنوات الشورتس الـ 4 بمقاس طولي 9:16 فخم */
-        .shorts-channels-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-            margin-top: 35px;
-            margin-bottom: 40px;
-            width: 100%;
-        }
-
-        .shorts-channel-card {
-            background: #0d0f18;
-            border: 1px solid var(--border-glass);
-            border-radius: 22px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.4s ease;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-            position: relative;
-        }
-
-        .shorts-channel-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--gold-accent);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.95), 0 0 30px rgba(245, 158, 11, 0.3);
-        }
-
-        /* الإطار الطولي 9:16 لشاشة الفيديو/الشورتس */
-        .shorts-media-preview-916 {
-            width: 100%;
-            aspect-ratio: 9 / 14;
-            position: relative;
-            background: linear-gradient(180deg, #16192e 0%, #090a12 100%);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 16px;
-        }
-
-        .shorts-bg-artwork {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            opacity: 0.45;
-            transition: transform 0.5s ease, opacity 0.3s;
-        }
-
-        .shorts-channel-card:hover .shorts-bg-artwork {
-            transform: scale(1.08);
-            opacity: 0.65;
-        }
-
-        .shorts-top-hud {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .shorts-cat-pill {
-            font-size: 0.78rem;
-            font-weight: 800;
-            padding: 4px 10px;
-            border-radius: 20px;
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: var(--gold-light);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .shorts-views-pill {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.76rem;
-            font-weight: 800;
-            color: #ffffff;
-            background: rgba(239, 68, 68, 0.25);
-            border: 1px solid rgba(239, 68, 68, 0.5);
-            padding: 3px 8px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .shorts-center-play-trigger {
-            position: relative;
-            z-index: 2;
-            margin: auto;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: rgba(245, 158, 11, 0.9);
-            color: #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            box-shadow: 0 0 25px var(--gold-glow);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .shorts-channel-card:hover .shorts-center-play-trigger {
-            transform: scale(1.15);
-            background: #ffffff;
-        }
-
-        .shorts-bottom-hud {
-            position: relative;
-            z-index: 2;
-            background: linear-gradient(to top, rgba(9, 10, 16, 0.95) 70%, transparent);
-            margin: -16px;
-            padding: 20px 16px 16px;
-        }
-
-        .shorts-title-h3 {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 6px;
-            line-height: 1.35;
-        }
-
-        .shorts-desc-p {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 14px;
-        }
-
-        /* روابط المنصات لكل شورتس */
-        .shorts-platform-links {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .btn-shorts-target {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 7px 12px;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid var(--border-glass);
-            color: #ffffff;
-            transition: all 0.25s;
-            flex-grow: 1;
-            justify-content: center;
-        }
-
-        .btn-shorts-target:hover {
-            background: var(--gold-accent);
-            color: #000000;
-            border-color: var(--gold-accent);
-        }
-
-        /* مركز الربط مع منصات السوشيال ميديا */
-        .social-media-hub-bar {
-            background: rgba(0, 0, 0, 0.45);
-            border: 1px solid var(--border-glass);
-            border-radius: 20px;
-            padding: 22px 28px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .hub-label {
-            font-size: 1.12rem;
-            font-weight: 800;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hub-icons-row {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .hub-social-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-glass);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            text-decoration: none;
-            transition: all 0.25s;
-        }
-
-        .hub-social-btn:hover {
-            transform: translateY(-3px) scale(1.1);
-            color: #ffffff;
-        }
-
-        .hub-social-btn.yt:hover { background: #ff0000; border-color: #ff0000; }
-        .hub-social-btn.fb:hover { background: #1877f2; border-color: #1877f2; }
-        .hub-social-btn.ig:hover { background: #e1306c; border-color: #e1306c; }
-        .hub-social-btn.tk:hover { background: #000000; border-color: #ffffff; }
-        .hub-social-btn.tg:hover { background: #229ed9; border-color: #229ed9; }
-        .hub-social-btn.wa:hover { background: #25d366; border-color: #25d366; }
-
-        /* ================= 8. بطاقة التواصل والتعاون مع الاستشارة المجانية ================= */
-        .collaboration-banner-box {
-            background: linear-gradient(135deg, #6d28d9 0%, #4338ca 100%);
-            border-radius: 30px;
-            padding: 55px 45px;
-            margin-bottom: 80px;
-            box-shadow: 0 30px 80px rgba(109, 40, 217, 0.45);
-            display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
-            gap: 40px;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .collaboration-banner-box::before {
-            content: "";
-            position: absolute;
-            top: -100px; right: -100px;
-            width: 380px; height: 380px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .free-consult-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(245, 158, 11, 0.2);
-            border: 1px solid var(--gold-accent);
-            color: #fef08a;
-            font-size: 0.95rem;
-            font-weight: 800;
-            padding: 6px 20px;
-            border-radius: 30px;
-            margin-bottom: 18px;
-            box-shadow: 0 0 15px var(--gold-glow);
-        }
-
-        .collab-title-ar {
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1.35;
-            margin-bottom: 14px;
-        }
-
-        .collab-desc-courteous {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #f1f5f9;
-            margin-bottom: 25px;
-            line-height: 1.9;
-        }
-
-        .collab-channels-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .collab-channel-btn {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 16px 22px;
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 16px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.02rem;
-            transition: all 0.3s;
-        }
-
-        .collab-channel-btn:hover {
-            background: #ffffff;
-            color: #000000;
-            transform: translateX(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* الفوتر الأنيق */
-        footer {
-            border-top: 1px solid var(--border-glass);
-            padding: 40px 0 30px;
-            text-align: center;
-            position: relative;
-            width: 100%;
-        }
-
-        .footer-brand-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 6px;
-            direction: ltr;
-        }
-
-        .footer-brand-title span {
-            color: var(--primary-purple-light);
-        }
-
-        .footer-copyright {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .secret-owner-lock {
-            color: var(--text-muted);
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: color 0.3s;
-        }
-
-        .secret-owner-lock:hover {
-            color: var(--primary-purple-light);
-        }
-
-        /* ================= 9. استوديو ولوحة تحكم المالك (Owner Studio) ================= */
-        .studio-modal-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0, 0, 0, 0.94);
-            backdrop-filter: blur(25px);
-            z-index: 25000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .studio-master-dashboard {
-            background: #0d0f18;
-            border: 2px solid var(--primary-purple);
-            border-radius: 22px;
-            width: 100%;
-            max-width: 980px;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 50px var(--primary-glow);
-        }
-
-        .studio-dash-header {
-            padding: 20px 30px;
-            background: #131624;
-            border-bottom: 1px solid var(--border-glass);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .dash-nav-tabs {
-            display: flex;
-            gap: 10px;
-            padding: 14px 30px;
-            background: rgba(0, 0, 0, 0.4);
-            border-bottom: 1px solid var(--border-glass);
-            overflow-x: auto;
-        }
-
-        .dash-tab-btn {
-            padding: 9px 18px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-glass);
-            color: var(--text-secondary);
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s;
-            white-space: nowrap;
-        }
-
-        .dash-tab-btn.active, .dash-tab-btn:hover {
-            background: linear-gradient(135deg, #8b5cf6, #6366f1);
-            color: #ffffff;
-            border-color: var(--primary-purple);
-        }
-
-        .dash-tab-content {
-            padding: 30px;
-            display: none;
-        }
-
-        .dash-tab-content.active {
-            display: block;
-        }
-
-        .luxury-input, .luxury-textarea {
-            width: 100%;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-glass);
-            border-radius: 8px;
-            color: #ffffff;
-            font-family: 'Cairo', sans-serif;
-            font-size: 0.95rem;
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .luxury-input:focus, .luxury-textarea:focus {
-            border-color: var(--primary-purple);
-            box-shadow: 0 0 15px var(--primary-glow);
-        }
-
-        .luxury-textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .form-row-group {
-            margin-bottom: 16px;
-        }
-
-        .form-row-group label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: #cbd5e1;
-        }
-
-        /* شريط التعديل الحي */
-        body.studio-edit-mode [data-editable="true"] {
-            outline: 2px dashed rgba(139, 92, 246, 0.8) !important;
-            outline-offset: 4px;
-            cursor: text !important;
-            border-radius: 4px;
-        }
-
-        .quick-studio-dock {
-            position: fixed;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(14, 16, 28, 0.96);
-            backdrop-filter: blur(25px);
-            border: 2px solid var(--primary-purple);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 35px var(--primary-glow);
-            padding: 12px 26px;
-            border-radius: 50px;
-            display: none;
-            align-items: center;
-            gap: 14px;
-            z-index: 20000;
-            flex-wrap: wrap;
-        }
-
-        /* ================= 10. مشغل الشورتس التفاعلي (Shorts Player Modal) ================= */
-        .shorts-player-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0,0,0,0.92);
-            backdrop-filter: blur(20px);
-            z-index: 26000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-
-        .shorts-player-card {
-            background: #090b14;
-            border: 2px solid var(--gold-accent);
-            border-radius: 24px;
-            width: 100%;
-            max-width: 420px;
-            height: 85vh;
-            max-height: 720px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.95), 0 0 50px var(--gold-glow);
-        }
-
-        .shorts-player-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0,0,0,0.7);
-            border: 1px solid var(--border-glass);
-            color: #fff;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* ================= 11. التكيف المتقدم والفائق للشاشات (Responsive Breakpoints) ================= */
-
-        /* أجهزة التابلت والشاشات المتوسطة (Laptop / Tablet) */
-        @media (max-width: 1120px) {
-            .shorts-channels-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .hero-grid-balanced {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 35px;
-            }
-            .hero-portrait-stage {
-                justify-content: center;
-            }
-            .hero-buttons-row {
-                justify-content: center;
-            }
-            .platform-grid-inner {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .platform-specs-grid {
-                grid-template-columns: 1fr;
-            }
-            .collaboration-banner-box {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
-        /* أجهزة الهاتف الذكي (Mobile Full-Bleed Edge-to-Edge Experience) */
-        @media (max-width: 768px) {
-            body {
-                font-size: 15px;
-            }
-
-            /* ملء الشاشة بالكامل على الموبايل بدون هوامش مقيدة */
-            .container {
-                padding: 0 16px;
-                max-width: 100%;
-            }
-
-            header {
-                top: 10px;
-                margin-bottom: 20px;
-            }
-
-            .navbar-main {
-                height: 60px;
-                padding: 0 16px;
-                border-radius: 30px;
-            }
-
-            .nav-links-wrap {
-                display: none; /* إخفاء الروابط الأفقية وإظهار زر القائمة */
-            }
-
-            .mobile-header-actions {
-                display: flex;
-            }
-
-            .brand-name-en {
-                font-size: 1.12rem;
-            }
-
-            .brand-title-sub {
-                font-size: 0.72rem;
-            }
-
-            /* واجهة الهيرو على الهاتف */
-            .hero-section-balanced {
-                padding: 10px 0 45px;
-            }
-
-            .hero-brand-name {
-                font-size: 2rem;
-            }
-
-            .hero-brand-role {
-                font-size: 1.02rem;
-            }
-
-            .hero-headline-medium {
-                font-size: 1.85rem;
-                line-height: 1.35;
-                margin: 12px 0;
-            }
-
-            .hero-bio-unified {
-                font-size: 1.05rem;
-                line-height: 1.95;
-                text-align: right;
-            }
-
-            .hero-portrait-frame-lux {
-                max-width: 100%;
-                width: 100%;
-                height: 440px; /* مقاس طولي متناسق على الهاتف */
-                border-radius: 22px;
-            }
-
-            .hero-buttons-row {
-                flex-direction: column;
-                width: 100%;
-                gap: 12px;
-            }
-
-            .btn-primary-purple, .btn-secondary-wa {
-                width: 100%;
-                padding: 14px 20px;
-                font-size: 1rem;
-            }
-
-            /* قسم الإحصائيات */
-            .metrics-grid-modern {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-
-            .metric-card-box {
-                padding: 18px 12px;
-            }
-
-            .metric-number-big {
-                font-size: 2.3rem;
-            }
-
-            .metric-title {
-                font-size: 0.95rem;
-            }
-
-            .metric-desc {
-                font-size: 0.8rem;
-            }
-
-            /* العناوين العامة */
-            .section-title-large {
-                font-size: 1.75rem;
-            }
-
-            .section-desc-lead {
-                font-size: 1.02rem;
-                line-height: 1.8;
-            }
-
-            /* الخدمات */
-            .services-grid-3col {
-                grid-template-columns: 1fr;
-                gap: 16px;
-                margin-bottom: 50px;
-            }
-
-            /* المنصات الكبرى */
-            .platform-box-lux, .platform-box-purple {
-                padding: 28px 18px;
-                border-radius: 20px;
-                margin-bottom: 25px;
-            }
-
-            .platform-main-title {
-                font-size: 1.6rem;
-            }
-
-            .platform-sub-en {
-                font-size: 0.95rem;
-            }
-
-            .platform-body-text {
-                font-size: 1rem;
-                text-align: right;
-            }
-
-            .btn-launch-cyan, .btn-launch-purple {
-                width: 100%;
-                justify-content: center;
-                padding: 14px 18px;
-            }
-
-            /* النماذج البرمجية والمشاريع المنفصلة */
-            .models-grid-layout {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .model-thumbnail-holder {
-                height: 190px;
-            }
-
-            /* شبكة الشورتس الـ 4 على الموبايل: عرض عمودي متناسق وسلس */
-            .media-enterprise-section {
-                padding: 30px 16px;
-                border-radius: 24px;
-                margin-bottom: 55px;
-            }
-
-            .shorts-channels-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .shorts-media-preview-916 {
-                aspect-ratio: 9 / 13;
-            }
-
-            .social-media-hub-bar {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 16px;
-            }
-
-            .hub-icons-row {
-                justify-content: center;
-            }
-
-            /* بطاقة التعاون والاستشارة */
-            .collaboration-banner-box {
-                padding: 35px 20px;
-                border-radius: 24px;
-                margin-bottom: 50px;
-            }
-
-            .collab-title-ar {
-                font-size: 1.65rem;
-            }
-
-            .collab-desc-courteous {
-                font-size: 1.05rem;
-                text-align: right;
-            }
-
-            .collab-channel-btn {
-                padding: 14px 16px;
-                font-size: 0.95rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABDOU ALI MOUSA | AI & Digital Systems Engineer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkBg: "#0a0a0c",
+            cardBg: "#18181b",
+            cardBorder: "#27272a",
+            neonPurple: "#a855f7",
+            vibrantPurple: "#9333ea",
+            accentPurple: "#8b5cf6",
+            lightPurple: "#c084fc",
+            mutedText: "#a1a1aa",
+          },
+          fontFamily: {
+            heading: ["'Oswald'", "'Impact'", "'Poppins'", "sans-serif"],
+            cursive: ["'Caveat'", "'Dancing Script'", "cursive"],
+            sans: ["'Inter'", "'DM Sans'", "sans-serif"],
+          },
+          boxShadow: {
+            'purple-glow': '0 0 50px -10px rgba(168, 85, 247, 0.45)',
+            'purple-glow-lg': '0 0 90px -15px rgba(147, 51, 234, 0.55)',
+            'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.7)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0a0a0c;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-heading { font-family: 'Oswald', 'Impact', sans-serif; }
+    .font-cursive { font-family: 'Caveat', 'Dancing Script', cursive; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0c; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #9333ea; }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spinSlow 18s linear infinite;
+    }
+
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-up.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body>
+<body class="bg-[#0a0a0c] text-white antialiased selection:bg-purple-600 selection:text-white">
 
-    <!-- هالات الإضاءة الخلفية الهادئة -->
-    <div class="ambient-glow-top"></div>
-    <div class="ambient-glow-bottom"></div>
+  <!-- NAVBAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 via-purple-700 to-zinc-900 p-[1px] shadow-lg shadow-purple-600/30 group-hover:shadow-purple-500/60 transition-all">
+          <div class="w-full h-full bg-[#0a0a0c] rounded-[11px] flex items-center justify-center font-heading font-black text-lg text-white group-hover:text-purple-400 transition-colors">
+            AA
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-black tracking-wider text-sm sm:text-base text-white group-hover:text-purple-300 transition-colors">
+            ABDOU<span class="text-purple-500">.</span>AI
+          </span>
+          <span class="text-[10px] font-mono tracking-widest text-zinc-500 uppercase -mt-1">
+            SYSTEMS ENGINEER
+          </span>
+        </div>
+      </a>
 
-    <!-- شريط التعديل الحي العائم -->
-    <div class="quick-studio-dock" id="quickStudioDock">
-        <span style="color: var(--primary-purple-light); font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-            <i class="fa-solid fa-pen-nib"></i> وضع التعديل الحي نشط (انقر على أي نص لتعديله)
-        </span>
-        <button class="btn-primary-purple" onclick="openStudioMaster()" style="padding: 8px 18px; font-size: 0.88rem;">
-            <i class="fa-solid fa-sliders"></i> لوحة التحكم
-        </button>
-        <button class="btn-primary-purple" onclick="saveAllStudioChanges()" style="padding: 8px 20px; font-size: 0.88rem; background: #25d366;">
-            <i class="fa-solid fa-floppy-disk"></i> حفظ التعديلات
-        </button>
-        <button class="btn-primary-purple" onclick="toggleVisualEditMode(false)" style="background: rgba(255,71,87,0.2); border: 1px solid #ff4757; color: #ff4757 !important; padding: 8px 14px; font-size: 0.88rem;">
-            <i class="fa-solid fa-xmark"></i> إغلاق
-        </button>
+      <nav class="hidden md:flex items-center gap-1 bg-[#18181b]/80 border border-[#27272a] rounded-full px-5 py-2 shadow-inner backdrop-blur-md">
+        <a href="#services" class="px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-400 hover:text-white hover:bg-purple-950/40 rounded-full transition-all duration-200">Services</a>
+        <a href="#software-models" class="px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-400 hover:text-white hover:bg-purple-950/40 rounded-full transition-all duration-200">AI Models</a>
+        <a href="#media-network" class="px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-400 hover:text-white hover:bg-purple-950/40 rounded-full transition-all duration-200">Media Network</a>
+        <a href="#toolkit" class="px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-400 hover:text-white hover:bg-purple-950/40 rounded-full transition-all duration-200">Toolkit</a>
+        <a href="#process" class="px-4 py-1.5 text-xs font-semibold tracking-wider text-zinc-400 hover:text-white hover:bg-purple-950/40 rounded-full transition-all duration-200">Process</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#contact-cta" class="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-purple-800 text-white text-xs font-bold tracking-wider uppercase hover:from-purple-500 hover:to-purple-700 transition-all shadow-md shadow-purple-600/30 hover:shadow-purple-500/60 hover:scale-105 active:scale-95">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-[#18181b] border border-[#27272a] text-zinc-300 hover:text-white">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
     </div>
 
-    <!-- قائمة الهاتف المنسدلة -->
-    <div class="mobile-drawer-nav" id="mobileDrawer">
-        <ul class="mobile-nav-list">
-            <li><a href="#vision" onclick="toggleMobileNav()"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
-            <li><a href="#services" onclick="toggleMobileNav()"><i class="fa-solid fa-gears"></i> الخدمات والحلول</a></li>
-            <li><a href="#platforms" onclick="toggleMobileNav()"><i class="fa-solid fa-layer-group"></i> المنظومات التشغيلية</a></li>
-            <li><a href="#software-models" onclick="toggleMobileNav()"><i class="fa-solid fa-laptop-code"></i> النماذج البرمجية</a></li>
-            <li><a href="#media-network" onclick="toggleMobileNav()"><i class="fa-solid fa-clapperboard"></i> شبكة القنوات (شورتس)</a></li>
-            <li><a href="#metrics" onclick="toggleMobileNav()"><i class="fa-solid fa-chart-line"></i> مؤشرات النجاح</a></li>
-            <li><a href="#contact" onclick="toggleMobileNav()"><i class="fa-solid fa-envelope"></i> تواصل واستشارة مجانية</a></li>
-        </ul>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0e0e12]/95 border-b border-[#27272a] backdrop-blur-xl px-6 py-5 flex flex-col gap-4 mt-3">
+      <a href="#services" class="mobile-nav-link text-sm font-bold text-zinc-300 hover:text-purple-400 py-1">Services</a>
+      <a href="#software-models" class="mobile-nav-link text-sm font-bold text-zinc-300 hover:text-purple-400 py-1">AI Models</a>
+      <a href="#media-network" class="mobile-nav-link text-sm font-bold text-zinc-300 hover:text-purple-400 py-1">Media Network</a>
+      <a href="#toolkit" class="mobile-nav-link text-sm font-bold text-zinc-300 hover:text-purple-400 py-1">Toolkit</a>
+      <a href="#process" class="mobile-nav-link text-sm font-bold text-zinc-300 hover:text-purple-400 py-1">Process</a>
+      <a href="#contact-cta" class="mt-2 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-purple-600 text-white font-bold text-sm tracking-wider uppercase">
+        <span>Get In Touch</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
     </div>
+  </header>
 
-    <div class="container">
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] md:w-[900px] h-[400px] md:h-[500px] bg-purple-900/15 blur-[140px] pointer-events-none rounded-full"></div>
+    <div class="absolute top-20 right-10 w-[300px] h-[300px] bg-purple-600/10 blur-[100px] pointer-events-none rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- ================= 1. الشريط العلوي النظيف والمنسق ================= -->
-        <header id="section-header">
-            <nav class="navbar-main">
-                
-                <!-- اليمين: الاسم الرسمي والمسمى الوظيفي -->
-                <a href="#" class="brand-section">
-                    <div class="brand-names">
-                        <div class="brand-name-en" data-editable="true" id="navBrandName">Abdou Ali Mousa</div>
-                        <div class="brand-title-sub" data-editable="true" id="navBrandRole">AI & Digital Systems Engineer</div>
-                    </div>
-                </a>
+        <div class="lg:col-span-7 flex flex-col justify-center relative z-10 reveal-up active">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18181b] border border-[#27272a] w-max mb-6">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="text-[11px] font-bold tracking-widest text-zinc-300 uppercase">
+              AVAILABLE FOR NEW PROJECTS
+            </span>
+          </div>
 
-                <!-- الوسط/اليسار: روابط تنقل الحاسوب -->
-                <ul class="nav-links-wrap">
-                    <li><a href="#vision" data-editable="true">الرئيسية</a></li>
-                    <li><a href="#services" data-editable="true">الخدمات</a></li>
-                    <li><a href="#platforms" data-editable="true">المنظومات</a></li>
-                    <li><a href="#software-models" data-editable="true">النماذج والمشاريع</a></li>
-                    <li><a href="#media-network" data-editable="true">الشبكة الإعلامية (Shorts)</a></li>
-                    <li><a href="#metrics" data-editable="true">مؤشرات النجاح</a></li>
-                    <li><a href="#contact" data-editable="true">تواصل معنا</a></li>
-                </ul>
+          <div class="relative select-none">
+            <h1 class="font-heading font-black text-7xl sm:text-8xl md:text-9xl lg:text-[7.8rem] xl:text-[9.2rem] uppercase tracking-tighter text-[#a855f7] leading-[0.88] drop-shadow-[0_0_40px_rgba(168,85,247,0.35)]">
+              CREATIVE
+            </h1>
 
-                <!-- أزرار الهاتف السريعة -->
-                <div class="mobile-header-actions">
-                    <a href="https://wa.me/201092519210" target="_blank" class="btn-mobile-wa" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
-                    <button class="btn-mobile-menu" onclick="toggleMobileNav()" title="القائمة"><i class="fa-solid fa-bars"></i></button>
-                </div>
+            <div class="relative inline-block w-full">
+              <h1 class="font-heading font-black text-7xl sm:text-8xl md:text-9xl lg:text-[7.8rem] xl:text-[9.2rem] uppercase tracking-tighter text-white leading-[0.88]">
+                DEVELOPER
+              </h1>
 
-            </nav>
-        </header>
-
-        <!-- ================= 2. واجهة الهيرو (Hero Section) ================= -->
-        <section id="vision" class="hero-section-balanced">
-            
-            <div class="hero-grid-balanced">
-                <div>
-                    <div class="hero-identity-box">
-                        <div class="hero-brand-name" data-editable="true" id="heroNameEn">Abdou Ali Mousa</div>
-                        <div class="hero-brand-role" data-editable="true" id="heroRoleEn">AI & Digital Systems Engineer</div>
-                    </div>
-
-                    <h1 class="hero-headline-medium" data-editable="true" id="heroMainTitle">
-                        أحوّل التعقيد إلى أنظمة ذكية.
-                    </h1>
-
-                    <!-- النص المنسق الملتصق الموحد بخط واحد أنيق -->
-                    <p class="hero-bio-unified" data-editable="true" id="heroBioUnified">
-                        أبني حلولًا تعتمد على الذكاء الاصطناعي والأتمتة لتحويل العمليات المعقدة إلى <strong>أنظمة أكثر ذكاءً، كفاءةً وقابليةً للتوسع</strong>؛ من أتمتة سير العمل والنماذج المالية والمحاسبية، إلى البنية السحابية وأنظمة الإنتاج الرقمي — أصمم حلولًا تقنية تخدم <strong>القرار، الكفاءة، والنمو</strong>.
-                    </p>
-
-                    <div class="hero-tags-pill" data-editable="true">
-                        AI • Automation • Digital Systems • Cloud
-                    </div>
-
-                    <div class="hero-buttons-row">
-                        <a href="#platforms" class="btn-primary-purple" id="heroExploreBtn">
-                            <i class="fa-solid fa-layer-group"></i> <span data-editable="true">استكشف المنظومات والنماذج</span>
-                        </a>
-                        <a href="https://wa.me/201092519210" target="_blank" class="btn-secondary-wa" id="heroWaLink">
-                            <i class="fa-brands fa-whatsapp"></i> <span data-editable="true">محادثة مباشرة عبر واتساب</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- الصورة الشخصية الحقيقية للمهندس عبده علي موسى بمقاس طولي فخم -->
-                <div class="hero-portrait-stage">
-                    <div class="hero-portrait-frame-lux">
-                        <img src="assets/hero_architect.jpg" alt="Abdou Ali Mousa - AI & Digital Systems Engineer" id="mainHeroPortrait">
-                        <div class="portrait-caption-tag">
-                            <span style="color: #ffffff; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.95rem;">
-                                <i class="fa-solid fa-certificate" style="color: var(--gold-light);"></i> Abdou Ali Mousa
-                            </span>
-                            <span style="background: rgba(37, 211, 102, 0.2); border: 1px solid #25d366; color: #86efac; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 700;">
-                                <i class="fa-solid fa-circle" style="color: #25d366; font-size: 0.6rem;"></i> نشط ومتاح
-                            </span>
-                        </div>
-                    </div>
-                </div>
+              <span class="font-cursive absolute -top-3 sm:-top-5 md:-top-7 right-4 sm:right-12 md:right-24 text-pink-400 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-normal pointer-events-none drop-shadow-[0_4px_20px_rgba(244,114,182,0.6)] transform -rotate-12">
+                Portfolio
+              </span>
             </div>
+          </div>
 
-        </section>
-
-        <!-- ================= 3. شريط الإحصائيات والأرقام (Metrics Strip) ================= -->
-        <section id="metrics" class="metrics-section">
-            <div class="metrics-grid-modern" id="metricsContainer">
-                
-                <div class="metric-card-box">
-                    <div class="metric-number-big" data-editable="true">04</div>
-                    <div class="metric-title" data-editable="true">قنوات شورتس دولية</div>
-                    <div class="metric-desc" data-editable="true">شبكة إعلامية ذكية ذاتية القيادة</div>
-                </div>
-
-                <div class="metric-card-box">
-                    <div class="metric-number-big" data-editable="true">+10M</div>
-                    <div class="metric-title" data-editable="true">مشاهدة وتفاعل عالمي</div>
-                    <div class="metric-desc" data-editable="true">محتوى وثائقي واقتصادي وتقني رائد</div>
-                </div>
-
-                <div class="metric-card-box">
-                    <div class="metric-number-big" data-editable="true">100%</div>
-                    <div class="metric-title" data-editable="true">أتمتة متكاملة للعمليات</div>
-                    <div class="metric-desc" data-editable="true">رفع كفاءة الأداء وتسريع القرار</div>
-                </div>
-
-                <div class="metric-card-box">
-                    <div class="metric-number-big" data-editable="true">24/7</div>
-                    <div class="metric-title" data-editable="true">جاهزية واستقرار سحابي</div>
-                    <div class="metric-desc" data-editable="true">أنظمة وتشغيل مستمر بلا انقطاع</div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ================= 4. خدمات وحلول هندسية (Services Section) ================= -->
-        <section id="services">
-            <div class="section-headline-block">
-                <span class="section-pill-tag" data-editable="true">مجالات التميز والخدمات الهندسية</span>
-                <h2 class="section-title-large" data-editable="true">كيف نُسهم في تطوير وتسريع وتيرة أعمالكم؟</h2>
-                <p class="section-desc-lead" data-editable="true">
-                    نُحوّل التحديات المعقدة إلى منظومات ذكية ومستقرة تضمن لسيادتكم أعلى درجات الكفاءة التشغيلية والنمو المستدام.
-                </p>
-            </div>
-
-            <div class="services-grid-3col" id="pillarsContainer">
-                
-                <!-- خدمة 1 -->
-                <div class="service-card-item">
-                    <div>
-                        <div class="service-icon-box"><i class="fa-solid fa-brain"></i></div>
-                        <h3 class="service-card-title" data-editable="true">أتمتة الأعمال بالذكاء الاصطناعي المستقل</h3>
-                        <p class="service-card-desc" data-editable="true">
-                            تصميم وبناء مسارات عمل ذكية ذاتية القيادة (AI Agents) لتنفيذ المهام المعقدة، وخدمة العملاء، وتحليل البيانات بأعلى مستويات الدقة والسرعة.
-                        </p>
-                    </div>
-                    <ul class="service-bullet-points">
-                        <li data-editable="true"><i class="fa-solid fa-check"></i> وكلاء ذكاء اصطناعي للمهام المتعددة</li>
-                        <li data-editable="true"><i class="fa-solid fa-check"></i> تكامل النماذج اللغوية المتطورة</li>
-                    </ul>
-                </div>
-
-                <!-- خدمة 2 -->
-                <div class="service-card-item">
-                    <div>
-                        <div class="service-icon-box" style="color: var(--primary-cyan); background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.3);"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3 class="service-card-title" data-editable="true">الهندسة المالية والنمذجة الاستراتيجية</h3>
-                        <p class="service-card-desc" data-editable="true">
-                            تصميم النماذج المحاسبية ولوحات التحكم التفاعلية (Power BI Dashboards) لتزويد سيادتكم برؤى مالية فورية تدعم اتخاذ القرارات الصائبة.
-                        </p>
-                    </div>
-                    <ul class="service-bullet-points">
-                        <li data-editable="true"><i class="fa-solid fa-check"></i> تخطيط مالي وتوقعات تدفقات نقدية</li>
-                        <li data-editable="true"><i class="fa-solid fa-check"></i> لوحات قياس مؤشرات الأداء اللحظية</li>
-                    </ul>
-                </div>
-
-                <!-- خدمة 3 -->
-                <div class="service-card-item">
-                    <div>
-                        <div class="service-icon-box" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3);"><i class="fa-solid fa-cloud-bolt"></i></div>
-                        <h3 class="service-card-title" data-editable="true">البنية التحتية السحابية وتكامل البرمجيات</h3>
-                        <p class="service-card-desc" data-editable="true">
-                            ربط الأنظمة السحابية والـ APIs المختلفة، وبناء منصات ويب متقدمة تتسم بالسرعة الفائقة والأمان الموثوق لدعم نمو وتوسع أعمالكم.
-                        </p>
-                    </div>
-                    <ul class="service-bullet-points">
-                        <li data-editable="true"><i class="fa-solid fa-check"></i> منصات سحابية آمنة وموثوقة 100%</li>
-                        <li data-editable="true"><i class="fa-solid fa-check"></i> معمارية برمجية قابلة للتوسع السلس</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ================= 5. المنصات والتطبيقات البرمجية التشغيلية (Live Systems) ================= -->
-        <section id="platforms" class="showcases-wrapper">
-            
-            <div class="section-headline-block">
-                <span class="section-pill-tag" data-editable="true">المنظومات والتطبيقات البرمجية التشغيلية</span>
-                <h2 class="section-title-large" data-editable="true">تطبيقات ومنصات حية تقود العمليات في الواقع</h2>
-                <p class="section-desc-lead" data-editable="true">
-                    نماذج لتطبيقات برمجية ومنصات سحابية متكاملة تخدم آلاف العمليات اليومية بكفاءة مطلقة ودقة متناهية.
-                </p>
-            </div>
-
-            <!-- مشروع 1: منظومة اللوجستيات وإدارة الأسطول والشحن -->
-            <div class="platform-box-lux">
-                <div class="platform-grid-inner">
-                    <div>
-                        <div class="platform-tag-cyan">
-                            <i class="fa-solid fa-truck-fast"></i>
-                            <span data-editable="true">منظومة لوجستية ذكية متكاملة</span>
-                        </div>
-
-                        <h3 class="platform-main-title" data-editable="true">
-                            منظومة إدارة اللوجستيات وعمليات الشحن والأسطول والمتجر الذكي
-                        </h3>
-                        <span class="platform-sub-en" style="color: var(--primary-cyan);" data-editable="true">
-                            ElQaed Logistics, Fleet Command & E-Commerce Suite
-                        </span>
-
-                        <p class="platform-body-text" data-editable="true">
-                            تطبيق متكامل لإدارة سلاسل الإمداد، وتتبع الشحنات والأسطول والمناديب في الوقت الفعلي عبر الخريطة، مع ربط مباشر مع المتجر الإلكتروني وإدارة المخازن، ولوحة تحكم مالية دقيقة لحسابات التحصيل اليومي وهوامش الأرباح.
-                        </p>
-
-                        <div class="platform-specs-grid">
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-map-location-dot" style="color: var(--primary-cyan);"></i>
-                                <span>تتبع حي وفوري للأسطول والمناديب</span>
-                            </div>
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-boxes-stacked" style="color: var(--primary-cyan);"></i>
-                                <span>إدارة المخزون وطلبات المتجر الإلكتروني</span>
-                            </div>
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-file-invoice-dollar" style="color: var(--primary-cyan);"></i>
-                                <span>أتمتة الفواتير وحسابات التحصيل اليومية</span>
-                            </div>
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-gauge-high" style="color: var(--primary-cyan);"></i>
-                                <span>لوحة قيادة إدارية متجاوبة مع كافة الشاشات</span>
-                            </div>
-                        </div>
-
-                        <a href="https://elqaedtravel-netizen.github.io/logistics/" target="_blank" class="btn-launch-cyan" id="launchLogisticsBtn">
-                            <i class="fa-solid fa-rocket"></i> <span data-editable="true">تشغيل منظومة اللوجستيات الحية</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.95rem;"></i>
-                        </a>
-                    </div>
-
-                    <div class="platform-wide-mockup">
-                        <img src="assets/logistics_preview.jpg" alt="معاينة لوحة تحكم اللوجستيات" id="logisticsPreviewImg">
-                    </div>
-                </div>
-            </div>
-
-            <!-- مشروع 2: استوديو الصوت والموسيقى التوليدي -->
-            <div class="platform-box-purple">
-                <div class="platform-grid-inner">
-                    <div>
-                        <div class="platform-tag-purple">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            <span data-editable="true">استوديو صوتي وموسيقي سحابي فائق الجودة</span>
-                        </div>
-
-                        <h3 class="platform-main-title" data-editable="true">
-                            استوديو الذكاء الاصطناعي الصوتي والموسيقي المتكامل
-                        </h3>
-                        <span class="platform-sub-en" style="color: var(--primary-purple-light);" data-editable="true">
-                            Abdou Studio VO & AI Music Synthesis DAW
-                        </span>
-
-                        <p class="platform-body-text" data-editable="true">
-                            منصة برمجية متطورة لتوليد الفويس أوفر (Voiceover) الواقعي البشري بمختلف اللهجات واللغات، وتأليف وهندسة الموسيقى والمؤثرات الصوتية التوليدية بدقة استوديو 48kHz بمعالجة سحابية فورية.
-                        </p>
-
-                        <div class="platform-specs-grid">
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-microphone-lines" style="color: var(--primary-purple-light);"></i>
-                                <span>توليد فويس أوفر واقعي بشري بنبرات متعددة</span>
-                            </div>
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-music" style="color: var(--primary-purple-light);"></i>
-                                <span>تأليف وتوزيع المقطوعات بالذكاء الاصطناعي</span>
-                            </div>
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-sliders" style="color: var(--primary-purple-light);"></i>
-                                <span>ماسترنج وتحسين الصوت التلقائي وعزل الضوضاء</span>
-                            </div>
-                            <div class="platform-spec-card" data-editable="true">
-                                <i class="fa-solid fa-bolt" style="color: var(--primary-purple-light);"></i>
-                                <span>تشغيل سحابي سريع ومباشر عبر المتصفح</span>
-                            </div>
-                        </div>
-
-                        <a href="https://abdou-studio-vo.ai.studio" target="_blank" class="btn-launch-purple" id="launchVoiceStudioBtn">
-                            <i class="fa-solid fa-play"></i> <span data-editable="true">تشغيل استوديو الصوت والموسيقى</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.95rem;"></i>
-                        </a>
-                    </div>
-
-                    <div class="platform-wide-mockup" style="border-color: rgba(139, 92, 246, 0.45); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 45px var(--primary-glow);">
-                        <img src="assets/voice_studio_preview.jpg" alt="معاينة استوديو الصوت والموسيقى" id="voiceStudioPreviewImg">
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- ================= 6. قسم النماذج البرمجية والمشاريع المنفصل (Software Models & Prototypes) ================= -->
-        <section id="software-models" class="software-models-section">
-            <div class="section-headline-block">
-                <span class="section-pill-tag" style="background: rgba(6, 182, 212, 0.12); border-color: var(--border-cyan); color: var(--primary-cyan);" data-editable="true">
-                    <i class="fa-solid fa-laptop-code"></i> النماذج البرمجية والمشاريع التقنية
-                </span>
-                <h2 class="section-title-large" data-editable="true">نماذج ذكية وحلول برمجية متخصصة</h2>
-                <p class="section-desc-lead" data-editable="true">
-                    معرض لأحدث النماذج البرمجية، محركات الأتمتة المالية، وأدوات تحليل البيانات الذكية المصممة لتمكين المؤسسات.
-                </p>
-            </div>
-
-            <div class="models-grid-layout" id="modelsGridContainer">
-                
-                <!-- نموذج 1: النمذجة المالية والأتمتة -->
-                <div class="model-project-card">
-                    <div class="model-thumbnail-holder">
-                        <img src="assets/fintech_model_preview.jpg" alt="محرك النمذجة المالية والأتمتة" id="modelImg1">
-                        <div class="model-badge-top">
-                            <i class="fa-solid fa-circle" style="color: #25d366; font-size: 0.55rem;"></i>
-                            <span>نموذج تشغيلي</span>
-                        </div>
-                    </div>
-                    <div class="model-content-box">
-                        <div>
-                            <h3 class="model-title-text" data-editable="true">نظام الأتمتة والنمذجة المالية التفاعلية</h3>
-                            <p class="model-desc-text" data-editable="true">
-                                محرك مالي متكامل لتحليل التدفقات النقدية، تقييم المخاطر، وبناء سيناريوهات الموازنات التقديرية بالذكاء الاصطناعي مع لوحات تحكم تفاعلية فورية.
-                            </p>
-                            <div class="model-tags-row">
-                                <span class="model-tag-item">FinTech</span>
-                                <span class="model-tag-item">Financial Modeling</span>
-                                <span class="model-tag-item">Power BI</span>
-                                <span class="model-tag-item">FastAPI</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/201092519210?text=استفسار%20عن%20نظام%20النمذجة%20المالية" target="_blank" class="model-action-btn">
-                            <i class="fa-solid fa-circle-info"></i> طلب عرض توضيحي للنموذج
-                        </a>
-                    </div>
-                </div>
-
-                <!-- نموذج 2: معالجة المستندات واستخراج البيانات -->
-                <div class="model-project-card">
-                    <div class="model-thumbnail-holder">
-                        <img src="assets/doc_ai_preview.jpg" alt="معالجة المستندات واستخراج البيانات الذكي" id="modelImg2">
-                        <div class="model-badge-top">
-                            <i class="fa-solid fa-sparkles" style="color: var(--primary-cyan); font-size: 0.7rem;"></i>
-                            <span>ذكاء اصطناعي OCR</span>
-                        </div>
-                    </div>
-                    <div class="model-content-box">
-                        <div>
-                            <h3 class="model-title-text" data-editable="true">منظومة معالجة المستندات واستخراج البيانات الذكي</h3>
-                            <p class="model-desc-text" data-editable="true">
-                                أداة ذكية لاستخراج وهيكلة البيانات من الفواتير والعقود والملفات بصيغ PDF/صور وربطها بقواعد البيانات آلياً دون أي تدخل بشري.
-                            </p>
-                            <div class="model-tags-row">
-                                <span class="model-tag-item">Vision OCR</span>
-                                <span class="model-tag-item">LLM Extraction</span>
-                                <span class="model-tag-item">Python</span>
-                                <span class="model-tag-item">REST API</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/201092519210?text=استفسار%20عن%20منظومة%20معالجة%20المستندات" target="_blank" class="model-action-btn">
-                            <i class="fa-solid fa-circle-info"></i> طلب عرض توضيحي للنموذج
-                        </a>
-                    </div>
-                </div>
-
-                <!-- نموذج 3: مساعد اتخاذ القرار التنفيذي -->
-                <div class="model-project-card">
-                    <div class="model-thumbnail-holder">
-                        <img src="assets/exec_ai_preview.jpg" alt="مساعد اتخاذ القرار التنفيذي الذكي" id="modelImg3">
-                        <div class="model-badge-top">
-                            <i class="fa-solid fa-shield-check" style="color: var(--gold-accent); font-size: 0.7rem;"></i>
-                            <span>إدارة استراتيجية</span>
-                        </div>
-                    </div>
-                    <div class="model-content-box">
-                        <div>
-                            <h3 class="model-title-text" data-editable="true">مساعد القرار الاستراتيجي للمؤسسات</h3>
-                            <p class="model-desc-text" data-editable="true">
-                                منصة قيادة وتحليلات تنبؤية لكبار المدراء التنفيذيين تجمع بيانات المبيعات والتسويق والتشغيل وتقدم توصيات استراتيجية مدعومة بالبيانات.
-                            </p>
-                            <div class="model-tags-row">
-                                <span class="model-tag-item">Executive BI</span>
-                                <span class="model-tag-item">Predictive Analytics</span>
-                                <span class="model-tag-item">AI Agents</span>
-                                <span class="model-tag-item">Cloud</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/201092519210?text=استفسار%20عن%20مساعد%20القرار%20التنفيذي" target="_blank" class="model-action-btn">
-                            <i class="fa-solid fa-circle-info"></i> طلب عرض توضيحي للنموذج
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ================= 7. الشبكة الإعلامية العالمية (Global Media Network & 4 Shorts Channels) ================= -->
-        <section id="media-network" class="media-enterprise-section">
-            <div class="section-headline-block">
-                <span class="section-pill-tag" style="background: rgba(245, 158, 11, 0.15); border-color: var(--gold-accent); color: var(--gold-light);" data-editable="true">
-                    <i class="fa-solid fa-clapperboard"></i> الشبكة الإعلامية العالمية
-                </span>
-                <h2 class="section-title-large" data-editable="true">شبكة القنوات الرقمية والمحتوى القصير (Shorts & Reels)</h2>
-                <p class="section-desc-lead" data-editable="true">
-                    إدارة وإنتاج محتوى متكامل عبر 4 قنوات شورتس دولية تعتمد على الذكاء الاصطناعي التوليدي لسرد قصص التاريخ والاقتصاد والتقنية لملايين المشاهدين حول العالم.
-                </p>
-            </div>
-
-            <!-- شبكة بطاقات القنوات الـ 4 بنظام الشورتس 9:16 الطولي -->
-            <div class="shorts-channels-grid" id="shortsGridContainer">
-                
-                <!-- قناة شورتس 1: الذكاء الاصطناعي وصناعة المحتوى -->
-                <div class="shorts-channel-card">
-                    <div class="shorts-media-preview-916">
-                        <img src="assets/media_network.jpg" class="shorts-bg-artwork" alt="قناة آفاق الذكاء الاصطناعي">
-                        
-                        <div class="shorts-top-hud">
-                            <span class="shorts-cat-pill"><i class="fa-solid fa-brain"></i> AI Shorts #01</span>
-                            <span class="shorts-views-pill"><i class="fa-solid fa-fire"></i> +2.5M</span>
-                        </div>
-
-                        <div class="shorts-center-play-trigger" onclick="openShortsPlayer('قناة آفاق الذكاء الاصطناعي والتقنية', 'شورتس يومية تكشف أحدث نماذج وأدوات الذكاء الاصطناعي وتطبيقاتها العملية.')">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-
-                        <div class="shorts-bottom-hud">
-                            <h3 class="shorts-title-h3" data-editable="true">آفاق الذكاء الاصطناعي والتقنية</h3>
-                            <p class="shorts-desc-p" data-editable="true">
-                                مقاطع قصيرة تشرح أحدث أدوات ونماذج الذكاء الاصطناعي وكيفية توظيفها في تحويل الأعمال.
-                            </p>
-                            <div class="shorts-platform-links">
-                                <a href="https://youtube.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> شورتس</a>
-                                <a href="https://tiktok.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-tiktok"></i> تيك توك</a>
-                                <a href="https://instagram.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> ريلز</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- قناة شورتس 2: الاقتصاد والتحليلات الجيوسياسية -->
-                <div class="shorts-channel-card">
-                    <div class="shorts-media-preview-916">
-                        <img src="assets/fintech_model_preview.jpg" class="shorts-bg-artwork" alt="قناة الاقتصاد والتحليلات الجيوسياسية">
-                        
-                        <div class="shorts-top-hud">
-                            <span class="shorts-cat-pill" style="color: #38bdf8;"><i class="fa-solid fa-earth-americas"></i> Economy #02</span>
-                            <span class="shorts-views-pill"><i class="fa-solid fa-fire"></i> +3.8M</span>
-                        </div>
-
-                        <div class="shorts-center-play-trigger" onclick="openShortsPlayer('قناة الاقتصاد والتحليلات الجيوسياسية', 'تحليلات سريعة وموجزة لحركة الأسواق والصراعات الاقتصادية العالمية.')">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-
-                        <div class="shorts-bottom-hud">
-                            <h3 class="shorts-title-h3" data-editable="true">الاقتصاد والتحليلات العالمية</h3>
-                            <p class="shorts-desc-p" data-editable="true">
-                                تحليل الصراعات الاقتصادية، حركة الأسواق المالية، وحقائق التجارة الدولية بأسلوب بصري تفاعلي.
-                            </p>
-                            <div class="shorts-platform-links">
-                                <a href="https://youtube.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> شورتس</a>
-                                <a href="https://facebook.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> فيسبوك</a>
-                                <a href="https://tiktok.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-tiktok"></i> تيك توك</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- قناة شورتس 3: التحول الرقمي والأتمتة السحابية -->
-                <div class="shorts-channel-card">
-                    <div class="shorts-media-preview-916">
-                        <img src="assets/exec_ai_preview.jpg" class="shorts-bg-artwork" alt="قناة التحول الرقمي وأتمتة الأعمال">
-                        
-                        <div class="shorts-top-hud">
-                            <span class="shorts-cat-pill" style="color: #a855f7;"><i class="fa-solid fa-microchip"></i> Automation #03</span>
-                            <span class="shorts-views-pill"><i class="fa-solid fa-fire"></i> +1.9M</span>
-                        </div>
-
-                        <div class="shorts-center-play-trigger" onclick="openShortsPlayer('قناة التحول الرقمي وأتمتة الأعمال', 'كواليس أتمتة مسارات العمل وتكامل الأنظمة السحابية للمؤسسات.')">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-
-                        <div class="shorts-bottom-hud">
-                            <h3 class="shorts-title-h3" data-editable="true">التحول الرقمي وأتمتة الأعمال</h3>
-                            <p class="shorts-desc-p" data-editable="true">
-                                شروحات سريعة توضح كواليس ربط الأنظمة السحابية وأتمتة المهام اليومية في الشركات.
-                            </p>
-                            <div class="shorts-platform-links">
-                                <a href="https://youtube.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> شورتس</a>
-                                <a href="https://instagram.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> ريلز</a>
-                                <a href="https://tiktok.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-tiktok"></i> تيك توك</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- قناة شورتس 4: استوديو الصوت والإنتاج التوليدي -->
-                <div class="shorts-channel-card">
-                    <div class="shorts-media-preview-916">
-                        <img src="assets/voice_studio_preview.jpg" class="shorts-bg-artwork" alt="قناة استوديو الصوت والإنتاج التوليدي">
-                        
-                        <div class="shorts-top-hud">
-                            <span class="shorts-cat-pill" style="color: #ec4899;"><i class="fa-solid fa-microphone-lines"></i> Audio VO #04</span>
-                            <span class="shorts-views-pill"><i class="fa-solid fa-fire"></i> +2.2M</span>
-                        </div>
-
-                        <div class="shorts-center-play-trigger" onclick="openShortsPlayer('قناة معمل الصوت والإنتاج التوليدي', 'نماذج فويس أوفر وموسيقى توليدية وأسرار هندسة الصوت الرقمي.')">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-
-                        <div class="shorts-bottom-hud">
-                            <h3 class="shorts-title-h3" data-editable="true">معمل الصوت والإنتاج التوليدي</h3>
-                            <p class="shorts-desc-p" data-editable="true">
-                                استعراض نماذج الفويس أوفر الواقعي، الإلقاء الوثائقي، والموسيقى التوليدية بالذكاء الاصطناعي.
-                            </p>
-                            <div class="shorts-platform-links">
-                                <a href="https://youtube.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> شورتس</a>
-                                <a href="https://tiktok.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-tiktok"></i> تيك توك</a>
-                                <a href="https://soundcloud.com" target="_blank" class="btn-shorts-target"><i class="fa-brands fa-soundcloud" style="color: #ff5500;"></i> ساوند</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- مركز الربط مع منصات السوشيال ميديا الرسمية -->
-            <div class="social-media-hub-bar">
-                <div class="hub-label">
-                    <i class="fa-solid fa-globe" style="color: var(--gold-accent);"></i>
-                    <span data-editable="true">تابع وتواصل عبر كافة صفحات ومنصات السوشيال ميديا الرسمية:</span>
-                </div>
-                <div class="hub-icons-row">
-                    <a href="https://youtube.com" target="_blank" class="hub-social-btn yt" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://facebook.com" target="_blank" class="hub-social-btn fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="hub-social-btn ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://tiktok.com" target="_blank" class="hub-social-btn tk" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://t.me/abdou25008" target="_blank" class="hub-social-btn tg" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://wa.me/201092519210" target="_blank" class="hub-social-btn wa" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= 8. بطاقة التواصل والتعاون مع الاستشارة المجانية ================= -->
-        <section id="contact">
-            <div class="collaboration-banner-box">
-                <div>
-                    <div class="free-consult-badge">
-                        <i class="fa-solid fa-gift"></i>
-                        <span>جلسة استشارية أولية مجانية بالكامل</span>
-                    </div>
-
-                    <h2 class="collab-title-ar" data-editable="true">
-                        هل لدى سيادتكم فكرة مشروع أو رغبة في تطوير أعمالكم بالذكاء الاصطناعي؟
-                    </h2>
-                    
-                    <p class="collab-desc-courteous" data-editable="true">
-                        يشرفني ويسعدني جداً التعاون مع حضرتكم ومناقشة كافة التفاصيل.. خطوة واحدة ونبدأ في تحويل الرؤية إلى واقع استثنائي بأعلى معايير الإتقان، ويسرني تقديم الجلسة الاستشارية الأولى لسيادتكم مجاناً لمناقشة أهدافكم وتقديم أفضل الحلول التقنية.
-                    </p>
-                </div>
-
-                <div class="collab-channels-list">
-                    <a href="https://wa.me/201092519210" target="_blank" class="collab-channel-btn">
-                        <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.5rem;"></i>
-                        <span>حجز جلسة استشارية مجانية عبر واتساب (+20 109 251 9210)</span>
-                    </a>
-                    <a href="https://t.me/abdou25008" target="_blank" class="collab-channel-btn">
-                        <i class="fa-brands fa-telegram" style="color: #38bdf8; font-size: 1.5rem;"></i>
-                        <span>مراسلة استشارية فورية عبر تيليجرام (@abdou25008)</span>
-                    </a>
-                    <a href="mailto:abdou25008@gmail.com" class="collab-channel-btn">
-                        <i class="fa-solid fa-envelope" style="color: #fbbf24; font-size: 1.5rem;"></i>
-                        <span>البريد الإلكتروني المباشر (abdou25008@gmail.com)</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= الفوتر الأنيق ================= -->
-        <footer id="section-footer">
-            <div class="footer-brand-title">
-                <span id="footerBrandName" data-editable="true">Abdou Ali Mousa</span> <span>|</span> <span id="footerBrandRole" data-editable="true">AI & Digital Systems Engineer</span>
-            </div>
-            <p class="footer-copyright" data-editable="true">
-                جميع الحقوق محفوظة &copy; 2026 Abdou Ali Mousa. صُمم بأعلى معايير الإتقان والفخامة.
-                <button class="secret-owner-lock" onclick="openOwnerLogin()" title="دخول المالك"><i class="fa-solid fa-lock"></i></button>
+          <div class="mt-8 md:mt-10 max-w-xl">
+            <p class="text-xs sm:text-sm md:text-base font-semibold tracking-[0.2em] text-zinc-400 uppercase leading-relaxed">
+              I DESIGN & CODE DIGITAL EXPERIENCES THAT INSPIRE.
             </p>
-        </footer>
 
-    </div>
-
-    <!-- نافذة مشغل الشورتس التفاعلية (Shorts Player Preview Modal) -->
-    <div class="shorts-player-overlay" id="shortsPlayerModal">
-        <div class="shorts-player-card">
-            <button class="shorts-player-close" onclick="closeShortsPlayer()">&times;</button>
-            <div style="flex-grow: 1; position: relative; background: #000; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; text-align: center;">
-                <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(245,158,11,0.2); border: 2px solid var(--gold-accent); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--gold-light); margin-bottom: 20px;">
-                    <i class="fa-solid fa-clapperboard"></i>
-                </div>
-                <h3 id="playerModalTitle" style="color: #fff; font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;">عنوان القناة</h3>
-                <p id="playerModalDesc" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 25px; max-width: 320px;">وصف القناة ومحتوى الشورتس</p>
-                <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 280px;">
-                    <a href="https://youtube.com" target="_blank" class="btn-primary-purple" style="background: #ff0000; box-shadow: none;">
-                        <i class="fa-brands fa-youtube"></i> المشاهدة على يوتيوب شورتس
-                    </a>
-                    <a href="https://tiktok.com" target="_blank" class="btn-primary-purple" style="background: #000; border: 1px solid #fff; box-shadow: none;">
-                        <i class="fa-brands fa-tiktok"></i> المشاهدة على تيك توك
-                    </a>
-                </div>
+            <div class="mt-5 inline-flex items-center gap-2 font-mono text-xs text-purple-300 bg-purple-950/40 border border-purple-800/50 px-4 py-1.5 rounded-full shadow-inner">
+              <span className="text-purple-500 font-bold">&lt;/&gt;</span>
+              <span>AI â€¢ AUTOMATION â€¢ DIGITAL SYSTEMS â€¢ CLOUD</span>
             </div>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#software-models" class="px-7 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white font-heading font-bold text-sm tracking-wider uppercase hover:from-purple-500 hover:to-purple-700 transition-all shadow-xl shadow-purple-600/30 hover:shadow-purple-500/60 hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2 group">
+              <span>EXPLORE MODELS</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </a>
+
+            <a href="#media-network" class="px-7 py-4 rounded-xl bg-[#18181b] border border-[#27272a] text-zinc-300 font-heading font-bold text-sm tracking-wider uppercase hover:text-white hover:border-purple-500/60 hover:bg-[#1f1f24] transition-all flex items-center gap-2">
+              <span>MEDIA NETWORK</span>
+            </a>
+          </div>
         </div>
-    </div>
 
-    <!-- ================= 9. استوديو ولوحة تحكم المالك (Owner Studio Modal) ================= -->
-    <div class="studio-modal-overlay" id="masterDashboardModal">
-        <div class="studio-master-dashboard">
-            
-            <div class="studio-dash-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <h3 style="color: #fff; font-size: 1.25rem; font-weight: 800;">لوحة تحكم واستوديو المالك</h3>
+        <div class="lg:col-span-5 relative flex items-center justify-center reveal-up active">
+          <div class="absolute w-[320px] sm:w-[420px] h-[380px] sm:h-[480px] bg-gradient-to-t from-purple-600/40 via-purple-700/30 to-transparent blur-[70px] rounded-full pointer-events-none -z-10"></div>
+
+          <div class="relative w-full max-w-[360px] sm:max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border border-purple-500/30 bg-gradient-to-b from-[#18181b] to-[#0a0a0c] p-2.5 shadow-2xl shadow-purple-950/80 group">
+            <div class="w-full h-full rounded-[20px] overflow-hidden relative bg-[#121216]">
+              <img src="./assets/abdou_real_portrait.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'" alt="Abdou Ali Mousa Portrait" class="w-full h-full object-cover object-center filter contrast-110 brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-purple-950/20 mix-blend-multiply pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/40 to-transparent pointer-events-none"></div>
+
+              <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#0a0a0c]/80 backdrop-blur-md border border-[#27272a] flex items-center justify-between">
+                <div>
+                  <p class="text-[11px] font-bold text-white uppercase tracking-wider">ABDOU ALI MOUSA</p>
+                  <p class="text-[9px] font-mono text-purple-400">AI & DIGITAL SYSTEMS ENGINEER</p>
                 </div>
-                <button onclick="closeStudioMaster()" style="background: transparent; border: none; color: #fff; font-size: 1.6rem; cursor: pointer;">&times;</button>
+                <div class="w-7 h-7 rounded-full bg-purple-600/20 border border-purple-500/50 flex items-center justify-center text-purple-300">
+                  <i class="fa-solid fa-code text-xs"></i>
+                </div>
+              </div>
             </div>
 
-            <div class="dash-nav-tabs">
-                <button class="dash-tab-btn active" data-target="tab-visual-edit" onclick="switchDashboardTab(this, 'tab-visual-edit')">
-                    <i class="fa-solid fa-pen-to-square"></i> التعديل البصري الحي
-                </button>
-                <button class="dash-tab-btn" data-target="tab-branding-content" onclick="switchDashboardTab(this, 'tab-branding-content')">
-                    <i class="fa-solid fa-font"></i> الهوية والنصوص
-                </button>
-                <button class="dash-tab-btn" data-target="tab-media-files" onclick="switchDashboardTab(this, 'tab-media-files')">
-                    <i class="fa-solid fa-images"></i> الصور والوسائط
-                </button>
-                <button class="dash-tab-btn" data-target="tab-export-security" onclick="switchDashboardTab(this, 'tab-export-security')">
-                    <i class="fa-solid fa-shield-keyhole"></i> الحفظ والتصدير والأمان
-                </button>
+            <div class="absolute top-5 right-5 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0a0a0c]/90 backdrop-blur-md border border-purple-500/40 shadow-lg">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+              </span>
+              <span class="text-[10px] font-bold text-zinc-200 tracking-wider">ONLINE</span>
             </div>
+          </div>
 
-            <!-- 1. تبويب التعديل البصري الحي -->
-            <div class="dash-tab-content active" id="tab-visual-edit">
-                <div style="background: rgba(139, 92, 246, 0.08); border: 1px solid var(--border-purple); padding: 25px; border-radius: 16px; margin-bottom: 25px;">
-                    <h4 style="color: var(--primary-purple-light); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px;">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> وضع التعديل البصري الحي على الصفحة
-                    </h4>
-                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px;">
-                        انقر على أي نص أو عنوان في الصفحة لتعديله مباشرة بالماوس، ثم اضغط حفظ التعديلات في الشريط العائم.
-                    </p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <button class="btn-primary-purple" onclick="toggleVisualEditMode(true)">
-                            <i class="fa-solid fa-play"></i> تفعيل وضع التعديل الحي الآن
-                        </button>
-                        <button class="btn-secondary-wa" onclick="saveAllStudioChanges()" style="background: rgba(255,255,255,0.08); color: #fff; border-color: var(--border-glass);">
-                            <i class="fa-solid fa-floppy-disk"></i> حفظ التعديلات
-                        </button>
-                    </div>
-                </div>
+          <div class="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-6 w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-[#0a0a0c]/95 border border-purple-500/40 shadow-xl shadow-purple-950/90 flex items-center justify-center z-20 backdrop-blur-lg">
+            <svg class="w-full h-full p-1.5 animate-spin-slow" viewBox="0 0 100 100">
+              <defs>
+                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+              </defs>
+              <text class="text-[8.5px] font-bold fill-purple-300 tracking-[0.24em] uppercase">
+                <textPath href="#circlePath" startOffset="0%">
+                  CREATIVE DEVELOPER â€¢ CODE â€¢ DEPLOY â€¢
+                </textPath>
+              </text>
+            </svg>
+
+            <div class="absolute inset-0 m-auto w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-zinc-900 border border-purple-400/40 flex items-center justify-center font-heading font-black text-sm text-white shadow-inner">
+              AA
             </div>
-
-            <!-- 2. تبويب الهوية والنصوص -->
-            <div class="dash-tab-content" id="tab-branding-content">
-                <div class="form-row-group">
-                    <label>الاسم الرسمي (English Name):</label>
-                    <input type="text" id="dashNameInput" class="luxury-input" value="Abdou Ali Mousa">
-                </div>
-                <div class="form-row-group">
-                    <label>المسمى الوظيفي (Job Title):</label>
-                    <input type="text" id="dashRoleInput" class="luxury-input" value="AI & Digital Systems Engineer">
-                </div>
-                <div class="form-row-group">
-                    <label>عنوان الهيرو الرئيسي:</label>
-                    <input type="text" id="dashHeroTitleInput" class="luxury-input" value="أحوّل التعقيد إلى أنظمة ذكية.">
-                </div>
-                <button class="btn-primary-purple" onclick="applyBrandingForm()" style="margin-top: 10px;">
-                    <i class="fa-solid fa-check"></i> تطبيق وتحديث البيانات
-                </button>
-            </div>
-
-            <!-- 3. تبويب الصور والوسائط -->
-            <div class="dash-tab-content" id="tab-media-files">
-                <div class="form-row-group">
-                    <label>تغيير الصورة الشخصية (Hero Portrait):</label>
-                    <input type="file" id="dashHeroImgUpload" accept="image/*" class="luxury-input" onchange="handleLiveImageUpload(this, 'mainHeroPortrait', 'aa_live_hero_img')">
-                </div>
-                <div class="form-row-group" style="margin-top: 20px;">
-                    <label>تغيير صورة منظومة اللوجستيات (Logistics Mockup):</label>
-                    <input type="file" id="dashLogisticsUpload" accept="image/*" class="luxury-input" onchange="handleLiveImageUpload(this, 'logisticsPreviewImg', 'aa_live_logistics_img')">
-                </div>
-                <div class="form-row-group" style="margin-top: 20px;">
-                    <label>تغيير صورة استوديو الصوت (Voice Studio Mockup):</label>
-                    <input type="file" id="dashVoiceUpload" accept="image/*" class="luxury-input" onchange="handleLiveImageUpload(this, 'voiceStudioPreviewImg', 'aa_live_voice_img')">
-                </div>
-            </div>
-
-            <!-- 4. تبويب الحفظ والتصدير والأمان -->
-            <div class="dash-tab-content" id="tab-export-security">
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); padding: 25px; border-radius: 16px; margin-bottom: 25px;">
-                    <h4 style="color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 12px;">حفظ وتصدير ملف الموقع:</h4>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <button class="btn-primary-purple" onclick="saveAllStudioChanges()" style="background: #25d366;">
-                            <i class="fa-solid fa-floppy-disk"></i> حفظ كافة التعديلات في المتصفح
-                        </button>
-                        <button class="btn-secondary-wa" onclick="exportCleanHtmlFile()" style="background: rgba(255,255,255,0.08); color: #fff; border-color: var(--border-glass);">
-                            <i class="fa-solid fa-download"></i> تصدير وتحميل ملف index.html المحدث
-                        </button>
-                    </div>
-                </div>
-
-                <div class="form-row-group">
-                    <label>تغيير رمز الأمان السري (PIN):</label>
-                    <input type="password" id="dashNewPinInput" class="luxury-input" placeholder="الرمز الافتراضي: 25008">
-                    <button class="btn-primary-purple" onclick="updateMasterPin()" style="margin-top: 10px; padding: 10px 20px;">
-                        <i class="fa-solid fa-key"></i> تحديث رمز الأمان
-                    </button>
-                </div>
-            </div>
+          </div>
 
         </div>
-    </div>
 
-    <!-- نافذة تسجيل الدخول للمالك (PIN Modal) -->
-    <div class="studio-modal-overlay" id="ownerLoginModal">
-        <div style="background: #0d0f18; border: 2px solid var(--primary-purple); border-radius: 24px; padding: 35px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.95), 0 0 30px var(--primary-glow);">
-            <div style="font-size: 3.2rem; color: var(--primary-purple-light); margin-bottom: 12px;"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3 style="color: #fff; font-size: 1.45rem; font-weight: 800; margin-bottom: 6px;">استوديو تحكم المالك</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">أدخل رمز الأمان للدخول إلى لوحة التحكم:</p>
-            
-            <input type="password" id="ownerPinField" class="luxury-input" style="text-align: center; font-size: 1.5rem; letter-spacing: 5px; max-width: 200px; margin: auto; display: block;" placeholder="••••" onkeyup="if(event.key==='Enter') handlePinAuth()">
-            
-            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
-                <button class="btn-primary-purple" id="submitPinBtn" onclick="handlePinAuth()" style="padding: 10px 24px;">دخول</button>
-                <button class="btn-secondary-wa" onclick="closeOwnerLogin()" style="background: rgba(255,255,255,0.08); color: #fff; border-color: var(--border-glass); padding: 10px 18px;">إلغاء</button>
-            </div>
-            <p id="loginPinErr" style="color: #ef4444; font-size: 0.85rem; margin-top: 10px; display: none;">رمز الأمان غير صحيح! (الرمز الافتراضي: 25008)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="relative z-10 border-y border-[#27272a]/80 bg-[#121216]/60 backdrop-blur-sm py-10 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-[#27272a]/60">
+        <div class="flex flex-col items-center text-center reveal-up active">
+          <span class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-200 tracking-tight drop-shadow-[0_0_25px_rgba(168,85,247,0.3)]">
+            4+
+          </span>
+          <span class="mt-2 text-xs sm:text-sm font-semibold tracking-wider text-zinc-400 uppercase">
+            YEARS EXPERIENCE
+          </span>
         </div>
+
+        <div class="flex flex-col items-center text-center pt-6 md:pt-0 reveal-up active">
+          <span class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-200 tracking-tight drop-shadow-[0_0_25px_rgba(168,85,247,0.3)]">
+            40+
+          </span>
+          <span class="mt-2 text-xs sm:text-sm font-semibold tracking-wider text-zinc-400 uppercase">
+            PROJECTS DELIVERED
+          </span>
+        </div>
+
+        <div class="flex flex-col items-center text-center pt-6 md:pt-0 reveal-up active">
+          <span class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-200 tracking-tight drop-shadow-[0_0_25px_rgba(168,85,247,0.3)]">
+            25+
+          </span>
+          <span class="mt-2 text-xs sm:text-sm font-semibold tracking-wider text-zinc-400 uppercase">
+            HAPPY CLIENTS
+          </span>
+        </div>
+
+        <div class="flex flex-col items-center text-center pt-6 md:pt-0 reveal-up active">
+          <span class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-200 tracking-tight drop-shadow-[0_0_25px_rgba(168,85,247,0.3)]">
+            10+
+          </span>
+          <span class="mt-2 text-xs sm:text-sm font-semibold tracking-wider text-zinc-400 uppercase">
+            TECHNOLOGIES
+          </span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- JavaScript Handling & Studio Controls -->
-    <script>
-        let MASTER_PIN = localStorage.getItem("aa_master_pin") || "25008";
-        let isVisualEditing = false;
+  <!-- WHAT I DO SECTION -->
+  <section id="services" class="py-24 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+        
+        <div class="lg:col-span-4 lg:sticky lg:top-32 reveal-up">
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-purple-400 tracking-widest uppercase mb-3">
+            <span>// SERVICES & EXPERTISE</span>
+          </div>
+          <h2 class="font-heading font-black text-6xl sm:text-7xl lg:text-8xl tracking-tighter uppercase leading-[0.88] text-white">
+            WHAT <br />
+            <span class="text-[#a855f7] drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">I DO</span>
+          </h2>
+          <p class="mt-6 text-sm md:text-base text-zinc-400 leading-relaxed font-normal">
+            Transforming complex operational workflows into intuitive, high-performance digital products and automated AI architectures.
+          </p>
+          <div class="mt-8 hidden lg:block">
+            <div class="w-16 h-1 bg-gradient-to-r from-purple-600 to-transparent rounded-full"></div>
+          </div>
+        </div>
 
-        function toggleMobileNav() {
-            const drawer = document.getElementById("mobileDrawer");
-            if (drawer) {
-                drawer.classList.toggle("open");
-            }
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="relative p-8 rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/70 transition-all duration-300 group overflow-hidden shadow-lg shadow-black/40 hover:shadow-purple-950/30 flex flex-col justify-between min-h-[260px] hover:-translate-y-1.5 reveal-up">
+            <span class="absolute bottom-2 left-4 font-heading font-black text-6xl sm:text-7xl text-zinc-800/40 select-none group-hover:text-purple-900/20 transition-colors pointer-events-none">01</span>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-800/40 flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-500 transition-all duration-300 shadow-md">
+                <i class="fa-solid fa-compass-drafting text-lg"></i>
+              </div>
+              <h3 class="mt-6 font-heading font-bold text-xl sm:text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                WEB DESIGN
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed relative z-10">
+                Bespoke, brand-tailored aesthetics and interactive layouts designed to captivate visitors and maximize conversions.
+              </p>
+            </div>
+            <div class="w-20 h-20 bg-purple-600/10 rounded-full blur-xl absolute -top-4 -right-4 group-hover:bg-purple-600/25 transition-all pointer-events-none"></div>
+          </div>
+
+          <div class="relative p-8 rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/70 transition-all duration-300 group overflow-hidden shadow-lg shadow-black/40 hover:shadow-purple-950/30 flex flex-col justify-between min-h-[260px] hover:-translate-y-1.5 reveal-up">
+            <span class="absolute bottom-2 left-4 font-heading font-black text-6xl sm:text-7xl text-zinc-800/40 select-none group-hover:text-purple-900/20 transition-colors pointer-events-none">02</span>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-800/40 flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-500 transition-all duration-300 shadow-md">
+                <i class="fa-solid fa-laptop-code text-lg"></i>
+              </div>
+              <h3 class="mt-6 font-heading font-bold text-xl sm:text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                WEB DEVELOPMENT
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed relative z-10">
+                Scalable, modern full-stack web applications built with React, Next.js, and clean, high-performance architecture.
+              </p>
+            </div>
+            <div class="w-20 h-20 bg-purple-600/10 rounded-full blur-xl absolute -top-4 -right-4 group-hover:bg-purple-600/25 transition-all pointer-events-none"></div>
+          </div>
+
+          <div class="relative p-8 rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/70 transition-all duration-300 group overflow-hidden shadow-lg shadow-black/40 hover:shadow-purple-950/30 flex flex-col justify-between min-h-[260px] hover:-translate-y-1.5 reveal-up">
+            <span class="absolute bottom-2 left-4 font-heading font-black text-6xl sm:text-7xl text-zinc-800/40 select-none group-hover:text-purple-900/20 transition-colors pointer-events-none">03</span>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-800/40 flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-500 transition-all duration-300 shadow-md">
+                <i class="fa-solid fa-bezier-curve text-lg"></i>
+              </div>
+              <h3 class="mt-6 font-heading font-bold text-xl sm:text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                UI/UX DESIGN
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed relative z-10">
+                Intuitive user experiences, wireframes, component design systems in Figma, and interactive user testing prototypes.
+              </p>
+            </div>
+            <div class="w-20 h-20 bg-purple-600/10 rounded-full blur-xl absolute -top-4 -right-4 group-hover:bg-purple-600/25 transition-all pointer-events-none"></div>
+          </div>
+
+          <div class="relative p-8 rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/70 transition-all duration-300 group overflow-hidden shadow-lg shadow-black/40 hover:shadow-purple-950/30 flex flex-col justify-between min-h-[260px] hover:-translate-y-1.5 reveal-up">
+            <span class="absolute bottom-2 left-4 font-heading font-black text-6xl sm:text-7xl text-zinc-800/40 select-none group-hover:text-purple-900/20 transition-colors pointer-events-none">04</span>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-800/40 flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-500 transition-all duration-300 shadow-md">
+                <i class="fa-solid fa-bolt text-lg"></i>
+              </div>
+              <h3 class="mt-6 font-heading font-bold text-xl sm:text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                OPTIMIZATION
+              </h3>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed relative z-10">
+                Lightning-fast Core Web Vitals, technical SEO audits, seamless animation tuning, and zero-compromise responsiveness.
+              </p>
+            </div>
+            <div class="w-20 h-20 bg-purple-600/10 rounded-full blur-xl absolute -top-4 -right-4 group-hover:bg-purple-600/25 transition-all pointer-events-none"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTWARE MODELS & AI SECTION (WITH VISUAL THUMBNAILS) -->
+  <section id="software-models" class="py-24 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-12 border-b border-[#27272a] reveal-up">
+        <div>
+          <span class="text-xs font-mono text-purple-400 tracking-widest uppercase">// PRODUCTION ARCHITECTURES</span>
+          <h2 class="mt-2 font-heading font-black text-5xl sm:text-6xl md:text-7xl tracking-tighter uppercase text-white">
+            SOFTWARE <span class="text-[#a855f7]">MODELS & AI</span>
+          </h2>
+        </div>
+
+        <a href="#contact-cta" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider text-purple-400 hover:text-white uppercase group transition-colors">
+          <span>REQUEST ARCHITECTURE DEMO</span>
+          <span class="group-hover:translate-x-1.5 transition-transform duration-200">âž”</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        
+        <!-- Model 1 -->
+        <div class="rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500 transition-all duration-300 overflow-hidden group shadow-xl hover:shadow-purple-950/40 flex flex-col hover:-translate-y-2 reveal-up">
+          <div class="relative h-72 sm:h-80 overflow-hidden bg-[#0e0e12] border-b border-[#27272a]">
+            <img src="./assets/fintech_model_preview.jpg" alt="FinTech AI Engine" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-black/30 pointer-events-none"></div>
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-[#0a0a0c]/85 backdrop-blur-md border border-purple-500/40 text-[10px] font-mono text-purple-300 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-microchip text-purple-400 text-xs"></i>
+              <span>FINTECH ENGINE</span>
+            </div>
+          </div>
+
+          <div class="p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    FINTECH & FINANCIAL AI ENGINE
+                  </h3>
+                  <p class="mt-1 text-xs font-semibold text-purple-400 tracking-wider uppercase">
+                    Financial AI & Workflow Automation
+                  </p>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[#27272a]/80 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:bg-purple-600 group-hover:border-purple-500 group-hover:text-white transition-all duration-300 flex-shrink-0 group-hover:scale-110">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </div>
+              </div>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                High-throughput accounting automation, automated ledger balancing, and intelligent financial forecasting.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#27272a]/60 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">FinTech AI</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Next.js</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Python Engine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Model 2 -->
+        <div class="rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500 transition-all duration-300 overflow-hidden group shadow-xl hover:shadow-purple-950/40 flex flex-col hover:-translate-y-2 reveal-up">
+          <div class="relative h-72 sm:h-80 overflow-hidden bg-[#0e0e12] border-b border-[#27272a]">
+            <img src="./assets/doc_ai_preview.jpg" alt="Intelligent Document OCR" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-black/30 pointer-events-none"></div>
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-[#0a0a0c]/85 backdrop-blur-md border border-purple-500/40 text-[10px] font-mono text-purple-300 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-file-invoice text-purple-400 text-xs"></i>
+              <span>DOC AI OCR</span>
+            </div>
+          </div>
+
+          <div class="p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    INTELLIGENT DOCUMENT OCR & LLM
+                  </h3>
+                  <p class="mt-1 text-xs font-semibold text-purple-400 tracking-wider uppercase">
+                    Computer Vision & Extraction
+                  </p>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[#27272a]/80 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:bg-purple-600 group-hover:border-purple-500 group-hover:text-white transition-all duration-300 flex-shrink-0 group-hover:scale-110">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </div>
+              </div>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Multimodal document processing engine extracting invoices, contracts, and legal records with 99.4% precision.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#27272a]/60 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">OCR / LLM</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Vision Transformer</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Model 3 -->
+        <div class="rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500 transition-all duration-300 overflow-hidden group shadow-xl hover:shadow-purple-950/40 flex flex-col hover:-translate-y-2 reveal-up">
+          <div class="relative h-72 sm:h-80 overflow-hidden bg-[#0e0e12] border-b border-[#27272a]">
+            <img src="./assets/exec_ai_preview.jpg" alt="Executive AI Decision Support" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-black/30 pointer-events-none"></div>
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-[#0a0a0c]/85 backdrop-blur-md border border-purple-500/40 text-[10px] font-mono text-purple-300 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-chart-line text-purple-400 text-xs"></i>
+              <span>EXECUTIVE OS</span>
+            </div>
+          </div>
+
+          <div class="p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    EXECUTIVE AI DECISION ENGINE
+                  </h3>
+                  <p class="mt-1 text-xs font-semibold text-purple-400 tracking-wider uppercase">
+                    Enterprise Decision Support Matrix
+                  </p>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[#27272a]/80 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:bg-purple-600 group-hover:border-purple-500 group-hover:text-white transition-all duration-300 flex-shrink-0 group-hover:scale-110">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </div>
+              </div>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Real-time telemetry, predictive executive KPIs, and operational optimization dashboards for C-level leadership.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#27272a]/60 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Executive OS</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Model 4 -->
+        <div class="rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-purple-500 transition-all duration-300 overflow-hidden group shadow-xl hover:shadow-purple-950/40 flex flex-col hover:-translate-y-2 reveal-up">
+          <div class="relative h-72 sm:h-80 overflow-hidden bg-[#0e0e12] border-b border-[#27272a]">
+            <img src="./assets/logistics_preview.jpg" alt="Logistics Fleet AI" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-black/30 pointer-events-none"></div>
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-[#0a0a0c]/85 backdrop-blur-md border border-purple-500/40 text-[10px] font-mono text-purple-300 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-truck-fast text-purple-400 text-xs"></i>
+              <span>FLEET AI</span>
+            </div>
+          </div>
+
+          <div class="p-7 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="font-heading font-bold text-2xl text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    LOGISTICS & FLEET AUTOMATION
+                  </h3>
+                  <p class="mt-1 text-xs font-semibold text-purple-400 tracking-wider uppercase">
+                    Smart Supply Chain AI
+                  </p>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-[#27272a]/80 border border-zinc-700 flex items-center justify-center text-zinc-300 group-hover:bg-purple-600 group-hover:border-purple-500 group-hover:text-white transition-all duration-300 flex-shrink-0 group-hover:scale-110">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </div>
+              </div>
+              <p class="mt-3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                Autonomous route optimization, real-time vehicle dispatching, and predictive inventory management.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#27272a]/60 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">Fleet AI</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">IoT Telemetry</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0a0a0c] border border-zinc-800 text-[10px] font-mono text-zinc-400 font-medium">AWS Cloud</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHORTS CHANNELS NETWORK (4 DEDICATED VERTICAL CHANNELS) -->
+  <section id="media-network" class="py-24 md:py-32 relative bg-[#0e0e12]/50 border-y border-[#27272a]/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-12 border-b border-[#27272a] reveal-up">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-pink-400 tracking-widest uppercase mb-2">
+            <i class="fa-solid fa-tower-broadcast text-red-500 animate-pulse text-xs"></i>
+            <span>GLOBAL DIGITAL MEDIA NETWORK</span>
+          </div>
+          <h2 class="font-heading font-black text-5xl sm:text-6xl md:text-7xl tracking-tighter uppercase text-white">
+            SHORTS CHANNELS <span class="text-[#a855f7]">NETWORK</span>
+          </h2>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="px-3.5 py-1.5 rounded-full bg-red-600/20 border border-red-500/40 text-red-400 text-xs font-bold font-mono">
+            4 CHANNELS â€¢ 33M+ TOTAL VIEWS
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        
+        <!-- Channel 1 -->
+        <div class="relative aspect-[9/16] rounded-3xl overflow-hidden border border-[#27272a] hover:border-purple-500 transition-all duration-300 group shadow-2xl bg-[#121216] flex flex-col justify-between p-6 hover:-translate-y-2 reveal-up">
+          <div class="absolute inset-0 bg-gradient-to-b from-purple-900/60 to-purple-950/80 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+          <img src="./assets/media_network.jpg" alt="AI & Future Tech Shorts" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-125 brightness-75 opacity-30 group-hover:scale-110 group-hover:opacity-45 transition-all duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/60 to-transparent pointer-events-none"></div>
+
+          <div class="relative z-10 flex items-center justify-between">
+            <div class="px-2.5 py-1 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-lg">
+              <i class="fa-solid fa-play text-[8px]"></i>
+              <span>SHORTS</span>
+            </div>
+            <span class="text-[11px] font-mono text-purple-300 font-bold bg-[#0a0a0c]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-purple-500/30">
+              12M+ Views
+            </span>
+          </div>
+
+          <div class="relative z-10 flex items-center justify-center my-auto">
+            <div class="w-14 h-14 rounded-full bg-purple-600/30 border border-purple-400/50 backdrop-blur-md flex items-center justify-center text-white shadow-2xl group-hover:scale-125 group-hover:bg-purple-600 transition-all duration-300">
+              <i class="fa-solid fa-play text-lg ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <span class="text-xs font-bold text-pink-400 tracking-wider font-mono">180K+ Subscribers</span>
+            <h3 class="font-heading font-black text-xl text-white tracking-wide uppercase mt-1 group-hover:text-purple-300 transition-colors">
+              AI & FUTURE TECH
+            </h3>
+            <p class="text-[11px] text-zinc-400 mt-2 line-clamp-2 leading-relaxed">
+              High-energy daily deep-dives into autonomous agents, neural architectures, and future computing.
+            </p>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+              <div class="flex gap-1.5">
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">YouTube</span>
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">TikTok</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Channel 2 -->
+        <div class="relative aspect-[9/16] rounded-3xl overflow-hidden border border-[#27272a] hover:border-purple-500 transition-all duration-300 group shadow-2xl bg-[#121216] flex flex-col justify-between p-6 hover:-translate-y-2 reveal-up">
+          <div class="absolute inset-0 bg-gradient-to-b from-violet-900/60 to-indigo-950/80 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+          <img src="./assets/media_network.jpg" alt="FinTech & Automation Systems" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-125 brightness-75 opacity-30 group-hover:scale-110 group-hover:opacity-45 transition-all duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/60 to-transparent pointer-events-none"></div>
+
+          <div class="relative z-10 flex items-center justify-between">
+            <div class="px-2.5 py-1 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-lg">
+              <i class="fa-solid fa-play text-[8px]"></i>
+              <span>SHORTS</span>
+            </div>
+            <span class="text-[11px] font-mono text-purple-300 font-bold bg-[#0a0a0c]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-purple-500/30">
+              7.5M+ Views
+            </span>
+          </div>
+
+          <div class="relative z-10 flex items-center justify-center my-auto">
+            <div class="w-14 h-14 rounded-full bg-purple-600/30 border border-purple-400/50 backdrop-blur-md flex items-center justify-center text-white shadow-2xl group-hover:scale-125 group-hover:bg-purple-600 transition-all duration-300">
+              <i class="fa-solid fa-play text-lg ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <span class="text-xs font-bold text-pink-400 tracking-wider font-mono">95K+ Subscribers</span>
+            <h3 class="font-heading font-black text-xl text-white tracking-wide uppercase mt-1 group-hover:text-purple-300 transition-colors">
+              FINTECH AUTOMATION
+            </h3>
+            <p class="text-[11px] text-zinc-400 mt-2 line-clamp-2 leading-relaxed">
+              Practical breakdowns of accounting workflows, algorithm trading architectures, and smart contracts.
+            </p>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+              <div class="flex gap-1.5">
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">Shorts</span>
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">LinkedIn</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Channel 3 -->
+        <div class="relative aspect-[9/16] rounded-3xl overflow-hidden border border-[#27272a] hover:border-purple-500 transition-all duration-300 group shadow-2xl bg-[#121216] flex flex-col justify-between p-6 hover:-translate-y-2 reveal-up">
+          <div class="absolute inset-0 bg-gradient-to-b from-fuchsia-900/60 to-purple-950/80 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+          <img src="./assets/media_network.jpg" alt="Executive Engineering Matrix" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-125 brightness-75 opacity-30 group-hover:scale-110 group-hover:opacity-45 transition-all duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/60 to-transparent pointer-events-none"></div>
+
+          <div class="relative z-10 flex items-center justify-between">
+            <div class="px-2.5 py-1 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-lg">
+              <i class="fa-solid fa-play text-[8px]"></i>
+              <span>SHORTS</span>
+            </div>
+            <span class="text-[11px] font-mono text-purple-300 font-bold bg-[#0a0a0c]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-purple-500/30">
+              4.2M+ Views
+            </span>
+          </div>
+
+          <div class="relative z-10 flex items-center justify-center my-auto">
+            <div class="w-14 h-14 rounded-full bg-purple-600/30 border border-purple-400/50 backdrop-blur-md flex items-center justify-center text-white shadow-2xl group-hover:scale-125 group-hover:bg-purple-600 transition-all duration-300">
+              <i class="fa-solid fa-play text-lg ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <span class="text-xs font-bold text-pink-400 tracking-wider font-mono">60K+ Subscribers</span>
+            <h3 class="font-heading font-black text-xl text-white tracking-wide uppercase mt-1 group-hover:text-purple-300 transition-colors">
+              EXECUTIVE MATRIX
+            </h3>
+            <p class="text-[11px] text-zinc-400 mt-2 line-clamp-2 leading-relaxed">
+              Systems engineering decisions, cloud scaling roadmaps, and digital transformation mastery.
+            </p>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+              <div class="flex gap-1.5">
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">Shorts</span>
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">Reels</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Channel 4 -->
+        <div class="relative aspect-[9/16] rounded-3xl overflow-hidden border border-[#27272a] hover:border-purple-500 transition-all duration-300 group shadow-2xl bg-[#121216] flex flex-col justify-between p-6 hover:-translate-y-2 reveal-up">
+          <div class="absolute inset-0 bg-gradient-to-b from-pink-900/60 to-purple-950/80 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+          <img src="./assets/media_network.jpg" alt="Voice Studio & Creative Media" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-125 brightness-75 opacity-30 group-hover:scale-110 group-hover:opacity-45 transition-all duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/60 to-transparent pointer-events-none"></div>
+
+          <div class="relative z-10 flex items-center justify-between">
+            <div class="px-2.5 py-1 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-lg">
+              <i class="fa-solid fa-play text-[8px]"></i>
+              <span>SHORTS</span>
+            </div>
+            <span class="text-[11px] font-mono text-purple-300 font-bold bg-[#0a0a0c]/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-purple-500/30">
+              9.8M+ Views
+            </span>
+          </div>
+
+          <div class="relative z-10 flex items-center justify-center my-auto">
+            <div class="w-14 h-14 rounded-full bg-purple-600/30 border border-purple-400/50 backdrop-blur-md flex items-center justify-center text-white shadow-2xl group-hover:scale-125 group-hover:bg-purple-600 transition-all duration-300">
+              <i class="fa-solid fa-play text-lg ml-0.5"></i>
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <span class="text-xs font-bold text-pink-400 tracking-wider font-mono">120K+ Subscribers</span>
+            <h3 class="font-heading font-black text-xl text-white tracking-wide uppercase mt-1 group-hover:text-purple-300 transition-colors">
+              VOICE & MEDIA STUDIO
+            </h3>
+            <p class="text-[11px] text-zinc-400 mt-2 line-clamp-2 leading-relaxed">
+              Generative media workflows, AI voice cloning synthesis, and high-fidelity video rendering.
+            </p>
+            <div class="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+              <div class="flex gap-1.5">
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">YouTube</span>
+                <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-zinc-800">TikTok</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM TRIFECTA GRID -->
+  <section class="py-24 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- COLUMN 1: MY TOOLKIT -->
+        <div id="toolkit" class="p-7 sm:p-8 rounded-2xl bg-[#18181b] border border-[#27272a] flex flex-col justify-between reveal-up">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono text-purple-400 tracking-widest uppercase mb-2">
+              <span>// ARSENAL</span>
+            </div>
+            <h3 class="font-heading font-black text-3xl sm:text-4xl uppercase text-white tracking-tight">
+              MY <span class="text-[#a855f7]">TOOLKIT</span>
+            </h3>
+            <p class="mt-2 text-xs sm:text-sm text-zinc-400">
+              Core technologies and frameworks I leverage daily.
+            </p>
+
+            <div class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 mt-6">
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-html5 text-xl text-orange-500"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">HTML5</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-css3-alt text-xl text-blue-500"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">CSS3</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-js text-xl text-yellow-400"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">JavaScript</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <span class="text-sm font-bold text-blue-400">TS</span>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">TypeScript</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-react text-xl text-cyan-400"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">React</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <span class="text-sm font-black text-white">â–²</span>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">Next.js</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <span class="text-sm font-bold text-cyan-400">â‰ˆ</span>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">Tailwind</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-node-js text-xl text-emerald-500"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">Node.js</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-github text-xl text-white"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">GitHub</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-brands fa-figma text-xl text-pink-400"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">Figma</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-solid fa-code text-xl text-blue-400"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">VS Code</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-[#0a0a0c] border border-zinc-800 hover:border-purple-500 hover:scale-105 transition-all flex flex-col items-center justify-center text-center gap-1.5 group cursor-default shadow-sm">
+                <i class="fa-solid fa-fire text-xl text-amber-500"></i>
+                <span class="text-[10px] font-semibold text-zinc-300 group-hover:text-purple-300 transition-colors">Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[#27272a] flex items-center justify-between text-[11px] font-mono text-zinc-500">
+            <span>CONSTANTLY EXPANDING</span>
+            <span class="text-purple-400 font-bold">12+ MASTERED</span>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: WORK PROCESS -->
+        <div id="process" class="p-7 sm:p-8 rounded-2xl bg-[#18181b] border border-[#27272a] flex flex-col justify-between reveal-up">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono text-purple-400 tracking-widest uppercase mb-2">
+              <span>// WORKFLOW</span>
+            </div>
+            <h3 class="font-heading font-black text-3xl sm:text-4xl uppercase text-white tracking-tight">
+              WORK <span class="text-[#a855f7]">PROCESS</span>
+            </h3>
+            <p class="mt-2 text-xs sm:text-sm text-zinc-400">
+              A structured path from concept to high-impact execution.
+            </p>
+
+            <div class="relative mt-8 space-y-6">
+              <div class="absolute top-3 bottom-3 left-[17px] w-0.5 border-l-2 border-dashed border-purple-800/60 z-0"></div>
+
+              <div class="relative z-10 flex items-start gap-4 group">
+                <div class="w-9 h-9 rounded-full bg-[#0a0a0c] border border-purple-500/60 text-purple-300 font-heading font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md shadow-purple-950/50">
+                  01
+                </div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    DISCOVER
+                  </h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed mt-0.5">
+                    In-depth research, architectural scoping, and technical roadmapping.
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex items-start gap-4 group">
+                <div class="w-9 h-9 rounded-full bg-[#0a0a0c] border border-purple-500/60 text-purple-300 font-heading font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md shadow-purple-950/50">
+                  02
+                </div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    DESIGN
+                  </h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed mt-0.5">
+                    High-fidelity wireframes, interactive UI prototypes, and design systems.
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex items-start gap-4 group">
+                <div class="w-9 h-9 rounded-full bg-[#0a0a0c] border border-purple-500/60 text-purple-300 font-heading font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md shadow-purple-950/50">
+                  03
+                </div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    DEVELOP
+                  </h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed mt-0.5">
+                    Type-safe, component-driven clean code with fluid motion animations.
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative z-10 flex items-start gap-4 group">
+                <div class="w-9 h-9 rounded-full bg-[#0a0a0c] border border-purple-500/60 text-purple-300 font-heading font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md shadow-purple-950/50">
+                  04
+                </div>
+                <div>
+                  <h4 class="font-heading font-bold text-sm sm:text-base text-white tracking-wide uppercase group-hover:text-purple-300 transition-colors">
+                    DELIVER
+                  </h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed mt-0.5">
+                    Lighthouse optimization, QA testing, SEO audit, and smooth deployment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[#27272a] flex items-center justify-between text-[11px] font-mono text-zinc-500">
+            <span>AGILE & TRANSPARENT</span>
+            <span class="text-emerald-400 font-bold">100% ON-TIME</span>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: CALL-TO-ACTION CARD -->
+        <div id="contact-cta" class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[#8b5cf6] via-[#9333ea] to-[#7c3aed] text-white flex flex-col justify-between relative overflow-hidden shadow-2xl shadow-purple-900/60 reveal-up">
+          <div class="absolute top-4 right-6 text-white/30 text-2xl select-none animate-pulse">âœ¦</div>
+          <div class="absolute top-1/3 left-4 text-white/20 text-lg select-none">â‹†</div>
+          <div class="absolute bottom-28 right-8 text-white/30 text-xl select-none animate-pulse">âœ¨</div>
+          <div class="absolute -bottom-10 -right-10 w-44 h-44 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider text-white mb-6">
+              <span>âœ¦ LET'S TALK</span>
+            </div>
+
+            <h3 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter leading-[0.92] text-white drop-shadow-md">
+              LET'S BUILD SOMETHING AMAZING TOGETHER.
+            </h3>
+
+            <p class="mt-5 text-xs sm:text-sm text-purple-100/90 leading-relaxed font-normal">
+              Have a project in mind or looking for a dedicated full-stack engineer? Let's turn your vision into reality.
+            </p>
+          </div>
+
+          <div class="relative z-10 mt-8">
+            <a href="#contact" class="w-full py-4 px-6 rounded-xl bg-[#0a0a0c] hover:bg-zinc-900 text-white font-heading font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-2xl flex items-center justify-between group hover:scale-[1.02] active:scale-[0.98]">
+              <span>GET IN TOUCH</span>
+              <div class="w-8 h-8 rounded-lg bg-purple-600/30 flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="border-t border-[#27272a] bg-[#0a0a0c] pt-20 pb-12 relative overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-purple-950/20 blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 pb-16 border-b border-[#27272a]">
+        
+        <div>
+          <span class="text-xs font-mono text-purple-400 tracking-widest uppercase">// CONTACT INFORMATION</span>
+          <h3 class="mt-2 font-heading font-black text-4xl sm:text-5xl uppercase text-white tracking-tight">
+            HAVE A PROJECT <br />
+            <span class="text-[#a855f7]">IN MIND?</span>
+          </h3>
+
+          <div class="mt-8 space-y-4">
+            <a href="mailto:contact@creativedev.io" class="flex items-center gap-3 text-zinc-300 hover:text-purple-400 transition-colors group">
+              <div class="w-10 h-10 rounded-xl bg-[#18181b] border border-[#27272a] flex items-center justify-center text-purple-400 group-hover:border-purple-500 transition-colors">
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </div>
+              <span class="font-semibold text-sm sm:text-base">contact@creativedev.io</span>
+            </a>
+
+            <div class="flex items-center gap-3 text-zinc-400">
+              <div class="w-10 h-10 rounded-xl bg-[#18181b] border border-[#27272a] flex items-center justify-center text-purple-400">
+                <i class="fa-solid fa-earth-americas text-sm"></i>
+              </div>
+              <span class="text-sm">Available for Worldwide Remote Contracts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono text-purple-400 tracking-widest uppercase">// SOCIAL NETWORK</span>
+            <h3 class="mt-2 font-heading font-black text-4xl sm:text-5xl uppercase text-white tracking-tight">
+              LET'S <span class="text-[#a855f7]">CONNECT</span>
+            </h3>
+            <p class="mt-3 text-xs sm:text-sm text-zinc-400">
+              Follow my engineering journey, latest open-source projects, and UI experiments.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-6">
+              <a href="https://github.com" target="_blank" class="p-3 rounded-xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/80 hover:bg-purple-950/30 transition-all flex items-center gap-2.5 text-zinc-300 hover:text-white group text-xs font-semibold">
+                <i class="fa-brands fa-github text-purple-400 group-hover:scale-110 transition-transform"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="p-3 rounded-xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/80 hover:bg-purple-950/30 transition-all flex items-center gap-2.5 text-zinc-300 hover:text-white group text-xs font-semibold">
+                <i class="fa-brands fa-linkedin-in text-purple-400 group-hover:scale-110 transition-transform"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="p-3 rounded-xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/80 hover:bg-purple-950/30 transition-all flex items-center gap-2.5 text-zinc-300 hover:text-white group text-xs font-semibold">
+                <i class="fa-brands fa-x-twitter text-purple-400 group-hover:scale-110 transition-transform"></i>
+                <span>Twitter / X</span>
+              </a>
+              <a href="https://dribbble.com" target="_blank" class="p-3 rounded-xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/80 hover:bg-purple-950/30 transition-all flex items-center gap-2.5 text-zinc-300 hover:text-white group text-xs font-semibold">
+                <i class="fa-brands fa-dribbble text-purple-400 group-hover:scale-110 transition-transform"></i>
+                <span>Dribbble</span>
+              </a>
+              <a href="https://figma.com" target="_blank" class="p-3 rounded-xl bg-[#18181b] border border-[#27272a] hover:border-purple-500/80 hover:bg-purple-950/30 transition-all flex items-center gap-2.5 text-zinc-300 hover:text-white group text-xs font-semibold">
+                <i class="fa-brands fa-figma text-purple-400 group-hover:scale-110 transition-transform"></i>
+                <span>Figma</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-8 flex justify-end">
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#18181b] border border-[#27272a] hover:border-purple-500 text-xs font-bold text-zinc-300 hover:text-white transition-all group">
+              <span>BACK TO TOP</span>
+              <i class="fa-solid fa-arrow-up text-xs group-hover:-translate-y-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+        <p>Â© 2026 ABDOU ALI MOUSA. ALL RIGHTS RESERVED.</p>
+        <div class="text-purple-400/80">
+          &lt;/ CODE. DESIGN. DEPLOY /&gt;
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('py-3', 'bg-[#0a0a0c]/90', 'backdrop-blur-md', 'border-b', 'border-[#27272a]/80', 'shadow-lg', 'shadow-black/50');
+        header.classList.remove('py-6', 'bg-transparent');
+      } else {
+        header.classList.remove('py-3', 'bg-[#0a0a0c]/90', 'backdrop-blur-md', 'border-b', 'border-[#27272a]/80', 'shadow-lg', 'shadow-black/50');
+        header.classList.add('py-6', 'bg-transparent');
+      }
+    });
+
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
         }
+      });
+    }, { threshold: 0.1 });
 
-        function openShortsPlayer(title, desc) {
-            document.getElementById("playerModalTitle").textContent = title;
-            document.getElementById("playerModalDesc").textContent = desc;
-            const modal = document.getElementById("shortsPlayerModal");
-            if (modal) modal.style.display = "flex";
-        }
-
-        function closeShortsPlayer() {
-            const modal = document.getElementById("shortsPlayerModal");
-            if (modal) modal.style.display = "none";
-        }
-
-        function openOwnerLogin() {
-            const modal = document.getElementById("ownerLoginModal");
-            const pinField = document.getElementById("ownerPinField");
-            const err = document.getElementById("loginPinErr");
-            if (modal) {
-                modal.style.display = "flex";
-                pinField.value = "";
-                err.style.display = "none";
-                setTimeout(() => pinField.focus(), 100);
-            }
-        }
-
-        function closeOwnerLogin() {
-            const modal = document.getElementById("ownerLoginModal");
-            if (modal) modal.style.display = "none";
-        }
-
-        function handlePinAuth() {
-            const entered = document.getElementById("ownerPinField").value.trim();
-            if (entered === MASTER_PIN) {
-                closeOwnerLogin();
-                openStudioMaster();
-            } else {
-                document.getElementById("loginPinErr").style.display = "block";
-            }
-        }
-
-        document.addEventListener("keydown", (e) => {
-            if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) {
-                e.preventDefault();
-                openOwnerLogin();
-            }
-        });
-
-        function openStudioMaster() {
-            populateDashboardFields();
-            const modal = document.getElementById("masterDashboardModal");
-            if (modal) modal.style.display = "flex";
-        }
-
-        function closeStudioMaster() {
-            const modal = document.getElementById("masterDashboardModal");
-            if (modal) modal.style.display = "none";
-        }
-
-        function switchDashboardTab(btn, targetId) {
-            document.querySelectorAll(".dash-tab-btn").forEach(b => b.classList.remove("active"));
-            document.querySelectorAll(".dash-tab-content").forEach(c => c.classList.remove("active"));
-            btn.classList.add("active");
-            const target = document.getElementById(targetId);
-            if (target) target.classList.add("active");
-        }
-
-        function toggleVisualEditMode(enable) {
-            isVisualEditing = enable;
-            document.body.classList.toggle("studio-edit-mode", enable);
-            
-            document.querySelectorAll("[data-editable='true']").forEach(el => {
-                el.contentEditable = enable ? "true" : "false";
-            });
-            
-            const dock = document.getElementById("quickStudioDock");
-            if (dock) dock.style.display = enable ? "flex" : "none";
-            
-            if (enable) {
-                closeStudioMaster();
-                alert("✏️ تم تفعيل وضع التعديل الحي!\nانقر على أي نص في الصفحة لتعديله مباشرة ثم اضغط حفظ التعديلات في الشريط العائم.");
-            }
-        }
-
-        function populateDashboardFields() {
-            document.getElementById("dashNameInput").value = document.getElementById("navBrandName").textContent.trim();
-            document.getElementById("dashRoleInput").value = document.getElementById("navBrandRole").textContent.trim();
-            document.getElementById("dashHeroTitleInput").value = document.getElementById("heroMainTitle").textContent.trim();
-        }
-
-        function applyBrandingForm() {
-            const name = document.getElementById("dashNameInput").value;
-            const role = document.getElementById("dashRoleInput").value;
-            const title = document.getElementById("dashHeroTitleInput").value;
-
-            document.getElementById("navBrandName").textContent = name;
-            document.getElementById("heroNameEn").textContent = name;
-            document.getElementById("footerBrandName").textContent = name;
-
-            document.getElementById("navBrandRole").textContent = role;
-            document.getElementById("heroRoleEn").textContent = role;
-            document.getElementById("footerBrandRole").textContent = role;
-
-            document.getElementById("heroMainTitle").textContent = title;
-
-            alert("✅ تم تطبيق وتحديث النصوص فوراً!");
-        }
-
-        function handleLiveImageUpload(inputEl, targetImgId, storageKey) {
-            const file = inputEl.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    const target = document.getElementById(targetImgId);
-                    if (target) target.src = evt.target.result;
-                    localStorage.setItem(storageKey, evt.target.result);
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function saveAllStudioChanges() {
-            const editables = {};
-            document.querySelectorAll("[data-editable='true']").forEach((el, idx) => {
-                const key = el.id ? el.id : "editable_" + idx;
-                editables[key] = el.innerHTML;
-            });
-            localStorage.setItem("aa_saved_texts", JSON.stringify(editables));
-            alert("💾 تم حفظ كافة التعديلات بنجاح في متصفحك!");
-        }
-
-        function exportCleanHtmlFile() {
-            toggleVisualEditMode(false);
-            closeStudioMaster();
-
-            setTimeout(() => {
-                const cloneDoc = document.documentElement.cloneNode(true);
-                cloneDoc.querySelectorAll("[contenteditable]").forEach(el => el.removeAttribute("contenteditable"));
-                cloneDoc.classList.remove("studio-edit-mode");
-
-                const cleanHTML = "<!DOCTYPE html>\n" + cloneDoc.outerHTML;
-                const blob = new Blob([cleanHTML], { type: "text/html;charset=utf-8" });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement("a");
-                a.href = url;
-                a.download = "index.html";
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                alert("📥 تم تصدير وتحميل ملف index.html المحدث بالكامل!");
-            }, 300);
-        }
-
-        function updateMasterPin() {
-            const newPin = document.getElementById("dashNewPinInput").value.trim();
-            if (newPin.length >= 4) {
-                MASTER_PIN = newPin;
-                localStorage.setItem("aa_master_pin", newPin);
-                alert("🔒 تم تحديث رمز الأمان بنجاح!");
-            } else {
-                alert("يجب أن يتكون الرمز من 4 أرقام على الأقل.");
-            }
-        }
-
-        window.addEventListener("DOMContentLoaded", () => {
-            if (localStorage.getItem("aa_saved_texts")) {
-                try {
-                    const saved = JSON.parse(localStorage.getItem("aa_saved_texts"));
-                    document.querySelectorAll("[data-editable='true']").forEach((el, idx) => {
-                        const key = el.id ? el.id : "editable_" + idx;
-                        if (saved[key]) el.innerHTML = saved[key];
-                    });
-                } catch(e) { console.error(e); }
-            }
-            if (localStorage.getItem("aa_live_hero_img")) {
-                const el = document.getElementById("mainHeroPortrait");
-                if (el) el.src = localStorage.getItem("aa_live_hero_img");
-            }
-            if (localStorage.getItem("aa_live_logistics_img")) {
-                const el = document.getElementById("logisticsPreviewImg");
-                if (el) el.src = localStorage.getItem("aa_live_logistics_img");
-            }
-            if (localStorage.getItem("aa_live_voice_img")) {
-                const el = document.getElementById("voiceStudioPreviewImg");
-                if (el) el.src = localStorage.getItem("aa_live_voice_img");
-            }
-        });
-    </script>
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
