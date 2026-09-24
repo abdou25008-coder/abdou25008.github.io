@@ -1,0 +1,1603 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>عبده علي موسى | Abdou Ali Mousa - AI & Digital Systems Engineer</title>
+  <meta name="description" content="الموقع الرسمي للمهندس عبده علي موسى - مهندس ذكاء اصطناعي وأنظمة رقمية. أحوّل التعقيد إلى أنظمة ذكية، أتمتة مسارات العمل، النمذجة المالية الاستراتيجية، وإدارة شبكة الإنتاج الإعلامي والقنوات الدولية." />
+  
+  <!-- Android & Mobile App Meta Tags -->
+  <meta name="theme-color" content="#050508" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900;1000&family=Tajawal:wght@300;400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#050508",
+            darkBase: "#09090d",
+            darkSurface: "#111116",
+            cardBg: "#16161f",
+            cardBorder: "#23232f",
+            cardBorderHover: "#8b5cf6",
+            neonPurple: "#a855f7",
+            vibrantPurple: "#9333ea",
+            accentPurple: "#8b5cf6",
+            lightPurple: "#c084fc",
+            darkPurple: "#4c1d95",
+            primaryCyan: "#06b6d4",
+            lightCyan: "#38bdf8",
+            emeraldBeacon: "#10b981",
+            warmGold: "#f59e0b",
+            mutedText: "#94a3b8",
+          },
+          fontFamily: {
+            sans: ["'Tajawal'", "'Cairo'", "'Roboto'", "'Plus Jakarta Sans'", "sans-serif"],
+            heading: ["'Cairo'", "'Tajawal'", "'Plus Jakarta Sans'", "sans-serif"],
+            mono: ["'Fira Code'", "'Courier New'", "monospace"],
+          },
+          boxShadow: {
+            'glow-purple': '0 0 25px -3px rgba(168, 85, 247, 0.4)',
+            'glow-purple-lg': '0 0 50px -8px rgba(147, 51, 234, 0.55)',
+            'glow-cyan': '0 0 25px -3px rgba(6, 182, 212, 0.4)',
+            'glow-emerald': '0 0 20px rgba(16, 185, 129, 0.4)',
+            'card-lux': '0 10px 30px -10px rgba(0, 0, 0, 0.85)',
+            'floating-dock': '0 10px 35px -5px rgba(0, 0, 0, 0.95), 0 0 20px rgba(168, 85, 247, 0.35)',
+            'phone-frame': '0 25px 80px -10px rgba(0,0,0,0.95), 0 0 50px rgba(147, 51, 234, 0.35)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'wave-bar': 'waveBar 1.2s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            waveBar: {
+              '0%': { height: '15%' },
+              '100%': { height: '100%' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    html, body {
+      background-color: #050508;
+      color: #f8fafc;
+      font-family: 'Tajawal', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    
+    html[lang="en"] body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Luxury Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050508;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e1e28;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8b5cf6;
+    }
+
+    /* Ambient Background Grids */
+    .bg-grid-mesh {
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+
+    /* Glass Panels */
+    .glass-panel {
+      background: rgba(17, 17, 24, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .glass-panel:hover {
+      border-color: rgba(168, 85, 247, 0.35);
+    }
+
+    /* Floating Dock Glass */
+    .glass-dock {
+      background: rgba(14, 14, 20, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .purple-gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, #d8b4fe 60%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cyan-gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, #7dd3fc 60%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .purple-btn-gradient {
+      background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .purple-btn-gradient:hover {
+      background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+      transform: translateY(-1px);
+    }
+    .purple-btn-gradient:active {
+      transform: scale(0.97);
+    }
+
+    /* Android Touch Active Ripple Effect */
+    .touch-press:active {
+      transform: scale(0.96);
+      opacity: 0.9;
+    }
+
+    /* Audio Equalizer animation bars */
+    .equalizer-bar {
+      width: 3px;
+      background: linear-gradient(to top, #8b5cf6, #c084fc);
+      border-radius: 999px;
+      height: 20%;
+    }
+    .is-playing .equalizer-bar:nth-child(1) { animation: waveBar 0.8s ease-in-out infinite alternate; }
+    .is-playing .equalizer-bar:nth-child(2) { animation: waveBar 1.2s ease-in-out infinite alternate 0.2s; }
+    .is-playing .equalizer-bar:nth-child(3) { animation: waveBar 0.9s ease-in-out infinite alternate 0.4s; }
+    .is-playing .equalizer-bar:nth-child(4) { animation: waveBar 1.4s ease-in-out infinite alternate 0.1s; }
+    .is-playing .equalizer-bar:nth-child(5) { animation: waveBar 0.7s ease-in-out infinite alternate 0.3s; }
+    .is-playing .equalizer-bar:nth-child(6) { animation: waveBar 1.1s ease-in-out infinite alternate 0.5s; }
+    .is-playing .equalizer-bar:nth-child(7) { animation: waveBar 0.95s ease-in-out infinite alternate 0.25s; }
+
+    /* RTL / LTR text alignments */
+    html[dir="rtl"] .align-start-dir { text-align: right; }
+    html[dir="ltr"] .align-start-dir { text-align: left; }
+
+    /* Switcher Button Glow */
+    .switch-btn-active {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      color: #ffffff !important;
+      box-shadow: 0 0 12px rgba(139, 92, 246, 0.45);
+      border-color: rgba(192, 132, 252, 0.4);
+    }
+
+    /* Emulator Modal Backdrop */
+    #emulator-modal {
+      display: none;
+    }
+    #emulator-modal.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-[#050508] text-slate-100 antialiased selection:bg-purple-600 selection:text-white relative pb-24 lg:pb-0">
+
+  <!-- ========================================== -->
+  <!-- 1. TOP HEADER & CONTROLS -->
+  <!-- ========================================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-2 sm:py-2.5 bg-[#050508]/92 backdrop-blur-xl border-b border-white/10 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+      
+      <!-- Brand & Title -->
+      <a href="#" class="flex items-center gap-2 sm:gap-2.5 group flex-shrink-0 touch-press" onclick="triggerHaptic()">
+        <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-tr from-purple-600 via-indigo-600 to-purple-400 p-[1.5px] shadow-md shadow-purple-600/30 group-hover:shadow-purple-500/50 transition-all duration-300">
+          <div class="w-full h-full bg-[#09090d] rounded-[6px] flex items-center justify-center font-black text-[10px] sm:text-xs text-white group-hover:text-purple-300 transition-colors">
+            AA
+          </div>
+        </div>
+        <div class="flex flex-col text-right align-start-dir">
+          <div class="flex items-center gap-1">
+            <span class="font-black text-[11px] sm:text-sm text-white tracking-tight group-hover:text-purple-300 transition-colors" data-i18n="brand_name">
+              Abdou Ali Mousa
+            </span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          </div>
+          <span class="text-[8px] sm:text-[9.5px] font-mono tracking-wider text-zinc-400" data-i18n="brand_role">
+            AI & Digital Systems Engineer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden xl:flex items-center gap-1 bg-[#111116]/90 border border-white/10 rounded-full px-3 py-1 shadow-inner backdrop-blur-md">
+        <a href="#services" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_services">الخدمات</a>
+        <a href="#platforms" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_platforms">المنظومات الحية</a>
+        <a href="#software-models" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_models">النماذج الذكية</a>
+        <a href="#media-network" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_media">شبكة الميديا</a>
+      </nav>
+
+      <!-- Quick Control Group (Language + Mobile Simulator + WhatsApp) -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        
+        <!-- Mobile/Android Simulator Toggle (Desktop Only) -->
+        <button id="btnOpenEmulator" onclick="toggleMobileEmulator()" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#161622] hover:bg-[#201c34] border border-purple-500/40 text-purple-300 text-[11px] font-bold shadow-sm transition-all touch-press">
+          <i class="fa-solid fa-mobile-screen-button text-[11px] text-purple-400"></i>
+          <span data-i18n="btn_emulator">محاكي الهواتف الذكية</span>
+        </button>
+
+        <!-- Bilingual Language Switcher (AR / EN) -->
+        <div class="bg-[#111116] p-0.5 rounded-full border border-white/10 flex items-center shadow-inner">
+          <button id="btnLangAr" onclick="switchLanguage('ar'); triggerHaptic();" class="px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px] font-black transition-all switch-btn-active touch-press">
+            عربي
+          </button>
+          <button id="btnLangEn" onclick="switchLanguage('en'); triggerHaptic();" class="px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px] font-black text-zinc-400 hover:text-white transition-all touch-press">
+            EN
+          </button>
+        </div>
+
+        <!-- Direct WhatsApp 1-Tap CTA -->
+        <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center gap-1 purple-btn-gradient text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-purple-400/30 shadow-md touch-press">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-xs sm:text-sm"></i>
+          <span class="hidden sm:inline" data-i18n="btn_header_cta">استشارة فورية</span>
+          <span class="sm:hidden" data-i18n="btn_header_cta_short">تواصل</span>
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Ambient Luxury Spotlights -->
+  <div class="fixed top-0 right-1/4 w-[250px] sm:w-[450px] h-[250px] sm:h-[450px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/3 left-1/4 w-[220px] sm:w-[500px] h-[220px] sm:h-[500px] bg-cyan-600/8 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-1/3 w-[250px] sm:w-[550px] h-[250px] sm:h-[550px] bg-purple-900/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION (Harmonious & Proportional) -->
+  <!-- ========================================== -->
+  <section id="hero" class="relative pt-16 sm:pt-24 pb-6 sm:pb-12 flex items-center justify-center bg-grid-mesh overflow-hidden">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+        
+        <!-- Bio & Actions Column -->
+        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-right align-start-dir z-10">
+          
+          <!-- Mobile-Only Compact Avatar Badge (Prevents huge vertical scroll on phone) -->
+          <div class="lg:hidden flex items-center gap-3 mb-3 bg-[#111116]/80 p-1.5 pr-2.5 rounded-full border border-purple-500/30 backdrop-blur-md shadow-lg">
+            <div class="w-9 h-9 rounded-full overflow-hidden border border-purple-400/50 relative shadow-sm">
+              <img src="assets/abdou_real_portrait.jpg" alt="Abdou Ali Mousa" class="w-full h-full object-cover object-top" onerror="this.src='assets/hero_architect.jpg'" />
+            </div>
+            <div class="flex flex-col text-right align-start-dir pl-1">
+              <div class="flex items-center gap-1.5">
+                <span class="text-[11px] font-black text-white">عبده علي موسى</span>
+                <span class="text-[8px] font-mono text-purple-300 bg-purple-950/80 px-1 py-0.2 rounded border border-purple-500/30">Pro</span>
+              </div>
+              <span class="text-[8.5px] font-mono text-zinc-400">AI & Digital Systems Engineer</span>
+            </div>
+          </div>
+
+          <!-- Top Cyber Pill (Desktop + Tablet) -->
+          <div class="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#16161f] border border-purple-500/30 text-purple-300 text-[11px] font-mono mb-3 shadow-md backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span data-i18n="hero_pill">Abdou Ali Mousa // AI Systems Architect</span>
+          </div>
+
+          <!-- Scaled, Responsive Headline -->
+          <h1 class="text-xl sm:text-3xl lg:text-5xl font-black tracking-tight text-white leading-tight sm:leading-snug mb-2 sm:mb-2.5">
+            <span data-i18n="hero_h1_part1">أحوّل التعقيد إلى</span>
+            <span class="purple-gradient-text inline-block" data-i18n="hero_h1_part2">أنظمة ذكية فائقة.</span>
+          </h1>
+
+          <!-- Tagline with luxury touch -->
+          <div class="flex items-center justify-center lg:justify-start gap-2 mb-2.5 sm:mb-4">
+            <span class="text-[11px] sm:text-base text-purple-300 font-serif italic" data-i18n="hero_tagline">
+              بورتفوليو الأنظمة والأتمتة والإنتاج الرقمي 2025
+            </span>
+            <div class="hidden sm:block h-[1px] w-8 bg-gradient-to-l from-purple-500 to-transparent"></div>
+          </div>
+
+          <!-- Authentic Focused Bio Paragraph -->
+          <p class="text-xs sm:text-base text-zinc-300 max-w-2xl font-normal leading-relaxed mb-3.5 sm:mb-5" data-i18n="hero_bio">
+            أبني حلولًا تعتمد على الذكاء الاصطناعي والأتمتة لتحويل العمليات المعقدة إلى <strong class="text-white font-bold">أنظمة أكثر ذكاءً، كفاءةً وقابليةً للتوسع</strong>؛ من أتمتة سير العمل والنماذج المالية والمحاسبية، إلى البنية السحابية وأنظمة الإنتاج الرقمي — أصمم حلولًا تقنية تخدم <strong class="text-purple-300 font-bold">القرار، الكفاءة، والنمو</strong>.
+          </p>
+
+          <!-- Core Specialization Tags (Compact Chips) -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 mb-4 sm:mb-5 text-[9.5px] sm:text-xs font-mono text-zinc-300">
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">AI Multi-Agents</span>
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">Autonomous Automation</span>
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">FinTech & BI Dashboards</span>
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">Voice Synthesis DAW</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 w-full sm:w-auto mb-3.5 sm:mb-5">
+            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-glow-emerald transition-all duration-300 touch-press">
+              <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
+              <span data-i18n="hero_btn_whatsapp">محادثة واتساب مباشرة (+20 109 251 9210)</span>
+            </a>
+            <a href="#platforms" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 touch-press">
+              <i class="fa-solid fa-layer-group text-purple-400 text-xs sm:text-sm"></i>
+              <span data-i18n="hero_btn_platforms">استكشف المنظومات الحية</span>
+            </a>
+          </div>
+
+          <!-- Micro Status Bar -->
+          <div class="w-full max-w-md bg-[#0e0e14]/90 border border-white/10 rounded-lg p-2 flex items-center justify-between font-mono text-[9.5px] sm:text-xs text-zinc-400 backdrop-blur-md">
+            <div class="flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500/80"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/80"></span>
+              <span class="text-zinc-600 mr-1">|</span>
+              <span class="text-purple-300 font-semibold">sys.init("Production_Ready")</span>
+            </div>
+            <div class="text-zinc-400 truncate dir-ltr font-mono text-[9px] sm:text-[10.5px]">
+              <span class="text-zinc-500">status:</span> <span class="text-emerald-400">"Online_24/7"</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Desktop Luxury Portrait Column (Hidden on small phones to maximize readability) -->
+        <div class="hidden lg:flex lg:col-span-5 relative items-center justify-center">
+          
+          <div class="relative w-full max-w-xs aspect-[4/5] rounded-3xl p-[2px] bg-gradient-to-b from-purple-500/60 via-purple-800/30 to-zinc-900 shadow-glow-purple-lg group">
+            
+            <div class="relative w-full h-full bg-[#09090d] rounded-[22px] overflow-hidden">
+              <img 
+                src="assets/abdou_real_portrait.jpg" 
+                alt="Abdou Ali Mousa - AI & Digital Systems Engineer" 
+                class="w-full h-full object-cover object-top filter grayscale contrast-110 brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="eager"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-transparent to-transparent opacity-90"></div>
+              <div class="absolute inset-0 bg-purple-950/20 mix-blend-color"></div>
+
+              <!-- Top Left Badge -->
+              <div class="absolute top-2.5 left-2.5 bg-[#050508]/85 border border-purple-500/40 rounded-xl px-2 py-0.5 backdrop-blur-md text-[9.5px] font-mono text-purple-300">
+                <span>AI_ENGINEER // 2025</span>
+              </div>
+
+              <!-- Bottom Card Tag -->
+              <div class="absolute bottom-2.5 right-2.5 left-2.5 bg-[#111116]/90 border border-white/10 rounded-2xl p-2.5 backdrop-blur-md text-right align-start-dir">
+                <div class="flex items-center justify-between mb-0.5">
+                  <h3 class="font-bold text-white text-xs sm:text-sm" data-i18n="hero_portrait_name">عبده علي موسى</h3>
+                  <span class="text-[9px] font-mono text-purple-400 bg-purple-950/80 px-1.5 py-0.5 rounded-md border border-purple-500/30">Verified Pro</span>
+                </div>
+                <p class="text-[10px] text-zinc-400 leading-tight" data-i18n="hero_portrait_role">
+                  هندسة وتكامل خوارزميات الذكاء الاصطناعي للمؤسسات
+                </p>
+              </div>
+            </div>
+
+            <!-- Rotating Circular Stamp Badge -->
+            <div class="absolute -top-2.5 -right-2.5 w-16 h-16 rounded-full bg-[#050508] border-2 border-purple-500/60 p-1 shadow-2xl shadow-purple-900/80 z-20 flex items-center justify-center cursor-pointer group/stamp touch-press">
+              <svg class="w-full h-full animate-spin-slow" viewBox="0 0 100 100">
+                <path id="heroCirclePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
+                <text class="text-[7.5px] font-extrabold fill-purple-300 tracking-widest uppercase">
+                  <textPath href="#heroCirclePath" startOffset="0%" data-i18n="hero_stamp_text">
+                    • استشارات تقنية • حلول ذكاء اصطناعي • أنظمة فائقة •
+                  </textPath>
+                </text>
+              </svg>
+
+              <div class="absolute w-6 h-6 rounded-full bg-purple-900/60 border border-purple-400/50 flex items-center justify-center text-purple-300 group-hover/stamp:scale-110 transition-transform">
+                <i class="fa-solid fa-wand-magic-sparkles text-[9px] text-purple-300"></i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 3. METRICS STRIP (Proportional 2x2 Grid) -->
+  <!-- ========================================== -->
+  <section id="metrics" class="relative py-4 sm:py-8 border-y border-white/5 bg-[#09090d]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
+        
+        <!-- Metric 1 -->
+        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+            04
+          </span>
+          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_1_title">قنوات شورتس دولية</span>
+          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_1_sub">شبكة إعلامية ذكية ذاتية القيادة</span>
+        </div>
+
+        <!-- Metric 2 -->
+        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+            +10M
+          </span>
+          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_2_title">مشاهدة وتفاعل عالمي</span>
+          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_2_sub">محتوى وثائقي واقتصادي رائد</span>
+        </div>
+
+        <!-- Metric 3 -->
+        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+            100%
+          </span>
+          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_3_title">أتمتة متكاملة للعمليات</span>
+          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_3_sub">رفع كفاءة الأداء وتسريع القرار</span>
+        </div>
+
+        <!-- Metric 4 -->
+        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+            24/7
+          </span>
+          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_4_title">جاهزية واستقرار سحابي</span>
+          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_4_sub">أنظمة وتشغيل مستمر بلا انقطاع</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 4. SERVICES SECTION (Compact & Proportional) -->
+  <!-- ========================================== -->
+  <section id="services" class="py-6 sm:py-14 relative">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-4 sm:mb-10 gap-2 sm:gap-4 text-right align-start-dir">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-purple-400 tracking-wider uppercase mb-1">
+            <span class="w-4 h-[2px] bg-purple-500"></span>
+            <span data-i18n="serv_badge">مجالات التميز والخدمات الهندسية</span>
+          </div>
+          <h2 class="text-lg sm:text-2xl lg:text-3xl font-black text-white" data-i18n="serv_title">
+            كيف نُسهم في تطوير <span class="purple-gradient-text">وتسريع وتيرة أعمالكم؟</span>
+          </h2>
+        </div>
+        <p class="text-zinc-400 text-[11px] sm:text-xs max-w-md" data-i18n="serv_sub">
+          نُحوّل التحديات المعقدة إلى منظومات ذكية ومستقرة تضمن أعلى درجات الكفاءة التشغيلية والنمو المستمر لأعمالك.
+        </p>
+      </div>
+
+      <!-- Services Grid (2 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5">
+        
+        <!-- Card 1 -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-purple-950/80 border border-purple-500/40 flex items-center justify-center text-purple-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-purple-300 transition-colors" data-i18n="s1_title">
+            أتمتة الأعمال بالذكاء الاصطناعي المستقل (Autonomous AI)
+          </h3>
+          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+            <span data-i18n="s1_desc">تصميم وبناء مسارات عمل ذكية ذاتية القيادة (AI Agents) لتنفيذ المهام المعقدة، وخدمة العملاء، وتحليل البيانات بأعلى مستويات الدقة والسرعة.</span>
+          </p>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s1_t1">وكلاء ذكاء اصطناعي متعدد المهام</span>
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s1_t2">تكامل النماذج اللغوية المتطورة</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-cyan-950/80 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors" data-i18n="s2_title">
+            الهندسة المالية والنمذجة الاستراتيجية (FinTech & BI)
+          </h3>
+          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+            <span data-i18n="s2_desc">تصميم النماذج المحاسبية ولوحات التحكم التفاعلية (Power BI Dashboards) لتوفير رؤى مالية فورية وتوقعات التدفقات النقدية لدعم اتخاذ القرارات الصائبة.</span>
+          </p>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s2_t1">تخطيط مالي وتوقعات التدفقات</span>
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s2_t2">لوحات قياس الأداء اللحظية</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-indigo-950/80 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-purple-300 transition-colors" data-i18n="s3_title">
+            البنية التحتية السحابية وتكامل البرمجيات (Cloud & APIs)
+          </h3>
+          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+            <span data-i18n="s3_desc">ربط الأنظمة السحابية والـ APIs المختلفة، وبناء منصات ويب متقدمة تتسم بالسرعة الفائقة والأمان الموثوق لدعم نمو وتوسع أعمالكم بلا انقطاع.</span>
+          </p>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s3_t1">منصات سحابية آمنة 100%</span>
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s3_t2">معمارية برمجية قابلة للتوسع</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-pink-950/80 border border-pink-500/40 flex items-center justify-center text-pink-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-pink-300 transition-colors" data-i18n="s4_title">
+            استوديوهات الصوت التوليدي وصناعة المحتوى الرقمي
+          </h3>
+          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+            <span data-i18n="s4_desc">بناء محركات توليد الفويس أوفر البشري والموسيقى التصويرية بالذكاء الاصطناعي، وإدارة شبكات المحتوى الرقمي لخدمة ملايين المشاهدين.</span>
+          </p>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">AI Voice Synthesis (DAW)</span>
+            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s4_t2">إنتاج شورتس وميديا</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 5. LIVE PRODUCTION PLATFORMS (VERTICAL CARDS GRID) -->
+  <!-- ========================================== -->
+  <section id="platforms" class="py-6 sm:py-14 relative bg-[#07070b]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-4 sm:mb-10 gap-2 sm:gap-4 text-right align-start-dir">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-purple-400 tracking-wider uppercase mb-1">
+            <span class="w-4 h-[2px] bg-purple-500"></span>
+            <span data-i18n="plat_badge">المنظومات والتطبيقات البرمجية التشغيلية</span>
+          </div>
+          <h2 class="text-lg sm:text-2xl lg:text-3xl font-black text-white" data-i18n="plat_title">
+            تطبيقات ومنصات حية <span class="purple-gradient-text">تقود العمليات في الواقع</span>
+          </h2>
+        </div>
+        <p class="text-zinc-400 text-[11px] sm:text-xs max-w-md" data-i18n="plat_sub">
+          نماذج لمنصات وتطبيقات برمجية حية متكاملة تخدم آلاف العمليات اليومية بكفاءة مطلقة ودقة متناهية.
+        </p>
+      </div>
+
+      <!-- Vertical Cards Grid (2 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6">
+        
+        <!-- Platform Card 1: Logistics & Fleet Platform -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+          <div>
+            <!-- Top Thumbnail Image -->
+            <div class="aspect-[16/9] max-h-36 sm:max-h-48 rounded-lg sm:rounded-xl bg-[#09090d] border border-white/10 overflow-hidden mb-3 relative shadow-md">
+              <img 
+                src="assets/logistics_preview.jpg" 
+                alt="ElQaed Logistics Fleet & Store Suite" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute top-2 left-2 bg-emerald-950/90 border border-emerald-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-emerald-300 flex items-center gap-1 backdrop-blur-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Live Platform</span>
+              </div>
+            </div>
+
+            <!-- Pill & Header -->
+            <div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-950/70 border border-purple-500/30 text-purple-300 text-[9.5px] font-mono mb-1.5">
+              <i class="fa-solid fa-truck-fast text-purple-400 text-[10px]"></i>
+              <span data-i18n="p1_badge">منظومة لوجستية ذكية متكاملة</span>
+            </div>
+            
+            <h3 class="text-xs sm:text-base font-bold text-white mb-1.5 leading-snug group-hover:text-purple-300 transition-colors" data-i18n="p1_title">
+              منظومة إدارة اللوجستيات وعمليات الشحن والأسطول والمتجر الذكي
+            </h3>
+            
+            <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-3" data-i18n="p1_desc">
+              تطبيق متكامل لإدارة سلاسل الإمداد، وتتبع الشحنات والأسطول والمناديب في الوقت الفعلي عبر الخريطة، مع ربط مباشر مع المتجر والمخازن، ولوحة تحكم مالية دقيقة لحسابات التحصيل اليومي وهوامش الأرباح.
+            </p>
+
+            <!-- Feature Checklist (2x2) -->
+            <div class="grid grid-cols-2 gap-1.5 mb-3.5 text-[10px] sm:text-xs text-zinc-300">
+              <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
+                <span data-i18n="p1_f1">تتبع حي وفوري للأسطول</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
+                <span data-i18n="p1_f2">إدارة المخزون والمتجر</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
+                <span data-i18n="p1_f3">أتمتة الفواتير والتحصيل</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
+                <span data-i18n="p1_f4">لوحة قيادة إدارية شاملة</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex flex-col sm:flex-row items-center gap-1.5 pt-2.5 border-t border-white/10">
+            <a href="http://localhost:5173" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10.5px] sm:text-xs shadow-glow-purple transition-all touch-press">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <span data-i18n="p1_btn_launch">تشغيل المنظومة الحية</span>
+            </a>
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمنظومة%20اللوجستيات%20والمتجر" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10.5px] sm:text-xs border border-white/10 transition-all touch-press">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
+              <span data-i18n="p1_btn_demo">طلب استعراض</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Platform Card 2: Voiceover & Music AI DAW Studio -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-cyan-500/25 hover:border-cyan-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+          <div>
+            <!-- Top Thumbnail Image -->
+            <div class="aspect-[16/9] max-h-36 sm:max-h-48 rounded-lg sm:rounded-xl bg-[#09090d] border border-white/10 overflow-hidden mb-3 relative shadow-md">
+              <img 
+                src="assets/voice_studio_preview.jpg" 
+                alt="AI Audio DAW Synthesis Studio" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute top-2 left-2 bg-cyan-950/90 border border-cyan-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-cyan-300 flex items-center gap-1 backdrop-blur-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span>Studio 48kHz</span>
+              </div>
+            </div>
+
+            <!-- Pill & Header -->
+            <div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-cyan-950/70 border border-cyan-500/30 text-cyan-300 text-[9.5px] font-mono mb-1.5">
+              <i class="fa-solid fa-waveform-lines text-cyan-400 text-[10px]"></i>
+              <span data-i18n="p2_badge">استوديو صوتي وموسيقي سحابي فائق الجودة</span>
+            </div>
+            
+            <h3 class="text-xs sm:text-base font-bold text-white mb-1.5 leading-snug group-hover:text-cyan-300 transition-colors" data-i18n="p2_title">
+              استوديو الذكاء الاصطناعي الصوتي والموسيقي المتكامل
+            </h3>
+            
+            <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-3" data-i18n="p2_desc">
+              منصة برمجية متطورة لتوليد الفويس أوفر (Voiceover) الواقعي البشري بمختلف اللهجات، وتأليف وهندسة الموسيقى والمؤثرات الصوتية التوليدية بدقة استوديو 48kHz بمعالجة سحابية فورية.
+            </p>
+
+            <!-- Compact Audio Waveform Player Widget -->
+            <div class="bg-[#09090d] rounded-xl p-2.5 border border-white/10 mb-3.5 shadow-inner">
+              <div class="flex items-center justify-between mb-1.5 text-xs">
+                <span class="font-bold text-white text-[10.5px] flex items-center gap-1">
+                  <i class="fa-solid fa-headphones text-purple-400 text-[10px]"></i>
+                  <span data-i18n="audio_sample_title">عينة فويس أوفر وثائقي (AI Voice Sample)</span>
+                </span>
+                <span id="audioTimer" class="font-mono text-purple-300 text-[9.5px]">0:00 / 0:45</span>
+              </div>
+              
+              <!-- Waveform Bars -->
+              <div id="waveformWrapper" class="flex items-center justify-between gap-1 h-6 px-1.5 bg-[#111116] rounded-lg mb-2 border border-white/5">
+                <div class="equalizer-bar" style="height: 35%"></div>
+                <div class="equalizer-bar" style="height: 60%"></div>
+                <div class="equalizer-bar" style="height: 85%"></div>
+                <div class="equalizer-bar" style="height: 40%"></div>
+                <div class="equalizer-bar" style="height: 95%"></div>
+                <div class="equalizer-bar" style="height: 50%"></div>
+                <div class="equalizer-bar" style="height: 70%"></div>
+                <div class="equalizer-bar" style="height: 90%"></div>
+                <div class="equalizer-bar" style="height: 30%"></div>
+                <div class="equalizer-bar" style="height: 65%"></div>
+                <div class="equalizer-bar" style="height: 80%"></div>
+                <div class="equalizer-bar" style="height: 45%"></div>
+                <div class="equalizer-bar" style="height: 100%"></div>
+                <div class="equalizer-bar" style="height: 75%"></div>
+                <div class="equalizer-bar" style="height: 55%"></div>
+                <div class="equalizer-bar" style="height: 85%"></div>
+                <div class="equalizer-bar" style="height: 40%"></div>
+              </div>
+
+              <!-- Play/Pause Controls -->
+              <div class="flex items-center justify-between">
+                <button id="playAudioBtn" onclick="triggerHaptic()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] shadow-sm transition-all touch-press">
+                  <i id="playIcon" class="fa-solid fa-play text-[9px]"></i>
+                  <span id="playText">تشغيل العينة</span>
+                </button>
+                <span class="text-[8.5px] font-mono text-zinc-400 bg-white/5 px-1.5 py-0.5 rounded">48kHz Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex flex-col sm:flex-row items-center gap-1.5 pt-2.5 border-t border-white/10">
+            <a href="http://localhost:5174" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-[10.5px] sm:text-xs shadow-glow-cyan transition-all touch-press">
+              <i class="fa-solid fa-sliders text-[10px]"></i>
+              <span data-i18n="p2_btn_launch">تشغيل استوديو الصوت</span>
+            </a>
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20تجربة%20صوتية%20واستعراض%20استوديو%20الذكاء%20الاصطناعي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10.5px] sm:text-xs border border-white/10 transition-all touch-press">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
+              <span data-i18n="p2_btn_demo">طلب تجربة</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 6. AI SOFTWARE MODELS & TOOLS (VERTICAL CARDS GRID) -->
+  <!-- ========================================== -->
+  <section id="software-models" class="py-6 sm:py-14 relative">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-4 sm:mb-10 gap-2 sm:gap-4 text-right align-start-dir">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-purple-400 tracking-wider uppercase mb-1">
+            <span class="w-4 h-[2px] bg-purple-500"></span>
+            <span data-i18n="models_badge">النماذج البرمجية والمشاريع التقنية</span>
+          </div>
+          <h2 class="text-lg sm:text-2xl lg:text-3xl font-black text-white" data-i18n="models_title">
+            نماذج ذكية <span class="purple-gradient-text">وحلول برمجية متخصصة</span>
+          </h2>
+        </div>
+        <p class="text-zinc-400 text-[11px] sm:text-xs max-w-md" data-i18n="models_sub">
+          معرض لأحدث النماذج البرمجية، محركات الأتمتة المالية، وأدوات تحليل البيانات الذكية المصممة لتمكين المؤسسات.
+        </p>
+      </div>
+
+      <!-- Models Vertical Cards Grid (3 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-5">
+        
+        <!-- Model 1: FinTech Modeling -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 hover:border-purple-500/50 transition-all flex flex-col justify-between text-right align-start-dir group">
+          <div>
+            <div class="aspect-[16/9] max-h-32 sm:max-h-36 rounded-lg bg-[#09090d] border border-white/5 overflow-hidden mb-2.5 relative shadow-sm">
+              <img 
+                src="assets/fintech_model_preview.jpg" 
+                alt="FinTech AI Model" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy"
+              />
+              <div class="absolute top-1.5 left-1.5 bg-purple-950/90 border border-purple-500/40 px-1.5 py-0.5 rounded text-[8.5px] font-mono text-purple-300">
+                <span data-i18n="m1_tag">نموذج تشغيلي</span>
+              </div>
+            </div>
+            <h3 class="font-bold text-white text-xs sm:text-sm mb-1 group-hover:text-purple-300 transition-colors leading-snug" data-i18n="m1_title">
+              نظام الأتمتة والنمذجة المالية التفاعلية
+            </h3>
+            <p class="text-zinc-400 text-[10.5px] sm:text-xs leading-relaxed mb-3" data-i18n="m1_desc">
+              محرك مالي متكامل لتحليل التدفقات النقدية، تقييم المخاطر، وبناء سيناريوهات الموازنات التقديرية بالذكاء الاصطناعي مع لوحات تحكم تفاعلية فورية.
+            </p>
+          </div>
+          <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لنموذج%20النمذجة%20المالية" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-2.5 rounded-lg bg-purple-950/60 hover:bg-purple-900/60 text-purple-300 border border-purple-500/30 text-[10.5px] font-bold transition-all touch-press">
+            <i class="fa-solid fa-circle-play text-[10px]"></i>
+            <span data-i18n="m_btn_demo">طلب عرض توضيحي</span>
+          </a>
+        </div>
+
+        <!-- Model 2: DocuVision OCR -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between text-right align-start-dir group">
+          <div>
+            <div class="aspect-[16/9] max-h-32 sm:max-h-36 rounded-lg bg-[#09090d] border border-white/5 overflow-hidden mb-2.5 relative shadow-sm">
+              <img 
+                src="assets/doc_ai_preview.jpg" 
+                alt="DocuVision AI OCR" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy"
+              />
+              <div class="absolute top-1.5 left-1.5 bg-cyan-950/90 border border-cyan-500/40 px-1.5 py-0.5 rounded text-[8.5px] font-mono text-cyan-300">
+                <span data-i18n="m2_tag">ذكاء اصطناعي OCR</span>
+              </div>
+            </div>
+            <h3 class="font-bold text-white text-xs sm:text-sm mb-1 group-hover:text-cyan-300 transition-colors leading-snug" data-i18n="m2_title">
+              منظومة معالجة المستندات واستخراج البيانات الذكي
+            </h3>
+            <p class="text-zinc-400 text-[10.5px] sm:text-xs leading-relaxed mb-3" data-i18n="m2_desc">
+              أداة ذكية لاستخراج وهيكلة البيانات من الفواتير والعقود والملفات بصيغ PDF/صور وربطها بقواعد البيانات آلياً دون أي تدخل بشري.
+            </p>
+          </div>
+          <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمنظومة%20استخراج%20البيانات%20الذكية" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-2.5 rounded-lg bg-cyan-950/60 hover:bg-cyan-900/60 text-cyan-300 border border-cyan-500/30 text-[10.5px] font-bold transition-all touch-press">
+            <i class="fa-solid fa-circle-play text-[10px]"></i>
+            <span data-i18n="m_btn_demo">طلب عرض توضيحي</span>
+          </a>
+        </div>
+
+        <!-- Model 3: Executive Strategy AI -->
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 hover:border-purple-500/50 transition-all flex flex-col justify-between text-right align-start-dir group">
+          <div>
+            <div class="aspect-[16/9] max-h-32 sm:max-h-36 rounded-lg bg-[#09090d] border border-white/5 overflow-hidden mb-2.5 relative shadow-sm">
+              <img 
+                src="assets/exec_ai_preview.jpg" 
+                alt="Executive Decision AI" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy"
+              />
+              <div class="absolute top-1.5 left-1.5 bg-purple-950/90 border border-purple-500/40 px-1.5 py-0.5 rounded text-[8.5px] font-mono text-purple-300">
+                <span data-i18n="m3_tag">إدارة استراتيجية</span>
+              </div>
+            </div>
+            <h3 class="font-bold text-white text-xs sm:text-sm mb-1 group-hover:text-purple-300 transition-colors leading-snug" data-i18n="m3_title">
+              مساعد القرار الاستراتيجي للمؤسسات
+            </h3>
+            <p class="text-zinc-400 text-[10.5px] sm:text-xs leading-relaxed mb-3" data-i18n="m3_desc">
+              منصة قيادة وتحليلات تنبؤية تجمع بيانات المبيعات والتسويق والتشغيل وتقدم توصيات استراتيجية مدعومة بالبيانات للنمو السريع.
+            </p>
+          </div>
+          <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمساعد%20القرار%20الاستراتيجي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-1.5 px-2.5 rounded-lg bg-purple-950/60 hover:bg-purple-900/60 text-purple-300 border border-purple-500/30 text-[10.5px] font-bold transition-all touch-press">
+            <i class="fa-solid fa-circle-play text-[10px]"></i>
+            <span data-i18n="m_btn_demo">طلب عرض توضيحي</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 7. MEDIA NETWORK & FATHOM X (CHANNELS GRID) -->
+  <!-- ========================================== -->
+  <section id="media-network" class="py-6 sm:py-14 relative bg-[#07070b]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-4 sm:mb-10 gap-2 sm:gap-4 text-right align-start-dir">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-purple-400 tracking-wider uppercase mb-1">
+            <span class="w-4 h-[2px] bg-purple-500"></span>
+            <span data-i18n="media_badge">الشبكة الإعلامية العالمية</span>
+          </div>
+          <h2 class="text-lg sm:text-2xl lg:text-3xl font-black text-white" data-i18n="media_title">
+            شبكة القنوات الرقمية <span class="purple-gradient-text">والمحتوى الوثائقي (Shorts)</span>
+          </h2>
+        </div>
+        <p class="text-zinc-400 text-[11px] sm:text-xs max-w-md" data-i18n="media_sub">
+          إدارة وإنتاج محتوى متكامل عبر 4 قنوات دولية تعتمد على الذكاء الاصطناعي التوليدي لسرد قصص التاريخ والاقتصاد والتقنية واستكشافات الأعماق لملايين المشاهدين.
+        </p>
+      </div>
+
+      <!-- 4 Channels Grid (Featuring Fathom X) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-8">
+        
+        <!-- Channel 1: Fathom X (Deep Sea & Mystery) -->
+        <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="glass-panel rounded-xl p-2 sm:p-3 border border-blue-500/30 hover:border-blue-500/80 transition-all text-right align-start-dir group touch-press">
+          <div class="aspect-[9/13] rounded-lg bg-[#09090d] border border-white/10 mb-2 overflow-hidden relative shadow-sm">
+            <img 
+              src="assets/fathom_x_preview.jpg" 
+              alt="Fathom X - Deep Sea Mystery Documentaries" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" 
+              onerror="this.src='assets/hero_architect.jpg'"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-1.5 left-1.5 bg-blue-600/90 text-white px-1.5 py-0.5 rounded text-[8px] font-mono flex items-center gap-1">
+              <i class="fa-brands fa-facebook-f text-[7.5px]"></i>
+              <span>Facebook</span>
+            </div>
+            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+              <span class="text-[8px] font-mono bg-cyan-950/90 text-cyan-300 border border-cyan-500/40 px-1 py-0.5 rounded">Deep Sea Mystery</span>
+            </div>
+          </div>
+          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight group-hover:text-cyan-300 transition-colors line-clamp-2" data-i18n="sh1_title">Fathom X | استكشافات الأعماق والغموض</h4>
+          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh1_desc">سلسلة وثائقية متخصصة في سبر أغوار أعماق المحيطات والأسرار الغامضة.</p>
+        </a>
+
+        <!-- Channel 2: AI & Tech -->
+        <div class="glass-panel rounded-xl p-2 sm:p-3 border border-white/5 hover:border-red-500/40 transition-all text-right align-start-dir group">
+          <div class="aspect-[9/13] rounded-lg bg-gradient-to-tr from-purple-950 to-zinc-900 border border-white/10 mb-2 overflow-hidden relative shadow-sm">
+            <img src="assets/media_network.jpg" alt="AI Tech Shorts" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+              <span class="text-[8px] font-mono bg-red-600/90 text-white px-1.5 py-0.5 rounded">Shorts AI</span>
+            </div>
+          </div>
+          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight line-clamp-2" data-i18n="sh2_title">آفاق الذكاء الاصطناعي والتقنية</h4>
+          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh2_desc">شروحات ومقاطع تريند تشرح أحدث أدوات ونماذج الذكاء الاصطناعي.</p>
+        </div>
+
+        <!-- Channel 3: Economy & Markets -->
+        <div class="glass-panel rounded-xl p-2 sm:p-3 border border-white/5 hover:border-purple-500/40 transition-all text-right align-start-dir group">
+          <div class="aspect-[9/13] rounded-lg bg-gradient-to-tr from-cyan-950 to-zinc-900 border border-white/10 mb-2 overflow-hidden relative shadow-sm">
+            <img src="assets/fintech_model_preview.jpg" alt="Economics Shorts" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+              <span class="text-[8px] font-mono bg-purple-600/90 text-white px-1.5 py-0.5 rounded">Economy</span>
+            </div>
+          </div>
+          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight line-clamp-2" data-i18n="sh3_title">الاقتصاد والتحليلات العالمية</h4>
+          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh3_desc">تحليل الصراعات الاقتصادية الكبرى وحركة التجارة الدولية والأسواق.</p>
+        </div>
+
+        <!-- Channel 4: Audio Lab -->
+        <div class="glass-panel rounded-xl p-2 sm:p-3 border border-white/5 hover:border-pink-500/40 transition-all text-right align-start-dir group">
+          <div class="aspect-[9/13] rounded-lg bg-gradient-to-tr from-pink-950 to-zinc-900 border border-white/10 mb-2 overflow-hidden relative shadow-sm">
+            <img src="assets/voice_studio_preview.jpg" alt="Audio Synth Shorts" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+              <span class="text-[8px] font-mono bg-pink-600/90 text-white px-1.5 py-0.5 rounded">Audio Lab</span>
+            </div>
+          </div>
+          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight line-clamp-2" data-i18n="sh4_title">معمل الصوت والإنتاج التوليدي</h4>
+          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh4_desc">استعراض نماذج الفويس أوفر البشري والموسيقى السينمائية التوليدية.</p>
+        </div>
+
+      </div>
+
+      <!-- Social Media Platform Direct Links Strip (Including Fathom X Facebook) -->
+      <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col md:flex-row items-center justify-between gap-2.5">
+        <div class="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-white">
+          <i class="fa-solid fa-share-nodes text-purple-400"></i>
+          <span data-i18n="social_hub_text">تابع وتواصل عبر كافة منصات السوشيال ميديا الرسمية:</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-1.5 text-[10.5px] sm:text-xs">
+          <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="px-2.5 py-1 rounded-full bg-blue-950/90 border border-blue-500/50 text-blue-300 hover:bg-blue-900 font-bold flex items-center gap-1.5 transition-all touch-press shadow-sm">
+            <i class="fa-brands fa-facebook-f text-blue-400 text-[10px]"></i>
+            <span>Fathom X</span>
+          </a>
+          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-900 font-bold flex items-center gap-1.5 transition-all touch-press">
+            <i class="fa-brands fa-whatsapp text-[10px]"></i>
+            <span>واتساب</span>
+          </a>
+          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="px-2.5 py-1 rounded-full bg-sky-950/80 border border-sky-500/40 text-sky-400 hover:bg-sky-900 font-bold flex items-center gap-1.5 transition-all touch-press">
+            <i class="fa-brands fa-telegram text-[10px]"></i>
+            <span>تيليجرام</span>
+          </a>
+          <a href="#" class="px-2.5 py-1 rounded-full bg-red-950/80 border border-red-500/40 text-red-400 hover:bg-red-900 font-bold flex items-center gap-1.5 transition-all touch-press">
+            <i class="fa-brands fa-youtube text-[10px]"></i>
+            <span data-i18n="sh_tag_yt">شورتس</span>
+          </a>
+          <a href="#" class="px-2.5 py-1 rounded-full bg-zinc-900 border border-white/20 text-zinc-200 hover:bg-zinc-800 font-bold flex items-center gap-1.5 transition-all touch-press">
+            <i class="fa-brands fa-tiktok text-[10px]"></i>
+            <span data-i18n="sh_tag_tt">تيك توك</span>
+          </a>
+          <a href="#" class="px-2.5 py-1 rounded-full bg-pink-950/80 border border-pink-500/40 text-pink-400 hover:bg-pink-900 font-bold flex items-center gap-1.5 transition-all touch-press">
+            <i class="fa-brands fa-instagram text-[10px]"></i>
+            <span data-i18n="sh_tag_ig">ريلز</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 8. HIGH-CONVERTING DIGNIFIED CTA (STRATEGIC PARTNERSHIP) -->
+  <!-- ========================================== -->
+  <section id="contact-cta" class="py-8 sm:py-16 relative bg-gradient-to-b from-[#07070b] to-[#050508]">
+    <div class="max-w-3xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Main Strategic Consultation CTA Card -->
+      <div class="glass-panel rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-purple-500/35 shadow-glow-purple-lg relative overflow-hidden">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-400/40 text-purple-300 text-[10.5px] sm:text-xs font-bold mb-2.5">
+          <i class="fa-solid fa-sparkles text-purple-400 text-[10px]"></i>
+          <span data-i18n="cta_badge">استشارة استراتيجية أولية مجانية</span>
+        </div>
+
+        <h2 class="text-base sm:text-2xl lg:text-3xl font-black text-white mb-2 leading-snug" data-i18n="cta_title">
+          مستعد لتحويل فكرتك إلى منظومة ذكية خارقة ومضاعفة كفاءة أعمالك؟
+        </h2>
+        
+        <p class="text-[11px] sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed mb-4 sm:mb-6" data-i18n="cta_desc">
+          نبني حلولاً رقمية وأنظمة ذكاء اصطناعي تفوق التوقعات، تمنح مشروعك أسبقية تنافسية مطلقة وكفاءة تشغيلية لا تضاهى. دعنا نناقش أهدافك ونرسم معاً معمارية النظام القادم من خلال جلسة استشارية أولية مجانية ومباشرة.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-2 w-full max-w-md mx-auto">
+          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm shadow-glow-emerald transition-all touch-press">
+            <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
+            <span data-i18n="cta_btn_wa">حجز جلسة استشارية عبر واتساب</span>
+          </a>
+          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 rounded-xl bg-[#161622] hover:bg-[#201c34] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-sky-500/50 transition-all touch-press">
+            <i class="fa-brands fa-telegram text-sky-400 text-sm"></i>
+            <span data-i18n="cta_btn_tg">تيليجرام (@abdou25008)</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 9. FOOTER -->
+  <!-- ========================================== -->
+  <footer class="py-6 sm:py-8 border-t border-white/5 bg-[#030305] text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-right align-start-dir mb-4 sm:mb-6">
+        <div>
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="font-black text-xs sm:text-sm text-white">عبده علي موسى</span>
+            <span class="text-purple-400 font-mono text-[9.5px]">// AI Systems</span>
+          </div>
+          <p class="text-zinc-500 text-[10.5px] leading-relaxed" data-i18n="footer_bio">
+            أحوّل التعقيد إلى أنظمة ذكية، أتمتة مسارات العمل، النمذجة المالية الاستراتيجية، وإدارة شبكة الإنتاج الإعلامي والقنوات الدولية.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs mb-1.5" data-i18n="footer_links_title">روابط التنقل السريع</h4>
+          <div class="grid grid-cols-2 gap-1 text-[10.5px]">
+            <a href="#services" class="hover:text-purple-400 transition-colors" data-i18n="nav_services">الخدمات الهندسية</a>
+            <a href="#platforms" class="hover:text-purple-400 transition-colors" data-i18n="nav_platforms">المنظومات الحية</a>
+            <a href="#software-models" class="hover:text-purple-400 transition-colors" data-i18n="nav_models">النماذج الذكية</a>
+            <a href="#media-network" class="hover:text-purple-400 transition-colors" data-i18n="nav_media">شبكة الميديا</a>
+            <a href="#metrics" class="hover:text-purple-400 transition-colors" data-i18n="footer_metric_link">مؤشرات النجاح</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs mb-1.5" data-i18n="footer_contact_title">بيانات الاتصال والتواصل</h4>
+          <div class="space-y-0.5 text-[10.5px]">
+            <div><i class="fa-solid fa-phone text-purple-400 ml-1"></i> +20 109 251 9210</div>
+            <div><i class="fa-solid fa-envelope text-purple-400 ml-1"></i> abdou25008@gmail.com</div>
+            <div><i class="fa-solid fa-location-dot text-purple-400 ml-1"></i> <span data-i18n="footer_location">جمهورية مصر العربية | استشارات دولية</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center text-[9.5px] sm:text-[10px] text-zinc-500">
+        <div>
+          <span data-i18n="footer_rights">جميع الحقوق محفوظة © 2025</span> - <strong class="text-zinc-400 font-bold">عبده علي موسى</strong>
+        </div>
+        <div class="font-mono text-zinc-500">
+          Engineered with Precision & Passion // Production v3.5
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================== -->
+  <!-- 10. ULTRA SLEEK ERGONOMIC MOBILE DOCK -->
+  <!-- ========================================== -->
+  <div class="fixed bottom-2.5 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-[360px] lg:hidden">
+    <div class="glass-dock rounded-full px-2.5 py-1.5 flex items-center justify-around shadow-floating-dock border border-white/10">
+      
+      <a href="#hero" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 active:text-purple-300 transition-colors touch-press">
+        <i class="fa-solid fa-house text-xs"></i>
+        <span class="text-[8px] font-bold" data-i18n="dock_home">الرئيسية</span>
+      </a>
+
+      <a href="#platforms" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 active:text-purple-300 transition-colors touch-press">
+        <i class="fa-solid fa-layer-group text-xs"></i>
+        <span class="text-[8px] font-bold" data-i18n="dock_platforms">المنظومات</span>
+      </a>
+
+      <!-- Highlighted Center WhatsApp Action -->
+      <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex flex-col items-center -mt-4 group touch-press">
+        <div class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-lg shadow-emerald-950/80 border-2 border-[#050508] transition-transform group-hover:scale-105">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+        </div>
+        <span class="text-[8px] font-black text-emerald-400 mt-0.5" data-i18n="dock_contact">تواصل</span>
+      </a>
+
+      <a href="#software-models" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 active:text-purple-300 transition-colors touch-press">
+        <i class="fa-solid fa-code text-xs"></i>
+        <span class="text-[8px] font-bold" data-i18n="dock_models">النماذج</span>
+      </a>
+
+      <a href="#media-network" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-pink-400 active:text-pink-300 transition-colors touch-press">
+        <i class="fa-solid fa-clapperboard text-xs"></i>
+        <span class="text-[8px] font-bold" data-i18n="dock_media">الميديا</span>
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- 11. DUAL SMARTPHONE LIVE EMULATOR (ANDROID & IPHONE) -->
+  <!-- ========================================== -->
+  <div id="emulator-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-2xl items-center justify-center p-3">
+    
+    <div class="relative flex flex-col items-center max-h-screen">
+      
+      <!-- Top Control Bar of Emulator -->
+      <div class="flex items-center justify-between w-full max-w-[390px] mb-2 px-2 text-white">
+        
+        <!-- Device Switcher Tabs inside Simulator -->
+        <div class="flex items-center gap-1 bg-[#161622] p-0.5 rounded-full border border-white/10">
+          <button id="tabAndroid" onclick="setDeviceEmulator('android')" class="px-2 py-0.5 rounded-full text-[10.5px] font-bold transition-all switch-btn-active">
+            <i class="fa-brands fa-android text-emerald-400 mr-1"></i> Android
+          </button>
+          <button id="tabIPhone" onclick="setDeviceEmulator('iphone')" class="px-2 py-0.5 rounded-full text-[10.5px] font-bold text-zinc-400 hover:text-white transition-all">
+            <i class="fa-brands fa-apple text-zinc-300 mr-1"></i> iPhone 16
+          </button>
+        </div>
+
+        <button onclick="toggleMobileEmulator()" class="px-2.5 py-0.5 rounded-full bg-white/10 hover:bg-red-500/80 text-white text-xs font-bold transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-xmark text-xs"></i>
+          <span>إغلاق</span>
+        </button>
+      </div>
+
+      <!-- Smartphone Mockup Frame -->
+      <div id="phone-frame-container" class="relative w-[360px] sm:w-[380px] h-[720px] max-h-[82vh] rounded-[40px] border-[8px] border-[#22222a] outline outline-1 outline-purple-500/30 bg-[#050508] shadow-phone-frame overflow-hidden flex flex-col transition-all duration-300">
+        
+        <!-- Android Status Bar & Punch-Hole Camera -->
+        <div id="emulator-status-bar" class="h-8 px-4 z-20 flex items-center justify-between text-[10px] font-mono text-zinc-300 bg-[#050508]/90 backdrop-blur-md border-b border-white/5 select-none">
+          <span id="emulator-live-clock" class="font-bold tracking-wider">03:00</span>
+          
+          <!-- Camera cutout (Android Punch-Hole by default) -->
+          <div id="camera-cutout" class="w-3 h-3 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-inner">
+            <div class="w-1 h-1 rounded-full bg-[#111122]"></div>
+          </div>
+
+          <div class="flex items-center gap-1 text-[9px]">
+            <span class="font-bold text-purple-300 mr-0.5">120Hz</span>
+            <i class="fa-solid fa-wifi text-[9px]"></i>
+            <i class="fa-solid fa-battery-full text-emerald-400 text-[10px]"></i>
+          </div>
+        </div>
+
+        <!-- Embedded True Mobile Viewport -->
+        <iframe id="emulator-iframe" src="index.html?mode=mobile_inner" class="w-full flex-1 border-0 bg-[#050508]"></iframe>
+
+        <!-- Android Home Navigation Pill Indicator -->
+        <div id="android-nav-pill" class="h-3.5 bg-[#050508] flex items-center justify-center">
+          <div class="w-24 h-1 rounded-full bg-white/30"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT: BILINGUAL TRANSLATION & CONTROLS -->
+  <!-- ========================================== -->
+  <script>
+    // ----------------------------------------------------
+    // 1. ANDROID HAPTIC FEEDBACK
+    // ----------------------------------------------------
+    function triggerHaptic() {
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try { navigator.vibrate(12); } catch(e){}
+      }
+    }
+
+    // ----------------------------------------------------
+    // 2. TRANSLATION DICTIONARY
+    // ----------------------------------------------------
+    const translations = {
+      ar: {
+        brand_name: "Abdou Ali Mousa",
+        brand_role: "AI & Digital Systems Engineer",
+        nav_services: "الخدمات",
+        nav_platforms: "المنظومات الحية",
+        nav_models: "النماذج الذكية",
+        nav_media: "شبكة الميديا",
+        btn_emulator: "محاكي الهواتف الذكية",
+        btn_header_cta: "استشارة فورية",
+        btn_header_cta_short: "تواصل",
+        
+        hero_pill: "Abdou Ali Mousa // AI Systems Architect",
+        hero_h1_part1: "أحوّل التعقيد إلى",
+        hero_h1_part2: "أنظمة ذكية فائقة.",
+        hero_tagline: "بورتفوليو الأنظمة والأتمتة والإنتاج الرقمي 2025",
+        hero_bio: "أبني حلولًا تعتمد على الذكاء الاصطناعي والأتمتة لتحويل العمليات المعقدة إلى أنظمة أكثر ذكاءً، كفاءةً وقابليةً للتوسع؛ من أتمتة سير العمل والنماذج المالية والمحاسبية، إلى البنية السحابية وأنظمة الإنتاج الرقمي — أصمم حلولًا تقنية تخدم القرار، الكفاءة، والنمو.",
+        hero_btn_whatsapp: "محادثة واتساب مباشرة (+20 109 251 9210)",
+        hero_btn_platforms: "استكشف المنظومات الحية",
+        hero_portrait_name: "عبده علي موسى",
+        hero_portrait_role: "هندسة وتكامل خوارزميات الذكاء الاصطناعي للمؤسسات",
+        hero_stamp_text: "• استشارات تقنية • حلول ذكاء اصطناعي • أنظمة فائقة •",
+
+        metric_1_title: "قنوات شورتس دولية",
+        metric_1_sub: "شبكة إعلامية ذكية ذاتية القيادة",
+        metric_2_title: "مشاهدة وتفاعل عالمي",
+        metric_2_sub: "محتوى وثائقي واقتصادي رائد",
+        metric_3_title: "أتمتة متكاملة للعمليات",
+        metric_3_sub: "رفع كفاءة الأداء وتسريع القرار",
+        metric_4_title: "جاهزية واستقرار سحابي",
+        metric_4_sub: "أنظمة وتشغيل مستمر بلا انقطاع",
+
+        serv_badge: "مجالات التميز والخدمات الهندسية",
+        serv_title: "كيف نُسهم في تطوير <span class='purple-gradient-text'>وتسريع وتيرة أعمالكم؟</span>",
+        serv_sub: "نُحوّل التحديات المعقدة إلى منظومات ذكية ومستقرة تضمن أعلى درجات الكفاءة التشغيلية والنمو المستمر لأعمالك.",
+        s1_title: "أتمتة الأعمال بالذكاء الاصطناعي المستقل (Autonomous AI)",
+        s1_desc: "تصميم وبناء مسارات عمل ذكية ذاتية القيادة (AI Agents) لتنفيذ المهام المعقدة، وخدمة العملاء، وتحليل البيانات بأعلى مستويات الدقة والسرعة.",
+        s1_t1: "وكلاء ذكاء اصطناعي متعدد المهام",
+        s1_t2: "تكامل النماذج اللغوية المتطورة",
+        
+        s2_title: "الهندسة المالية والنمذجة الاستراتيجية (FinTech & BI)",
+        s2_desc: "تصميم النماذج المحاسبية ولوحات التحكم التفاعلية (Power BI Dashboards) لتوفير رؤى مالية فورية وتوقعات التدفقات النقدية لدعم اتخاذ القرارات الصائبة.",
+        s2_t1: "تخطيط مالي وتوقعات التدفقات",
+        s2_t2: "لوحات قياس الأداء اللحظية",
+
+        s3_title: "البنية التحتية السحابية وتكامل البرمجيات (Cloud & APIs)",
+        s3_desc: "ربط الأنظمة السحابية والـ APIs المختلفة، وبناء منصات ويب متقدمة تتسم بالسرعة الفائقة والأمان الموثوق لدعم نمو وتوسع أعمالكم بلا انقطاع.",
+        s3_t1: "منصات سحابية آمنة 100%",
+        s3_t2: "معمارية برمجية قابلة للتوسع",
+
+        s4_title: "استوديوهات الصوت التوليدي وصناعة المحتوى الرقمي",
+        s4_desc: "بناء محركات توليد الفويس أوفر البشري والموسيقى التصويرية بالذكاء الاصطناعي، وإدارة شبكات المحتوى الرقمي لخدمة ملايين المشاهدين.",
+        s4_t2: "إنتاج شورتس وميديا",
+
+        plat_badge: "المنظومات والتطبيقات البرمجية التشغيلية",
+        plat_title: "تطبيقات ومنصات حية <span class='purple-gradient-text'>تقود العمليات في الواقع</span>",
+        plat_sub: "نماذج لمنصات وتطبيقات برمجية حية متكاملة تخدم آلاف العمليات اليومية بكفاءة مطلقة ودقة متناهية.",
+
+        p1_badge: "منظومة لوجستية ذكية متكاملة",
+        p1_title: "منظومة إدارة اللوجستيات وعمليات الشحن والأسطول والمتجر الذكي",
+        p1_desc: "تطبيق متكامل لإدارة سلاسل الإمداد، وتتبع الشحنات والأسطول والمناديب في الوقت الفعلي عبر الخريطة، مع ربط مباشر مع المتجر والمخازن، ولوحة تحكم مالية دقيقة لحسابات التحصيل اليومي وهوامش الأرباح.",
+        p1_f1: "تتبع حي وفوري للأسطول",
+        p1_f2: "إدارة المخزون والمتجر",
+        p1_f3: "أتمتة الفواتير والتحصيل",
+        p1_f4: "لوحة قيادة إدارية شاملة",
+        p1_btn_launch: "تشغيل المنظومة الحية",
+        p1_btn_demo: "طلب استعراض",
+
+        p2_badge: "استوديو صوتي وموسيقي سحابي فائق الجودة",
+        p2_title: "استوديو الذكاء الاصطناعي الصوتي والموسيقي المتكامل",
+        p2_desc: "منصة برمجية متطورة لتوليد الفويس أوفر (Voiceover) الواقعي البشري بمختلف اللهجات، وتأليف وهندسة الموسيقى والمؤثرات الصوتية التوليدية بدقة استوديو 48kHz بمعالجة سحابية فورية.",
+        audio_sample_title: "عينة فويس أوفر وثائقي (AI Voice Sample)",
+        p2_btn_launch: "تشغيل استوديو الصوت",
+        p2_btn_demo: "طلب تجربة",
+
+        models_badge: "النماذج البرمجية والمشاريع التقنية",
+        models_title: "نماذج ذكية <span class='purple-gradient-text'>وحلول برمجية متخصصة</span>",
+        models_sub: "معرض لأحدث النماذج البرمجية، محركات الأتمتة المالية، وأدوات تحليل البيانات الذكية المصممة لتمكين المؤسسات.",
+        m1_tag: "نموذج تشغيلي",
+        m1_title: "نظام الأتمتة والنمذجة المالية التفاعلية",
+        m1_desc: "محرك مالي متكامل لتحليل التدفقات النقدية، تقييم المخاطر، وبناء سيناريوهات الموازنات التقديرية بالذكاء الاصطناعي مع لوحات تحكم تفاعلية فورية.",
+        m2_tag: "ذكاء اصطناعي OCR",
+        m2_title: "منظومة معالجة المستندات واستخراج البيانات الذكي",
+        m2_desc: "أداة ذكية لاستخراج وهيكلة البيانات من الفواتير والعقود والملفات بصيغ PDF/صور وربطها بقواعد البيانات آلياً دون أي تدخل بشري.",
+        m3_tag: "إدارة استراتيجية",
+        m3_title: "مساعد القرار الاستراتيجي للمؤسسات",
+        m3_desc: "منصة قيادة وتحليلات تنبؤية تجمع بيانات المبيعات والتسويق والتشغيل وتقدم توصيات استراتيجية مدعومة بالبيانات للنمو السريع.",
+        m_btn_demo: "طلب عرض توضيحي",
+
+        media_badge: "الشبكة الإعلامية العالمية",
+        media_title: "شبكة القنوات الرقمية <span class='purple-gradient-text'>والمحتوى الوثائقي (Shorts)</span>",
+        media_sub: "إدارة وإنتاج محتوى متكامل عبر 4 قنوات دولية تعتمد على الذكاء الاصطناعي التوليدي لسرد قصص التاريخ والاقتصاد والتقنية واستكشافات الأعماق لملايين المشاهدين.",
+        sh1_title: "Fathom X | استكشافات الأعماق والغموض",
+        sh1_desc: "سلسلة وثائقية متخصصة في سبر أغوار أعماق المحيطات والأسرار الغامضة.",
+        sh2_title: "آفاق الذكاء الاصطناعي والتقنية",
+        sh2_desc: "شروحات ومقاطع تريند تشرح أحدث أدوات ونماذج الذكاء الاصطناعي.",
+        sh3_title: "الاقتصاد والتحليلات العالمية",
+        sh3_desc: "تحليل الصراعات الاقتصادية الكبرى وحركة التجارة الدولية والأسواق.",
+        sh4_title: "معمل الصوت والإنتاج التوليدي",
+        sh4_desc: "استعراض نماذج الفويس أوفر البشري والموسيقى السينمائية التوليدية.",
+        sh_tag_yt: "شورتس",
+        sh_tag_tt: "تيك توك",
+        sh_tag_ig: "ريلز",
+        social_hub_text: "تابع وتواصل عبر كافة منصات السوشيال ميديا الرسمية:",
+
+        cta_badge: "استشارة استراتيجية أولية مجانية",
+        cta_title: "مستعد لتحويل فكرتك إلى منظومة ذكية خارقة ومضاعفة كفاءة أعمالك؟",
+        cta_desc: "نبني حلولاً رقمية وأنظمة ذكاء اصطناعي تفوق التوقعات، تمنح مشروعك أسبقية تنافسية مطلقة وكفاءة تشغيلية لا تضاهى. دعنا نناقش أهدافك ونرسم معاً معمارية النظام القادم من خلال جلسة استشارية أولية مجانية ومباشرة.",
+        cta_btn_wa: "حجز جلسة استشارية عبر واتساب",
+        cta_btn_tg: "تيليجرام (@abdou25008)",
+
+        footer_bio: "أحوّل التعقيد إلى أنظمة ذكية، أتمتة مسارات العمل، النمذجة المالية الاستراتيجية، وإدارة شبكة الإنتاج الإعلامي والقنوات الدولية.",
+        footer_links_title: "روابط التنقل السريع",
+        footer_contact_title: "بيانات الاتصال والتواصل",
+        footer_location: "جمهورية مصر العربية | استشارات دولية",
+        footer_rights: "جميع الحقوق محفوظة © 2025",
+        footer_metric_link: "مؤشرات النجاح والأرقام",
+
+        dock_home: "الرئيسية",
+        dock_platforms: "المنظومات",
+        dock_contact: "تواصل",
+        dock_models: "النماذج",
+        dock_media: "الميديا"
+      },
+
+      en: {
+        brand_name: "Abdou Ali Mousa",
+        brand_role: "AI & Digital Systems Engineer",
+        nav_services: "Services",
+        nav_platforms: "Live Platforms",
+        nav_models: "AI Models",
+        nav_media: "Media Network",
+        btn_emulator: "Smartphone Emulator",
+        btn_header_cta: "Consultation",
+        btn_header_cta_short: "Chat",
+
+        hero_pill: "Abdou Ali Mousa // AI Systems Architect",
+        hero_h1_part1: "Transforming Complexity Into",
+        hero_h1_part2: "Super-Intelligent Systems.",
+        hero_tagline: "AI Systems, Automation & Digital Media Portfolio 2025",
+        hero_bio: "I engineer AI and automation-driven architectures that transform complex workflows into smarter, highly efficient, and scalable digital systems. From workflow orchestration and FinTech cash-flow modeling to cloud infrastructure and high-yield media networks — I design technology that drives strategic decisions, operational efficiency, and exponential growth.",
+        hero_btn_whatsapp: "Direct WhatsApp Chat (+20 109 251 9210)",
+        hero_btn_platforms: "Explore Live Platforms",
+        hero_portrait_name: "Abdou Ali Mousa",
+        hero_portrait_role: "Enterprise AI Systems & Cloud Integration",
+        hero_stamp_text: "• TECH CONSULTING • AI SYSTEMS • DIGITAL SOLUTIONS •",
+
+        metric_1_title: "International Shorts Channels",
+        metric_1_sub: "Autonomous AI-Powered Media Network",
+        metric_2_title: "Global Views & Engagements",
+        metric_2_sub: "Viral Documentary & Tech Content",
+        metric_3_title: "Full Process Automation",
+        metric_3_sub: "Maximizing Efficiency & Decision Speed",
+        metric_4_title: "Cloud Uptime & Stability",
+        metric_4_sub: "High-Availability Architecture",
+
+        serv_badge: "Areas of Excellence & Engineering Services",
+        serv_title: "How We Scale & <span class='purple-gradient-text'>Accelerate Your Operations</span>",
+        serv_sub: "We turn complex operational bottlenecks into resilient, intelligent systems that ensure peak performance and sustainable business growth.",
+        s1_title: "Autonomous AI Workflow Automation",
+        s1_desc: "Engineering autonomous AI agents to orchestrate multi-step business logic, streamline customer support, and automate data pipelines with precision.",
+        s1_t1: "Multi-Agent AI Systems",
+        s1_t2: "Advanced LLM Integration",
+
+        s2_title: "FinTech Engineering & Strategic BI",
+        s2_desc: "Designing dynamic accounting engines and executive BI dashboards providing real-time cash flow projections, unit economics, and predictive financial insights.",
+        s2_t1: "Cash Flow Forecasting",
+        s2_t2: "Real-Time KPI Dashboards",
+
+        s3_title: "Cloud Infrastructure & API Integration",
+        s3_desc: "Architecting secure, highly scalable cloud backends, microservices, and unified APIs that keep critical digital operations running 24/7 without disruption.",
+        s3_t1: "100% Secure Cloud Architecture",
+        s3_t2: "Scalable System Design",
+
+        s4_title: "Generative Audio DAW & Digital Media Production",
+        s4_desc: "Building AI-powered human voiceover engines, automated audio mastering, and managing high-yield viral shorts networks engaging millions globally.",
+        s4_t2: "Viral Media Production",
+
+        plat_badge: "Live Production Platforms & Software Suites",
+        plat_title: "Production Platforms <span class='purple-gradient-text'>Driving Real-World Operations</span>",
+        plat_sub: "Live enterprise applications managing thousands of daily operations with zero downtime and bulletproof accuracy.",
+
+        p1_badge: "Smart Logistics & Fleet Suite",
+        p1_title: "ElQaed Logistics, Fleet Command & E-Commerce Suite",
+        p1_desc: "An all-in-one cloud logistics ecosystem managing fleet dispatching, real-time GPS courier tracking, warehouse stock sync, and automated settlement ledgers.",
+        p1_f1: "Real-Time GPS Fleet Tracking",
+        p1_f2: "Inventory & Store Sync",
+        p1_f3: "Automated Invoicing & COD",
+        p1_f4: "Executive Command Dashboard",
+        p1_btn_launch: "Launch Live Platform",
+        p1_btn_demo: "Request Demo",
+
+        p2_badge: "Cloud Studio Voice & Music DAW",
+        p2_title: "Abdou Studio VO & AI Music Synthesis DAW",
+        p2_desc: "A next-generation AI studio for lifelike human voice synthesis, multilingual narration, generative audio mastering, and ambient soundscapes processed in real-time at 48kHz.",
+        audio_sample_title: "AI Documentary Narration Sample",
+        p2_btn_launch: "Launch Audio DAW",
+        p2_btn_demo: "Request Demo",
+
+        models_badge: "AI Software Models & Specialized Tools",
+        models_title: "Specialized AI Engines <span class='purple-gradient-text'>& Custom Software</span>",
+        models_sub: "A showcase of algorithmic engines, financial intelligence tools, and vision models built for modern enterprises.",
+        m1_tag: "Production Ready",
+        m1_title: "Interactive FinTech & Cash Flow Modeling Engine",
+        m1_desc: "An AI-powered financial model calculating real-time cash burns, scenario risk testing, and automated balance sheet forecasting.",
+        m2_tag: "Vision AI OCR",
+        m2_title: "DocuVision AI Intelligent Document Processing",
+        m2_desc: "Automated pipeline parsing structured data from invoices, customs docs, and contracts directly into ERP systems without human touch.",
+        m3_tag: "Executive Strategy",
+        m3_title: "Executive Decision AI & Strategy Assistant",
+        m3_desc: "An enterprise BI intelligence co-pilot synthesizing sales, marketing, and supply-chain metrics to generate actionable executive insights.",
+        m_btn_demo: "Request Live Demo",
+
+        media_badge: "Global Media Network",
+        media_title: "Digital Media Network <span class='purple-gradient-text'>& Documentaries</span>",
+        media_sub: "Autonomous production and distribution across 4 international channels leveraging generative AI to deliver deep-sea mystery, economy, and tech stories.",
+        sh1_title: "Fathom X | Deep Sea & Mystery Expeditions",
+        sh1_desc: "A premier documentary series uncovering dark abyss secrets and oceanic expeditions.",
+        sh2_title: "AI Horizons & Tech Evolution",
+        sh2_desc: "Bite-sized shorts breaking down frontier AI tools and enterprise digital transformation.",
+        sh3_title: "Global Economy & Market Analysis",
+        sh3_desc: "Deep visual breakdowns of macroeconomics, supply shocks, and global trade dynamics.",
+        sh4_title: "Audio Synthesis & Generative Media",
+        sh4_desc: "Showcasing neural voiceovers, documentary voice artistry, and generative soundtracks.",
+        sh_tag_yt: "Shorts",
+        sh_tag_tt: "TikTok",
+        sh_tag_ig: "Reels",
+        social_hub_text: "Connect & Follow Across All Official Social Channels:",
+
+        cta_badge: "Free Initial Strategic Consultation",
+        cta_title: "Ready to Supercharge Your Operations with Cutting-Edge AI Systems?",
+        cta_desc: "We engineer transformative AI solutions and cloud architectures that give your enterprise an unbeatable competitive advantage. Let's discuss your vision and map out your next system in a direct, complimentary strategic consultation.",
+        cta_btn_wa: "Book Strategic Consultation",
+        cta_btn_tg: "Telegram (@abdou25008)",
+
+        footer_bio: "Transforming operational complexity into super-intelligent digital systems, workflow automation, and international media networks.",
+        footer_links_title: "Quick Navigation",
+        footer_contact_title: "Direct Contact Channels",
+        footer_location: "Egypt | Available for Global Enterprise Contracts",
+        footer_rights: "All Rights Reserved © 2025",
+        footer_metric_link: "Metrics & Success KPIs",
+
+        dock_home: "Home",
+        dock_platforms: "Platforms",
+        dock_contact: "Contact",
+        dock_models: "Models",
+        dock_media: "Media"
+      }
+    };
+
+    // ----------------------------------------------------
+    // 3. LANGUAGE SWITCHER LOGIC
+    // ----------------------------------------------------
+    let currentLang = localStorage.getItem('abdou_portfolio_lang') || 'ar';
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('abdou_portfolio_lang', lang);
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const btnAr = document.getElementById('btnLangAr');
+      const btnEn = document.getElementById('btnLangEn');
+      if (btnAr && btnEn) {
+        if (lang === 'ar') {
+          btnAr.classList.add('switch-btn-active');
+          btnAr.classList.remove('text-zinc-400');
+          btnEn.classList.remove('switch-btn-active');
+          btnEn.classList.add('text-zinc-400');
+        } else {
+          btnEn.classList.add('switch-btn-active');
+          btnEn.classList.remove('text-zinc-400');
+          btnAr.classList.remove('switch-btn-active');
+          btnAr.classList.add('text-zinc-400');
+        }
+      }
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    // Initialize language
+    switchLanguage(currentLang);
+
+
+    // ----------------------------------------------------
+    // 4. DUAL SMARTPHONE EMULATOR (Android / iPhone)
+    // ----------------------------------------------------
+    function toggleMobileEmulator() {
+      const modal = document.getElementById('emulator-modal');
+      modal.classList.toggle('active');
+    }
+
+    function setDeviceEmulator(device) {
+      const tabAndroid = document.getElementById('tabAndroid');
+      const tabIPhone = document.getElementById('tabIPhone');
+      const cameraCutout = document.getElementById('camera-cutout');
+      const androidNavPill = document.getElementById('android-nav-pill');
+      const phoneFrame = document.getElementById('phone-frame-container');
+
+      if (device === 'android') {
+        tabAndroid.classList.add('switch-btn-active');
+        tabAndroid.classList.remove('text-zinc-400');
+        tabIPhone.classList.remove('switch-btn-active');
+        tabIPhone.classList.add('text-zinc-400');
+
+        cameraCutout.className = "w-3 h-3 rounded-full bg-black border border-white/10 flex items-center justify-center shadow-inner";
+        cameraCutout.innerHTML = '<div class="w-1 h-1 rounded-full bg-[#111122]"></div>';
+        androidNavPill.style.display = 'flex';
+        phoneFrame.style.borderRadius = '40px';
+      } else {
+        tabIPhone.classList.add('switch-btn-active');
+        tabIPhone.classList.remove('text-zinc-400');
+        tabAndroid.classList.remove('switch-btn-active');
+        tabAndroid.classList.add('text-zinc-400');
+
+        cameraCutout.className = "w-20 h-4 rounded-full bg-black border border-white/10 flex items-center justify-center gap-1 shadow-inner";
+        cameraCutout.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span class="text-[7.5px] font-mono text-purple-300">ABDOU.AI</span>';
+        androidNavPill.style.display = 'none';
+        phoneFrame.style.borderRadius = '48px';
+      }
+    }
+
+    // Live clock for emulator
+    function updateEmulatorClock() {
+      const clockEl = document.getElementById('emulator-live-clock');
+      if (clockEl) {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        clockEl.textContent = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+      }
+    }
+    setInterval(updateEmulatorClock, 1000);
+    updateEmulatorClock();
+
+
+    // ----------------------------------------------------
+    // 5. AUDIO PLAYER SIMULATOR LOGIC
+    // ----------------------------------------------------
+    const playBtn = document.getElementById('playAudioBtn');
+    const playIcon = document.getElementById('playIcon');
+    const playText = document.getElementById('playText');
+    const waveformWrapper = document.getElementById('waveformWrapper');
+    const audioTimer = document.getElementById('audioTimer');
+    let isPlaying = false;
+    let timerInterval = null;
+    let secondsElapsed = 0;
+
+    if (playBtn) {
+      playBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          playIcon.classList.remove('fa-play');
+          playIcon.classList.add('fa-pause');
+          if (playText) playText.textContent = currentLang === 'ar' ? 'إيقاف مؤقت' : 'Pause Sample';
+          waveformWrapper.classList.add('is-playing');
+          
+          timerInterval = setInterval(() => {
+            secondsElapsed++;
+            if (secondsElapsed > 45) {
+              secondsElapsed = 0;
+            }
+            const mins = Math.floor(secondsElapsed / 60);
+            const secs = secondsElapsed % 60;
+            audioTimer.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs} / 0:45`;
+          }, 1000);
+        } else {
+          playIcon.classList.remove('fa-pause');
+          playIcon.classList.add('fa-play');
+          if (playText) playText.textContent = currentLang === 'ar' ? 'تشغيل العينة' : 'Play Audio Demo';
+          waveformWrapper.classList.remove('is-playing');
+          clearInterval(timerInterval);
+        }
+      });
+    }
+
+    // Header scroll background opacity
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('bg-[#050508]/98', 'shadow-2xl', 'py-1.5');
+        header.classList.remove('py-2', 'sm:py-2.5');
+      } else {
+        header.classList.remove('bg-[#050508]/98', 'shadow-2xl', 'py-1.5');
+        header.classList.add('py-2', 'sm:py-2.5');
+      }
+    });
+
+    // If loaded inside emulator iframe, hide the emulator button to avoid recursion
+    if (window.self !== window.top || window.location.search.includes('mode=mobile_inner')) {
+      const emuBtn = document.getElementById('btnOpenEmulator');
+      if (emuBtn) emuBtn.style.display = 'none';
+      const emuModal = document.getElementById('emulator-modal');
+      if (emuModal) emuModal.remove();
+    }
+  </script>
+
+</body>
+</html>
