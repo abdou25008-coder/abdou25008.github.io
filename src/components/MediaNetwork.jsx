@@ -85,7 +85,7 @@ export default function MediaNetwork() {
                 <img 
                   src={card.img} 
                   alt={card.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" 
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 opacity-60" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-[#0a0a0c]/60 to-transparent"></div>
               </div>

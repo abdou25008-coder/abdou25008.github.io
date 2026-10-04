@@ -39,7 +39,7 @@ export default function Hero() {
             {/* Cursive Accent */}
             <div className="flex items-center gap-3 mb-6">
               <span className="text-2xl sm:text-3xl text-purple-400 font-serif italic">
-                بورتفوليو الأنظمة والأتمتة والإنتاج الرقمي 2025
+                الأنظمة والأتمتة والإنتاج الرقمي 2025
               </span>
               <div className="h-[1px] w-20 bg-gradient-to-l from-purple-500 to-transparent"></div>
             </div>
