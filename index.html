@@ -278,6 +278,15 @@
       opacity: 0.9;
     }
 
+    /* Clean Horizontal Touch Carousel (No scrollbar) */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     /* Audio Equalizer animation bars */
     .equalizer-bar {
       width: 3px;
@@ -393,22 +402,22 @@
   <!-- ========================================== -->
   <!-- 2. HERO SECTION (Harmonious & Proportional) -->
   <!-- ========================================== -->
-  <section id="hero" class="relative pt-16 sm:pt-24 pb-6 sm:pb-12 flex items-center justify-center bg-grid-mesh overflow-hidden">
+  <section id="hero" class="relative pt-10 sm:pt-24 pb-4 sm:pb-12 flex items-center justify-center bg-grid-mesh overflow-hidden">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
         
         <!-- Bio & Actions Column -->
         <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-right align-start-dir z-10">
           
           <!-- Mobile-Only Compact Avatar Badge (Prevents huge vertical scroll on phone) -->
-          <div class="lg:hidden flex items-center gap-3 mb-3 bg-[#111116]/80 p-1.5 pr-2.5 rounded-full border border-purple-500/30 backdrop-blur-md shadow-lg">
-            <div class="w-9 h-9 rounded-full overflow-hidden border border-purple-400/50 relative shadow-sm">
+          <div class="lg:hidden flex items-center gap-2.5 mb-2.5 bg-[#111116]/85 py-1 px-2.5 rounded-full border border-purple-500/30 backdrop-blur-md shadow-md">
+            <div class="w-8 h-8 rounded-full overflow-hidden border border-purple-400/50 relative shadow-sm flex-shrink-0">
               <img src="assets/abdou_real_portrait.jpg" alt="Abdou Ali Mousa" class="w-full h-full object-cover object-top" onerror="this.src='assets/hero_architect.jpg'" />
             </div>
-            <div class="flex flex-col text-right align-start-dir pl-1">
+            <div class="flex flex-col text-right align-start-dir">
               <div class="flex items-center gap-1.5">
                 <span class="text-[11px] font-black text-white">عبده علي موسى</span>
-                <span class="text-[8px] font-mono text-purple-300 bg-purple-950/80 px-1 py-0.2 rounded border border-purple-500/30">Pro</span>
+                <span class="text-[8px] font-mono text-purple-300 bg-purple-950/80 px-1 py-0.2 rounded border border-purple-500/30">Verified Pro</span>
               </div>
               <span class="text-[8.5px] font-mono text-zinc-400">AI & Digital Systems Engineer</span>
             </div>
@@ -421,55 +430,54 @@
           </div>
 
           <!-- Scaled, Responsive Headline -->
-          <h1 class="text-xl sm:text-3xl lg:text-5xl font-black tracking-tight text-white leading-tight sm:leading-snug mb-2 sm:mb-2.5">
+          <h1 class="text-xl sm:text-3xl lg:text-5xl font-black tracking-tight text-white leading-tight sm:leading-snug mb-1.5 sm:mb-2.5">
             <span data-i18n="hero_h1_part1">أحوّل التعقيد إلى</span>
             <span class="purple-gradient-text inline-block" data-i18n="hero_h1_part2">أنظمة ذكية فائقة.</span>
           </h1>
 
           <!-- Tagline with luxury touch -->
-          <div class="flex items-center justify-center lg:justify-start gap-2 mb-2.5 sm:mb-4">
-            <span class="text-[11px] sm:text-base text-purple-300 font-serif italic" data-i18n="hero_tagline">
+          <div class="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
+            <span class="text-[10px] sm:text-sm px-2.5 py-0.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono tracking-wide" data-i18n="hero_tagline">
               الأنظمة والأتمتة والإنتاج الرقمي 2025
             </span>
-            <div class="hidden sm:block h-[1px] w-8 bg-gradient-to-l from-purple-500 to-transparent"></div>
           </div>
 
           <!-- Authentic Focused Bio Paragraph -->
-          <p class="text-xs sm:text-base text-zinc-300 max-w-2xl font-normal leading-relaxed mb-3.5 sm:mb-5" data-i18n="hero_bio">
+          <p class="text-[11px] sm:text-sm lg:text-base text-zinc-300 max-w-2xl font-normal leading-relaxed mb-2.5 sm:mb-4 px-0.5" data-i18n="hero_bio">
             أبني حلولًا تعتمد على الذكاء الاصطناعي والأتمتة لتحويل العمليات المعقدة إلى <strong class="text-white font-bold">أنظمة أكثر ذكاءً، كفاءةً وقابليةً للتوسع</strong>؛ من أتمتة سير العمل والنماذج المالية والمحاسبية، إلى البنية السحابية وأنظمة الإنتاج الرقمي — أصمم حلولًا تقنية تخدم <strong class="text-purple-300 font-bold">القرار، الكفاءة، والنمو</strong>.
           </p>
 
-          <!-- Core Specialization Tags (Compact Chips) -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 mb-4 sm:mb-5 text-[9.5px] sm:text-xs font-mono text-zinc-300">
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">AI Multi-Agents</span>
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">Autonomous Automation</span>
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">FinTech & BI Dashboards</span>
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md">Voice Synthesis DAW</span>
+          <!-- Core Specialization Tags (Compact Micro-Chips with Neon Accents) -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1 sm:gap-1.5 mb-3 sm:mb-4 text-[9px] sm:text-xs font-mono text-zinc-300">
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-purple-400"></span>AI Multi-Agents</span>
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-cyan-400"></span>Autonomous Automation</span>
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-emerald-400"></span>FinTech & BI Dashboards</span>
+            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-pink-400"></span>Voice Synthesis DAW</span>
           </div>
 
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 w-full sm:w-auto mb-3.5 sm:mb-5">
-            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-glow-emerald transition-all duration-300 touch-press">
-              <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
-              <span data-i18n="hero_btn_whatsapp">محادثة واتساب مباشرة (+20 109 251 9210)</span>
+          <!-- CTAs (Compact, side-by-side row on mobile to save vertical space) -->
+          <div class="flex flex-row items-center gap-2 w-full max-w-md mb-2.5 sm:mb-4">
+            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] sm:text-sm shadow-glow-emerald transition-all duration-300 touch-press">
+              <i class="fa-brands fa-whatsapp text-xs sm:text-base"></i>
+              <span data-i18n="hero_btn_whatsapp">محادثة واتساب</span>
             </a>
-            <a href="#platforms" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 touch-press">
+            <a href="#platforms" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-[11px] sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 touch-press">
               <i class="fa-solid fa-layer-group text-purple-400 text-xs sm:text-sm"></i>
-              <span data-i18n="hero_btn_platforms">استكشف المنظومات الحية</span>
+              <span data-i18n="hero_btn_platforms">المنظومات الحية</span>
             </a>
           </div>
 
           <!-- Micro Status Bar -->
-          <div class="w-full max-w-md bg-[#0e0e14]/90 border border-white/10 rounded-lg p-2 flex items-center justify-between font-mono text-[9.5px] sm:text-xs text-zinc-400 backdrop-blur-md">
+          <div class="w-full max-w-md bg-[#0e0e14]/90 border border-white/10 rounded-lg py-1 px-2.5 flex items-center justify-between font-mono text-[9px] sm:text-xs text-zinc-400 backdrop-blur-md">
             <div class="flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-red-500/80"></span>
               <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/80"></span>
               <span class="text-zinc-600 mr-1">|</span>
-              <span class="text-purple-300 font-semibold">sys.init("Production_Ready")</span>
+              <span class="text-purple-300 font-semibold truncate">sys.init("Production_Ready")</span>
             </div>
-            <div class="text-zinc-400 truncate dir-ltr font-mono text-[9px] sm:text-[10.5px]">
-              <span class="text-zinc-500">status:</span> <span class="text-emerald-400">"Online_24/7"</span>
+            <div class="text-zinc-400 truncate dir-ltr font-mono text-[8.5px] sm:text-[10.5px]">
+              <span class="text-zinc-500">status:</span> <span class="text-emerald-400 font-bold">"Online_24/7"</span>
             </div>
           </div>
 
@@ -535,46 +543,46 @@
 
 
   <!-- ========================================== -->
-  <!-- 3. METRICS STRIP (Proportional 2x2 Grid) -->
+  <!-- 3. METRICS STRIP (Ultra-Sleek Single Line on Mobile) -->
   <!-- ========================================== -->
-  <section id="metrics" class="relative py-4 sm:py-8 border-y border-white/5 bg-[#09090d]">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
+  <section id="metrics" class="relative py-2.5 sm:py-6 border-y border-white/5 bg-[#08080c]">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-4 gap-1.5 sm:gap-4 divide-x divide-white/10 sm:divide-x-0 rtl:divide-x-reverse">
         
         <!-- Metric 1 -->
-        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             04
           </span>
-          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_1_title">قنوات شورتس دولية</span>
-          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_1_sub">شبكة إعلامية ذكية ذاتية القيادة</span>
+          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_1_title">قنوات دولية</span>
+          <span class="hidden sm:block text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_1_sub">شبكة إعلامية ذكية ذاتية القيادة</span>
         </div>
 
         <!-- Metric 2 -->
-        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             +10M
           </span>
-          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_2_title">مشاهدة وتفاعل عالمي</span>
-          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_2_sub">محتوى وثائقي واقتصادي رائد</span>
+          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_2_title">مشاهدة وتفاعل</span>
+          <span class="hidden sm:block text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_2_sub">محتوى وثائقي واقتصادي رائد</span>
         </div>
 
         <!-- Metric 3 -->
-        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             100%
           </span>
-          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_3_title">أتمتة متكاملة للعمليات</span>
-          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_3_sub">رفع كفاءة الأداء وتسريع القرار</span>
+          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_3_title">أتمتة للعمليات</span>
+          <span class="hidden sm:block text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_3_sub">رفع كفاءة الأداء وتسريع القرار</span>
         </div>
 
         <!-- Metric 4 -->
-        <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-lg sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
+          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             24/7
           </span>
-          <span class="text-[10.5px] sm:text-xs font-bold text-zinc-200 mt-0.5" data-i18n="metric_4_title">جاهزية واستقرار سحابي</span>
-          <span class="text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_4_sub">أنظمة وتشغيل مستمر بلا انقطاع</span>
+          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_4_title">استقرار سحابي</span>
+          <span class="hidden sm:block text-[8.5px] sm:text-[10px] text-zinc-500" data-i18n="metric_4_sub">أنظمة وتشغيل مستمر بلا انقطاع</span>
         </div>
 
       </div>
@@ -605,73 +613,81 @@
       </div>
 
       <!-- Services Grid (2 Columns) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-5">
         
         <!-- Card 1 -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-purple-950/80 border border-purple-500/40 flex items-center justify-center text-purple-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
-            <i class="fa-solid fa-brain"></i>
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
+            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-purple-950/80 border border-purple-500/40 flex-shrink-0 flex items-center justify-center text-purple-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-purple-300 transition-colors leading-snug" data-i18n="s1_title">
+              أتمتة الأعمال بالذكاء الاصطناعي المستقل (Autonomous AI)
+            </h3>
           </div>
-          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-purple-300 transition-colors" data-i18n="s1_title">
-            أتمتة الأعمال بالذكاء الاصطناعي المستقل (Autonomous AI)
-          </h3>
-          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
             <span data-i18n="s1_desc">تصميم وبناء مسارات عمل ذكية ذاتية القيادة (AI Agents) لتنفيذ المهام المعقدة، وخدمة العملاء، وتحليل البيانات بأعلى مستويات الدقة والسرعة.</span>
           </p>
-          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s1_t1">وكلاء ذكاء اصطناعي متعدد المهام</span>
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s1_t2">تكامل النماذج اللغوية المتطورة</span>
+          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s1_t1">وكلاء ذكاء اصطناعي متعدد المهام</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s1_t2">تكامل النماذج اللغوية المتطورة</span>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-cyan-950/80 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
-            <i class="fa-solid fa-chart-line"></i>
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
+            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-cyan-950/80 border border-cyan-500/40 flex-shrink-0 flex items-center justify-center text-cyan-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug" data-i18n="s2_title">
+              الهندسة المالية والنمذجة الاستراتيجية (FinTech & BI)
+            </h3>
           </div>
-          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors" data-i18n="s2_title">
-            الهندسة المالية والنمذجة الاستراتيجية (FinTech & BI)
-          </h3>
-          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
             <span data-i18n="s2_desc">تصميم النماذج المحاسبية ولوحات التحكم التفاعلية (Power BI Dashboards) لتوفير رؤى مالية فورية وتوقعات التدفقات النقدية لدعم اتخاذ القرارات الصائبة.</span>
           </p>
-          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s2_t1">تخطيط مالي وتوقعات التدفقات</span>
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s2_t2">لوحات قياس الأداء اللحظية</span>
+          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s2_t1">تخطيط مالي وتوقعات التدفقات</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s2_t2">لوحات قياس الأداء اللحظية</span>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-indigo-950/80 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
-            <i class="fa-solid fa-server"></i>
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
+            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-indigo-950/80 border border-indigo-500/40 flex-shrink-0 flex items-center justify-center text-indigo-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-purple-300 transition-colors leading-snug" data-i18n="s3_title">
+              البنية التحتية السحابية وتكامل البرمجيات (Cloud & APIs)
+            </h3>
           </div>
-          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-purple-300 transition-colors" data-i18n="s3_title">
-            البنية التحتية السحابية وتكامل البرمجيات (Cloud & APIs)
-          </h3>
-          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
             <span data-i18n="s3_desc">ربط الأنظمة السحابية والـ APIs المختلفة، وبناء منصات ويب متقدمة تتسم بالسرعة الفائقة والأمان الموثوق لدعم نمو وتوسع أعمالكم بلا انقطاع.</span>
           </p>
-          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s3_t1">منصات سحابية آمنة 100%</span>
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s3_t2">معمارية برمجية قابلة للتوسع</span>
+          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s3_t1">منصات سحابية آمنة 100%</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s3_t2">معمارية برمجية قابلة للتوسع</span>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-pink-950/80 border border-pink-500/40 flex items-center justify-center text-pink-400 text-sm sm:text-lg mb-2 sm:mb-3 shadow-md group-hover:scale-105 transition-transform">
-            <i class="fa-solid fa-microphone-lines"></i>
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
+            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-pink-950/80 border border-pink-500/40 flex-shrink-0 flex items-center justify-center text-pink-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-microphone-lines"></i>
+            </div>
+            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-pink-300 transition-colors leading-snug" data-i18n="s4_title">
+              استوديوهات الصوت التوليدي وصناعة المحتوى الرقمي
+            </h3>
           </div>
-          <h3 class="text-xs sm:text-base font-bold text-white mb-1 group-hover:text-pink-300 transition-colors" data-i18n="s4_title">
-            استوديوهات الصوت التوليدي وصناعة المحتوى الرقمي
-          </h3>
-          <p class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-2.5">
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
             <span data-i18n="s4_desc">بناء محركات توليد الفويس أوفر البشري والموسيقى التصويرية بالذكاء الاصطناعي، وإدارة شبكات المحتوى الرقمي لخدمة ملايين المشاهدين.</span>
           </p>
-          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">AI Voice Synthesis (DAW)</span>
-            <span class="text-[9px] sm:text-[10.5px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s4_t2">إنتاج شورتس وميديا</span>
+          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">AI Voice Synthesis (DAW)</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5" data-i18n="s4_t2">إنتاج شورتس وميديا</span>
           </div>
         </div>
 
@@ -706,10 +722,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6">
         
         <!-- Platform Card 1: Teacher OS Platform -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
-            <!-- Top Thumbnail Image (Centered) -->
-            <div class="aspect-[16/9] max-h-36 sm:max-h-48 rounded-lg sm:rounded-xl bg-[#09090d] border border-white/10 overflow-hidden mb-3 relative shadow-md mx-auto flex items-center justify-center">
+            <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
+            <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-emerald-500/50 transition-all">
               <img 
                 src="assets/teacheros_preview.jpg" 
                 alt="Teacher OS Closed-Loop Intelligent Education" 
@@ -717,10 +733,15 @@
                 onerror="this.src='assets/hero_architect.jpg'"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div class="absolute top-2 left-2 bg-emerald-950/90 border border-emerald-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-emerald-300 flex items-center gap-1 backdrop-blur-md">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20"></div>
+              <div class="absolute top-2 left-2 bg-emerald-950/90 border border-emerald-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-emerald-300 flex items-center gap-1 backdrop-blur-md shadow-sm">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span>Live Platform • EdTech OS</span>
+              </div>
+              <div class="absolute bottom-2 right-2 text-right">
+                <span class="px-2 py-0.5 rounded-md bg-black/80 border border-white/10 text-emerald-300 text-[8.5px] font-mono backdrop-blur-md">
+                  Teacher OS // 2025
+                </span>
               </div>
             </div>
 
@@ -739,7 +760,7 @@
             </p>
 
             <!-- Feature Checklist (2x2) -->
-            <div class="grid grid-cols-2 gap-1.5 mb-3.5 text-[10px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
                 <span data-i18n="p_tos_f1">تحضير دروس بالذكاء الاصطناعي</span>
@@ -760,12 +781,12 @@
           </div>
 
           <!-- Actions -->
-          <div class="flex flex-col sm:flex-row items-center gap-1.5 pt-2.5 border-t border-white/10">
-            <a href="https://abdou25008-coder.github.io/teacher-os/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-[10.5px] sm:text-xs shadow-glow-emerald transition-all touch-press">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
+            <a href="https://abdou25008-coder.github.io/teacher-os/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-emerald transition-all touch-press">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               <span data-i18n="p_tos_btn_launch">تشغيل المنصة الحية</span>
             </a>
-            <a href="https://github.com/abdou25008-coder/teacher-os.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10.5px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://github.com/abdou25008-coder/teacher-os.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
               <i class="fa-brands fa-github text-emerald-400 text-xs"></i>
               <span data-i18n="p_tos_btn_repo">مستودع GitHub</span>
             </a>
@@ -773,10 +794,10 @@
         </div>
 
         <!-- Platform Card 2: MoneyPrinter Pro -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
-            <!-- Top Thumbnail Image (Centered) -->
-            <div class="aspect-[16/9] max-h-36 sm:max-h-48 rounded-lg sm:rounded-xl bg-[#09090d] border border-white/10 overflow-hidden mb-3 relative shadow-md mx-auto flex items-center justify-center">
+            <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
+            <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-purple-500/50 transition-all">
               <img 
                 src="assets/moneyprinter_pro_preview.jpg" 
                 alt="MoneyPrinter Pro Arabic AI Video Generation Studio" 
@@ -784,10 +805,15 @@
                 onerror="this.src='assets/hero_architect.jpg'"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div class="absolute top-2 left-2 bg-purple-950/90 border border-purple-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-purple-300 flex items-center gap-1 backdrop-blur-md">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20"></div>
+              <div class="absolute top-2 left-2 bg-purple-950/90 border border-purple-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-purple-300 flex items-center gap-1 backdrop-blur-md shadow-sm">
                 <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
                 <span>Autonomous AI Studio</span>
+              </div>
+              <div class="absolute bottom-2 right-2 text-right">
+                <span class="px-2 py-0.5 rounded-md bg-black/80 border border-white/10 text-purple-300 text-[8.5px] font-mono backdrop-blur-md">
+                  MoneyPrinter Pro // Arabic
+                </span>
               </div>
             </div>
 
@@ -806,7 +832,7 @@
             </p>
 
             <!-- Feature Checklist (2x2) -->
-            <div class="grid grid-cols-2 gap-1.5 mb-3.5 text-[10px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-circle-check text-purple-400 text-[10px]"></i>
                 <span data-i18n="p_mp_f1">سيناريو عربي توليدي متقن (LLMs)</span>
@@ -827,23 +853,23 @@
           </div>
 
           <!-- Actions -->
-          <div class="flex flex-col sm:flex-row items-center gap-1.5 pt-2.5 border-t border-white/10">
-            <a href="https://github.com/abdou25008-coder/MoneyPrinter-Pro.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10.5px] sm:text-xs shadow-glow-purple transition-all touch-press">
+          <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
+            <a href="https://github.com/abdou25008-coder/MoneyPrinter-Pro.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] sm:text-xs shadow-glow-purple transition-all touch-press">
               <i class="fa-brands fa-github text-xs"></i>
-              <span data-i18n="p_mp_btn_repo">مستودع GitHub الرسمي</span>
+              <span data-i18n="p_mp_btn_repo">المستودع الرسمي</span>
             </a>
-            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لعملاق%20صناعة%20المحتوى%20العربي%20MoneyPrinter%20Pro" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10.5px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لعملاق%20صناعة%20المحتوى%20العربي%20MoneyPrinter%20Pro" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
-              <span data-i18n="p_mp_btn_demo">طلب عرض توضيحي</span>
+              <span data-i18n="p_mp_btn_demo">طلب ديمو</span>
             </a>
           </div>
         </div>
 
         <!-- Platform Card 3: Logistics & Fleet Platform -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-cyan-500/25 hover:border-cyan-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-cyan-500/25 hover:border-cyan-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
-            <!-- Top Thumbnail Image (Centered) -->
-            <div class="aspect-[16/9] max-h-36 sm:max-h-48 rounded-lg sm:rounded-xl bg-[#09090d] border border-white/10 overflow-hidden mb-3 relative shadow-md mx-auto flex items-center justify-center">
+            <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
+            <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-cyan-500/50 transition-all">
               <img 
                 src="assets/logistics_preview.jpg" 
                 alt="ElQaed Logistics Fleet & Store Suite" 
@@ -851,10 +877,15 @@
                 onerror="this.src='assets/hero_architect.jpg'"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div class="absolute top-2 left-2 bg-cyan-950/90 border border-cyan-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-cyan-300 flex items-center gap-1 backdrop-blur-md">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20"></div>
+              <div class="absolute top-2 left-2 bg-cyan-950/90 border border-cyan-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-cyan-300 flex items-center gap-1 backdrop-blur-md shadow-sm">
                 <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
                 <span>Live Platform</span>
+              </div>
+              <div class="absolute bottom-2 right-2 text-right">
+                <span class="px-2 py-0.5 rounded-md bg-black/80 border border-white/10 text-cyan-300 text-[8.5px] font-mono backdrop-blur-md">
+                  ElQaed Logistics // Fleet
+                </span>
               </div>
             </div>
 
@@ -873,7 +904,7 @@
             </p>
 
             <!-- Feature Checklist (2x2) -->
-            <div class="grid grid-cols-2 gap-1.5 mb-3.5 text-[10px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-circle-check text-cyan-400 text-[10px]"></i>
                 <span data-i18n="p1_f1">تتبع حي وفوري للأسطول</span>
@@ -894,12 +925,12 @@
           </div>
 
           <!-- Actions -->
-          <div class="flex flex-col sm:flex-row items-center gap-1.5 pt-2.5 border-t border-white/10">
-            <a href="https://elqaedtravel-netizen.github.io/logistics/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-cyan-600 hover:bg-cyan-500 text-zinc-950 font-bold text-[10.5px] sm:text-xs shadow-glow-cyan transition-all touch-press">
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              <span data-i18n="p1_btn_launch">تشغيل المنظومة الحية</span>
+          <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
+            <a href="https://elqaedtravel-netizen.github.io/logistics/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-cyan-600 hover:bg-cyan-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-cyan transition-all touch-press">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              <span data-i18n="p1_btn_launch">تشغيل المنظومة</span>
             </a>
-            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمنظومة%20اللوجستيات%20والمتجر" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10.5px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمنظومة%20اللوجستيات%20والمتجر" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
               <span data-i18n="p1_btn_demo">طلب استعراض</span>
             </a>
@@ -907,10 +938,10 @@
         </div>
 
         <!-- Platform Card 4: Voiceover & Music AI DAW Studio -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
-            <!-- Top Thumbnail Image (Centered) -->
-            <div class="aspect-[16/9] max-h-36 sm:max-h-48 rounded-lg sm:rounded-xl bg-[#09090d] border border-white/10 overflow-hidden mb-3 relative shadow-md mx-auto flex items-center justify-center">
+            <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
+            <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-purple-500/50 transition-all">
               <img 
                 src="assets/voice_studio_preview.jpg" 
                 alt="AI Audio DAW Synthesis Studio" 
@@ -918,10 +949,15 @@
                 onerror="this.src='assets/hero_architect.jpg'"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div class="absolute top-2 left-2 bg-purple-950/90 border border-purple-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-purple-300 flex items-center gap-1 backdrop-blur-md">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20"></div>
+              <div class="absolute top-2 left-2 bg-purple-950/90 border border-purple-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-purple-300 flex items-center gap-1 backdrop-blur-md shadow-sm">
                 <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
                 <span>Studio 48kHz</span>
+              </div>
+              <div class="absolute bottom-2 right-2 text-right">
+                <span class="px-2 py-0.5 rounded-md bg-black/80 border border-white/10 text-purple-300 text-[8.5px] font-mono backdrop-blur-md">
+                  DAW Studio // 48kHz
+                </span>
               </div>
             </div>
 
@@ -940,13 +976,13 @@
             </p>
 
             <!-- Compact Audio Waveform Player Widget -->
-            <div class="bg-[#09090d] rounded-xl p-2.5 border border-white/10 mb-3.5 shadow-inner">
+            <div class="bg-[#09090d] rounded-xl p-2.5 border border-white/10 mb-3 shadow-inner">
               <div class="flex items-center justify-between mb-1.5 text-xs">
-                <span class="font-bold text-white text-[10.5px] flex items-center gap-1">
+                <span class="font-bold text-white text-[10px] sm:text-[10.5px] flex items-center gap-1">
                   <i class="fa-solid fa-headphones text-purple-400 text-[10px]"></i>
                   <span data-i18n="audio_sample_title">عينة فويس أوفر وثائقي (AI Voice Sample)</span>
                 </span>
-                <span id="audioTimer" class="font-mono text-purple-300 text-[9.5px]">0:00 / 0:45</span>
+                <span id="audioTimer" class="font-mono text-purple-300 text-[9px] sm:text-[9.5px]">0:00 / 0:45</span>
               </div>
               
               <!-- Waveform Bars -->
@@ -972,7 +1008,7 @@
 
               <!-- Play/Pause Controls -->
               <div class="flex items-center justify-between">
-                <button id="playAudioBtn" onclick="triggerHaptic()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] shadow-sm transition-all touch-press">
+                <button id="playAudioBtn" onclick="triggerHaptic()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-[9.5px] sm:text-[10px] shadow-sm transition-all touch-press">
                   <i id="playIcon" class="fa-solid fa-play text-[9px]"></i>
                   <span id="playText">تشغيل العينة</span>
                 </button>
@@ -982,12 +1018,12 @@
           </div>
 
           <!-- Actions -->
-          <div class="flex flex-col sm:flex-row items-center gap-1.5 pt-2.5 border-t border-white/10">
-            <a href="https://abdou-studio-vo.ai.studio" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10.5px] sm:text-xs shadow-glow-purple transition-all touch-press">
-              <i class="fa-solid fa-sliders text-[10px]"></i>
-              <span data-i18n="p2_btn_launch">تشغيل استوديو الصوت</span>
+          <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
+            <a href="https://abdou-studio-vo.ai.studio" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] sm:text-xs shadow-glow-purple transition-all touch-press">
+              <i class="fa-solid fa-sliders text-[9px]"></i>
+              <span data-i18n="p2_btn_launch">تشغيل الاستوديو</span>
             </a>
-            <a href="https://wa.me/201092519210?text=أود%20طلب%20تجربة%20صوتية%20واستعراض%20استوديو%20الذكاء%20الاصطناعي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10.5px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20تجربة%20صوتية%20واستعراض%20استوديو%20الذكاء%20الاصطناعي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
               <span data-i18n="p2_btn_demo">طلب تجربة</span>
             </a>
@@ -1135,104 +1171,269 @@
         </p>
       </div>
 
-      <!-- 4 Channels Grid (Featuring Fathom X) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-8">
+      <!-- Section Highlights Badges -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-3 sm:mb-6">
+        <span class="px-2 py-0.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-brands fa-facebook-f text-blue-400"></i> Fathom X (الرسمية)
+        </span>
+        <span class="px-2 py-0.5 rounded-full bg-red-950/80 border border-red-500/40 text-red-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-brands fa-youtube text-red-400"></i> +10M مشاهدة شورتس
+        </span>
+        <span class="px-2 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-solid fa-bolt text-purple-400"></i> 4 قنوات دولية نشطة
+        </span>
+      </div>
+
+      <!-- 4 Channels Reel Cards (Horizontal Touch Carousel on Mobile / 4 Columns on Desktop) -->
+      <div class="flex overflow-x-auto snap-x no-scrollbar gap-2.5 sm:gap-4 pb-3 pt-1 md:grid md:grid-cols-4 md:overflow-visible mb-4 sm:mb-8">
         
         <!-- Channel 1: Fathom X (Deep Sea & Mystery) -->
-        <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="glass-panel rounded-xl p-2 sm:p-3 border border-blue-500/30 hover:border-blue-500/80 transition-all text-right align-start-dir group touch-press">
-          <div class="aspect-[9/13] rounded-lg bg-[#09090d] border border-white/10 mb-2 overflow-hidden relative shadow-sm mx-auto flex items-center justify-center">
-            <img 
-              src="assets/fathom_x_preview.jpg" 
-              alt="Fathom X - Deep Sea Mystery Documentaries" 
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
-              onerror="this.src='assets/hero_architect.jpg'"
-              loading="lazy"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-            <div class="absolute top-1.5 left-1.5 bg-blue-600/90 text-white px-1.5 py-0.5 rounded text-[8px] font-mono flex items-center gap-1">
-              <i class="fa-brands fa-facebook-f text-[7.5px]"></i>
-              <span>Facebook</span>
+        <div class="w-[210px] sm:w-auto flex-shrink-0 snap-center glass-panel rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-blue-500/30 hover:border-blue-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <div>
+            <div class="aspect-[9/13] rounded-lg bg-[#08080c] border border-white/10 mb-2 overflow-hidden relative shadow-md">
+              <img 
+                src="assets/fathom_x_preview.jpg" 
+                alt="Fathom X - Deep Sea Mystery Documentaries" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-transparent"></div>
+              
+              <!-- Platform Tag -->
+              <div class="absolute top-1.5 left-1.5 bg-blue-600/90 text-white px-2 py-0.5 rounded-full text-[8px] font-mono flex items-center gap-1 shadow-sm">
+                <i class="fa-brands fa-facebook-f text-[7.5px]"></i>
+                <span>Facebook Page</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-9 h-9 rounded-full bg-black/40 border border-white/30 backdrop-blur-md flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:bg-blue-600 transition-all">
+                  <i class="fa-solid fa-play text-[10px] mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+                <span class="text-[8px] font-mono bg-cyan-950/90 text-cyan-300 border border-cyan-500/40 px-1.5 py-0.5 rounded">وثائقيات الغموض والأعماق</span>
+              </div>
             </div>
-            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
-              <span class="text-[8px] font-mono bg-cyan-950/90 text-cyan-300 border border-cyan-500/40 px-1 py-0.5 rounded">Deep Sea Mystery</span>
-            </div>
+            
+            <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-snug group-hover:text-cyan-300 transition-colors" data-i18n="sh1_title">Fathom X | استكشافات الأعماق والغموض</h4>
+            <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2 mb-2" data-i18n="sh1_desc">سلسلة وثائقية متخصصة في سبر أغوار أعماق المحيطات والأسرار الغامضة.</p>
           </div>
-          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight group-hover:text-cyan-300 transition-colors line-clamp-2" data-i18n="sh1_title">Fathom X | استكشافات الأعماق والغموض</h4>
-          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh1_desc">سلسلة وثائقية متخصصة في سبر أغوار أعماق المحيطات والأسرار الغامضة.</p>
-        </a>
+
+          <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] shadow-sm transition-all touch-press">
+            <i class="fa-brands fa-facebook-f text-[9px]"></i>
+            <span>تصفح الصفحة على فيسبوك</span>
+          </a>
+        </div>
 
         <!-- Channel 2: AI & Tech -->
-        <div class="glass-panel rounded-xl p-2 sm:p-3 border border-white/5 hover:border-red-500/40 transition-all text-right align-start-dir group">
-          <div class="aspect-[9/13] rounded-lg bg-gradient-to-tr from-purple-950 to-zinc-900 border border-white/10 mb-2 overflow-hidden relative shadow-sm mx-auto flex items-center justify-center">
-            <img src="assets/media_network.jpg" alt="AI Tech Shorts" class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
-              <span class="text-[8px] font-mono bg-red-600/90 text-white px-1.5 py-0.5 rounded">Shorts AI</span>
+        <div class="w-[210px] sm:w-auto flex-shrink-0 snap-center glass-panel rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-red-500/30 hover:border-red-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <div>
+            <div class="aspect-[9/13] rounded-lg bg-[#08080c] border border-white/10 mb-2 overflow-hidden relative shadow-md">
+              <img 
+                src="assets/media_network.jpg" 
+                alt="AI Tech Shorts" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-transparent"></div>
+              
+              <div class="absolute top-1.5 left-1.5 bg-red-600/90 text-white px-2 py-0.5 rounded-full text-[8px] font-mono flex items-center gap-1 shadow-sm">
+                <i class="fa-brands fa-youtube text-[8px]"></i>
+                <span>Shorts AI</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-9 h-9 rounded-full bg-black/40 border border-white/30 backdrop-blur-md flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:bg-red-600 transition-all">
+                  <i class="fa-solid fa-play text-[10px] mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+                <span class="text-[8px] font-mono bg-red-950/90 text-red-300 border border-red-500/40 px-1.5 py-0.5 rounded">نماذج ومسارات الذكاء الاصطناعي</span>
+              </div>
             </div>
+            
+            <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-snug group-hover:text-red-300 transition-colors" data-i18n="sh2_title">آفاق الذكاء الاصطناعي والتقنية</h4>
+            <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2 mb-2" data-i18n="sh2_desc">شروحات ومقاطع تريند تشرح أحدث أدوات ونماذج الذكاء الاصطناعي.</p>
           </div>
-          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight line-clamp-2" data-i18n="sh2_title">آفاق الذكاء الاصطناعي والتقنية</h4>
-          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh2_desc">شروحات ومقاطع تريند تشرح أحدث أدوات ونماذج الذكاء الاصطناعي.</p>
+
+          <a href="https://wa.me/201092519210?text=أود%20الاطلاع%20على%20نماذج%20شورتس%20الذكاء%20الاصطناعي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-red-600/90 hover:bg-red-500 text-white font-bold text-[10px] shadow-sm transition-all touch-press">
+            <i class="fa-brands fa-youtube text-[9px]"></i>
+            <span>استعراض الفيديوهات</span>
+          </a>
         </div>
 
         <!-- Channel 3: Economy & Markets -->
-        <div class="glass-panel rounded-xl p-2 sm:p-3 border border-white/5 hover:border-purple-500/40 transition-all text-right align-start-dir group">
-          <div class="aspect-[9/13] rounded-lg bg-gradient-to-tr from-cyan-950 to-zinc-900 border border-white/10 mb-2 overflow-hidden relative shadow-sm mx-auto flex items-center justify-center">
-            <img src="assets/fintech_model_preview.jpg" alt="Economics Shorts" class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
-              <span class="text-[8px] font-mono bg-purple-600/90 text-white px-1.5 py-0.5 rounded">Economy</span>
+        <div class="w-[210px] sm:w-auto flex-shrink-0 snap-center glass-panel rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-purple-500/30 hover:border-purple-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <div>
+            <div class="aspect-[9/13] rounded-lg bg-[#08080c] border border-white/10 mb-2 overflow-hidden relative shadow-md">
+              <img 
+                src="assets/fintech_model_preview.jpg" 
+                alt="Economics Shorts" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-transparent"></div>
+              
+              <div class="absolute top-1.5 left-1.5 bg-purple-600/90 text-white px-2 py-0.5 rounded-full text-[8px] font-mono flex items-center gap-1 shadow-sm">
+                <i class="fa-solid fa-chart-line text-[8px]"></i>
+                <span>Economy & Markets</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-9 h-9 rounded-full bg-black/40 border border-white/30 backdrop-blur-md flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:bg-purple-600 transition-all">
+                  <i class="fa-solid fa-play text-[10px] mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+                <span class="text-[8px] font-mono bg-purple-950/90 text-purple-300 border border-purple-500/40 px-1.5 py-0.5 rounded">صراعات التجارة والأسواق</span>
+              </div>
             </div>
+            
+            <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-snug group-hover:text-purple-300 transition-colors" data-i18n="sh3_title">الاقتصاد والتحليلات العالمية</h4>
+            <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2 mb-2" data-i18n="sh3_desc">تحليل الصراعات الاقتصادية الكبرى وحركة التجارة الدولية والأسواق.</p>
           </div>
-          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight line-clamp-2" data-i18n="sh3_title">الاقتصاد والتحليلات العالمية</h4>
-          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh3_desc">تحليل الصراعات الاقتصادية الكبرى وحركة التجارة الدولية والأسواق.</p>
+
+          <a href="https://wa.me/201092519210?text=أود%20الاطلاع%20على%20سلسلة%20التحليلات%20الاقتصادية" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-purple-600/90 hover:bg-purple-500 text-white font-bold text-[10px] shadow-sm transition-all touch-press">
+            <i class="fa-solid fa-chart-pie text-[9px]"></i>
+            <span>نماذج التحليلات</span>
+          </a>
         </div>
 
         <!-- Channel 4: Audio Lab -->
-        <div class="glass-panel rounded-xl p-2 sm:p-3 border border-white/5 hover:border-pink-500/40 transition-all text-right align-start-dir group">
-          <div class="aspect-[9/13] rounded-lg bg-gradient-to-tr from-pink-950 to-zinc-900 border border-white/10 mb-2 overflow-hidden relative shadow-sm mx-auto flex items-center justify-center">
-            <img src="assets/voice_studio_preview.jpg" alt="Audio Synth Shorts" class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
-              <span class="text-[8px] font-mono bg-pink-600/90 text-white px-1.5 py-0.5 rounded">Audio Lab</span>
+        <div class="w-[210px] sm:w-auto flex-shrink-0 snap-center glass-panel rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-pink-500/30 hover:border-pink-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <div>
+            <div class="aspect-[9/13] rounded-lg bg-[#08080c] border border-white/10 mb-2 overflow-hidden relative shadow-md">
+              <img 
+                src="assets/voice_studio_preview.jpg" 
+                alt="Audio Synth Shorts" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                onerror="this.src='assets/hero_architect.jpg'"
+                loading="lazy" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-transparent"></div>
+              
+              <div class="absolute top-1.5 left-1.5 bg-pink-600/90 text-white px-2 py-0.5 rounded-full text-[8px] font-mono flex items-center gap-1 shadow-sm">
+                <i class="fa-solid fa-waveform-lines text-[8px]"></i>
+                <span>Audio Lab 48k</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-9 h-9 rounded-full bg-black/40 border border-white/30 backdrop-blur-md flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:bg-pink-600 transition-all">
+                  <i class="fa-solid fa-play text-[10px] mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-1.5 right-1.5 left-1.5 text-right">
+                <span class="text-[8px] font-mono bg-pink-950/90 text-pink-300 border border-pink-500/40 px-1.5 py-0.5 rounded">استوديو صوت بشري وموسيقى</span>
+              </div>
             </div>
+            
+            <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-snug group-hover:text-pink-300 transition-colors" data-i18n="sh4_title">معمل الصوت والإنتاج التوليدي</h4>
+            <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2 mb-2" data-i18n="sh4_desc">استعراض نماذج الفويس أوفر البشري والموسيقى السينمائية التوليدية.</p>
           </div>
-          <h4 class="font-bold text-white text-[11px] sm:text-xs mb-0.5 leading-tight line-clamp-2" data-i18n="sh4_title">معمل الصوت والإنتاج التوليدي</h4>
-          <p class="text-zinc-400 text-[8.5px] sm:text-[10px] line-clamp-2" data-i18n="sh4_desc">استعراض نماذج الفويس أوفر البشري والموسيقى السينمائية التوليدية.</p>
+
+          <a href="#platforms" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg bg-pink-600/90 hover:bg-pink-500 text-white font-bold text-[10px] shadow-sm transition-all touch-press">
+            <i class="fa-solid fa-headphones text-[9px]"></i>
+            <span>تجربة الاستوديو الصوتي</span>
+          </a>
         </div>
 
       </div>
 
-      <!-- Social Media Platform Direct Links Strip (Including Fathom X Facebook) -->
-      <div class="glass-panel p-2.5 sm:p-4 rounded-xl flex flex-col md:flex-row items-center justify-between gap-2.5">
-        <div class="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-white">
-          <i class="fa-solid fa-share-nodes text-purple-400"></i>
-          <span data-i18n="social_hub_text">تابع وتواصل عبر كافة منصات السوشيال ميديا الرسمية:</span>
+      <!-- Dedicated Verified Official Pages & Channels Hub -->
+      <div class="glass-panel p-3.5 sm:p-6 rounded-2xl border border-white/10 shadow-lg">
+        <div class="flex items-center justify-between mb-3 border-b border-white/5 pb-2.5">
+          <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-white">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span data-i18n="social_hub_text">مركز الصفحات والقنوات الرسمية الموثقة:</span>
+          </div>
+          <span class="text-[9.5px] font-mono text-purple-400 bg-purple-950/80 px-2 py-0.5 rounded-md border border-purple-500/30">Official Hub</span>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-1.5 text-[10.5px] sm:text-xs">
-          <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="px-2.5 py-1 rounded-full bg-blue-950/90 border border-blue-500/50 text-blue-300 hover:bg-blue-900 font-bold flex items-center gap-1.5 transition-all touch-press shadow-sm">
-            <i class="fa-brands fa-facebook-f text-blue-400 text-[10px]"></i>
-            <span>Fathom X</span>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
+          
+          <!-- Official Page 1: Fathom X Facebook -->
+          <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-blue-950/30 border border-blue-500/30 hover:border-blue-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white text-xs shadow-md">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold text-white block leading-tight group-hover:text-blue-300 transition-colors">Fathom X</span>
+                <span class="text-[8px] font-mono text-blue-400">صفحة فيسبوك الرسمية</span>
+              </div>
+            </div>
+            <span class="text-[9px] text-zinc-400 line-clamp-1 mb-2">وثائقيات الأعماق والغموض</span>
+            <div class="w-full py-1 px-2 rounded-md bg-blue-600/80 hover:bg-blue-600 text-white text-[9.5px] font-bold text-center flex items-center justify-center gap-1 shadow-sm">
+              <span>متابعة الصفحة</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
+            </div>
           </a>
-          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-900 font-bold flex items-center gap-1.5 transition-all touch-press">
-            <i class="fa-brands fa-whatsapp text-[10px]"></i>
-            <span>واتساب</span>
+
+          <!-- Official Page 2: WhatsApp Business -->
+          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 hover:border-emerald-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-xs shadow-md">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold text-white block leading-tight group-hover:text-emerald-300 transition-colors">واتساب المباشر</span>
+                <span class="text-[8px] font-mono text-emerald-400">استشارات وحلول 24/7</span>
+              </div>
+            </div>
+            <span class="text-[9px] text-zinc-400 line-clamp-1 mb-2">+20 109 251 9210</span>
+            <div class="w-full py-1 px-2 rounded-md bg-emerald-600/80 hover:bg-emerald-600 text-white text-[9.5px] font-bold text-center flex items-center justify-center gap-1 shadow-sm">
+              <span>محادثة فورية</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
+            </div>
           </a>
-          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="px-2.5 py-1 rounded-full bg-sky-950/80 border border-sky-500/40 text-sky-400 hover:bg-sky-900 font-bold flex items-center gap-1.5 transition-all touch-press">
-            <i class="fa-brands fa-telegram text-[10px]"></i>
-            <span>تيليجرام</span>
+
+          <!-- Official Page 3: Telegram Systems -->
+          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-sky-950/30 border border-sky-500/30 hover:border-sky-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-7 h-7 rounded-lg bg-sky-600 flex items-center justify-center text-white text-xs shadow-md">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold text-white block leading-tight group-hover:text-sky-300 transition-colors">تيليجرام التقني</span>
+                <span class="text-[8px] font-mono text-sky-400">@abdou25008</span>
+              </div>
+            </div>
+            <span class="text-[9px] text-zinc-400 line-clamp-1 mb-2">أكواد وتحديثات المنظومات</span>
+            <div class="w-full py-1 px-2 rounded-md bg-sky-600/80 hover:bg-sky-600 text-white text-[9.5px] font-bold text-center flex items-center justify-center gap-1 shadow-sm">
+              <span>انضمام للقناة</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
+            </div>
           </a>
-          <a href="#" class="px-2.5 py-1 rounded-full bg-red-950/80 border border-red-500/40 text-red-400 hover:bg-red-900 font-bold flex items-center gap-1.5 transition-all touch-press">
-            <i class="fa-brands fa-youtube text-[10px]"></i>
-            <span data-i18n="sh_tag_yt">شورتس</span>
+
+          <!-- Official Page 4: YouTube & Shorts Network -->
+          <a href="https://wa.me/201092519210?text=طلب%20روابط%20قنوات%20الميديا%20وشورتس" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-purple-950/30 border border-purple-500/30 hover:border-purple-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-7 h-7 rounded-lg bg-gradient-to-r from-red-600 to-pink-600 flex items-center justify-center text-white text-xs shadow-md">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold text-white block leading-tight group-hover:text-purple-300 transition-colors">يوتيوب وشورتس</span>
+                <span class="text-[8px] font-mono text-purple-400">فيديوهات 4K وتريند</span>
+              </div>
+            </div>
+            <span class="text-[9px] text-zinc-400 line-clamp-1 mb-2">+10M مشاهدات مجمعة</span>
+            <div class="w-full py-1 px-2 rounded-md bg-purple-600/80 hover:bg-purple-600 text-white text-[9.5px] font-bold text-center flex items-center justify-center gap-1 shadow-sm">
+              <span>طلب الروابط</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
+            </div>
           </a>
-          <a href="#" class="px-2.5 py-1 rounded-full bg-zinc-900 border border-white/20 text-zinc-200 hover:bg-zinc-800 font-bold flex items-center gap-1.5 transition-all touch-press">
-            <i class="fa-brands fa-tiktok text-[10px]"></i>
-            <span data-i18n="sh_tag_tt">تيك توك</span>
-          </a>
-          <a href="#" class="px-2.5 py-1 rounded-full bg-pink-950/80 border border-pink-500/40 text-pink-400 hover:bg-pink-900 font-bold flex items-center gap-1.5 transition-all touch-press">
-            <i class="fa-brands fa-instagram text-[10px]"></i>
-            <span data-i18n="sh_tag_ig">ريلز</span>
-          </a>
+
         </div>
       </div>
 
