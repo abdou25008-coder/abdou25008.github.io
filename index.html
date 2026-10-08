@@ -321,7 +321,29 @@
     #emulator-modal.active {
       display: flex;
     }
+  
+    /* Active Tab Style */
+    .nav-tab.active-tab {
+      background-color: rgba(59, 7, 100, 0.8) !important; /* purple-950/80 */
+      color: #ffffff !important;
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+    }
+    
+    /* Content Tab Display */
+    .content-section {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    .content-section.active-section {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
+
 </head>
 <body class="bg-[#050508] text-slate-100 antialiased selection:bg-purple-600 selection:text-white relative pb-24 lg:pb-0">
 
@@ -352,11 +374,11 @@
       </a>
 
       <!-- Desktop Nav Menu -->
-      <nav class="hidden xl:flex items-center gap-1 bg-[#111116]/90 border border-white/10 rounded-full px-3 py-1 shadow-inner backdrop-blur-md">
-        <a href="#services" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_services">المهارات</a>
-        <a href="#platforms" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_platforms">المنظومات الحية</a>
-        <a href="#software-models" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_models">النماذج الذكية</a>
-        <a href="#media-network" class="px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_media">شبكة الميديا</a>
+      <nav class="hidden xl:flex items-center gap-1 bg-[#111116]/90 border border-white/10 rounded-full px-3 py-1 shadow-inner backdrop-blur-md" id="main-nav-tabs">
+        <button onclick="switchTab('services')" class="nav-tab active-tab px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_services" data-target="services">المهارات</button>
+        <button onclick="switchTab('platforms')" class="nav-tab px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_platforms" data-target="platforms">المنظومات الحية</button>
+        <button onclick="switchTab('software-models')" class="nav-tab px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_models" data-target="software-models">النماذج الذكية</button>
+        <button onclick="switchTab('media-network')" class="nav-tab px-3 py-1 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all duration-200" data-i18n="nav_media" data-target="media-network">شبكة الميديا</button>
       </nav>
 
       <!-- Quick Control Group (Language + Mobile Simulator + WhatsApp) -->
@@ -593,7 +615,7 @@
   <!-- ========================================== -->
   <!-- 4. SERVICES SECTION (Compact & Proportional) -->
   <!-- ========================================== -->
-  <section id="services" class="py-6 sm:py-14 relative">
+  <section id="services" class="content-section active-section py-6 sm:py-14 relative">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -699,7 +721,7 @@
   <!-- ========================================== -->
   <!-- 5. LIVE PRODUCTION PLATFORMS (VERTICAL CARDS GRID) -->
   <!-- ========================================== -->
-  <section id="platforms" class="py-6 sm:py-14 relative bg-[#07070b]">
+  <section id="platforms" class="content-section py-6 sm:py-14 relative bg-[#07070b]">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -1216,7 +1238,7 @@
   <!-- ========================================== -->
   <!-- 6. AI SOFTWARE MODELS & TOOLS (VERTICAL CARDS GRID) -->
   <!-- ========================================== -->
-  <section id="software-models" class="py-6 sm:py-14 relative">
+  <section id="software-models" class="content-section py-6 sm:py-14 relative">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -1330,7 +1352,7 @@
   <!-- ========================================== -->
   <!-- 7. MEDIA NETWORK & FATHOM X (CHANNELS GRID) -->
   <!-- ========================================== -->
-  <section id="media-network" class="py-6 sm:py-14 relative bg-[#07070b]">
+  <section id="media-network" class="content-section py-6 sm:py-14 relative bg-[#07070b]">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -1713,15 +1735,15 @@
   <div class="fixed bottom-2.5 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-[360px] lg:hidden">
     <div class="glass-dock rounded-full px-2.5 py-1.5 flex items-center justify-around shadow-floating-dock border border-white/10">
       
-      <a href="#hero" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 active:text-purple-300 transition-colors touch-press">
+      <button onclick="triggerHaptic(); switchTab('services')" class="dock-tab active-dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press" data-target="services">
         <i class="fa-solid fa-house text-xs"></i>
-        <span class="text-[8px] font-bold" data-i18n="dock_home">الرئيسية</span>
-      </a>
+        <span class="text-[8px] font-bold" data-i18n="dock_home">المهارات</span>
+      </button>
 
-      <a href="#platforms" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 active:text-purple-300 transition-colors touch-press">
+      <button onclick="triggerHaptic(); switchTab('platforms')" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press" data-target="platforms">
         <i class="fa-solid fa-layer-group text-xs"></i>
         <span class="text-[8px] font-bold" data-i18n="dock_platforms">المنظومات</span>
-      </a>
+      </button>
 
       <!-- Highlighted Center WhatsApp Action -->
       <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex flex-col items-center -mt-4 group touch-press">
@@ -1731,15 +1753,15 @@
         <span class="text-[8px] font-black text-emerald-400 mt-0.5" data-i18n="dock_contact">تواصل</span>
       </a>
 
-      <a href="#software-models" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 active:text-purple-300 transition-colors touch-press">
+      <button onclick="triggerHaptic(); switchTab('software-models')" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press" data-target="software-models">
         <i class="fa-solid fa-code text-xs"></i>
         <span class="text-[8px] font-bold" data-i18n="dock_models">النماذج</span>
-      </a>
+      </button>
 
-      <a href="#media-network" onclick="triggerHaptic()" class="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-pink-400 active:text-pink-300 transition-colors touch-press">
+      <button onclick="triggerHaptic(); switchTab('media-network')" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-pink-400 transition-colors touch-press" data-target="media-network">
         <i class="fa-solid fa-clapperboard text-xs"></i>
         <span class="text-[8px] font-bold" data-i18n="dock_media">الميديا</span>
-      </a>
+      </button>
 
     </div>
   </div>
@@ -3037,5 +3059,55 @@
     });
   </script>
 
+
+  <!-- Tab Switching Logic -->
+  <script>
+    function switchTab(tabId) {
+      // 1. Hide all sections
+      const sections = ['services', 'platforms', 'software-models', 'media-network'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if(el) {
+          el.classList.remove('active-section');
+        }
+      });
+      
+      // 2. Show target section
+      const targetEl = document.getElementById(tabId);
+      if(targetEl) {
+        targetEl.classList.add('active-section');
+      }
+
+      // 3. Update desktop tab buttons styles
+      const tabs = document.querySelectorAll('.nav-tab');
+      tabs.forEach(tab => {
+        if(tab.getAttribute('data-target') === tabId) {
+          tab.classList.add('active-tab');
+        } else {
+          tab.classList.remove('active-tab');
+        }
+      });
+
+      // 4. Update mobile dock buttons styles
+      const dockTabs = document.querySelectorAll('.dock-tab');
+      dockTabs.forEach(tab => {
+        if(tab.getAttribute('data-target') === tabId) {
+          tab.classList.add('text-purple-400');
+          tab.classList.remove('text-zinc-400');
+        } else {
+          tab.classList.remove('text-purple-400');
+          tab.classList.add('text-zinc-400');
+        }
+      });
+      
+      // Optional: Smooth scroll to content
+      const metricsEl = document.getElementById('metrics');
+      if (metricsEl) {
+         const y = metricsEl.getBoundingClientRect().top + window.scrollY - 80;
+         window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  </script>
 </body>
+
 </html>
