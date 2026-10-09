@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, Wand2, Rocket, Play, Info, ExternalLink } from 'lucide-react';
+import { Truck, Wand2, Rocket, Play, Info, ExternalLink, GraduationCap, Sparkles, Video } from 'lucide-react';
 
 export default function SoftwareModels() {
   const models = [
@@ -51,7 +51,77 @@ export default function SoftwareModels() {
             </p>
           </div>
 
-          {/* Platform 1: Logistics */}
+          {/* Platform 1: Teacher OS */}
+          <div className="bg-[#16161a]/70 rounded-3xl p-8 sm:p-10 mb-12 border border-emerald-500/30 relative overflow-hidden group text-right">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 flex flex-col">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-mono mb-4 w-fit">
+                  <GraduationCap className="w-3.5 h-3.5" />
+                  <span>منظومة تعليمية متكاملة مغلقة الحلقة</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                  نظام تشغيل المعلم الذكي والمنصة التعليمية المتكاملة (Teacher OS)
+                </h3>
+                <span className="text-xs font-mono text-emerald-400 mb-4 block dir-ltr text-right">
+                  Teacher OS // Closed-Loop Teaching Ecosystem
+                </span>
+                <p className="text-zinc-300 text-sm leading-relaxed mb-6">
+                  المنظومة التعليمية الرقمية الشاملة لتمكين المعلمين والمراكز التعليمية؛ تعتمد فلسفة التدريس مغلق الحلقة (Closed-Loop Engine)؛ تحضير الدروس الذكي بالذكاء الاصطناعي، بنك أسئلة معياري، التصحيح الآلي الفوري، رصد فجوات الاستيعاب (Concept Mastery Signals)، والتدخل العلاجي المخصص مع نافذة متابعة حية لأولياء الأمور.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="https://abdou25008-coder.github.io/teacher-os/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs shadow-lg shadow-emerald-900/50 transition-all">
+                    <Rocket className="w-4 h-4" />
+                    <span>تشغيل المنصة الحية (Live Demo)</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                  <a href="https://github.com/abdou25008-coder/teacher-os.git" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-zinc-200 border border-white/10 font-bold text-xs transition-all">
+                    <span>مستودع GitHub</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-zinc-950 flex items-center justify-center">
+                <img src="assets/teacheros_preview.jpg" alt="معاينة نظام تشغيل المعلم الذكي" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+              </div>
+            </div>
+          </div>
+
+          {/* Platform 2: MoneyPrinter Pro */}
+          <div className="bg-[#16161a]/70 rounded-3xl p-8 sm:p-10 mb-12 border border-purple-500/30 relative overflow-hidden group text-right">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 flex flex-col">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-purple-950/80 border border-purple-500/40 text-purple-300 text-xs font-mono mb-4 w-fit">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>عملاق صناعة المحتوى العربي الذاتي</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  عملاق صناعة المحتوى والفيديوهات القصيرة بالذكاء الاصطناعي (MoneyPrinter Pro)
+                </h3>
+                <span className="text-xs font-mono text-purple-400 mb-4 block dir-ltr text-right">
+                  MoneyPrinter Pro // Arabic AI Video & Shorts Engine
+                </span>
+                <p className="text-zinc-300 text-sm leading-relaxed mb-6">
+                  المنظومة الاحترافية الأقوى لتوليد الفيديوهات القصيرة (Shorts, Reels, TikTok) بالذكاء الاصطناعي حصراً باللغة العربية؛ كتابة السيناريو التوليدي، اختيار المشاهد البصرية بدقة 4K، دمج التعليق الصوتي البشري المتنوع، الموسيقى التصويرية، وتوليد الترجمة الحركية الملونة آلياً للنشر الفوري.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="https://github.com/abdou25008-coder/MoneyPrinter-Pro.git" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-lg shadow-purple-950/50 transition-all">
+                    <Rocket className="w-4 h-4" />
+                    <span>مستودع GitHub الرسمي</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                  <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لعملاق%20صناعة%20المحتوى%20العربي%20MoneyPrinter%20Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-zinc-200 border border-white/10 font-bold text-xs transition-all">
+                    <span>طلب عرض توضيحي</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl bg-zinc-950 flex items-center justify-center">
+                <img src="assets/moneyprinter_pro_preview.jpg" alt="معاينة عملاق صناعة المحتوى العربي" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+              </div>
+            </div>
+          </div>
+
+          {/* Platform 3: Logistics */}
           <div className="bg-[#16161a]/70 rounded-3xl p-8 sm:p-10 mb-12 border border-cyan-500/30 relative overflow-hidden group text-right">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 flex flex-col">
@@ -76,13 +146,13 @@ export default function SoftwareModels() {
                   </a>
                 </div>
               </div>
-              <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl bg-zinc-950">
-                <img src="assets/logistics_preview.jpg" alt="معاينة لوحة تحكم اللوجستيات" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl bg-zinc-950 flex items-center justify-center">
+                <img src="assets/logistics_preview.jpg" alt="معاينة لوحة تحكم اللوجستيات" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </div>
 
-          {/* Platform 2: Abdou Studio VO */}
+          {/* Platform 4: Abdou Studio VO */}
           <div className="bg-[#16161a]/70 rounded-3xl p-8 sm:p-10 border border-purple-500/30 relative overflow-hidden group text-right">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 flex flex-col">
@@ -107,8 +177,8 @@ export default function SoftwareModels() {
                   </a>
                 </div>
               </div>
-              <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl bg-zinc-950">
-                <img src="assets/voice_studio_preview.jpg" alt="معاينة استوديو الصوت والموسيقى" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl bg-zinc-950 flex items-center justify-center">
+                <img src="assets/voice_studio_preview.jpg" alt="معاينة استوديو الصوت والموسيقى" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </div>
@@ -131,8 +201,8 @@ export default function SoftwareModels() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {models.map((m, idx) => (
               <div key={idx} className="bg-[#16161a]/80 rounded-3xl overflow-hidden border border-[#27272e] hover:border-purple-500/50 transition-all duration-300 flex flex-col group text-right">
-                <div className="relative h-52 w-full overflow-hidden bg-zinc-950">
-                  <img src={m.img} alt={m.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="relative h-52 w-full overflow-hidden bg-zinc-950 flex items-center justify-center">
+                  <img src={m.img} alt={m.title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#16161a] via-transparent to-transparent"></div>
                   <div className={`absolute top-4 right-4 border px-3 py-1 rounded-lg text-xs font-mono backdrop-blur-md ${m.badgeColor}`}>
                     {m.badge}

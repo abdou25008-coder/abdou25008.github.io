@@ -1,0 +1,418 @@
+
+--- Shayrha ---
+User Inputs:
+- <USER_REQUEST>
+اعمل كلون كامل للنظام ده 
+https://github.com/gitroomhq/postiz-app.git
+انشئ لي موقعا الكترونيا بأسم شيرها بالعربي بالكامل وبطابع مصري 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T18:16:30+03:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+- <USER_REQUEST>
+ اريد حذف هذا الجزء , سنطلق موقع الكتروني كامل خاص بنا 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T18:31:41+03:00.
+
+The user has uploaded 1 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/1c1ea3bb-494a-42be-8b0e-8075ce96c537/.user_uploaded/media_1791473469396_046cdad6.png
+You can embed this image in an artifact if you need the USER to review it.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+اريد اضافة الحساب البنكي الخاص بنا او الارقام التي سيقوم الاخرون بالدفع عليها لاطلاق المنصه واي شئ اخر اسالني فيه للضبط المتكامل
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T19:11:16+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+01092519210
+aa1647167@gmail.com
+Abdou Mousa بواسطة 
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T19:23:11+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+ليس لدي نطاقات قم انت برفعه وانشاء نطاق مجاني احترافي shayrha
+بوابة الدفع الإلكتروني الآلية (Paymob): سنجعلها غير متاحه مؤقتا وجاري العمل عليها 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T19:33:21+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+https://github.com/projectdiscovery/nuclei.git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T19:48:03+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+استخدمه في فحص اعمال منصة شيرها
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T19:53:23+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+خلاص فكك عاوزك تراجع علي كل حاجه في منصة شيرها كمستخدم طبيعي وشوف الاخطاء وعالجها 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T19:54:49+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+فين تسجيل الدخول وربط المنصات الحقيقيه المشهوره من فضلك قدم العمل بشكل متكامل لاينقصه اي شئ واستلم من بابلور وبوفور في كل الاعدادات 
+واستخدم هذا القالب المرفق وحلله وطبقه علي كامل النظام . واريد نظام تحقق تلقائي لمدفوعات العملاء بدلا من ارسال الرساله علي واتساب 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T20:25:02+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+فين تسجيل الدخول وربط المنصات الحقيقيه المشهوره من فضلك قدم العمل بشكل متكامل لاينقصه اي شئ واستلم من بابلور وبوفور في كل الاعدادات 
+واستخدم هذا القالب المرفق وحلله وطبقه علي كامل النظام . واريد نظام تحقق تلقائي لمدفوعات العملاء بدلا من ارسال الرساله علي واتساب 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-08T20:29:58+03:00.
+
+The user has uploaded 1 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/1c1ea3bb-494a-42be-8b0e-8075ce96c537/.user_uploaded/media_1791480579143_aebed856.jpg
+You can embed this image in an artifact if you need the USER to r
+
+--- E-Commerce ---
+User Inputs:
+- <USER_REQUEST>
+ابحث هنا عن كل مانحتاجه ليتناسب مع متجر الكتروني احترافي لنشاطنا لبيع مستلزمات البحار والصيد والادوات المرتبطه للجمهور الامريكي والاوروبي 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T00:21:14+03:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+- <USER_REQUEST>
+نعم قم بتجهيز كل شئ , مع العلم اريده ان يرتبط بمنصات تجاريه مثل علي اكسبريس واشهر التجار والمنصات , كما اريده ان يدعم كافة وسائل الدفع العالميه وبوابات الدفع بما يتناسب مع مصر وكل الدول , كما ارغب باضافة لغة عربيه كلغة ثانيه بعد الانجليزيه 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T01:16:24+03:00.
+
+The user has uploaded 2 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/eaf82265-7780-493e-abba-89ed4c3328bc/.user_uploaded/media_1791497777344_ec2001ba.jpg
+- C:/Users/LENOVO/.gemini/antigravity/brain/eaf82265-7780-493e-abba-89ed4c3328bc/.user_u
+- <USER_REQUEST>
+اريدك ان تجري بحث عالمي وخصوصا في الصين وتستحضر بيانات اشهر الموردين الخاصين بمجالنا وعرضهم في لوحة تحكم خاصه بي مع فحص وربط توليفه من افضل المنتجات لديهم وادراجهم في الموقع وساقوم بتحديد اسعارهم النهائيه لاحقا 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T01:22:35+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+كيف افتح الموقع اعطني رابط 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T01:31:17+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+اضافة لوحة تصفح لمنتجات التجار مع امكانية اضافة او ادراج اصناف لمتجري بضغطة زر 
+انشئ بانر اخر احترافي يتناسب مع الواجهه والمشروع 
+ثم انتقل للمرحله التاليه
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T01:39:40+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+يجب عرض البانر الجديد بدل القديم وليس كاضافه 
+اريد ان يكون الاتصال مباشر بالتجار من خلال تصفح متاجرهم واختيار اي منتج لديهم بزر لعرضه في متجرنا مثل المتاجر الشهيره وعلي اكسبريس 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T01:56:26+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+يجب عليك الذهاب لمنصة شوبيفاي وشوف ايه الخصائص والاعدادات اللي بيقدمها للمستخدم واعملها هنا وباحسن كفائه وضبط وتكامل , ثم قم بمراجعتها واختبارها وعالج اي اخطاء واعطني المرحله التاليه 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T02:07:34+03:00.
+</ADDITIONAL_METADATA>
+
+--- IdeaToSpread ---
+User Inputs:
+- <USER_REQUEST>
+كت اعمل علي هذا المشروع والهدف هو الحصول علي افكار لحلقات غير مكرره ومعده مسبقا لضمان ثبات التعليمات بدل العمل العشوائي وكنت اقوم بانشاء الفويس اوفر وارفقه بمنصة موني برينتي @[conversation:"money printer x"] للحصول علي مقاطع الفيديو جاهزه 
+اريد تطوير هذا العمل من خلالك هنا للحصول علي افكار فريده وغير مكرره وانشاءها في النهايه 
+المشروع المقصود بالذكر 
+{
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "let allItems = $input.all();\nlet recentItems6 = allItems.slice(-6);\nlet recentHistoryStrict = \"\";\n\nfor (let i = 0; i < recentItems6.length; i++) {\n    let item
+- <USER_REQUEST>
+1
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T22:56:08+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+@[code_block]  كيف استخدمه
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T23:33:02+03:00.
+
+The user has mentioned some items in the form @[ITEM]. Here is extra information about the items that were mentioned by the user, in the order that they appear:
+
+@[code_block] is a [Text Block]:
+# 1. توليد الحلقة التالية غير المكررة وحفظ الـ Markdown:
+python fathom.py next
+
+# 2. توليد الحلقة وإنتاج الفيديو تلقائياً بواسطة MoneyPrinterTurbo:
+python fathom.py auto
+
+# 3. عرض إحصائيات الأرشيف والحلقات المتبقية:
+python fathom.py stats
+
+# 4. عرض قائمة جميع مواضيع الر
+- <USER_REQUEST>
+https://ai.studio/apps/c7596134-87b5-44ff-8de4-5da960fc1002
+AIzaSyBT0g5FDr5CuBj9lBdSMXiNI6-2mE31QWM
+اريد دمج هذا النموذج لتوليد الفويس اوفر بصوت شريف او شارون 
+واريد ان يكون العمل اتوماتيكيا من خلال محادثتي معك لا اريد الاكواد ولا استطيع الاحتفاظ دائما بهم
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T23:37:30+03:00.
+
+The user has uploaded 1 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/c96e7df2-66a5-4873-9e1f-3b15989f65c3/.user_uploaded/media_1791232525394.png
+You can embed this image in an artifact if you need the USER to review it.
+</ADDI
+- <USER_REQUEST>
+ابدء
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-06T00:00:41+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+انشئ بالكامل بالمقاس الطولي 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-06T00:06:37+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+تكامل مع هذا 
+https://github.com/affaan-m/ECC.git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-06T00:26:27+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+انشئ حلقه دقيقه طوليه متكامله بكل المهارات
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-06T01:12:15+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+اريد منع صوت مؤثر الانتقال المسفز هذا وحذف الكابشن واختيار المعلق شارون من نموذج جوجل هذا https://abdou-studio-vo.ai.studio
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-06T03:14:11+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+اريد منع صوت مؤثر الانتقال المسفز هذا وحذف الكابشن واختيار المعلق شارون من نموذج جوجل هذا https://abdou-studio-vo.ai.studio
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-06T03:20:34+03:00.
+</ADDITIONAL_METADATA>
+
+--- NovaCraft ---
+User Inputs:
+- <USER_REQUEST>
+-- 1. تفعيل إضافة توليد المعرفات الفريدة
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- 2. إنشاء جدول العملاء (الشركات التي ستسجل في منصتك)
+CREATE TABLE clients (
+    id UUID REFERENCES auth.users NOT NULL PRIMARY KEY, -- يربط العميل بنظام المصادقة
+    company_name VARCHAR(255) NOT NULL,
+    subscription_plan VARCHAR(50) DEFAULT 'free',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', NOW())
+);
+
+-- 3. إنشاء جدول التطبيقات (المشاريع التي ينشئها العملاء)
+CREATE TABLE apps (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    client_id UUID REFEREN
+- <USER_REQUEST>
+Act as an expert Frontend Developer and UI/UX Designer. I want to build the main SaaS Dashboard for a No-Code App Builder platform. 
+
+The application must connect to my Supabase backend. Use modern, clean, and responsive design (similar to Vercel or Supabase dashboards) with a sidebar navigation and a main content area.
+
+Please generate the following screens and functionalities:
+
+1. Authentication Flow:
+- Login and Registration pages using Supabase Auth.
+- After successful registration, automatically insert the user's ID and company name into the "clients" table.
+
+2. M
+- Comments on artifact URI: file:///c%3A/Users/LENOVO/.gemini/antigravity/brain/92bfda29-3cd6-4469-b701-723e657d96d2/implementation_plan.md
+
+The user has approved this document.
+
+
+<USER_REQUEST>
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T02:44:58+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T03:07:35+03:00.
+
+The user has uploaded 1 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/92bfda29-3cd6-4469-b701-723e657d96d2/.user_uploaded/media_1788653253179.png
+You can embed this image in an artifact if you need the USER to review it.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-06T03:12:05+03:00.
+
+The user has uploaded 3 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/92bfda29-3cd6-4469-b701-723e657d96d2/.user_uploaded/media_1788653501868.png
+- C:/Users/LENOVO/.gemini/antigravity/brain/92bfda29-3cd6-4469-b701-723e657d96d2/.user_uploaded/media_1788653513580.png
+- C:/Users/LENOVO/.gemini/antigravity/brain/92bfda29-3cd6-4469-b701-723e657d96d2/.user_uploaded/media_1788653523612.png
+You can embed these images in an artifact if you need the USER to review them.
+</ADDITIONAL_METAD
+- <USER_REQUEST>
+Act as a Senior UI/UX Designer and Frontend Developer. I need to build an "App Customizer & Visual Editor" page for my No-Code platform. 
+
+This page will allow users to design their Delivery and Logistics apps. The output of this page must be a JSON object saved to the Supabase backend.
+
+Please build a layout with two main sections:
+
+1. Left Sidebar (Configuration Panel):
+Create a structured form with the following sections (use accordions or tabs for neatness):
+- Global Theme:
+  - Color picker for "Primary Color" (Hex code).
+  - Color picker for "Secondary Color" (Hex
+- <USER_REQUEST>
+Act as a Senior UI/UX Designer and Frontend Developer. I need to build a "Universal Visual Editor & App Builder" page for a No-Code SaaS platform (similar to Stunning.so). 
+
+This page allows users to design generic web and mobile applications. The final output of this page must be a structured JSON object saved to the Supabase backend.
+
+Please build a robust layout with three main sections:
+
+1. Left Sidebar (UI Components Library & Elements):
+Provide a drag-and-drop or click-to-add menu with generic building blocks categorized into:
+- Layout: Container, Row, Column, Grid
+- <USER_REQUEST>
+Act as a UI/UX Designer. I need to add a "Billing & Subscriptions" page to my No-Code SaaS platform dashboard.
+
+Please build a page with the following elements:
+
+1. Current Plan Status:
+- A card displaying the user's current plan (fetch 'subscription_status' from the 'clients' table in Supabase). 
+- If the status is 'free', show a prompt to upgrade.
+
+2. Pricing Tables:
+Display 3 pricing cards side-by-side:
+- "Basic Plan (Free)": Allows generating Web Apps only. 
+- "Pro Plan ($29/month)": Allows generating Android APKs + Web. Button: "Upgrade to Pro".
+- "Enterprise Pl
+- <USER_REQUEST>
+لم اتمكن من المعاينه
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-07T01:30:24+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+ فكره المنصه قائمه علي فكره سهولة انشاء التطبيق او الموقع من خلال مساعد ذكاء اصطناعي عبر جمله او فويس بسيط يتم تحليل هذه المدخلات وبدء عمل المنظومه بالكامل مع اتاحة خيار تنفيذه يدوي 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-07T04:11:37+03:00.
+
+The user has uploaded 1 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/92bfda29-3cd6-4469-b701-723e657d96d2/.user_uploaded/media_1788743415818.png
+You can embed this image in an artifact if you need the USER to review it.
+</ADDITIONAL_METADATA>
+
+--- OpenMontage ---
+User Inputs:
+- <USER_REQUEST>
+اريد تنزيل هذا المشروع علي جهازي والعمل به وربطه معك في هذا النظام كأداة مونتاج متكامله 
+https://github.com/calesthio/OpenMontage.git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-04T23:30:14+03:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.7 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+- <USER_REQUEST>
+"أنشئ لي فيديو يوتيوب شورت (9:16) مدته 30 ثانية عن اكثر الافكار التي يتجاهلها الناس عن المحيطات والبحار والكائنات البحريه كفيديو ترويجي لقناة fathom x 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-04T23:44:09+03:00.
+
+The user has uploaded 2 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/b7664e52-5d42-467a-98f8-99e074c03529/.user_uploaded/media_1791146639878.jpg
+- C:/Users/LENOVO/.gemini/antigravity/brain/b7664e52-5d42-467a-98f8-99e074c03529/.user_uploaded/media_1791146639935.jpg
+You can embed these images in an artifact if you need the USER to 
+- <USER_REQUEST>
+هل هذا المشروع سيفيدنا اذا دمجناه معنا , يال انه خاص بقوالب وافكار المونتاج 
+https://github.com/yihui-dev/awesome-opus5-5-videos.git
+https://github.com/zhuyansen/awesome-claude-video-skills.git
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T03:12:26+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+وهذا ايضا سيساعدنا في اعمال النشر ادمجه اذا وافقتني الراي 
+https://github.com/krillinai/OpenCreator.git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T03:39:51+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+حمل المهاره https://github.com/shyamtawli/devFind.git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T03:54:20+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+"أنشئ لي فيديو يوتيوب شورت (9:16) مدته 30 ثانية عن اكثر الافكار التي يتجاهلها الناس عن المحيطات والبحار والكائنات البحريه كفيديو ترويجي لقناة fathom x 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T04:31:32+03:00.
+
+The user has uploaded 2 image(s):
+- C:/Users/LENOVO/.gemini/antigravity/brain/b7664e52-5d42-467a-98f8-99e074c03529/.user_uploaded/media_1791160980724.jpg
+- C:/Users/LENOVO/.gemini/antigravity/brain/b7664e52-5d42-467a-98f8-99e074c03529/.user_uploaded/media_1791160986511.png
+You can embed these images in an artifact if you need the USER to 
+- <USER_REQUEST>
+مقطع الفيديو لم يعمل 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T18:11:33+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+كيف يمكنني الاستفاده من هذه المهارات وهل تقتصر علي هذه المحادثه فقط ام مع اي محادثه اخري يمكنني استدعاءها 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T20:07:15+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+هل يمكننا ربط حسابات السوشيال ميديا لتسهيل عملية النشر من خلالك بالامر 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T20:26:08+03:00.
+</ADDITIONAL_METADATA>
+- <USER_REQUEST>
+هذا مفتاح بوفور لحسابات فيس بوك وانستجرام وتيك توك 
+bJsQO4QTzvHBaM9yxOrnrd34kk_cj-_o6BOO2nGyNfv
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T20:28:25+03:00.
+</ADDITIONAL_METADATA>
