@@ -396,7 +396,7 @@
         <!-- Direct WhatsApp 1-Tap CTA -->
         <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center gap-1 purple-btn-gradient text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-purple-400/30 shadow-md touch-press">
           <i class="fa-brands fa-whatsapp text-emerald-400 text-xs sm:text-sm"></i>
-          <span class="hidden sm:inline" data-i18n="btn_header_cta">استشارة مجانية</span>
+          <span class="hidden sm:inline" data-i18n="btn_header_cta">تواصل تقني</span>
           <span class="sm:hidden" data-i18n="btn_header_cta_short">تواصل</span>
         </a>
 
@@ -424,79 +424,25 @@
         <!-- Bio & Actions Column -->
         <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-right align-start-dir z-10">
           
-          <!-- Mobile-Only Compact Avatar Badge (Prevents huge vertical scroll on phone) -->
-          <div class="lg:hidden flex items-center gap-2.5 mb-2.5 bg-[#111116]/85 py-1 px-2.5 rounded-full border border-purple-500/30 backdrop-blur-md shadow-md">
-            <div class="w-8 h-8 rounded-full overflow-hidden border border-purple-400/50 relative shadow-sm flex-shrink-0">
-              <img src="assets/abdou_real_portrait.jpg" alt="Abdou Ali Mousa" class="w-full h-full object-contain object-top" onerror="this.src='assets/hero_architect.jpg'" />
-            </div>
-            <div class="flex flex-col text-right align-start-dir">
-              <div class="flex items-center gap-1.5">
-                <span class="text-[11px] font-black text-white">عبده علي موسى</span>
-                <span class="text-[8px] font-mono text-purple-300 bg-purple-950/80 px-1 py-0.2 rounded border border-purple-500/30">Verified Pro</span>
+          <!-- Mobile-Only Rich Engineer Profile Card (Visible on mobile only) -->
+          <div class="lg:hidden w-full max-w-sm mb-3">
+            <div class="flex items-center gap-3 bg-[#111116]/90 border border-purple-500/35 rounded-2xl p-2.5 backdrop-blur-md shadow-lg">
+              <div class="w-14 h-14 rounded-xl overflow-hidden border border-purple-400/50 relative shadow-md flex-shrink-0 bg-[#09090d]">
+                <img src="assets/abdou_real_portrait.jpg" alt="Abdou Ali Mousa" class="w-full h-full object-contain object-top" onerror="this.src='assets/hero_architect.jpg'" />
               </div>
-              <span class="text-[8.5px] font-mono text-zinc-400">AI & Digital Systems Engineer</span>
+              <div class="flex flex-col text-right align-start-dir flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-1 mb-0.5">
+                  <span class="text-xs font-black text-white truncate">عبده علي موسى</span>
+                  <span class="text-[8.5px] font-mono text-purple-300 bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/30">Verified Pro</span>
+                </div>
+                <p class="text-[10px] text-zinc-300 leading-snug truncate">هندسة المنظومات والذكاء الاصطناعي</p>
+                <div class="flex items-center gap-1.5 text-[8.5px] font-mono text-emerald-400 mt-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>Active Engineer & Innovator</span>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Top Cyber Pill (Desktop + Tablet) -->
-          <div class="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#16161f] border border-purple-500/30 text-purple-300 text-[11px] font-mono mb-3 shadow-md backdrop-blur-md">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span data-i18n="hero_pill">Abdou Ali Mousa // AI Systems Architect</span>
-          </div>
-
-          <!-- Scaled, Responsive Headline -->
-          <h1 class="text-xl sm:text-3xl lg:text-5xl font-black tracking-tight text-white leading-tight sm:leading-snug mb-1.5 sm:mb-2.5">
-            <span data-i18n="hero_h1_part1">أحوّل التعقيد إلى</span>
-            <span class="purple-gradient-text inline-block" data-i18n="hero_h1_part2">أنظمة ذكية فائقة.</span>
-          </h1>
-
-          <!-- Tagline with luxury touch -->
-          <div class="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
-            <span class="text-[10px] sm:text-sm px-2.5 py-0.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono tracking-wide" data-i18n="hero_tagline">
-              الأنظمة والأتمتة والإنتاج الرقمي 2025
-            </span>
-          </div>
-
-          <!-- Authentic Focused Bio Paragraph -->
-          <p class="text-[11px] sm:text-sm lg:text-base text-zinc-300 max-w-2xl font-normal leading-relaxed mb-2.5 sm:mb-4 px-0.5" data-i18n="hero_bio">
-            مسيرة شغف في هندسة الذكاء الاصطناعي والأتمتة، أُسخر فيها التقنية لبناء <strong class="text-white font-bold">أنظمة ذكية تعكس طموحي وشغفي بالابتكار</strong>؛ من أتمتة سير العمل والنماذج المالية، إلى البنية السحابية وأنظمة الإنتاج الرقمي — أُوثق هنا رحلتي كمهندس يعشق تحويل التعقيد إلى إبداع تقني، وأرحب دوماً بتقديم أي استشارات مجانية.
-          </p>
-
-          <!-- Core Specialization Tags (Compact Micro-Chips with Neon Accents) -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1 sm:gap-1.5 mb-3 sm:mb-4 text-[9px] sm:text-xs font-mono text-zinc-300">
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-purple-400"></span>AI Multi-Agents</span>
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-cyan-400"></span>Autonomous Automation</span>
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-emerald-400"></span>FinTech & BI Dashboards</span>
-            <span class="bg-[#111116] border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-pink-400"></span>Voice Synthesis DAW</span>
-          </div>
-
-          <!-- CTAs (Compact, side-by-side row on mobile to save vertical space) -->
-          <div class="flex flex-row items-center gap-2 w-full max-w-md mb-2.5 sm:mb-4">
-            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] sm:text-sm shadow-glow-emerald transition-all duration-300 touch-press">
-              <i class="fa-brands fa-whatsapp text-xs sm:text-base"></i>
-              <span data-i18n="hero_btn_whatsapp">محادثة واتساب</span>
-            </a>
-            <a href="#platforms" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-[11px] sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 touch-press">
-              <i class="fa-solid fa-layer-group text-purple-400 text-xs sm:text-sm"></i>
-              <span data-i18n="hero_btn_platforms">المنظومات الحية</span>
-            </a>
-          </div>
-
-          <!-- Micro Status Bar -->
-          <div class="w-full max-w-md bg-[#0e0e14]/90 border border-white/10 rounded-lg py-1 px-2.5 flex items-center justify-between font-mono text-[9px] sm:text-xs text-zinc-400 backdrop-blur-md">
-            <div class="flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-red-500/80"></span>
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/80"></span>
-              <span class="text-zinc-600 mr-1">|</span>
-              <span class="text-purple-300 font-semibold truncate">sys.init("Production_Ready")</span>
-            </div>
-            <div class="text-zinc-400 truncate dir-ltr font-mono text-[8.5px] sm:text-[10.5px]">
-              <span class="text-zinc-500">status:</span> <span class="text-emerald-400 font-bold">"Online_24/7"</span>
-            </div>
-          </div>
-
-        </div>
 
         <!-- Desktop Luxury Portrait Column (Hidden on small phones to maximize readability) -->
         <div class="hidden lg:flex lg:col-span-5 relative items-center justify-center">
@@ -1679,30 +1625,30 @@
   <section id="contact-cta" class="py-8 sm:py-16 relative bg-gradient-to-b from-[#07070b] to-[#050508]">
     <div class="max-w-3xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
       
-      <!-- Main Strategic Consultation CTA Card -->
-      <div class="glass-panel rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-purple-500/35 shadow-glow-purple-lg relative overflow-hidden">
-        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-400/40 text-purple-300 text-[10.5px] sm:text-xs font-bold mb-2.5">
-          <i class="fa-solid fa-sparkles text-purple-400 text-[10px]"></i>
-          <span data-i18n="cta_badge">استشارة استراتيجية أولية مجانية</span>
+      <!-- Personal Engineering Legacy & Open Networking Closing Card -->
+      <div class="glass-panel rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-purple-500/30 shadow-glow-purple-lg relative overflow-hidden text-center">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-950/80 border border-purple-400/40 text-purple-300 text-[10.5px] sm:text-xs font-bold mb-3">
+          <i class="fa-solid fa-code-commit text-purple-400 text-[11px]"></i>
+          <span data-i18n="cta_badge">خاتمة المسيرة وسجل الإنجازات</span>
         </div>
 
-        <h2 class="text-base sm:text-2xl lg:text-3xl font-black text-white mb-2 leading-snug" data-i18n="cta_title">
-          مستعد لتحويل فكرتك إلى منظومة ذكية خارقة ومضاعفة كفاءة أعمالك؟
+        <h2 class="text-base sm:text-2xl lg:text-3xl font-black text-white mb-2.5 leading-snug" data-i18n="cta_title">
+          بناء المنظومات شغف هندسي مستمر وتوثيق دائم للابتكار
         </h2>
         
-        <p class="text-[11px] sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed mb-4 sm:mb-6" data-i18n="cta_desc">
-          نبني حلولاً رقمية وأنظمة ذكاء اصطناعي تفوق التوقعات، تمنح مشروعك أسبقية تنافسية مطلقة وكفاءة تشغيلية لا تضاهى. دعنا نناقش أهدافك ونرسم معاً معمارية النظام القادم من خلال جلسة استشارية أولية مجانية ومباشرة.
+        <p class="text-[11px] sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed mb-5" data-i18n="cta_desc">
+          هذا المعرض ليس منصة لبيع الخدمات، بل هو سجل شخصي وثائقي يجسد مسيرتي في تحويل المفاهيم المعقدة إلى برمجيات حقيقية حية. وإيماناً بأهمية مشاركة المعرفة ونقل الخبرة للمجتمع التقني، يسعدني دوماً تقديم أي استشارات أو مشورات برمجية مجانية لمن يطلبها.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-2 w-full max-w-md mx-auto">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 w-full max-w-md mx-auto">
           <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm shadow-glow-emerald transition-all touch-press">
             <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
-            <span data-i18n="cta_btn_wa">حجز جلسة استشارية عبر واتساب</span>
+            <span data-i18n="cta_btn_wa">تواصل مباشر عبر واتساب</span>
           </a>
           <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 rounded-xl bg-[#161622] hover:bg-[#201c34] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-sky-500/50 transition-all touch-press">
             <i class="fa-brands fa-telegram text-sky-400 text-sm"></i>
-            <span data-i18n="cta_btn_tg">تيليجرام (@abdou25008)</span>
+            <span data-i18n="cta_btn_tg">تيليجرام التقني (@abdou25008)</span>
           </a>
         </div>
       </div>
@@ -1884,19 +1830,19 @@
         nav_models: "النماذج الذكية",
         nav_media: "شبكة الميديا",
         btn_emulator: "محاكي الهواتف الذكية",
-        btn_header_cta: "استشارة مجانية",
+        btn_header_cta: "تواصل تقني",
         btn_header_cta_short: "تواصل",
         
         hero_pill: "Abdou Ali Mousa // AI Systems Architect",
         hero_h1_part1: "أحوّل التعقيد إلى",
         hero_h1_part2: "أنظمة ذكية فائقة.",
         hero_tagline: "الأنظمة والأتمتة والإنتاج الرقمي 2025",
-        hero_bio: "أبني حلولًا تعتمد على الذكاء الاصطناعي والأتمتة لتحويل العمليات المعقدة إلى أنظمة أكثر ذكاءً، كفاءةً وقابليةً للتوسع؛ من أتمتة سير العمل والنماذج المالية والمحاسبية، إلى البنية السحابية وأنظمة الإنتاج الرقمي — أصمم حلولًا تقنية تخدم القرار، الكفاءة، والنمو.",
+        hero_bio: "بورتفوليو هندسي شخصي يوثق مسيرة شغف في تصميم وبناء المنظومات الذكية، وهندسة الأتمتة والإنتاج الرقمي؛ من بناء المنصات الشاملة والمحررات المرئية، إلى النمذجة المتقدمة ومعمارية السحابة — سجل حي لإنجازاتي وتجاربي التقنية الحقيقية، مع كامل الترحيب بتبادل الخبرات أو تقديم أي استشارات مجانية لمن يحتاجها.",
         hero_btn_whatsapp: "محادثة واتساب مباشرة (+20 109 251 9210)",
         hero_btn_platforms: "استكشف المنظومات الحية",
         hero_portrait_name: "عبده علي موسى",
         hero_portrait_role: "هندسة وتكامل خوارزميات الذكاء الاصطناعي للمؤسسات",
-        hero_stamp_text: "• استشارات تقنية • حلول ذكاء اصطناعي • أنظمة فائقة •",
+        hero_stamp_text: "• توثيق هندسي • منظومات ذكية • شغف الابتكار •",
 
         metric_1_title: "قنوات شورتس دولية",
         metric_1_sub: "شبكة إعلامية ذكية ذاتية القيادة",
@@ -1908,7 +1854,7 @@
         metric_4_sub: "أنظمة وتشغيل مستمر بلا انقطاع",
 
         serv_badge: "المهارات والخبرات الهندسية",
-        serv_title: "كيف نُسهم في تطوير <span class='purple-gradient-text'>وتسريع وتيرة أعمالكم؟</span>",
+        serv_title: "شغف بناء المنظومات <span class='purple-gradient-text'>وإتقان الحلول الذكية</span>",
         serv_sub: "توثيق لمسيرتي وخبراتي في تحويل الأفكار والتحديات إلى منظومات ذكية ومستقرة، وبناء معماريات برمجية تعكس دقة التنفيذ والابتكار.",
         s1_title: "أتمتة الأعمال بالذكاء الاصطناعي المستقل (Autonomous AI)",
         s1_desc: "تصميم وبناء مسارات عمل ذكية ذاتية القيادة (AI Agents) لتنفيذ المهام المعقدة، وخدمة العملاء، وتحليل البيانات بأعلى مستويات الدقة والسرعة.",
@@ -2000,20 +1946,20 @@
         sh_tag_ig: "ريلز",
         social_hub_text: "تابع وتواصل عبر كافة منصات السوشيال ميديا الرسمية:",
 
-        cta_badge: "استشارة استراتيجية أولية مجانية",
-        cta_title: "مستعد لتحويل فكرتك إلى منظومة ذكية خارقة ومضاعفة كفاءة أعمالك؟",
-        cta_desc: "نبني حلولاً رقمية وأنظمة ذكاء اصطناعي تفوق التوقعات، تمنح مشروعك أسبقية تنافسية مطلقة وكفاءة تشغيلية لا تضاهى. دعنا نناقش أهدافك ونرسم معاً معمارية النظام القادم من خلال جلسة استشارية أولية مجانية ومباشرة.",
-        cta_btn_wa: "حجز جلسة استشارية عبر واتساب",
-        cta_btn_tg: "تيليجرام (@abdou25008)",
+        cta_badge: "خاتمة المسيرة وسجل الإنجازات",
+        cta_title: "بناء المنظومات شغف هندسي مستمر وتوثيق دائم للابتكار",
+        cta_desc: "هذا المعرض ليس منصة لبيع الخدمات، بل هو سجل شخصي وثائقي يجسد مسيرتي في تحويل المفاهيم المعقدة إلى برمجيات حقيقية حية. وإيماناً بأهمية مشاركة المعرفة ونقل الخبرة للمجتمع التقني، يسعدني دوماً تقديم أي استشارات أو مشورات برمجية مجانية لمن يطلبها.",
+        cta_btn_wa: "تواصل مباشر عبر واتساب",
+        cta_btn_tg: "تيليجرام التقني (@abdou25008)",
 
         footer_bio: "أحوّل التعقيد إلى أنظمة ذكية، أتمتة مسارات العمل، النمذجة المالية الاستراتيجية، وإدارة شبكة الإنتاج الإعلامي والقنوات الدولية.",
         footer_links_title: "روابط التنقل السريع",
         footer_contact_title: "بيانات الاتصال والتواصل",
-        footer_location: "جمهورية مصر العربية | استشارات دولية",
+        footer_location: "جمهورية مصر العربية | مهندس برمجيات ونظم",
         footer_rights: "جميع الحقوق محفوظة © 2025",
         footer_metric_link: "مؤشرات النجاح والأرقام",
 
-        dock_home: "الرئيسية",
+        dock_home: "المهارات",
         dock_platforms: "المنظومات",
         dock_contact: "تواصل",
         dock_models: "النماذج",
