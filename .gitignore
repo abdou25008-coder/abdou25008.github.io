@@ -6,3 +6,8 @@ dist-ssr/
 !.vscode/extensions.json
 .idea
 .DS_Store
+
+.cf_credentials.json
+deploy_cf_pages_final.py
+deploy_cloudflare.py
+*.env
