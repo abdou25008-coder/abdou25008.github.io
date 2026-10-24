@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
+
+  
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>عبده علي موسى | Abdou Ali Mousa - AI & Digital Systems Engineer</title>
@@ -78,6 +81,36 @@
   </script>
 
   <style>
+
+    /* ----------------------------------------------------
+       STRICT MOBILE-FIRST VIEWPORT & ZERO-OVERFLOW CONTRACT
+       ---------------------------------------------------- */
+    html { width: 100%; max-width: 100%; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { width: 100%; max-width: 100%; margin: 0; padding: 0; padding-bottom: 6.5rem !important; }
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    img, video, canvas, svg {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Prevent off-screen studio drawer or modals from expanding mobile width */
+    #studio-drawer,
+    #studio-trigger-wrapper,
+    #emulator-modal {
+      display: none !important;
+    }
+    /* Mobile-Optimized Typography */
+    .mobile-headline {
+      font-size: clamp(1.45rem, 5.5vw, 2.5rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .mobile-body {
+      font-size: clamp(0.82rem, 2.8vw, 0.95rem);
+      line-height: 1.65;
+    }
+
     html { scroll-behavior: smooth; }
 
     :root {
@@ -103,16 +136,7 @@
     html {
       font-size: var(--studio-font-scale);
     }
-    html, body {
-      background-color: #050508;
-      color: #f8fafc;
-      font-family: var(--studio-font-sans), sans-serif;
-      overflow-x: hidden;
-      line-height: var(--studio-line-height);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
+    html, body { width: 100%; max-width: 100%; margin: 0; padding: 0; padding-bottom: 6.5rem !important; }
     
     html[lang="en"] body {
       font-family: 'Plus Jakarta Sans', var(--studio-font-sans), sans-serif;
@@ -163,6 +187,9 @@
 
     /* Viewport Simulator Wrapper */
     #page-viewport-wrapper {
+      overflow-x: clip;
+      max-width: 100vw;
+
       transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), margin 0.4s ease, border-radius 0.4s ease;
       width: 100%;
     }
@@ -335,6 +362,16 @@
     
       to { opacity: 1; transform: translateY(0); }
     }
+  
+    /* Ensure no off-screen elements leak or blow up mobile horizontal scroll */
+    html { width: 100%; max-width: 100%; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { width: 100%; max-width: 100%; margin: 0; padding: 0; padding-bottom: 6.5rem !important; }
+    #studio-drawer:not(.active),
+    #studio-trigger-wrapper,
+    #emulator-modal:not(.active) {
+      display: none !important;
+    }
+
   </style>
 
 </head>
@@ -344,24 +381,24 @@
   <!-- 1. TOP HEADER & CONTROLS -->
   <!-- ========================================== -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-2 sm:py-2.5 bg-[#050508]/92 backdrop-blur-xl border-b border-white/10 shadow-2xl">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+    <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 overflow-hidden">
       
       <!-- Brand & Title -->
-      <a href="#" class="flex items-center gap-2 sm:gap-2.5 group flex-shrink-0 touch-press" onclick="triggerHaptic()">
+      <a href="#" class="flex items-center gap-2 sm:gap-2.5 group min-w-0 flex-1 sm:flex-initial touch-press" onclick="triggerHaptic()">
         <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-tr from-purple-600 via-indigo-600 to-purple-400 p-[1.5px] shadow-md shadow-purple-600/30 group-hover:shadow-purple-500/50 transition-all duration-300">
           <div class="w-full h-full bg-[#09090d] rounded-[6px] flex items-center justify-center font-black text-[10px] sm:text-xs text-white group-hover:text-purple-300 transition-colors">
             AA
           </div>
         </div>
-        <div class="flex flex-col text-right align-start-dir">
-          <div class="flex items-center gap-1">
-            <span class="font-black text-[11px] sm:text-sm text-white tracking-tight group-hover:text-purple-300 transition-colors" data-i18n="brand_name">
-              Abdou Ali Mousa
+        <div class="flex flex-col text-right align-start-dir min-w-0">
+          <div class="flex items-center gap-1 min-w-0">
+            <span class="font-black text-xs sm:text-sm text-white tracking-tight truncate group-hover:text-purple-300 transition-colors" data-i18n="brand_name">
+              عبده علي موسى
             </span>
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
           </div>
-          <span class="text-[8px] sm:text-[9.5px] font-mono tracking-wider text-zinc-400" data-i18n="brand_role">
-            AI & Digital Systems Engineer
+          <span class="text-[8.5px] sm:text-[9.5px] font-mono tracking-wider text-purple-300 truncate" data-i18n="brand_role">
+            AI & Systems Engineer
           </span>
         </div>
       </a>
@@ -374,7 +411,7 @@
       </nav>
 
       <!-- Quick Control Group (Language + Mobile Simulator + WhatsApp) -->
-      <div class="flex items-center gap-1 sm:gap-2">
+      <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
         
         <!-- Mobile/Android Simulator Toggle (Desktop Only) -->
         <button id="btnOpenEmulator" onclick="toggleMobileEmulator()" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#161622] hover:bg-[#201c34] border border-purple-500/40 text-purple-300 text-[11px] font-bold shadow-sm transition-all touch-press">
@@ -404,125 +441,115 @@
   </header>
 
 
-  <!-- Ambient Luxury Spotlights -->
-  <div class="fixed top-0 right-1/4 w-[250px] sm:w-[450px] h-[250px] sm:h-[450px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-  <div class="fixed top-1/3 left-1/4 w-[220px] sm:w-[500px] h-[220px] sm:h-[500px] bg-cyan-600/8 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-  <div class="fixed bottom-10 right-1/3 w-[250px] sm:w-[550px] h-[250px] sm:h-[550px] bg-purple-900/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <!-- Ambient Luxury Spotlights (Strictly Contained) -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10 w-full max-w-full">
+    <div class="absolute top-0 right-1/4 w-60 sm:w-96 h-60 sm:h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 left-1/4 w-52 sm:w-96 h-52 sm:h-96 bg-cyan-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-1/3 w-60 sm:w-96 h-60 sm:h-96 bg-purple-900/10 rounded-full blur-3xl"></div>
+  </div>
 
-
-  <!-- Viewport Simulation Container (For Live Studio scaling) -->
+  <!-- Viewport Simulation Container --> (For Live Studio scaling) -->
   <div id="page-viewport-wrapper">
 
   <!-- ========================================== -->
   <!-- 2. HERO SECTION (Harmonious & Proportional) -->
   <!-- ========================================== -->
-  <section id="hero" class="relative pt-10 sm:pt-24 pb-4 sm:pb-12 flex items-center justify-center bg-grid-mesh overflow-hidden">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
+  <section id="hero" class="relative pt-16 sm:pt-24 pb-6 sm:pb-12 flex items-center justify-center bg-grid-mesh overflow-hidden w-full max-w-full">
+    <div class="w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
         
-        <!-- Bio & Actions Column -->
-        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-right align-start-dir z-10">
+        <!-- Main Bio & Actions Column (Primary Mobile Focus) -->
+        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-right align-start-dir z-10 w-full max-w-full">
           
-          <!-- Mobile-Only Rich Engineer Profile Card (Visible on mobile only) -->
-          <div class="lg:hidden w-full max-w-sm mb-3">
-            <div class="flex items-center gap-3 bg-[#111116]/90 border border-purple-500/35 rounded-2xl p-2.5 backdrop-blur-md shadow-lg">
-              <div class="w-14 h-14 rounded-xl overflow-hidden border border-purple-400/50 relative shadow-md flex-shrink-0 bg-[#09090d]">
-                <img src="assets/abdou_real_portrait.jpg" alt="Abdou Ali Mousa" class="w-full h-full object-contain object-top" onerror="this.src='assets/hero_architect.jpg'" />
+          <!-- Unified Mobile Profile Card (Clean, Non-Redundant, Premium) -->
+          <div class="w-full max-w-lg mb-4 bg-[#111116]/95 border border-purple-500/35 rounded-2xl p-3 sm:p-4 backdrop-blur-md shadow-xl flex items-center gap-3 text-right">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 border-purple-400/60 relative shadow-md flex-shrink-0 bg-[#09090d]">
+              <img src="assets/abdou_real_portrait.jpg" alt="Abdou Ali Mousa" class="w-full h-full object-contain object-top" onerror="this.src='assets/hero_architect.jpg'" />
+            </div>
+            <div class="flex flex-col flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="text-sm sm:text-base font-black text-white truncate">عبده علي موسى</span>
+                <span class="text-[9px] font-mono text-purple-300 bg-purple-950/90 px-2 py-0.5 rounded-full border border-purple-500/40 flex-shrink-0">Verified Pro</span>
               </div>
-              <div class="flex flex-col text-right align-start-dir flex-1 min-w-0">
-                <div class="flex items-center justify-between gap-1 mb-0.5">
-                  <span class="text-xs font-black text-white truncate">عبده علي موسى</span>
-                  <span class="text-[8.5px] font-mono text-purple-300 bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/30">Verified Pro</span>
-                </div>
-                <p class="text-[10px] text-zinc-300 leading-snug truncate">هندسة المنظومات والذكاء الاصطناعي</p>
-                <div class="flex items-center gap-1.5 text-[8.5px] font-mono text-emerald-400 mt-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span>Active Engineer & Innovator</span>
-                </div>
+              <p class="text-[11px] sm:text-xs text-zinc-300 leading-snug truncate">هندسة المنظومات والذكاء الاصطناعي</p>
+              <div class="flex items-center gap-1.5 text-[9.5px] font-mono text-emerald-400 mt-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+                <span class="truncate">متاح للمشاريع والمنظومات الكبرى // 2025</span>
               </div>
             </div>
           </div>
 
-          <!-- Status & Availability Pill -->
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111116]/90 border border-purple-500/30 text-purple-300 text-xs font-mono mb-3 backdrop-blur-md shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span data-i18n="hero_pill">متاح للمنظومات الذكية والمشاريع الكبرى // 2025</span>
-          </div>
-
-          <!-- Main Impactful H1 Headline -->
-          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight sm:leading-snug mb-3">
+          <!-- Main Bold Impactful H1 Headline -->
+          <h1 class="mobile-headline font-black tracking-tight text-white mb-2.5 w-full">
             <span data-i18n="hero_h1_part1">أصمم وأبني</span>
-            <span class="purple-gradient-text inline-block" data-i18n="hero_h1_part2">منظومات ذكية فائقة الأداء.</span>
+            <span class="purple-gradient-text block sm:inline" data-i18n="hero_h1_part2">منظومات ذكية فائقة الأداء.</span>
           </h1>
 
           <!-- Tagline Chip -->
-          <div class="flex items-center justify-center lg:justify-start gap-2 mb-3">
-            <span class="text-[10px] sm:text-xs px-2.5 py-1 rounded-lg bg-purple-950/70 border border-purple-500/30 text-purple-200 font-mono" data-i18n="hero_tagline">
-              هندسة برمجيات • أنظمة ذكاء اصطناعي • أتمتة شاملة
-            </span>
+          <div class="w-full flex items-center justify-center lg:justify-start mb-3">
+            <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs px-3 py-1 rounded-full bg-purple-950/70 border border-purple-500/35 text-purple-200 font-mono shadow-sm">
+              <i class="fa-solid fa-code text-purple-400 text-[10px]"></i>
+              <span data-i18n="hero_tagline">هندسة برمجيات • أنظمة ذكاء اصطناعي • أتمتة شاملة</span>
+            </div>
           </div>
 
-          <!-- Professional Egyptian-Style Bio Paragraph -->
-          <p class="text-xs sm:text-sm lg:text-base text-zinc-300 max-w-2xl font-normal leading-relaxed mb-4 px-0.5" data-i18n="hero_bio">
+          <!-- Refined Egyptian-Style Bio Paragraph -->
+          <p class="mobile-body text-zinc-300 max-w-2xl font-normal leading-relaxed mb-4 w-full" data-i18n="hero_bio">
             أهلاً بك، أنا <strong class="text-white font-bold">عبده علي موسى</strong> — مهندس برمجيات متخصص في بناء المنظومات الذكية، وهندسة الأتمتة والإنتاج الرقمي. مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة؛ من المنصات السحابية والمحررات المرئية لغاية خطوط إنتاج الميديا المؤتمتة بالكامل. أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.
           </p>
 
-          <!-- Core Specialization Tags (Compact Micro-Chips with Neon Accents) -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 mb-4 text-[9.5px] sm:text-xs font-mono text-zinc-300">
-            <span class="bg-[#111116] border border-white/10 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
-              <span>AI Multi-Agents</span>
-            </span>
-            <span class="bg-[#111116] border border-white/10 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>Autonomous Pipelines</span>
-            </span>
-            <span class="bg-[#111116] border border-white/10 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              <span>Full-Stack Architecture</span>
-            </span>
-            <span class="bg-[#111116] border border-white/10 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>Generative Media Studio</span>
-            </span>
+          <!-- Core Specialization Tags (Mobile-Optimized Wrapping Grid) -->
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-1.5 sm:gap-2 mb-4 w-full max-w-lg text-[10px] font-mono text-zinc-200">
+            <div class="bg-[#111116] border border-white/10 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm justify-center sm:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+              <span class="truncate">AI Multi-Agents</span>
+            </div>
+            <div class="bg-[#111116] border border-white/10 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm justify-center sm:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></span>
+              <span class="truncate">Autonomous Pipelines</span>
+            </div>
+            <div class="bg-[#111116] border border-white/10 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm justify-center sm:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+              <span class="truncate">Full-Stack SaaS</span>
+            </div>
+            <div class="bg-[#111116] border border-white/10 px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm justify-center sm:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+              <span class="truncate">Generative Media</span>
+            </div>
           </div>
 
-          <!-- CTAs (Side-by-side on mobile, balanced row on desktop) -->
-          <div class="flex flex-wrap items-center gap-2.5 w-full max-w-md mb-4">
-            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 min-w-[140px] inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-glow-emerald transition-all duration-300 touch-press">
+          <!-- CTAs (2 Big Touch-Friendly Buttons) -->
+          <div class="grid grid-cols-2 gap-2.5 w-full max-w-lg mb-4">
+            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-glow-emerald transition-all touch-press">
               <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
-              <span data-i18n="hero_btn_whatsapp">تواصل مباشر واتساب</span>
+              <span data-i18n="hero_btn_whatsapp">محادثة واتساب</span>
             </a>
-            <a href="#platforms" onclick="triggerHaptic()" class="flex-1 min-w-[140px] inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 touch-press">
+            <a href="#platforms" onclick="triggerHaptic()" class="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all touch-press">
               <i class="fa-solid fa-layer-group text-purple-400 text-xs sm:text-sm"></i>
               <span data-i18n="hero_btn_platforms">المنظومات الحية</span>
             </a>
           </div>
 
-          <!-- Micro Status & Trust Bar -->
-          <div class="w-full max-w-md bg-[#0e0e14]/90 border border-white/10 rounded-xl py-1.5 px-3 flex items-center justify-between font-mono text-[9px] sm:text-[10px] text-zinc-400 backdrop-blur-md">
-            <span class="flex items-center gap-1">
-              <i class="fa-solid fa-shield-halved text-purple-400 text-[10px]"></i>
-              <span>مشاريع ومنظومات موثقة</span>
-            </span>
-            <span class="text-zinc-600">•</span>
-            <span class="flex items-center gap-1">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
-              <span>أكواد مفتوحة المصدر</span>
-            </span>
-            <span class="text-zinc-600">•</span>
-            <span class="flex items-center gap-1">
-              <i class="fa-solid fa-cloud text-cyan-400 text-[10px]"></i>
-              <span>سحابية 100%</span>
-            </span>
+          <!-- Micro Status & Trust Bar (3 Balanced Columns) -->
+          <div class="w-full max-w-lg bg-[#0e0e14]/90 border border-white/10 rounded-xl py-2 px-2.5 grid grid-cols-3 gap-1 text-center font-mono text-[9px] sm:text-[10px] text-zinc-400 backdrop-blur-md">
+            <div class="flex items-center justify-center gap-1 truncate">
+              <i class="fa-solid fa-shield-halved text-purple-400 text-[10px] flex-shrink-0"></i>
+              <span class="truncate">مشاريع موثقة</span>
+            </div>
+            <div class="flex items-center justify-center gap-1 border-x border-white/10 px-1 truncate">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-[10px] flex-shrink-0"></i>
+              <span class="truncate">أكواد مفتوحة</span>
+            </div>
+            <div class="flex items-center justify-center gap-1 truncate">
+              <i class="fa-solid fa-cloud text-cyan-400 text-[10px] flex-shrink-0"></i>
+              <span class="truncate">سحابية 100%</span>
+            </div>
           </div>
         </div>
 
-        <!-- Desktop Luxury Portrait Column (Hidden on small phones to maximize readability) -->
+        <!-- Desktop Luxury Portrait Column (Hidden on Mobile) -->
         <div class="hidden lg:flex lg:col-span-5 relative items-center justify-center">
-          
           <div class="relative w-full max-w-xs aspect-[4/5] rounded-3xl p-[2px] bg-gradient-to-b from-purple-500/60 via-purple-800/30 to-zinc-900 shadow-glow-purple-lg group">
-            
             <div class="relative w-full h-full bg-[#09090d] rounded-[22px] overflow-hidden">
               <img 
                 src="assets/abdou_real_portrait.jpg" 
@@ -531,16 +558,13 @@
                 onerror="this.src='assets/hero_architect.jpg'"
                 loading="eager"
               />
-
               <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-transparent to-transparent opacity-90"></div>
               <div class="absolute inset-0 bg-purple-950/20 mix-blend-color"></div>
 
-              <!-- Top Left Badge -->
               <div class="absolute top-2.5 left-2.5 bg-[#050508]/85 border border-purple-500/40 rounded-xl px-2 py-0.5 backdrop-blur-md text-[9.5px] font-mono text-purple-300">
                 <span>AI_ENGINEER // 2025</span>
               </div>
 
-              <!-- Bottom Card Tag -->
               <div class="absolute bottom-2.5 right-2.5 left-2.5 bg-[#111116]/90 border border-white/10 rounded-2xl p-2.5 backdrop-blur-md text-right align-start-dir">
                 <div class="flex items-center justify-between mb-0.5">
                   <h3 class="font-bold text-white text-xs sm:text-sm" data-i18n="hero_portrait_name">عبده علي موسى</h3>
@@ -562,14 +586,11 @@
                   </textPath>
                 </text>
               </svg>
-
               <div class="absolute w-6 h-6 rounded-full bg-purple-900/60 border border-purple-400/50 flex items-center justify-center text-purple-300 group-hover/stamp:scale-110 transition-transform">
                 <i class="fa-solid fa-wand-magic-sparkles text-[9px] text-purple-300"></i>
               </div>
             </div>
-
           </div>
-
         </div>
 
       </div>
@@ -580,44 +601,44 @@
   <!-- ========================================== -->
   <!-- 3. METRICS STRIP (Ultra-Sleek Single Line on Mobile) -->
   <!-- ========================================== -->
-  <section id="metrics" class="relative py-2.5 sm:py-6 border-y border-white/5 bg-[#08080c]">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-4 gap-1.5 sm:gap-4 divide-x divide-white/10 sm:divide-x-0 rtl:divide-x-reverse">
+  <section id="metrics" class="relative py-4 sm:py-6 border-y border-white/5 bg-[#08080c] w-full max-w-full">
+    <div class="w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
         
         <!-- Metric 1 -->
-        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+          <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             04
           </span>
-          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_1_title">قنوات دولية</span>
-          <span class="block text-[8px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_1_sub">شبكة إعلامية ذكية ذاتية القيادة</span>
+          <span class="text-[10px] sm:text-xs font-bold text-zinc-200 mt-1 line-clamp-1" data-i18n="metric_1_title">قنوات دولية</span>
+          <span class="block text-[8.5px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_1_sub">شبكة إعلامية ذكية ذاتية القيادة</span>
         </div>
 
         <!-- Metric 2 -->
-        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+          <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             +10M
           </span>
-          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_2_title">مشاهدة وتفاعل</span>
-          <span class="block text-[8px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_2_sub">محتوى وثائقي واقتصادي رائد</span>
+          <span class="text-[10px] sm:text-xs font-bold text-zinc-200 mt-1 line-clamp-1" data-i18n="metric_2_title">مشاهدة وتفاعل</span>
+          <span class="block text-[8.5px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_2_sub">محتوى وثائقي واقتصادي رائد</span>
         </div>
 
         <!-- Metric 3 -->
-        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+          <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             100%
           </span>
-          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_3_title">أتمتة للعمليات</span>
-          <span class="block text-[8px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_3_sub">رفع كفاءة الأداء وتسريع القرار</span>
+          <span class="text-[10px] sm:text-xs font-bold text-zinc-200 mt-1 line-clamp-1" data-i18n="metric_3_title">أتمتة للعمليات</span>
+          <span class="block text-[8.5px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_3_sub">رفع كفاءة الأداء وتسريع القرار</span>
         </div>
 
         <!-- Metric 4 -->
-        <div class="glass-panel p-2 sm:p-4 rounded-lg sm:rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir">
-          <span class="text-base sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
+        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+          <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             24/7
           </span>
-          <span class="text-[9px] sm:text-xs font-bold text-zinc-200 mt-0.5 line-clamp-1" data-i18n="metric_4_title">استقرار سحابي</span>
-          <span class="block text-[8px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_4_sub">أنظمة وتشغيل مستمر بلا انقطاع</span>
+          <span class="text-[10px] sm:text-xs font-bold text-zinc-200 mt-1 line-clamp-1" data-i18n="metric_4_title">استقرار سحابي</span>
+          <span class="block text-[8.5px] sm:text-[10px] text-zinc-400 mt-0.5 leading-tight" data-i18n="metric_4_sub">أنظمة وتشغيل مستمر بلا انقطاع</span>
         </div>
 
       </div>
@@ -795,7 +816,7 @@
             </p>
 
             <!-- Feature Checklist (2x2) -->
-            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mb-3 text-[10px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>
                 <span data-i18n="p_tos_f1">تحضير دروس بالذكاء الاصطناعي</span>
@@ -868,7 +889,7 @@
             </p>
 
             <!-- Feature Checklist (2x2) -->
-            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mb-3 text-[10px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-film text-amber-400 text-[10px]"></i>
                 <span data-i18n="p_mp_f1">توليد سينمائي 4K (Omni Flash + MiniMax)</span>
@@ -942,7 +963,7 @@
             </p>
 
             <!-- Feature Checklist (2x2) -->
-            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mb-3 text-[10px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-circle-check text-cyan-400 text-[10px]"></i>
                 <span data-i18n="p1_f1">تتبع حي وفوري للأسطول</span>
@@ -1095,7 +1116,7 @@
               تحفة برمجية تجسد الجيل الجديد من منصات التواصل الاجتماعي؛ تم هندستها بالكامل لتكون منصة تفاعلية متطورة للمستخدم العربي. تجمع المنصة بين جمالية التصميم وقوة الأداء لتتيح للمستخدمين مشاركة الأفكار، والتواصل المباشر، وبناء مجتمعات رقمية نابضة بالحياة، مع لوحة تحكم ذكية وصلاحيات أمان صارمة.
             </p>
 
-            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mb-3 text-[10px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-bolt text-purple-400 text-[10px]"></i>
                 <span>محرك تفاعل لحظي فائق السرعة</span>
@@ -1140,7 +1161,7 @@
               مشروع طموح وثوري في عالم الـ SaaS (No-Code Builder). يتيح لأي شخص تحويل فكرته إلى تطبيق أو موقع إلكتروني بالكامل من خلال الأوامر الصوتية أو النصوص البسيطة فقط؛ حيث يقوم محرك الذكاء الاصطناعي بتحليل المدخلات وتوليد الواجهات، مع توفير محرر بصري شامل للتعديل اليدوي.
             </p>
 
-            <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9.5px] sm:text-xs text-zinc-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mb-3 text-[10px] sm:text-xs text-zinc-300">
               <div class="flex items-center gap-1.5 bg-black/40 p-1.5 rounded-lg border border-white/5">
                 <i class="fa-solid fa-wand-magic-sparkles text-emerald-400 text-[10px]"></i>
                 <span>توليد الواجهات عبر الأوامر الصوتية والنصية</span>
@@ -1674,7 +1695,7 @@
   <!-- ========================================== -->
   <!-- 10. ULTRA SLEEK ERGONOMIC MOBILE DOCK -->
   <!-- ========================================== -->
-  <div class="fixed bottom-2.5 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-[360px] lg:hidden">
+  <div class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-[360px] lg:hidden">
     <div class="glass-dock rounded-full px-2.5 py-1.5 flex items-center justify-around shadow-floating-dock border border-white/10">
       
             <a href="#services" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press">
