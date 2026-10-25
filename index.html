@@ -82,6 +82,108 @@
 
   <style>
 
+    /* ==========================================================================
+       INTEGRATED SUITE: VENGEANCE UI + SKIPER UI + ANIMMASTER LIB
+       High-performance GPU 60fps micro-interactions & zero-overflow compliance
+       ========================================================================== */
+
+    /* --- 1. Vengeance UI: Signature Electric Border Beam --- */
+    @property --vengeance-angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @keyframes vengeanceBeamSpin {
+      0% { --vengeance-angle: 0deg; }
+      100% { --vengeance-angle: 360deg; }
+    }
+    .vengeance-beam-card {
+      position: relative;
+      background-clip: padding-box;
+      isolation: isolate;
+    }
+    .vengeance-beam-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: conic-gradient(from var(--vengeance-angle, 0deg) at 50% 50%, transparent 65%, rgba(168, 85, 247, 0.95) 88%, rgba(56, 189, 248, 0.95) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      animation: vengeanceBeamSpin 5s linear infinite;
+      opacity: 0.75;
+      z-index: 2;
+      transition: opacity 0.3s ease;
+    }
+    .vengeance-beam-card:hover::before,
+    .vengeance-beam-card:active::before {
+      opacity: 1;
+    }
+
+    /* --- 2. Skiper UI: Tactile Spring Wrap Buttons & Shimmer Badges --- */
+    .skiper-btn {
+      position: relative;
+      transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, filter 0.22s ease !important;
+      will-change: transform;
+    }
+    .skiper-btn:active {
+      transform: scale(0.96) !important;
+    }
+    .skiper-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .skiper-shimmer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+      transform: translateX(-100%);
+      animation: skiperShimmerSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+    @keyframes skiperShimmerSweep {
+      0%, 40% { transform: translateX(-100%); }
+      60%, 100% { transform: translateX(100%); }
+    }
+
+    /* --- 3. Animmaster Lib: Awwwards Interactive Touch Spotlight --- */
+    .animmaster-spotlight {
+      position: relative;
+      overflow: hidden;
+    }
+    .animmaster-spotlight::before {
+      content: '';
+      position: absolute;
+      top: var(--spotlight-y, -100%);
+      left: var(--spotlight-x, -100%);
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.16) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      opacity: 0;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .animmaster-spotlight:hover::before,
+    .animmaster-spotlight:active::before {
+      opacity: 1;
+    }
+
+    /* Responsive touch optimizations */
+    @media (hover: none) and (pointer: coarse) {
+      .vengeance-beam-card::before {
+        opacity: 0.6;
+        animation-duration: 7s;
+      }
+    }
+
+
     /* ----------------------------------------------------
        STRICT MOBILE-FIRST VIEWPORT & ZERO-OVERFLOW CONTRACT
        ---------------------------------------------------- */
@@ -302,7 +404,7 @@
     }
 
     /* Android Touch Active Ripple Effect */
-    .touch-press:active {
+    .touch-press skiper-btn:active {
       transform: scale(0.96);
       opacity: 0.9;
     }
@@ -384,7 +486,7 @@
     <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 overflow-hidden">
       
       <!-- Brand & Title -->
-      <a href="#" class="flex items-center gap-2 sm:gap-2.5 group min-w-0 flex-1 sm:flex-initial touch-press" onclick="triggerHaptic()">
+      <a href="#" class="flex items-center gap-2 sm:gap-2.5 group min-w-0 flex-1 sm:flex-initial touch-press skiper-btn" onclick="triggerHaptic()">
         <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-tr from-purple-600 via-indigo-600 to-purple-400 p-[1.5px] shadow-md shadow-purple-600/30 group-hover:shadow-purple-500/50 transition-all duration-300">
           <div class="w-full h-full bg-[#09090d] rounded-[6px] flex items-center justify-center font-black text-[10px] sm:text-xs text-white group-hover:text-purple-300 transition-colors">
             AA
@@ -414,23 +516,23 @@
       <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
         
         <!-- Mobile/Android Simulator Toggle (Desktop Only) -->
-        <button id="btnOpenEmulator" onclick="toggleMobileEmulator()" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#161622] hover:bg-[#201c34] border border-purple-500/40 text-purple-300 text-[11px] font-bold shadow-sm transition-all touch-press">
+        <button id="btnOpenEmulator" onclick="toggleMobileEmulator()" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#161622] hover:bg-[#201c34] border border-purple-500/40 text-purple-300 text-[11px] font-bold shadow-sm transition-all touch-press skiper-btn">
           <i class="fa-solid fa-mobile-screen-button text-[11px] text-purple-400"></i>
           <span data-i18n="btn_emulator">محاكي الهواتف الذكية</span>
         </button>
 
         <!-- Bilingual Language Switcher (AR / EN) -->
         <div class="bg-[#111116] p-0.5 rounded-full border border-white/10 flex items-center shadow-inner">
-          <button id="btnLangAr" onclick="switchLanguage('ar'); triggerHaptic();" class="px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px] font-black transition-all switch-btn-active touch-press">
+          <button id="btnLangAr" onclick="switchLanguage('ar'); triggerHaptic();" class="px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px] font-black transition-all switch-btn-active touch-press skiper-btn">
             عربي
           </button>
-          <button id="btnLangEn" onclick="switchLanguage('en'); triggerHaptic();" class="px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px] font-black text-zinc-400 hover:text-white transition-all touch-press">
+          <button id="btnLangEn" onclick="switchLanguage('en'); triggerHaptic();" class="px-2 py-0.5 rounded-full text-[9.5px] sm:text-[11px] font-black text-zinc-400 hover:text-white transition-all touch-press skiper-btn">
             EN
           </button>
         </div>
 
         <!-- Direct WhatsApp 1-Tap CTA -->
-        <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center gap-1 purple-btn-gradient text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-purple-400/30 shadow-md touch-press">
+        <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center gap-1 purple-btn-gradient text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-purple-400/30 shadow-md touch-press skiper-btn">
           <i class="fa-brands fa-whatsapp text-emerald-400 text-xs sm:text-sm"></i>
           <span class="hidden sm:inline" data-i18n="btn_header_cta">تواصل تقني</span>
           <span class="sm:hidden" data-i18n="btn_header_cta_short">تواصل</span>
@@ -520,11 +622,11 @@
 
           <!-- CTAs (2 Big Touch-Friendly Buttons) -->
           <div class="grid grid-cols-2 gap-2.5 w-full max-w-lg mb-4">
-            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-glow-emerald transition-all touch-press">
+            <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-glow-emerald transition-all touch-press skiper-btn">
               <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
               <span data-i18n="hero_btn_whatsapp">محادثة واتساب</span>
             </a>
-            <a href="#platforms" onclick="triggerHaptic()" class="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all touch-press">
+            <a href="#platforms" onclick="triggerHaptic()" class="inline-flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-[#16161f] hover:bg-[#1e1e2c] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-purple-500/50 transition-all touch-press skiper-btn">
               <i class="fa-solid fa-layer-group text-purple-400 text-xs sm:text-sm"></i>
               <span data-i18n="hero_btn_platforms">المنظومات الحية</span>
             </a>
@@ -577,7 +679,7 @@
             </div>
 
             <!-- Rotating Circular Stamp Badge -->
-            <div class="absolute -top-2.5 -right-2.5 w-16 h-16 rounded-full bg-[#050508] border-2 border-purple-500/60 p-1 shadow-2xl shadow-purple-900/80 z-20 flex items-center justify-center cursor-pointer group/stamp touch-press">
+            <div class="absolute -top-2.5 -right-2.5 w-16 h-16 rounded-full bg-[#050508] border-2 border-purple-500/60 p-1 shadow-2xl shadow-purple-900/80 z-20 flex items-center justify-center cursor-pointer group/stamp touch-press skiper-btn">
               <svg class="w-full h-full animate-spin-slow" viewBox="0 0 100 100">
                 <path id="heroCirclePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
                 <text class="text-[7.5px] font-extrabold fill-purple-300 tracking-widest uppercase">
@@ -606,7 +708,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
         
         <!-- Metric 1 -->
-        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+        <div class="glass-panel skiper-shimmer animmaster-spotlight p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
           <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             04
           </span>
@@ -615,7 +717,7 @@
         </div>
 
         <!-- Metric 2 -->
-        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+        <div class="glass-panel skiper-shimmer animmaster-spotlight p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
           <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             +10M
           </span>
@@ -624,7 +726,7 @@
         </div>
 
         <!-- Metric 3 -->
-        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+        <div class="glass-panel skiper-shimmer animmaster-spotlight p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
           <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             100%
           </span>
@@ -633,7 +735,7 @@
         </div>
 
         <!-- Metric 4 -->
-        <div class="glass-panel p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
+        <div class="glass-panel skiper-shimmer animmaster-spotlight p-3 sm:p-4 rounded-xl flex flex-col items-center md:items-start text-center md:text-right align-start-dir border border-white/5">
           <span class="text-xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white font-mono">
             24/7
           </span>
@@ -778,7 +880,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6">
         
         <!-- Platform Card 1: Teacher OS Platform -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
             <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
             <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-emerald-500/50 transition-all flex items-center justify-center">
@@ -838,11 +940,11 @@
 
           <!-- Actions -->
           <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
-            <a href="https://abdou25008-coder.github.io/teacher-os/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-emerald transition-all touch-press">
+            <a href="https://abdou25008-coder.github.io/teacher-os/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-emerald transition-all touch-press skiper-btn">
               <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               <span data-i18n="p_tos_btn_launch">تشغيل المنصة الحية</span>
             </a>
-            <a href="https://github.com/abdou25008-coder/teacher-os.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://github.com/abdou25008-coder/teacher-os.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press skiper-btn">
               <i class="fa-brands fa-github text-emerald-400 text-xs"></i>
               <span data-i18n="p_tos_btn_repo">مستودع GitHub</span>
             </a>
@@ -850,7 +952,7 @@
         </div>
 
         <!-- Platform Card 2: MoneyPrinter Pro -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-amber-500/30 hover:border-amber-500/70 transition-all flex flex-col justify-between text-right align-start-dir group shadow-glow-amber-sm">
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-amber-500/30 hover:border-amber-500/70 transition-all flex flex-col justify-between text-right align-start-dir group shadow-glow-amber-sm">
           <div>
             <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
             <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-amber-500/50 transition-all flex items-center justify-center">
@@ -911,11 +1013,11 @@
 
           <!-- Actions -->
           <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
-            <a href="https://github.com/abdou25008-coder/MoneyPrinter-Pro.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-amber-600 hover:bg-amber-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-amber transition-all touch-press">
+            <a href="https://github.com/abdou25008-coder/MoneyPrinter-Pro.git" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-amber-600 hover:bg-amber-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-amber transition-all touch-press skiper-btn">
               <i class="fa-brands fa-github text-xs text-zinc-950"></i>
               <span data-i18n="p_mp_btn_repo">المستودع الرسمي المطور</span>
             </a>
-            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20للنسخة%20الاحترافية%20من%20MoneyPrinter%20Pro" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20للنسخة%20الاحترافية%20من%20MoneyPrinter%20Pro" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press skiper-btn">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
               <span data-i18n="p_mp_btn_demo">طلب ديمو تشغيلي</span>
             </a>
@@ -925,7 +1027,7 @@
         
 
         <!-- Platform Card 3: Logistics & Fleet Platform -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-cyan-500/25 hover:border-cyan-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-cyan-500/25 hover:border-cyan-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
             <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
             <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-cyan-500/50 transition-all flex items-center justify-center">
@@ -985,11 +1087,11 @@
 
           <!-- Actions -->
           <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
-            <a href="https://elqaedtravel-netizen.github.io/logistics/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-cyan-600 hover:bg-cyan-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-cyan transition-all touch-press">
+            <a href="https://elqaedtravel-netizen.github.io/logistics/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-cyan-600 hover:bg-cyan-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-cyan transition-all touch-press skiper-btn">
               <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               <span data-i18n="p1_btn_launch">تشغيل المنظومة</span>
             </a>
-            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمنظومة%20اللوجستيات%20والمتجر" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20عرض%20توضيحي%20لمنظومة%20اللوجستيات%20والمتجر" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press skiper-btn">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
               <span data-i18n="p1_btn_demo">طلب استعراض</span>
             </a>
@@ -997,7 +1099,7 @@
         </div>
 
         <!-- Platform Card 4: Voiceover & Music AI DAW Studio -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
             <!-- Top Thumbnail Image (Full Width, Centered, Edge-to-Edge with Cyber Glow & Badges) -->
             <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-purple-500/50 transition-all flex items-center justify-center">
@@ -1067,7 +1169,7 @@
 
               <!-- Play/Pause Controls -->
               <div class="flex items-center justify-between">
-                <button id="playAudioBtn" onclick="triggerHaptic()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-[9.5px] sm:text-[10px] shadow-sm transition-all touch-press">
+                <button id="playAudioBtn" onclick="triggerHaptic()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-[9.5px] sm:text-[10px] shadow-sm transition-all touch-press skiper-btn">
                   <i id="playIcon" class="fa-solid fa-play text-[9px]"></i>
                   <span id="playText">تشغيل العينة</span>
                 </button>
@@ -1078,11 +1180,11 @@
 
           <!-- Actions -->
           <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
-            <a href="https://abdou-studio-vo.ai.studio" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] sm:text-xs shadow-glow-purple transition-all touch-press">
+            <a href="https://abdou-studio-vo.ai.studio" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] sm:text-xs shadow-glow-purple transition-all touch-press skiper-btn">
               <i class="fa-solid fa-sliders text-[9px]"></i>
               <span data-i18n="p2_btn_launch">تشغيل الاستوديو</span>
             </a>
-            <a href="https://wa.me/201092519210?text=أود%20طلب%20تجربة%20صوتية%20واستعراض%20استوديو%20الذكاء%20الاصطناعي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=أود%20طلب%20تجربة%20صوتية%20واستعراض%20استوديو%20الذكاء%20الاصطناعي" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 font-bold text-[10px] sm:text-xs border border-white/10 transition-all touch-press skiper-btn">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-xs"></i>
               <span data-i18n="p2_btn_demo">طلب تجربة</span>
             </a>
@@ -1092,7 +1194,7 @@
       
         
         <!-- Platform Card 5: Shayrha -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
             <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-purple-500/50 transition-all flex items-center justify-center">
               <img src="assets/shayrha_preview.jpg" alt="Shayrha Platform" class="w-full h-full object-contain group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" loading="lazy" />
@@ -1129,7 +1231,7 @@
           </div>
           
           <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
-            <a href="https://shayrha.surge.sh" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] sm:text-xs shadow-glow-purple transition-all touch-press">
+            <a href="https://shayrha.surge.sh" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-[10px] sm:text-xs shadow-glow-purple transition-all touch-press skiper-btn">
               <i class="fa-solid fa-rocket text-[9px]"></i>
               <span>زيارة المنصة الحية</span>
             </a>
@@ -1137,7 +1239,7 @@
         </div>
 
         <!-- Platform Card 7: NovaCraft -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between text-right align-start-dir group">
           <div>
             <div class="w-full aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-lg group-hover:border-emerald-500/50 transition-all flex items-center justify-center">
               <img src="assets/novacraft_preview.jpg" alt="NovaCraft" class="w-full h-full object-contain group-hover:scale-105 transition-all duration-700" onerror="this.src='assets/hero_architect.jpg'" loading="lazy" />
@@ -1174,7 +1276,7 @@
           </div>
           
           <div class="flex flex-row items-center gap-1.5 pt-2 border-t border-white/10">
-            <a href="https://github.com/abdou25008-coder/appcraft-builder.git" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-emerald transition-all touch-press">
+            <a href="https://github.com/abdou25008-coder/appcraft-builder.git" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-[10px] sm:text-xs shadow-glow-emerald transition-all touch-press skiper-btn">
               <i class="fa-brands fa-github text-[9px]"></i>
               <span>مستودع المحرك (AppCraft)</span>
             </a>
@@ -1313,7 +1415,7 @@
           </div>
 
           <div class="flex items-center gap-1.5 w-full">
-            <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-cyan-600/90 hover:bg-cyan-500 text-white font-bold text-[10.5px] shadow-sm transition-all touch-press">
+            <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-cyan-600/90 hover:bg-cyan-500 text-white font-bold text-[10.5px] shadow-sm transition-all touch-press skiper-btn">
               <i class="fa-brands fa-facebook-f text-xs"></i>
               <span>صفحة فيسبوك الرسمية (@FathomX01)</span>
             </a>
@@ -1408,7 +1510,7 @@
           </div>
 
           <div class="flex items-center gap-1.5 w-full">
-            <a href="https://wa.me/201092519210?text=استعراض%20نماذج%20وحلقات%20Smart%20Health%20USA" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[10.5px] shadow-sm transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=استعراض%20نماذج%20وحلقات%20Smart%20Health%20USA" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[10.5px] shadow-sm transition-all touch-press skiper-btn">
               <i class="fa-brands fa-youtube text-xs"></i>
               <span>استعراض أعمال القناة الرسمية</span>
             </a>
@@ -1503,7 +1605,7 @@
           </div>
 
           <div class="flex items-center gap-1.5 w-full">
-            <a href="https://wa.me/201092519210?text=استعراض%20سلسلة%20وحلقات%20Meta%20Lapse%20ASMR" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-amber-600/90 hover:bg-amber-500 text-zinc-950 font-bold text-[10.5px] shadow-sm transition-all touch-press">
+            <a href="https://wa.me/201092519210?text=استعراض%20سلسلة%20وحلقات%20Meta%20Lapse%20ASMR" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-amber-600/90 hover:bg-amber-500 text-zinc-950 font-bold text-[10.5px] shadow-sm transition-all touch-press skiper-btn">
               <i class="fa-solid fa-play text-xs"></i>
               <span>استعراض حلقات السلسلة</span>
             </a>
@@ -1527,7 +1629,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
           
           <!-- Official Page 1: Fathom X Facebook -->
-          <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-blue-950/30 border border-blue-500/30 hover:border-blue-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-blue-950/30 border border-blue-500/30 hover:border-blue-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press skiper-btn">
             <div class="flex items-center gap-2 mb-1.5">
               <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white text-xs shadow-md">
                 <i class="fa-brands fa-facebook-f"></i>
@@ -1545,7 +1647,7 @@
           </a>
 
           <!-- Official Page 2: Smart Health USA YouTube & Buffer Hub -->
-          <a href="https://wa.me/201092519210?text=روابط%20حسابات%20Smart%20Health%20USA" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 hover:border-emerald-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <a href="https://wa.me/201092519210?text=روابط%20حسابات%20Smart%20Health%20USA" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 hover:border-emerald-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press skiper-btn">
             <div class="flex items-center gap-2 mb-1.5">
               <div class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center text-white text-xs shadow-md">
                 <i class="fa-brands fa-youtube"></i>
@@ -1563,7 +1665,7 @@
           </a>
 
           <!-- Official Page 3: Meta Lapse (ASMR Cinematic Hub) -->
-          <a href="https://wa.me/201092519210?text=روابط%20حسابات%20Meta%20Lapse" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 hover:border-amber-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <a href="https://wa.me/201092519210?text=روابط%20حسابات%20Meta%20Lapse" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 hover:border-amber-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press skiper-btn">
             <div class="flex items-center gap-2 mb-1.5">
               <div class="w-7 h-7 rounded-lg bg-amber-600 flex items-center justify-center text-white text-xs shadow-md">
                 <i class="fa-solid fa-gem"></i>
@@ -1581,7 +1683,7 @@
           </a>
 
           <!-- Official Page 4: Telegram & Technical Systems -->
-          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-sky-950/30 border border-sky-500/30 hover:border-sky-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press">
+          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="p-2.5 sm:p-3 rounded-xl bg-sky-950/30 border border-sky-500/30 hover:border-sky-500/80 transition-all flex flex-col justify-between text-right align-start-dir group touch-press skiper-btn">
             <div class="flex items-center gap-2 mb-1.5">
               <div class="w-7 h-7 rounded-lg bg-sky-600 flex items-center justify-center text-white text-xs shadow-md">
                 <i class="fa-brands fa-telegram"></i>
@@ -1628,11 +1730,11 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 w-full max-w-md mx-auto">
-          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm shadow-glow-emerald transition-all touch-press">
+          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm shadow-glow-emerald transition-all touch-press skiper-btn">
             <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
             <span data-i18n="cta_btn_wa">تواصل مباشر عبر واتساب</span>
           </a>
-          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 rounded-xl bg-[#161622] hover:bg-[#201c34] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-sky-500/50 transition-all touch-press">
+          <a href="https://t.me/abdou25008" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-3 rounded-xl bg-[#161622] hover:bg-[#201c34] text-zinc-200 hover:text-white font-bold text-xs sm:text-sm border border-white/10 hover:border-sky-500/50 transition-all touch-press skiper-btn">
             <i class="fa-brands fa-telegram text-sky-400 text-sm"></i>
             <span data-i18n="cta_btn_tg">تيليجرام التقني (@abdou25008)</span>
           </a>
@@ -1698,25 +1800,25 @@
   <div class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-[360px] lg:hidden">
     <div class="glass-dock rounded-full px-2.5 py-1.5 flex items-center justify-around shadow-floating-dock border border-white/10">
       
-            <a href="#services" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press">
+            <a href="#services" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press skiper-btn">
         <i class="fa-solid fa-house text-xs"></i>
         <span class="text-[8px] font-bold" data-i18n="dock_home">المهارات</span>
       </a>
 
-      <a href="#platforms" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press">
+      <a href="#platforms" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-purple-400 transition-colors touch-press skiper-btn">
         <i class="fa-solid fa-layer-group text-xs"></i>
         <span class="text-[8px] font-bold" data-i18n="dock_platforms">المنظومات</span>
       </a>
 
       <!-- Highlighted Center WhatsApp Action -->
-      <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex flex-col items-center -mt-4 group touch-press">
+      <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="flex flex-col items-center -mt-4 group touch-press skiper-btn">
         <div class="w-10 h-10 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-lg shadow-emerald-950/80 border-2 border-[#050508] transition-transform group-hover:scale-105">
           <i class="fa-brands fa-whatsapp text-base"></i>
         </div>
         <span class="text-[8px] font-black text-emerald-400 mt-0.5" data-i18n="dock_contact">تواصل</span>
       </a>
 
-      <a href="#media-network" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-pink-400 transition-colors touch-press">
+      <a href="#media-network" onclick="triggerHaptic()" class="dock-tab flex flex-col items-center gap-0.5 text-zinc-400 hover:text-pink-400 transition-colors touch-press skiper-btn">
         <i class="fa-solid fa-clapperboard text-xs"></i>
         <span class="text-[8px] font-bold" data-i18n="dock_media">الميديا</span>
       </a>
@@ -2248,7 +2350,7 @@
     <button 
       id="btnOpenStudio" 
       onclick="toggleLiveStudio()" 
-      class="group relative inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#11111a]/95 hover:bg-[#1a182c] border border-purple-500/50 hover:border-purple-400 text-white font-bold text-xs shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 touch-press"
+      class="group relative inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#11111a]/95 hover:bg-[#1a182c] border border-purple-500/50 hover:border-purple-400 text-white font-bold text-xs shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 touch-press skiper-btn"
       title="فتح ستوديو التخصيص والتحرير الحي (Ctrl + E)"
     >
       <span class="w-2 h-2 rounded-full bg-purple-400 group-hover:bg-cyan-400 animate-pulse transition-colors"></span>
@@ -2589,11 +2691,11 @@
     <!-- Studio Action Footer -->
     <div class="p-3.5 sm:p-4 bg-[#11111c] border-t border-white/10 space-y-2">
       <div class="grid grid-cols-2 gap-2">
-        <button onclick="saveStudioChanges(true)" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-glow-purple transition-all touch-press">
+        <button onclick="saveStudioChanges(true)" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-glow-purple transition-all touch-press skiper-btn">
           <i class="fa-solid fa-floppy-disk"></i>
           <span>حفظ التعديلات</span>
         </button>
-        <button onclick="exportCleanHTML()" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-xs shadow-glow-emerald transition-all touch-press">
+        <button onclick="exportCleanHTML()" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-zinc-950 font-bold text-xs shadow-glow-emerald transition-all touch-press skiper-btn">
           <i class="fa-solid fa-download"></i>
           <span>تصدير index.html</span>
         </button>
@@ -3015,6 +3117,78 @@
 
 
   
+
+  <!-- Integrated UI Libraries Script (Vengeance UI + Skiper UI + Animmaster Lib) -->
+  <script>
+    (function initInteractiveUILibraries() {
+      // 1. Animmaster Lib Spotlight Follower (Touch & Mouse)
+      const spotlightCards = document.querySelectorAll('.animmaster-spotlight');
+      spotlightCards.forEach(card => {
+        const updateSpotlight = (x, y) => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--spotlight-x', (x - rect.left) + 'px');
+          card.style.setProperty('--spotlight-y', (y - rect.top) + 'px');
+        };
+
+        card.addEventListener('mousemove', (e) => {
+          updateSpotlight(e.clientX, e.clientY);
+        }, { passive: true });
+
+        card.addEventListener('touchmove', (e) => {
+          if (e.touches && e.touches[0]) {
+            updateSpotlight(e.touches[0].clientX, e.touches[0].clientY);
+          }
+        }, { passive: true });
+
+        card.addEventListener('touchstart', (e) => {
+          if (e.touches && e.touches[0]) {
+            updateSpotlight(e.touches[0].clientX, e.touches[0].clientY);
+          }
+        }, { passive: true });
+      });
+
+      // 2. Vengeance / Animmaster Stats Counter Animator
+      const metricNumbers = document.querySelectorAll('#metrics .font-mono');
+      if ('IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const rawText = el.textContent.trim();
+              if (rawText === '04') {
+                animateNumber(el, 0, 4, 1200, (n) => n < 10 ? '0' + n : n);
+              } else if (rawText.includes('10M')) {
+                animateNumber(el, 1, 10, 1500, (n) => '+' + n + 'M');
+              } else if (rawText.includes('100%')) {
+                animateNumber(el, 50, 100, 1400, (n) => n + '%');
+              }
+              obs.unobserve(el);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        metricNumbers.forEach(el => counterObserver.observe(el));
+      }
+
+      function animateNumber(element, start, end, duration, formatFn) {
+        let startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          const easeOutQuad = 1 - (1 - progress) * (1 - progress);
+          const current = Math.floor(start + (end - start) * easeOutQuad);
+          element.textContent = formatFn(current);
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            element.textContent = formatFn(end);
+          }
+        }
+        window.requestAnimationFrame(step);
+      }
+    })();
+  </script>
+
 </body>
 
 </html>
