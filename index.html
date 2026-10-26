@@ -475,27 +475,120 @@
     }
 
   
+    
+
+  
+    /* ====================================================
+       PERFECT FIDELITY MOBILE VIEWPORT SIMULATION (100% PHONE ACCURACY)
+       ==================================================== */
     body.simulating-mobile {
       background-color: #030305 !important;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
     }
+    
+    /* Phone Device Mockup Container */
+    #page-viewport-wrapper.viewport-mobile {
+      max-width: 412px !important;
+      width: 412px !important;
+      margin: 75px auto 40px auto !important;
+      box-shadow: 0 0 0 10px #1a1a26, 0 25px 90px -10px rgba(0,0,0,0.98), 0 0 50px rgba(168, 85, 247, 0.35) !important;
+      border-radius: 40px !important;
+      background-color: #050508 !important;
+      overflow-x: hidden !important;
+      position: relative !important;
+      border: 2px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    
+    /* Header Refinements in Mobile Simulation */
+    body.simulating-mobile header .sm\:inline {
+      display: none !important;
+    }
+    body.simulating-mobile header .sm\:hidden {
+      display: inline !important;
+    }
+    body.simulating-mobile header [data-i18n="brand_role"] {
+      display: none !important;
+    }
+    body.simulating-mobile header [data-i18n="brand_name"] {
+      font-size: 12px !important;
+    }
+
+    /* Fixed Header Adaptation in Mobile Mode */
     body.simulating-mobile header {
-      max-width: 428px !important;
+      max-width: 412px !important;
       left: 50% !important;
       right: auto !important;
       transform: translateX(-50%) !important;
-      border-radius: 24px 24px 0 0;
-      top: 12px !important;
+      border-radius: 20px 20px 0 0 !important;
+      top: 15px !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
-    #page-viewport-wrapper.viewport-mobile {
-      max-width: 428px !important;
-      margin: 80px auto 40px auto !important;
-      box-shadow: 0 25px 90px -10px rgba(0,0,0,0.98), 0 0 50px rgba(168, 85, 247, 0.35);
-      border-radius: 40px;
-      border: 8px solid #1a1a26;
-      background-color: #050508;
-      overflow-x: hidden !important;
-      position: relative;
+
+    /* Hide Desktop Navigation Menu inside Phone Mode */
+    body.simulating-mobile nav.hidden.md\:flex,
+    body.simulating-mobile nav {
+      display: none !important;
+    }
+
+    /* Hide Secondary Desktop-Only Luxury Portrait */
+    body.simulating-mobile .hidden.lg\:flex,
+    body.simulating-mobile .hidden.lg\:block {
+      display: none !important;
+    }
+
+    /* Reset All Grids to Genuine Mobile Single-Column Flow */
+    body.simulating-mobile .lg\:grid-cols-12,
+    body.simulating-mobile .grid-cols-12 {
+      grid-template-columns: 1fr !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+
+    body.simulating-mobile .lg\:col-span-7,
+    body.simulating-mobile .lg\:col-span-8,
+    body.simulating-mobile .lg\:col-span-5,
+    body.simulating-mobile .lg\:col-span-4 {
+      grid-column: span 1 / span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    body.simulating-mobile .md\:grid-cols-2,
+    body.simulating-mobile .lg\:grid-cols-2,
+    body.simulating-mobile .lg\:grid-cols-3,
+    body.simulating-mobile .md\:grid-cols-3 {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Metrics Bar: Exactly 2 Balanced Columns in Mobile */
+    body.simulating-mobile #metrics .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 8px !important;
+    }
+
+    /* Hero Headline & Bio: Natural Mobile Proportions */
+    body.simulating-mobile #hero .mobile-headline {
+      font-size: 1.45rem !important;
+      line-height: 1.35 !important;
+      letter-spacing: -0.01em !important;
+      text-align: center !important;
+      margin-bottom: 12px !important;
+    }
+
+    body.simulating-mobile #hero .mobile-body {
+      font-size: 0.85rem !important;
+      line-height: 1.65 !important;
+      text-align: right !important;
+      padding: 0 4px !important;
+    }
+
+    /* Mobile Floating Dock: Pinned inside Mobile Simulator */
+    body.simulating-mobile .glass-dock {
+      max-width: 380px !important;
     }
 
   </style>
