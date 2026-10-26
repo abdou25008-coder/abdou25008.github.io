@@ -515,10 +515,9 @@
       <!-- Quick Control Group (Language + Mobile Simulator + WhatsApp) -->
       <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
         
-        <!-- Mobile/Android Simulator Toggle (Desktop Only) -->
-        <button id="btnOpenEmulator" onclick="toggleMobileEmulator()" class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#161622] hover:bg-[#201c34] border border-purple-500/40 text-purple-300 text-[11px] font-bold shadow-sm transition-all touch-press skiper-btn">
-          <i class="fa-solid fa-mobile-screen-button text-[11px] text-purple-400"></i>
-          <span data-i18n="btn_emulator">محاكي الهواتف الذكية</span>
+        <!-- Viewport Size Switcher (Mobile / Desktop View Toggle) -->
+        <button id="btnToggleViewport" onclick="toggleViewportMode()" title="تبديل العرض بين الكمبيوتر والهاتف" class="hidden md:inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#161622] hover:bg-[#221f38] border border-purple-500/40 text-purple-300 transition-all touch-press skiper-btn">
+          <i id="viewportToggleIcon" class="fa-solid fa-mobile-screen text-xs text-purple-400"></i>
         </button>
 
         <!-- Bilingual Language Switcher (AR / EN) -->
@@ -583,8 +582,8 @@
 
           <!-- Main Bold Impactful H1 Headline -->
           <h1 class="mobile-headline font-black tracking-tight text-white mb-2.5 w-full">
-            <span data-i18n="hero_h1_part1">أصمم وأبني</span>
-            <span class="purple-gradient-text block sm:inline" data-i18n="hero_h1_part2">منظومات ذكية فائقة الأداء.</span>
+            <span data-i18n="hero_h1_part1">نعمل علي تصميم وبناء</span>
+            <span class="purple-gradient-text block sm:inline" data-i18n="hero_h1_part2">منظومات ذكيه فائقة الأداء والأنتاجيه وتوفير الوقت</span>
           </h1>
 
           <!-- Tagline Chip -->
@@ -597,7 +596,7 @@
 
           <!-- Refined Egyptian-Style Bio Paragraph -->
           <p class="mobile-body text-zinc-300 max-w-2xl font-normal leading-relaxed mb-4 w-full" data-i18n="hero_bio">
-            أهلاً بك، أنا <strong class="text-white font-bold">عبده علي موسى</strong> — مهندس برمجيات متخصص في بناء المنظومات الذكية، وهندسة الأتمتة والإنتاج الرقمي. مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة؛ من المنصات السحابية والمحررات المرئية لغاية خطوط إنتاج الميديا المؤتمتة بالكامل. أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.
+            أهلاً بك، أنا <strong class="text-white font-bold">عبده علي</strong> — خبير برمجيات متخصص في بناء المنظومات الذكية وأتمتة المهمات المتكرره بأحدث ادوات التكنولوجيا والذكاء الاصطناعي . مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة ؛ من المنصات الألكترونيه والتطبيقات البرمجيه , حتى خطوط إنتاج الميديا المؤتمتة بالكامل .<br class="hidden sm:inline"> أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.
           </p>
 
           <!-- Core Specialization Tags (Mobile-Optimized Wrapping Grid) -->
@@ -751,6 +750,9 @@
   <!-- ========================================== -->
   <!-- 4. SERVICES SECTION (Compact & Proportional) -->
   <!-- ========================================== -->
+    <!-- ========================================== -->
+  <!-- 4. SERVICES SECTION (Aligned With Intro Pillars) -->
+  <!-- ========================================== -->
   <section id="services" class="py-6 sm:py-14 relative">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       
@@ -766,86 +768,98 @@
           </h2>
         </div>
         <p class="text-zinc-400 text-[11px] sm:text-xs max-w-md" data-i18n="serv_sub">
-          توثيق لمسيرتي وخبراتي في تحويل الأفكار والتحديات إلى منظومات ذكية ومستقرة، وبناء معماريات برمجية تعكس دقة التنفيذ والابتكار.
+          حلول تقنية متكاملة تركز على أتمتة الأعمال، تسريع الإنتاجية، وبناء منصات برمجية فائقة الأداء توفر الوقت والتكاليف التشغيلية.
         </p>
       </div>
 
-      <!-- Services Grid (2 Columns) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-5">
+      <!-- Services Grid (2 Columns, Balanced & Proportional) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5">
         
-        <!-- Card 1: Web Apps & SaaS -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
-            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-purple-950/80 border border-purple-500/40 flex-shrink-0 flex items-center justify-center text-purple-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+        <!-- Pillar 1: Smart Systems & Software Apps -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-2 sm:mb-3">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-purple-950/80 border border-purple-500/40 flex-shrink-0 flex items-center justify-center text-purple-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
               <i class="fa-solid fa-layer-group"></i>
             </div>
-            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-purple-300 transition-colors leading-snug">
-              هندسة المنظومات وتطبيقات الويب (SaaS & Platforms)
-            </h3>
-          </div>
-          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
-            تطوير وبناء منصات برمجية متكاملة؛ بدءاً من شبكات التواصل الاجتماعي وأنظمة التجارة الإلكترونية المتقدمة، وصولاً إلى لوحات التحكم الإدارية، مع ضمان أداء فائق وتجربة مستخدم عصرية وسلسة.
-          </p>
-          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">Full-Stack Development</span>
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">E-Commerce Architecture</span>
-          </div>
-        </div>
-
-        <!-- Card 2: AI Content Engines -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
-            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-pink-950/80 border border-pink-500/40 flex-shrink-0 flex items-center justify-center text-pink-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
-              <i class="fa-solid fa-photo-film"></i>
+            <div>
+              <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-purple-300 transition-colors leading-snug">
+                بناء المنظومات الذكية والتطبيقات البرمجية
+              </h3>
+              <span class="text-[9px] sm:text-[10px] font-mono text-purple-300/80">Smart Systems & Custom Apps</span>
             </div>
-            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-pink-300 transition-colors leading-snug">
-              أدوات الإنتاج وتوليد المحتوى (AI Automation)
-            </h3>
           </div>
-          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
-            برمجة محركات توليدية متخصصة لأتمتة صناعة الفيديو (Shorts/Reels) ومعالجة الصوتيات البشرية والموسيقى (DAW)، بهدف تسريع عملية الإنتاج الرقمي والنشر التلقائي المباشر على الشبكات.
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+            تصميم وتطوير تطبيقات برمجية ومنصات رقمية سحابية متكاملة تخدم العمليات الحقيقية؛ من لوحات التحكم التشغيلية المتطورة وحتى الأنظمة الخدمية المعقدة، بأداء فائق وتجربة مستخدم عصرية وسريعة.
           </p>
-          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">AI Video Generation</span>
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">Voice Synthesis</span>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-purple-200 border border-white/10">Full-Stack Architecture</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-purple-200 border border-white/10">Custom Web Platforms</span>
           </div>
         </div>
 
-        <!-- Card 3: No-Code Builders -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
-            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-emerald-950/80 border border-emerald-500/40 flex-shrink-0 flex items-center justify-center text-emerald-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+        <!-- Pillar 2: Process & Task Automation -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-2 sm:mb-3">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-cyan-950/80 border border-cyan-500/40 flex-shrink-0 flex items-center justify-center text-cyan-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
+                أتمتة المهمات المتكررة وتوفير الوقت والإنتاجية
+              </h3>
+              <span class="text-[9px] sm:text-[10px] font-mono text-cyan-300/80">Task Automation & Efficiency</span>
+            </div>
+          </div>
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+            استبدال الأعمال اليدوية الروتينية بمسارات عمل مؤتمتة بدون تدخل بشري؛ تحويل الإجراءات المتكررة لخطوط معالجة رقمية فورية تختصر ساعات العمل إلى دقائق، وترفع دقة العمليات مع تقليل التكلفة التشغيلية.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-cyan-200 border border-white/10">Workflow Automation</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-cyan-200 border border-white/10">Zero-Touch Pipelines</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Generative AI & Autonomous Media Engines -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-2 sm:mb-3">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-pink-950/80 border border-pink-500/40 flex-shrink-0 flex items-center justify-center text-pink-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors leading-snug">
-              منصات الـ No-Code والمحررات المرئية
-            </h3>
+            <div>
+              <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-pink-300 transition-colors leading-snug">
+                الذكاء الاصطناعي التوليدي وهندسة خطوط الميديا
+              </h3>
+              <span class="text-[9px] sm:text-[10px] font-mono text-pink-300/80">Generative AI & Media Engines</span>
+            </div>
           </div>
-          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
-            ابتكار وتطوير محركات بناء تطبيقات تتيح تحويل الأوامر الصوتية والنصية إلى واجهات تفاعلية بالكامل، مع تصميم أدوات تحرير مرئية (Visual Editors) لمنح المستخدم مرونة مطلقة في التعديل.
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+            تطوير محركات ذكية ومؤتمتة لإنتاج الفيديو الرقمي، وهندسة الصوت والتعليق الصوتي الواقعي بالذكاء الاصطناعي، ومونتاج المشاهد وضبط تزامن الكلمات، مع جدولة ونشر تلقائي مباشر على منصات التواصل.
           </p>
-          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">Visual App Builders</span>
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">UI/UX Architecture</span>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-pink-200 border border-white/10">Autonomous Video Engines</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-pink-200 border border-white/10">Voice & Speech AI</span>
           </div>
         </div>
 
-        <!-- Card 4: Cloud & APIs -->
-        <div class="glass-panel rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
-          <div class="flex items-center gap-2.5 mb-1.5 sm:mb-2.5">
-            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-cyan-950/80 border border-cyan-500/40 flex-shrink-0 flex items-center justify-center text-cyan-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
-              <i class="fa-solid fa-server"></i>
+        <!-- Pillar 4: Cloud Infrastructure & System Integration -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-xl sm:rounded-2xl p-3.5 sm:p-5 relative overflow-hidden group transition-all duration-300 text-right align-start-dir">
+          <div class="flex items-center gap-2.5 mb-2 sm:mb-3">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-emerald-950/80 border border-emerald-500/40 flex-shrink-0 flex items-center justify-center text-emerald-400 text-sm sm:text-lg shadow-md group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-cloud"></i>
             </div>
-            <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
-              البنية السحابية وتكامل الذكاء الاصطناعي
-            </h3>
+            <div>
+              <h3 class="text-xs sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                البنية السحابية وتكامل الأنظمة وحلول الأعمال
+              </h3>
+              <span class="text-[9px] sm:text-[10px] font-mono text-emerald-300/80">Cloud Infrastructure & API Mesh</span>
+            </div>
           </div>
-          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-2">
-            تأسيس بنى تحتية سحابية صلبة ومؤمنة (مثل Supabase)، وهندسة ربط النماذج اللغوية المتطورة (LLMs) والواجهات البرمجية (APIs) لإنشاء مسارات عمل ذكية تعمل باستقرار وموثوقية عالية.
+          <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+            تأسيس معماريات سحابية صلبة ومستقرة، وربط نماذج الذكاء الاصطناعي (LLMs & Vision) مع قواعد البيانات والواجهات البرمجية (APIs)، وتدقيق الوثائق والنمذجة التحليلية لخدمة الشركات على مدار الساعة (24/7).
           </p>
-          <div class="flex flex-wrap gap-1 pt-1.5 border-t border-white/5">
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">Cloud Architecture</span>
-            <span class="text-[8.5px] sm:text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-white/5 text-zinc-300 border border-white/5">LLMs Integration</span>
+          <div class="flex flex-wrap gap-1 pt-2 border-t border-white/5">
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-emerald-200 border border-white/10">Cloud Architecture (24/7)</span>
+            <span class="text-[8.5px] sm:text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 text-emerald-200 border border-white/10">Enterprise AI Integration</span>
           </div>
         </div>
 
@@ -854,16 +868,20 @@
   </section>
 
 
+
   <!-- ========================================== -->
   <!-- 5. LIVE PRODUCTION PLATFORMS (VERTICAL CARDS GRID) -->
   <!-- ========================================== -->
     <!-- ========================================== -->
   <!-- 5. LIVE PRODUCTION PLATFORMS (PREMIER BENTO SHOWCASE) -->
   <!-- ========================================== -->
+    <!-- ========================================== -->
+  <!-- 5. LIVE PRODUCTION PLATFORMS (UNIFORM EQUAL-SIZED GRID) -->
+  <!-- ========================================== -->
   <section id="platforms" class="py-8 sm:py-16 relative bg-[#060609]">
     <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
       
-      <!-- Section Header with High-End Hierarchy -->
+      <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-9 gap-2 sm:gap-4 text-right align-start-dir">
         <div>
           <div class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-purple-400 tracking-wider uppercase mb-1">
@@ -879,7 +897,7 @@
         </p>
       </div>
 
-      <!-- Interactive Category Filter Switcher (Skiper UI Tactile Pills) -->
+      <!-- Category Filter Pills -->
       <div class="flex items-center gap-1.5 sm:gap-2 mb-5 sm:mb-8 overflow-x-auto pb-1.5 scrollbar-none">
         <button type="button" onclick="filterPlatforms('all', this)" class="plat-filter-btn active-filter px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all flex items-center gap-1.5 bg-purple-600 text-white shadow-glow-purple skiper-btn flex-shrink-0">
           <i class="fa-solid fa-sparkles text-[10px]"></i>
@@ -899,90 +917,69 @@
         </button>
       </div>
 
-      <!-- Asymmetrical Bento Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6">
+      <!-- Uniform Equal-Sized 3-Column Grid (3 Columns on Desktop, 2 on Tablet, 1 on Mobile) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         
         <!-- ============================================== -->
-        <!-- BENTO ITEM 1 (FLAGSHIP SPOTLIGHT): TEACHER OS  -->
+        <!-- PLATFORM 1: TEACHER OS                         -->
         <!-- ============================================== -->
-        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-6 border border-emerald-500/30 flex flex-col justify-between text-right align-start-dir group md:col-span-2 shadow-card-lux" data-category="edtech">
-          <div>
-            <!-- Top Status Bar & Badge -->
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Flagship Platform • EdTech OS</span>
+        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-emerald-500/30 flex flex-col justify-between h-full text-right align-start-dir group shadow-card-lux" data-category="edtech">
+          <div class="flex-1 flex flex-col">
+            <!-- Header Badge -->
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Flagship • EdTech OS</span>
               </div>
-              <span class="text-[10px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-white/10">v3.8 Production</span>
+              <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-white/10">Teacher OS</span>
             </div>
 
-            <!-- Two-Column Layout Inside Flagship Card -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center mb-4">
-              <!-- Visual Preview Box -->
-              <div class="lg:col-span-7 aspect-[16/9] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden relative shadow-lg group-hover:border-emerald-500/50 transition-all flex items-center justify-center">
-                <img 
-                  src="assets/teacheros_preview.jpg" 
-                  alt="Teacher OS Closed-Loop Intelligent Education" 
-                  class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
-                  
-                  loading="lazy"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
-                <div class="absolute bottom-2.5 right-2.5">
-                  <span class="px-2 py-0.5 rounded bg-black/80 border border-emerald-500/40 text-emerald-300 text-[9px] font-mono backdrop-blur-md">
-                    Live Telemetry • Active
-                  </span>
-                </div>
+            <!-- Equal 16/10 Image Preview -->
+            <div class="w-full aspect-[16/10] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-md group-hover:border-emerald-500/50 transition-all flex items-center justify-center">
+              <img 
+                src="assets/teacheros_preview.jpg" 
+                alt="Teacher OS Closed-Loop Intelligent Education" 
+                class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
+              <div class="absolute top-2 left-2 bg-emerald-950/90 border border-emerald-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-emerald-300 flex items-center gap-1 backdrop-blur-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Live Platform</span>
               </div>
+            </div>
 
-              <!-- Flagship Info & Interactive Tabs -->
-              <div class="lg:col-span-5 flex flex-col justify-between">
-                <div>
-                  <h3 class="text-sm sm:text-lg font-bold text-white mb-2 leading-snug group-hover:text-emerald-300 transition-colors" data-i18n="p_tos_title">
-                    نظام تشغيل المعلم الذكي والمنصة التعليمية المتكاملة (Teacher OS)
-                  </h3>
-                  
-                  <!-- Interactive Micro-Tabs Inside Card -->
-                  <div class="flex items-center gap-1 bg-[#0b0b12] p-1 rounded-lg border border-white/10 mb-2.5 text-[10px]">
-                    <button type="button" onclick="switchTeacherOSTab('overview', this)" class="tos-tab-btn px-2 py-1 rounded font-bold bg-emerald-600/30 text-emerald-300 border border-emerald-500/30">الرؤية</button>
-                    <button type="button" onclick="switchTeacherOSTab('engine', this)" class="tos-tab-btn px-2 py-1 rounded text-zinc-400 hover:text-white">المحرك</button>
-                    <button type="button" onclick="switchTeacherOSTab('metrics', this)" class="tos-tab-btn px-2 py-1 rounded text-zinc-400 hover:text-white">النتائج</button>
-                  </div>
+            <!-- Title (Fixed 2 lines height) -->
+            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-emerald-300 transition-colors line-clamp-2 min-h-[40px]" data-i18n="p_tos_title">
+              نظام تشغيل المعلم والمنصة التعليمية (Teacher OS)
+            </h3>
+            
+            <!-- Description (Fixed 3 lines height) -->
+            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3 line-clamp-3 min-h-[58px]">
+              المنظومة التعليمية الرقمية الشاملة لتمكين المعلمين والمراكز؛ تحضير الدروس الذكي، بنك أسئلة معياري، والتصحيح الآلي الفوري مع رصد فجوات الاستيعاب بدقة.
+            </p>
 
-                  <!-- Dynamic Content Container -->
-                  <p id="tos-tab-content" class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed min-h-[58px]">
-                    المنظومة التعليمية الرقمية الشاملة لتمكين المعلمين والمراكز التعليمية؛ تحضير الدروس الذكي بالذكاء الاصطناعي، بنك أسئلة معياري، والتصحيح الآلي الفوري مع رصد فجوات الاستيعاب (Mastery Signals).
-                  </p>
-                </div>
-
-                <!-- 3 Key Highlights Strip -->
-                <div class="flex flex-wrap items-center gap-1.5 mt-2.5 pt-2.5 border-t border-white/10 text-[9.5px] font-mono text-emerald-300">
-                  <span class="bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">✓ مغلقة الحلقة</span>
-                  <span class="bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">✓ تصحيح آلي فوري</span>
-                  <span class="bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">✓ تقارير لحظية</span>
-                </div>
-              </div>
+            <!-- Tags (Fixed height) -->
+            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-emerald-300 min-h-[24px]">
+              <span class="bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">Closed-Loop Engine</span>
+              <span class="bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">Auto-Grading</span>
             </div>
           </div>
 
-          <!-- Actions -->
-          <div class="pt-3 border-t border-white/10 flex items-center gap-2">
-            <a href="https://teacheros.pages.dev" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-glow-emerald transition-all skiper-btn">
+          <!-- Uniform Action Button -->
+          <div class="pt-2.5 border-t border-white/10 mt-auto">
+            <a href="https://teacheros.pages.dev" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-glow-emerald transition-all skiper-btn">
               <span>معاينة المنظومة الحية</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-            <a href="#contact-cta" class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3.5 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-300 hover:text-white font-bold text-xs border border-white/10 transition-all skiper-btn">
-              <i class="fa-solid fa-code text-emerald-400 text-xs"></i>
-              <span>التوثيق</span>
             </a>
           </div>
         </div>
 
         <!-- ============================================== -->
-        <!-- BENTO ITEM 2: MONEYPRINTER PRO                 -->
+        <!-- PLATFORM 2: MONEYPRINTER PRO                   -->
         <!-- ============================================== -->
-        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-purple-500/30 flex flex-col justify-between text-right align-start-dir group shadow-card-lux" data-category="media">
-          <div>
+        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-purple-500/30 flex flex-col justify-between h-full text-right align-start-dir group shadow-card-lux" data-category="media">
+          <div class="flex-1 flex flex-col">
             <div class="flex items-center justify-between gap-2 mb-2.5">
               <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 text-[10px] font-mono">
                 <i class="fa-solid fa-wand-magic-sparkles text-purple-400 text-[10px]"></i>
@@ -991,38 +988,35 @@
               <span class="text-[9px] font-mono text-zinc-400 bg-black/60 px-2 py-0.5 rounded border border-white/10">MoneyPrinter Pro</span>
             </div>
 
-            <!-- Image Visual -->
             <div class="w-full aspect-[16/10] rounded-xl bg-[#08080c] border border-white/10 overflow-hidden mb-3 relative shadow-md group-hover:border-purple-500/50 transition-all flex items-center justify-center">
               <img 
                 src="assets/moneyprinter_pro_preview.jpg" 
                 alt="MoneyPrinter Pro Autonomous Engine" 
                 class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
-                
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
               <div class="absolute top-2 left-2 bg-purple-950/90 border border-purple-500/40 px-2 py-0.5 rounded-full text-[8.5px] font-mono text-purple-300 flex items-center gap-1 backdrop-blur-md">
                 <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-                <span>Google Flow 10s • 24fps</span>
+                <span>Google Flow 24fps</span>
               </div>
             </div>
 
-            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-purple-300 transition-colors" data-i18n="p_mpp_title">
-              النسخة الاحترافية من عملاق صناعة المحتوى (MoneyPrinter Pro)
+            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-purple-300 transition-colors line-clamp-2 min-h-[40px]" data-i18n="p_mpp_title">
+              عملاق صناعة المحتوى الآلي (MoneyPrinter Pro)
             </h3>
             
-            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3">
-              محرك توليد الفيديو الرأسي المؤتمت بالكامل؛ دمج Google Flow وسيناريوهات Gemini مع مكتبات موشن جرافيكس حية وتركيب صوتي متزامن ونشر آلي دون تدخل بشري.
+            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3 line-clamp-3 min-h-[58px]">
+              محرك توليد الفيديو الرأسي المؤتمت بالكامل؛ دمج سيناريوهات Gemini وسينما Google Flow مع موشن جرافيكس حي وتركيب صوتي متزامن ونشر آلي.
             </p>
 
-            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-purple-300">
-              <span class="bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/20">Google Flow</span>
+            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-purple-300 min-h-[24px]">
+              <span class="bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/20">Google Flow 10s</span>
               <span class="bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/20">Remotion Engine</span>
-              <span class="bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/20">Zero-Touch Quota</span>
             </div>
           </div>
 
-          <div class="pt-2.5 border-t border-white/10 flex items-center gap-2">
+          <div class="pt-2.5 border-t border-white/10 mt-auto">
             <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-glow-purple transition-all skiper-btn">
               <span>طلب تشغيل المنظومة</span>
               <i class="fa-solid fa-arrow-left text-[10px]"></i>
@@ -1031,10 +1025,10 @@
         </div>
 
         <!-- ============================================== -->
-        <!-- BENTO ITEM 3: NOVACRAFT AI ECOSYSTEM           -->
+        <!-- PLATFORM 3: NOVACRAFT AI ECOSYSTEM             -->
         <!-- ============================================== -->
-        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-cyan-500/25 flex flex-col justify-between text-right align-start-dir group shadow-card-lux" data-category="enterprise">
-          <div>
+        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-cyan-500/25 flex flex-col justify-between h-full text-right align-start-dir group shadow-card-lux" data-category="enterprise">
+          <div class="flex-1 flex flex-col">
             <div class="flex items-center justify-between gap-2 mb-2.5">
               <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[10px] font-mono">
                 <i class="fa-solid fa-terminal text-cyan-400 text-[10px]"></i>
@@ -1048,28 +1042,27 @@
                 src="assets/novacraft_preview.jpg" 
                 alt="NovaCraft AI Ecosystem" 
                 class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
-                
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
             </div>
 
-            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-cyan-300 transition-colors" data-i18n="p_nova_title">
-              منصة نوفاكرافت للأنظمة الذكية (NovaCraft AI Ecosystem)
+            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-cyan-300 transition-colors line-clamp-2 min-h-[40px]" data-i18n="p_nova_title">
+              منصة نوفاكرافت للأنظمة الذكية (NovaCraft AI)
             </h3>
             
-            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3">
+            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3 line-clamp-3 min-h-[58px]">
               بيئة تطوير برمجية متقدمة لأتمتة دورة حياة الأنظمة، توليد الأكواد النظيفة، وإدارة البنية التحتية السحابية عبر وكلاء برمجيات مستقلين.
             </p>
 
-            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-cyan-300">
+            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-cyan-300 min-h-[24px]">
               <span class="bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">Agent Orchestration</span>
               <span class="bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">CI/CD Pipeline</span>
             </div>
           </div>
 
-          <div class="pt-2.5 border-t border-white/10 flex items-center gap-2">
-            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-cyan-500/50 transition-all skiper-btn">
+          <div class="pt-2.5 border-t border-white/10 mt-auto">
+            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-cyan-500/50 transition-all skiper-btn">
               <span>استكشاف المعمارية</span>
               <i class="fa-solid fa-arrow-left text-[10px]"></i>
             </a>
@@ -1077,10 +1070,10 @@
         </div>
 
         <!-- ============================================== -->
-        <!-- BENTO ITEM 4: AI VOICE STUDIO ENGINE           -->
+        <!-- PLATFORM 4: AI VOICE STUDIO ENGINE             -->
         <!-- ============================================== -->
-        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-purple-500/25 flex flex-col justify-between text-right align-start-dir group shadow-card-lux" data-category="media">
-          <div>
+        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-purple-500/25 flex flex-col justify-between h-full text-right align-start-dir group shadow-card-lux" data-category="media">
+          <div class="flex-1 flex flex-col">
             <div class="flex items-center justify-between gap-2 mb-2.5">
               <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 text-[10px] font-mono">
                 <i class="fa-solid fa-microphone-lines text-purple-400 text-[10px]"></i>
@@ -1094,28 +1087,27 @@
                 src="assets/voice_studio_preview.jpg" 
                 alt="AI Voice Studio Engine" 
                 class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
-                
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
             </div>
 
-            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-purple-300 transition-colors" data-i18n="p_voice_title">
-              استوديو هندسة الصوت التوليدي (AI Voice Studio Engine)
+            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-purple-300 transition-colors line-clamp-2 min-h-[40px]" data-i18n="p_voice_title">
+              استوديو هندسة الصوت التوليدي (Voice Studio Engine)
             </h3>
             
-            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3">
+            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3 line-clamp-3 min-h-[58px]">
               استوديو صوتي متكامل لتوليد النبرات الوثائقية والبودكاست بالذكاء الاصطناعي بدقة نطق اللهجة المصرية والعربية مع تزامن شفاه فائق الدقة.
             </p>
 
-            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-purple-300">
+            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-purple-300 min-h-[24px]">
               <span class="bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/20">Gemini TTS</span>
               <span class="bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/20">Whisper Alignment</span>
             </div>
           </div>
 
-          <div class="pt-2.5 border-t border-white/10 flex items-center gap-2">
-            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-purple-500/50 transition-all skiper-btn">
+          <div class="pt-2.5 border-t border-white/10 mt-auto">
+            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-purple-500/50 transition-all skiper-btn">
               <span>طلب الاستوديو</span>
               <i class="fa-solid fa-arrow-left text-[10px]"></i>
             </a>
@@ -1123,10 +1115,10 @@
         </div>
 
         <!-- ============================================== -->
-        <!-- BENTO ITEM 5: FINTECH AI ENGINE                -->
+        <!-- PLATFORM 5: FINTECH AI ENGINE                  -->
         <!-- ============================================== -->
-        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-amber-500/25 flex flex-col justify-between text-right align-start-dir group shadow-card-lux" data-category="enterprise">
-          <div>
+        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-amber-500/25 flex flex-col justify-between h-full text-right align-start-dir group shadow-card-lux" data-category="enterprise">
+          <div class="flex-1 flex flex-col">
             <div class="flex items-center justify-between gap-2 mb-2.5">
               <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 text-[10px] font-mono">
                 <i class="fa-solid fa-chart-pie text-amber-400 text-[10px]"></i>
@@ -1140,28 +1132,27 @@
                 src="assets/fintech_model_preview.jpg" 
                 alt="FinTech AI Financial Modeling Engine" 
                 class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
-                
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
             </div>
 
-            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-amber-300 transition-colors" data-i18n="p_fin_title">
-              محرك النمذجة والتحليل المالي الكمي (FinTech AI Engine)
+            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-amber-300 transition-colors line-clamp-2 min-h-[40px]" data-i18n="p_fin_title">
+              محرك النمذجة والتحليل المالي الكمي (FinTech AI)
             </h3>
             
-            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3">
+            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3 line-clamp-3 min-h-[58px]">
               منصة حوسبة مالية متقدمة لبناء التوقعات، تقييم الشركات الناشئة، كشف الاحتيال، وتحليل المخاطر الائتمانية عبر خوارزميات الاستدلال المعززة.
             </p>
 
-            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-amber-300">
+            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-amber-300 min-h-[24px]">
               <span class="bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">Quantitative Models</span>
               <span class="bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">Risk Assessment</span>
             </div>
           </div>
 
-          <div class="pt-2.5 border-t border-white/10 flex items-center gap-2">
-            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-amber-500/50 transition-all skiper-btn">
+          <div class="pt-2.5 border-t border-white/10 mt-auto">
+            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-amber-500/50 transition-all skiper-btn">
               <span>معاينة النماذج المالية</span>
               <i class="fa-solid fa-arrow-left text-[10px]"></i>
             </a>
@@ -1169,10 +1160,10 @@
         </div>
 
         <!-- ============================================== -->
-        <!-- BENTO ITEM 6: DOCUVISION AI                    -->
+        <!-- PLATFORM 6: DOCUVISION AI                      -->
         <!-- ============================================== -->
-        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-cyan-500/25 flex flex-col justify-between text-right align-start-dir group shadow-card-lux" data-category="enterprise">
-          <div>
+        <div class="plat-card glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-cyan-500/25 flex flex-col justify-between h-full text-right align-start-dir group shadow-card-lux" data-category="enterprise">
+          <div class="flex-1 flex flex-col">
             <div class="flex items-center justify-between gap-2 mb-2.5">
               <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[10px] font-mono">
                 <i class="fa-solid fa-file-invoice text-cyan-400 text-[10px]"></i>
@@ -1186,28 +1177,27 @@
                 src="assets/doc_ai_preview.jpg" 
                 alt="DocuVision AI Document Intelligence" 
                 class="w-full h-full object-contain object-center group-hover:scale-105 transition-all duration-700" 
-                
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
             </div>
 
-            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-cyan-300 transition-colors" data-i18n="p_doc_title">
-              منظومة استيعاب وتدقيق الوثائق الذكية (DocuVision AI)
+            <h3 class="text-xs sm:text-sm font-bold text-white mb-1.5 leading-snug group-hover:text-cyan-300 transition-colors line-clamp-2 min-h-[40px]" data-i18n="p_doc_title">
+              منظومة استيعاب وتدقيق الوثائق (DocuVision AI)
             </h3>
             
-            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3">
-              محرك استخراج ذكي للعقود والقوائم المالية، مدعوم بنماذج رؤية متقدمة (Multimodal Vision) وفهرسة معرفية (RAG) لاسترجاع البيانات بدقة 99.8%.
+            <p class="text-zinc-300 text-[11px] leading-relaxed mb-3 line-clamp-3 min-h-[58px]">
+              محرك استخراج ذكي للعقود والقوائم المالية، مدعوم بنماذج رؤية متطورة وفهرسة معرفية (RAG) لاسترجاع البيانات بدقة متناهية تصل إلى 99.8%.
             </p>
 
-            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-cyan-300">
-              <span class="bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">OCR + Multimodal</span>
-              <span class="bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">99.8% Accuracy</span>
+            <div class="flex flex-wrap items-center gap-1 mb-3 text-[9px] font-mono text-cyan-300 min-h-[24px]">
+              <span class="bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">OCR Multimodal</span>
+              <span class="bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/20">99.8% Precision</span>
             </div>
           </div>
 
-          <div class="pt-2.5 border-t border-white/10 flex items-center gap-2">
-            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-cyan-500/50 transition-all skiper-btn">
+          <div class="pt-2.5 border-t border-white/10 mt-auto">
+            <a href="#contact-cta" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-200 hover:text-white font-bold text-xs border border-white/10 hover:border-cyan-500/50 transition-all skiper-btn">
               <span>طلب تجربة المحرك</span>
               <i class="fa-solid fa-arrow-left text-[10px]"></i>
             </a>
@@ -1217,6 +1207,7 @@
       </div>
     </div>
   </section>
+
 
 
 
@@ -1771,10 +1762,10 @@
         btn_header_cta_short: "تواصل",
         
         hero_pill: "Abdou Ali Mousa // مهندس المنظومات الذكية والأتمتة",
-        hero_h1_part1: "أحوّل التعقيد إلى",
-        hero_h1_part2: "أنظمة ذكية فائقة.",
+        hero_h1_part1: "نعمل علي تصميم وبناء",
+        hero_h1_part2: "منظومات ذكيه فائقة الأداء والأنتاجيه وتوفير الوقت",
         hero_tagline: "هندسة برمجيات • أنظمة ذكاء اصطناعي • أتمتة شاملة 2025",
-        hero_bio: "مساحتي الخاصة لتوثيق مشاريعي وخبرتي في تصميم وبناء المنظومات البرمجية والحلول الذكية؛ من بناء المنصات والمحررات المرئية لغاية خطوط إنتاج الميديا المؤتمتة — تجارب عملية حقيقية خطوة بخطوة، وأهلاً وسهلاً بتبادل الخبرات أو تقديم أي استشارة مجانية في أي وقت.",
+        hero_bio: "أهلاً بك، أنا عبده علي — خبير برمجيات متخصص في بناء المنظومات الذكية وأتمتة المهمات المتكرره بأحدث ادوات التكنولوجيا والذكاء الاصطناعي . مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة ؛ من المنصات الألكترونيه والتطبيقات البرمجيه , حتى خطوط إنتاج الميديا المؤتمتة بالكامل . أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.",
         hero_btn_whatsapp: "محادثة واتساب مباشرة (+20 109 251 9210)",
         hero_btn_platforms: "استكشف المنظومات الحية",
         hero_portrait_name: "عبده علي موسى",
@@ -2090,6 +2081,20 @@
     // ----------------------------------------------------
     // 4. DUAL SMARTPHONE EMULATOR (Android / iPhone)
     // ----------------------------------------------------
+    
+    function toggleViewportMode() {
+      const wrapper = document.getElementById('page-viewport-wrapper');
+      const icon = document.getElementById('viewportToggleIcon');
+      if (!wrapper) return;
+      if (wrapper.classList.contains('viewport-mobile')) {
+        wrapper.classList.remove('viewport-mobile');
+        if (icon) icon.className = 'fa-solid fa-mobile-screen text-xs text-purple-400';
+      } else {
+        wrapper.classList.add('viewport-mobile');
+        if (icon) icon.className = 'fa-solid fa-desktop text-xs text-cyan-400';
+      }
+    }
+
     function toggleMobileEmulator() {
       const modal = document.getElementById('emulator-modal');
       modal.classList.toggle('active');
