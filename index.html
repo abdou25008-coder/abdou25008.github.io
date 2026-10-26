@@ -1226,6 +1226,9 @@
     <!-- ========================================== -->
   <!-- 6. BROADCAST CONTROL ROOM & MEDIA NETWORK -->
   <!-- ========================================== -->
+    <!-- ========================================== -->
+  <!-- 6. CHANNELS MEDIA NETWORK (3 PROMINENT PILLARS) -->
+  <!-- ========================================== -->
   <section id="media-network" class="py-8 sm:py-16 relative bg-[#07070b] border-t border-white/5">
     <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
       
@@ -1241,136 +1244,321 @@
           </h2>
         </div>
         <p class="text-zinc-400 text-[11px] sm:text-xs max-w-md" data-i18n="media_sub">
-          معمارية إنتاج ونشر مؤتمتة تدير شبكة قنوات دولية متعددة المنصات عبر خطوط أنابيب الذكاء الاصطناعي وجدولة سحابية متقدمة.
+          معمارية إنتاج ونشر مؤتمتة تدير شبكة قنوات دولية متعددة المنصات (YouTube, TikTok, Instagram, Facebook) عبر خطوط أنابيب الذكاء الاصطناعي التوليدي والجدولة السحابية الدقيقة.
         </p>
       </div>
 
-      <!-- Channel Selector Tabs (Interactive Broadcast Deck) -->
-      <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
-        <button type="button" onclick="switchBroadcastChannel(0, this)" class="broadcast-tab active-b-tab p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#12121c] border-2 border-cyan-400/80 text-right transition-all flex items-center gap-2 sm:gap-3.5 group shadow-glow-cyan-sm skiper-btn">
-          <img src="assets/fathom_x_logo.jpg" alt="Fathom X" class="w-7 h-7 sm:w-10 sm:h-10 rounded-full object-cover border border-cyan-400 flex-shrink-0" />
-          <div class="min-w-0">
-            <div class="flex items-center gap-1">
-              <span class="font-bold text-white text-[11px] sm:text-sm truncate">Fathom X</span>
-              <i class="fa-solid fa-circle-check text-cyan-400 text-[9px] sm:text-[10px]"></i>
-            </div>
-            <span class="text-[8.5px] sm:text-xs text-zinc-400 font-mono block truncate">وثائقيات الأعماق</span>
-          </div>
-        </button>
-
-        <button type="button" onclick="switchBroadcastChannel(1, this)" class="broadcast-tab p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#0f0f16] border border-white/5 hover:border-white/20 text-right transition-all flex items-center gap-2 sm:gap-3.5 group opacity-75 hover:opacity-100 skiper-btn">
-          <img src="assets/smart_health_logo.jpg" alt="Smart Health USA" class="w-7 h-7 sm:w-10 sm:h-10 rounded-full object-cover border border-emerald-400/40 flex-shrink-0" />
-          <div class="min-w-0">
-            <div class="flex items-center gap-1">
-              <span class="font-bold text-white text-[11px] sm:text-sm truncate">Smart Health</span>
-              <i class="fa-solid fa-circle-check text-emerald-400 text-[9px] sm:text-[10px]"></i>
-            </div>
-            <span class="text-[8.5px] sm:text-xs text-zinc-400 font-mono block truncate">الصحة المتقدمة</span>
-          </div>
-        </button>
-
-        <button type="button" onclick="switchBroadcastChannel(2, this)" class="broadcast-tab p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#0f0f16] border border-white/5 hover:border-white/20 text-right transition-all flex items-center gap-2 sm:gap-3.5 group opacity-75 hover:opacity-100 skiper-btn">
-          <img src="assets/metalapse_logo.jpg" alt="Meta Lapse" class="w-7 h-7 sm:w-10 sm:h-10 rounded-full object-cover border border-amber-400/40 flex-shrink-0" />
-          <div class="min-w-0">
-            <div class="flex items-center gap-1">
-              <span class="font-bold text-white text-[11px] sm:text-sm truncate">Meta Lapse</span>
-              <i class="fa-solid fa-circle-check text-amber-400 text-[9px] sm:text-[10px]"></i>
-            </div>
-            <span class="text-[8.5px] sm:text-xs text-zinc-400 font-mono block truncate">السينما والـ ASMR</span>
-          </div>
-        </button>
+      <!-- Section Highlights Badges -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-4 sm:mb-7">
+        <span class="px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-solid fa-water text-cyan-400"></i> Fathom X (Deep Sea)
+        </span>
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-solid fa-heart-pulse text-emerald-400"></i> Smart Health USA
+        </span>
+        <span class="px-2.5 py-0.5 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-solid fa-gem text-amber-400"></i> Meta Lapse (Cinematic ASMR)
+        </span>
+        <span class="px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-mono text-[9px] sm:text-[10px] flex items-center gap-1">
+          <i class="fa-solid fa-bolt text-purple-400"></i> أتمتة النشر السحابي اللانهائي
+        </span>
       </div>
 
-      <!-- Live Broadcast Stage (Interactive Dynamic Frame) -->
-      <div id="broadcast-stage" class="glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 border border-white/10 relative overflow-hidden shadow-card-lux">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center">
-          
-          <!-- Channel Cover & Live Equalizer Visual -->
-          <div class="md:col-span-5 relative">
-            <div class="aspect-square w-full max-w-xs mx-auto rounded-xl sm:rounded-2xl bg-[#08080c] border border-white/10 overflow-hidden relative shadow-lg flex items-center justify-center">
-              <img 
-                id="b-cover-img"
-                src="assets/fathom_x_cover_branded.jpg" 
-                alt="Channel Featured Production" 
-                class="w-full h-full object-cover object-center" 
-                
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20 pointer-events-none"></div>
-              
-              <!-- Simulated Audio Equalizer Bars -->
-              <div class="absolute bottom-3 left-3 flex items-end gap-1 h-5 px-2 py-1 rounded bg-black/70 backdrop-blur-md border border-white/10">
-                <span class="w-1 bg-cyan-400 animate-wave-bar h-2"></span>
-                <span class="w-1 bg-cyan-400 animate-wave-bar h-4" style="animation-delay: 0.2s"></span>
-                <span class="w-1 bg-cyan-400 animate-wave-bar h-3" style="animation-delay: 0.4s"></span>
-                <span class="w-1 bg-cyan-400 animate-wave-bar h-5" style="animation-delay: 0.1s"></span>
-                <span class="text-[8.5px] font-mono text-cyan-300 mr-1">AUDIO ON</span>
-              </div>
-
-              <!-- Live Beacon -->
-              <div class="absolute top-3 right-3 bg-red-600/90 text-white font-mono text-[9px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1.5 shadow-md">
-                <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
-                <span>ON AIR</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Channel Telemetry, Niche & Action Hub -->
-          <div class="md:col-span-7 flex flex-col justify-between text-right align-start-dir">
-            <div>
-              <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
+      <!-- 3 Prominent Channel Cards (Side by Side on Desktop & Tablets) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        
+        <!-- ============================================== -->
+        <!-- CHANNEL 1: FATHOM X                            -->
+        <!-- ============================================== -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-cyan-500/35 hover:border-cyan-500/80 transition-all flex flex-col justify-between text-right align-start-dir group shadow-glow-cyan-sm">
+          <div>
+            <!-- Channel Header / Branding Bar with Official Logo -->
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+              <div class="flex items-center gap-2.5">
+                <div class="relative">
+                  <img src="assets/fathom_x_logo.jpg" alt="Fathom X Logo" class="w-11 h-11 rounded-full object-cover border-2 border-cyan-400 shadow-md group-hover:scale-105 transition-transform" />
+                  <span class="absolute -bottom-0.5 -right-0.5 bg-blue-500 text-white w-4 h-4 rounded-full flex items-center justify-center text-[8px] border border-[#08080c] shadow" title="Verified Creator">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
                 <div>
                   <div class="flex items-center gap-1.5">
-                    <h3 id="b-title" class="text-base sm:text-xl font-bold text-white">Fathom X</h3>
-                    <span id="b-verified-badge" class="px-1.5 py-0.2 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-500/40 text-[9px] font-mono">Verified Studio</span>
+                    <h4 class="font-bold text-white text-xs sm:text-sm group-hover:text-cyan-300 transition-colors leading-tight">Fathom X</h4>
+                    <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-cyan-950/90 text-cyan-300 border border-cyan-500/40">Official</span>
                   </div>
-                  <span id="b-handle" class="text-[10px] sm:text-xs font-mono text-zinc-400 block mt-0.5">@FathomX01 // وثائقيات الأعماق السحيقة</span>
-                </div>
-                <div class="flex items-center gap-2 text-xs sm:text-sm text-zinc-300">
-                  <i class="fa-brands fa-youtube text-red-500"></i>
-                  <i class="fa-brands fa-tiktok text-white"></i>
-                  <i class="fa-brands fa-facebook text-blue-400"></i>
+                  <span class="text-[9px] font-mono text-zinc-400 block leading-tight">@FathomX01 // وثائقيات الأعماق</span>
                 </div>
               </div>
-
-              <p id="b-desc" class="text-zinc-300 text-[11px] sm:text-xs leading-relaxed mb-3.5">
-                قناة وثائقية سينمائية متخصصة في كشف أسرار كائنات أعماق البحار والمحيطات المظلمة؛ إنتاج كامل بجودة سينمائية فائقة (Omni Flash 1.1) وسيناريوهات مدققة علمياً مع تعليق صوتي وثائقي وموسيقى حصرية.
-              </p>
-
-              <!-- 3 Telemetry Metrics -->
-              <div class="grid grid-cols-3 gap-2 bg-[#0c0c14] p-2.5 rounded-xl border border-white/5 mb-3.5 text-center font-mono">
-                <div>
-                  <span id="b-stat-1" class="text-xs sm:text-sm font-bold text-cyan-400 block">+120,000</span>
-                  <span class="text-[8.5px] sm:text-[9.5px] text-zinc-400">متابع نشط</span>
-                </div>
-                <div class="border-x border-white/10">
-                  <span id="b-stat-2" class="text-xs sm:text-sm font-bold text-emerald-400 block">+10,000,000</span>
-                  <span class="text-[8.5px] sm:text-[9.5px] text-zinc-400">مشاهدة وتفاعل</span>
-                </div>
-                <div>
-                  <span id="b-stat-3" class="text-xs sm:text-sm font-bold text-purple-400 block">100% مؤتمت</span>
-                  <span class="text-[8.5px] sm:text-[9.5px] text-zinc-400">نشر سحابي مستمر</span>
-                </div>
+              <div class="flex items-center gap-1.5 text-xs text-zinc-400">
+                <i class="fa-brands fa-facebook text-blue-400"></i>
+                <i class="fa-brands fa-youtube text-red-500"></i>
+                <i class="fa-brands fa-tiktok text-white"></i>
               </div>
             </div>
 
-            <!-- Direct Channel Links Bar -->
-            <div class="pt-2 border-t border-white/10 flex flex-wrap items-center gap-2">
-              <a id="b-link-primary" href="https://www.youtube.com/@FathomX01" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs shadow-glow-cyan transition-all skiper-btn">
-                <span>زيارة القناة الرئيسية</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
-              <a href="#contact-cta" class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3.5 rounded-xl bg-[#14141e] hover:bg-[#1a1a28] text-zinc-300 hover:text-white font-bold text-xs border border-white/10 transition-all skiper-btn">
-                <i class="fa-solid fa-bolt text-cyan-400 text-xs"></i>
-                <span>طلب شبكة قنوات مخصصة</span>
-              </a>
+            <!-- Authentic 1:1 Square Cover (Official Branded Badge) -->
+            <div class="aspect-square w-full rounded-xl bg-[#08080c] border border-white/10 mb-3 overflow-hidden relative shadow-md flex items-center justify-center">
+              <img 
+                src="assets/fathom_x_cover_branded.jpg" 
+                alt="Fathom X Deep Sea Official Episode Cover" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                loading="lazy" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none"></div>
+              
+              <div class="absolute top-2.5 left-2.5 bg-cyan-950/90 border border-cyan-500/40 text-cyan-300 px-2 py-0.5 rounded-full text-[8.5px] font-mono flex items-center gap-1 shadow-sm backdrop-blur-md">
+                <i class="fa-solid fa-water text-[8px] text-cyan-400"></i>
+                <span>الغلاف الرسمي المعتمد</span>
+              </div>
+
+              <div class="absolute top-2.5 right-2.5 bg-black/80 border border-white/10 text-cyan-300 px-2 py-0.5 rounded-full text-[8.5px] font-mono backdrop-blur-md">
+                <span>00:59 // 4K 9:16</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-11 h-11 rounded-full bg-cyan-500/20 border border-cyan-400/50 backdrop-blur-md flex items-center justify-center text-cyan-300 shadow-lg group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-black transition-all">
+                  <i class="fa-solid fa-play text-xs mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-2.5 right-2.5 left-2.5 text-right">
+                <div class="flex items-center gap-1.5 justify-between">
+                  <span class="text-[8.5px] font-mono bg-cyan-950/90 text-cyan-300 border border-cyan-500/40 px-2 py-0.5 rounded">MiniMax-H3 + Imagen 3</span>
+                  <span class="text-[8.5px] font-mono text-zinc-400">Shorts + Reels Auto-Push</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-[9.5px] font-mono mb-1.5">
+              <i class="fa-solid fa-film text-cyan-400 text-[10px]"></i>
+              <span>وثائقيات الغموض وأعماق المحيطات</span>
+            </div>
+            
+            <h4 class="font-bold text-white text-xs sm:text-sm mb-1 leading-snug group-hover:text-cyan-300 transition-colors">
+              مشروع وقناة Fathom X العالمية
+            </h4>
+            
+            <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+              منظومة إنتاج وثائقيات سينمائية فائقة الغموض لأعماق المحيطات والمخلوقات النادرة والكوارث البحرية الغارقة؛ مبنية بخوارزميات تحريك الفيديو المتتالي دون استوك، مع هندسة صوتية واقعية لمحاكاة أجهزة الغوص.
+            </p>
+
+            <div class="space-y-1 mb-3 text-[9.5px] font-mono text-zinc-400 bg-black/40 p-2 rounded-lg border border-white/5">
+              <div class="flex items-center justify-between">
+                <span>توزيع سحابي تلقائي:</span>
+                <span class="text-cyan-300 font-bold">Buffer 4-Channel Push</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>المحتوى المنجز:</span>
+                <span class="text-emerald-400 font-bold">+50 حلقة وثائقية متكاملة</span>
+              </div>
             </div>
           </div>
 
+          <div class="pt-2 border-t border-white/10 flex items-center gap-1.5 w-full">
+            <a href="https://www.facebook.com/FathomX01/" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-cyan-600/90 hover:bg-cyan-500 text-white font-bold text-xs shadow-glow-cyan transition-all touch-press skiper-btn">
+              <i class="fa-brands fa-facebook-f text-xs"></i>
+              <span>زيارة صفحة القناة (@FathomX01)</span>
+            </a>
+          </div>
         </div>
-      </div>
 
+        <!-- ============================================== -->
+        <!-- CHANNEL 2: SMART HEALTH USA                    -->
+        <!-- ============================================== -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-emerald-500/35 hover:border-emerald-500/80 transition-all flex flex-col justify-between text-right align-start-dir group shadow-glow-emerald-sm">
+          <div>
+            <!-- Channel Header / Branding Bar with Official Logo -->
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+              <div class="flex items-center gap-2.5">
+                <div class="relative">
+                  <img src="assets/smart_health_logo.jpg" alt="Smart Health USA Logo" class="w-11 h-11 rounded-full object-cover border-2 border-emerald-400 shadow-md group-hover:scale-105 transition-transform" />
+                  <span class="absolute -bottom-0.5 -right-0.5 bg-blue-500 text-white w-4 h-4 rounded-full flex items-center justify-center text-[8px] border border-[#08080c] shadow" title="Verified Creator">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <h4 class="font-bold text-white text-xs sm:text-sm group-hover:text-emerald-300 transition-colors leading-tight">Smart Health USA</h4>
+                    <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-950/90 text-emerald-300 border border-emerald-500/40">Verified</span>
+                  </div>
+                  <span class="text-[9px] font-mono text-zinc-400 block leading-tight">@SmartHealthUSA // محتوى طبي عالمي</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-xs text-zinc-400">
+                <i class="fa-brands fa-youtube text-red-500"></i>
+                <i class="fa-brands fa-tiktok text-white"></i>
+                <i class="fa-brands fa-instagram text-pink-400"></i>
+              </div>
+            </div>
+
+            <!-- Authentic 1:1 Square Cover (Official Branded Badge) -->
+            <div class="aspect-square w-full rounded-xl bg-[#08080c] border border-white/10 mb-3 overflow-hidden relative shadow-md flex items-center justify-center">
+              <img 
+                src="assets/smart_health_cover_branded.jpg" 
+                alt="Smart Health USA Official Cover" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                loading="lazy" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none"></div>
+              
+              <div class="absolute top-2.5 left-2.5 bg-emerald-950/90 border border-emerald-500/40 text-emerald-300 px-2 py-0.5 rounded-full text-[8.5px] font-mono flex items-center gap-1 shadow-sm backdrop-blur-md">
+                <i class="fa-solid fa-heart-pulse text-[8px] text-emerald-400"></i>
+                <span>الغلاف البصري المعتمد</span>
+              </div>
+
+              <div class="absolute top-2.5 right-2.5 bg-black/80 border border-white/10 text-emerald-300 px-2 py-0.5 rounded-full text-[8.5px] font-mono backdrop-blur-md">
+                <span>4K Medical 3D</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-11 h-11 rounded-full bg-emerald-500/20 border border-emerald-400/50 backdrop-blur-md flex items-center justify-center text-emerald-300 shadow-lg group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+                  <i class="fa-solid fa-play text-xs mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-2.5 right-2.5 left-2.5 text-right">
+                <div class="flex items-center gap-1.5 justify-between">
+                  <span class="text-[8.5px] font-mono bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded">MedVision + Imagen 3</span>
+                  <span class="text-[8.5px] font-mono text-zinc-400">Shorts + 4:5 Carousels</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-[9.5px] font-mono mb-1.5">
+              <i class="fa-solid fa-shield-halved text-emerald-400 text-[10px]"></i>
+              <span>محتوى طبي وتوعوي عالمي</span>
+            </div>
+            
+            <h4 class="font-bold text-white text-xs sm:text-sm mb-1 leading-snug group-hover:text-emerald-300 transition-colors">
+              قناة ومنظومة Smart Health USA
+            </h4>
+            
+            <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+              شبكة محتوى طبي دولي موجه للجمهور الأمريكي والعالمي؛ تشمل إنتاج مقاطع الشورتس ثلاثية الأبعاد لشخصيات وأجهزة الجسم، وباقات الكاروسيل الطبية بنسبة 4:5 الأكثر تفاعلاً، مع ربط مباشر بـ YouTube Shorts وTikTok.
+            </p>
+
+            <div class="space-y-1 mb-3 text-[9.5px] font-mono text-zinc-400 bg-black/40 p-2 rounded-lg border border-white/5">
+              <div class="flex items-center justify-between">
+                <span>نموذج التوليد البصري:</span>
+                <span class="text-emerald-300 font-bold">Zero-Watermark 4K Medical</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>الربط والجدولة:</span>
+                <span class="text-emerald-400 font-bold">YouTube API + Buffer Live</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-white/10 flex items-center gap-1.5 w-full">
+            <a href="https://wa.me/201092519210?text=استعراض%20نماذج%20وحلقات%20Smart%20Health%20USA" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-xs shadow-glow-emerald transition-all touch-press skiper-btn">
+              <i class="fa-brands fa-youtube text-xs"></i>
+              <span>استعراض أعمال القناة الرسمية</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- CHANNEL 3: META LAPSE                          -->
+        <!-- ============================================== -->
+        <div class="glass-panel vengeance-beam-card animmaster-spotlight rounded-2xl p-4 sm:p-5 border border-amber-500/35 hover:border-amber-500/80 transition-all flex flex-col justify-between text-right align-start-dir group shadow-glow-amber-sm">
+          <div>
+            <!-- Channel Header / Branding Bar with Official Logo -->
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+              <div class="flex items-center gap-2.5">
+                <div class="relative">
+                  <img src="assets/meta_lapse_logo.jpg" alt="Meta Lapse Logo" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow-md group-hover:scale-105 transition-transform" />
+                  <span class="absolute -bottom-0.5 -right-0.5 bg-blue-500 text-white w-4 h-4 rounded-full flex items-center justify-center text-[8px] border border-[#08080c] shadow" title="Verified Creator">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <h4 class="font-bold text-white text-xs sm:text-sm group-hover:text-amber-300 transition-colors leading-tight">Meta Lapse</h4>
+                    <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-950/90 text-amber-300 border border-amber-500/40">Verified</span>
+                  </div>
+                  <span class="text-[9px] font-mono text-zinc-400 block leading-tight">@MetaLapse // صناعة وفنون ASMR</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-xs text-zinc-400">
+                <i class="fa-brands fa-youtube text-red-500"></i>
+                <i class="fa-brands fa-tiktok text-white"></i>
+                <i class="fa-brands fa-instagram text-pink-400"></i>
+              </div>
+            </div>
+
+            <!-- Authentic 1:1 Square Cover (Official Branded Badge) -->
+            <div class="aspect-square w-full rounded-xl bg-[#08080c] border border-white/10 mb-3 overflow-hidden relative shadow-md flex items-center justify-center">
+              <img 
+                src="assets/metalapse_cover_branded.jpg" 
+                alt="Meta Lapse ASMR Official Episode Cover" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700" 
+                loading="lazy" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none"></div>
+              
+              <div class="absolute top-2.5 left-2.5 bg-amber-950/90 border border-amber-500/40 text-amber-300 px-2 py-0.5 rounded-full text-[8.5px] font-mono flex items-center gap-1 shadow-sm backdrop-blur-md">
+                <i class="fa-solid fa-gem text-[8px] text-amber-400"></i>
+                <span>الغلاف الفني المعتمد</span>
+              </div>
+
+              <div class="absolute top-2.5 right-2.5 bg-black/80 border border-white/10 text-amber-300 px-2 py-0.5 rounded-full text-[8.5px] font-mono backdrop-blur-md">
+                <span>Ultra ASMR 4K</span>
+              </div>
+
+              <!-- Animated Play Icon Indicator -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-11 h-11 rounded-full bg-amber-500/20 border border-amber-400/50 backdrop-blur-md flex items-center justify-center text-amber-300 shadow-lg group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition-all">
+                  <i class="fa-solid fa-play text-xs mr-0.5"></i>
+                </div>
+              </div>
+
+              <div class="absolute bottom-2.5 right-2.5 left-2.5 text-right">
+                <div class="flex items-center gap-1.5 justify-between">
+                  <span class="text-[8.5px] font-mono bg-amber-950/90 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded">Time-Lapse Engine</span>
+                  <span class="text-[8.5px] font-mono text-zinc-400">75 Days Cloud Queue</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-amber-950/60 border border-amber-500/30 text-amber-300 text-[9.5px] font-mono mb-1.5">
+              <i class="fa-solid fa-bolt text-amber-400 text-[10px]"></i>
+              <span>محتوى فيرال ASMR سينمائي</span>
+            </div>
+            
+            <h4 class="font-bold text-white text-xs sm:text-sm mb-1 leading-snug group-hover:text-amber-300 transition-colors">
+              مشروع وقناة Meta Lapse ASMR
+            </h4>
+            
+            <p class="text-zinc-300 text-[10.5px] sm:text-xs leading-relaxed mb-3">
+              منظومة إنتاج بصري فائقة الدقة ترصد عوالم الطبيعة والحياة الدقيقة بتقنية التصوير الزمني الفائق (Time-Lapse) الممزوج بأصوات الـ ASMR المريحة للأعصاب، مجدولة ومُدارة بالكامل عبر خوادمنا السحابية.
+            </p>
+
+            <div class="space-y-1 mb-3 text-[9.5px] font-mono text-zinc-400 bg-black/40 p-2 rounded-lg border border-white/5">
+              <div class="flex items-center justify-between">
+                <span>نموذج التوليد الحركي:</span>
+                <span class="text-amber-300 font-bold">Stable Video XL + ComfyUI</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>أتمتة إنستغرام وتيك توك:</span>
+                <span class="text-emerald-400 font-bold">Meta Graph API 75 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-white/10 flex items-center gap-1.5 w-full">
+            <a href="https://wa.me/201092519210?text=استعراض%20نماذج%20وحلقات%20Meta%20Lapse" target="_blank" rel="noopener noreferrer" onclick="triggerHaptic()" class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-amber-600/90 hover:bg-amber-500 text-white font-bold text-xs shadow-glow-amber transition-all touch-press skiper-btn">
+              <i class="fa-brands fa-instagram text-xs"></i>
+              <span>استعراض أعمال القناة (@MetaLapse)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+
 
 
 
