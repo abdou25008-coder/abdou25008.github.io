@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facet — Designed in glass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #050507;
+      color: #fff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    #webgl-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: block;
+    }
+
+    /* DOM Homography Text Layer */
+    #dom-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+      transform-origin: 0 0;
+      will-change: transform, opacity;
+    }
+    .interactive-element {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    ::selection {
+      background: rgba(30, 100, 255, 0.4);
+      color: #fff;
+    }
+
+    /* Definitions View (Revealed on Shatter) */
+    #definitions-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+      pointer-events: none;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-direction: column;
+    }
+    #definitions-overlay.active {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .def-column {
+      position: absolute;
+      left: 32.4vw;
+      width: 33.9vw;
+      top: 26vh;
+      display: flex;
+      flex-direction: column;
+      gap: 1.05vw;
+    }
+    .def-title {
+      font-size: 1.36vw;
+      font-weight: 650;
+      letter-spacing: -0.022em;
+      color: #ffffff;
+      margin-bottom: 0.6vw;
+      line-height: 1.2;
+    }
+    .def-paragraph {
+      font-size: 0.73vw;
+      line-height: 1.72;
+      color: rgba(255, 255, 255, 0.6);
+      user-select: text;
+      -webkit-user-select: text;
+    }
+    .def-paragraph strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* Fallback for no-WebGL / reduced motion */
+    #fallback-view {
+      display: none;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #fallback-view { display: block; }
+      #webgl-canvas, #dom-layer { display: none; }
+    }
+  </style>
+
+  <!-- Three.js 0.169.0 from jsDelivr via Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="webgl-canvas"></canvas>
+
+  <div id="dom-layer">
+    <div id="hit-open-studio" class="interactive-element" style="position:absolute;" title="Open studio"></div>
+    <div id="hit-read-paper" class="interactive-element" style="position:absolute;" title="Read paper →"></div>
+    <div id="hit-back-sliver" class="interactive-element" style="position:absolute; display:none;" title="← Back"></div>
+    <div id="hit-nav-brand" class="interactive-element" style="position:absolute;" title="Facet"></div>
+    <div id="hit-nav-studio" class="interactive-element" style="position:absolute;"></div>
+    <div id="hit-nav-materials" class="interactive-element" style="position:absolute;"></div>
+    <div id="hit-nav-pricing" class="interactive-element" style="position:absolute;"></div>
+    <div id="hit-nav-signin" class="interactive-element" style="position:absolute;"></div>
+  </div>
+
+  <div id="definitions-overlay">
+    <div id="btn-back-sliver" class="interactive-element" style="position:absolute; left:14.7vw; top:16.9vh; width:14vw; height:11vh; cursor:pointer;" title="← Back"></div>
+    <div class="def-column">
+      <h2 class="def-title">Real-time glass, in five terms.</h2>
+      
+      <p class="def-paragraph">
+        <strong>Iridescence</strong> — Wave interference within microscopic thin films generates fluid chromatic shifts that shimmer across the obsidian surface as viewing angles tilt toward incident illumination.
+      </p>
+
+      <p class="def-paragraph">
+        <strong>Index of refraction</strong> — Governs Snell's law boundary bending, determining how light decelerates upon entering the dense smoked glass matrix and how sharply glancing rays reflect off polished bevels.
+      </p>
+
+      <p class="def-paragraph">
+        <strong>Dispersion</strong> — Spectral separation of polychromatic light into constituent wavelengths, splitting specular highlights into subtle prismatic fringing across high-curvature rounded contours.
+      </p>
+
+      <p class="def-paragraph">
+        <strong>Transmission</strong> — The selective absorption and volumetric transit of photons through the physical medium, rendering deep smoky charcoal tones that soften internal refractions.
+      </p>
+
+      <p class="def-paragraph">
+        <strong>Roughness</strong> — Microfacet distribution across the outer boundary layer, balancing mirror-like specular highlights against velvety diffuse light scattering on dark glass faces.
+      </p>
+    </div>
+  </div>
+
+  <div id="fallback-view">
+    <header style="margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: 600; font-size: 1.2rem;">Facet</span>
+      <nav style="display: flex; gap: 20px; font-size: 0.9rem; color: #888;">
+        <span>Studio</span>
+        <span>Materials</span>
+        <span>Pricing</span>
+      </nav>
+    </header>
+    <div style="font-size: 0.8rem; letter-spacing: 0.2em; color: #666; margin-bottom: 20px;">REAL-TIME MATERIAL STUDIO</div>
+    <h1 style="font-size: 4rem; line-height: 0.97; margin-bottom: 24px;">Designed<br>in glass.</h1>
+    <p style="color: #888; font-size: 1.2rem; max-width: 500px; line-height: 1.5; margin-bottom: 30px;">
+      Author dispersion, transmission, and refraction in the browser. Live previews, real materials.
+    </p>
+    <div style="display: flex; gap: 20px; align-items: center;">
+      <button style="padding: 12px 24px; background: #fff; color: #000; border: none; border-radius: 6px; font-weight: 500; cursor: pointer;">Open studio</button>
+      <a href="#definitions" style="color: #fff; text-decoration: none;">Read paper →</a>
+    </div>
+  </div>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+    // --------------------------------------------------------
+    // 1. SETUP & CONSTANTS
+    // --------------------------------------------------------
+    const canvas = document.getElementById('webgl-canvas');
+    const domLayer = document.getElementById('dom-layer');
+    const defOverlay = document.getElementById('definitions-overlay');
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x050507);
+
+    // Camera at FOV 30° calibrated so 1 unit = 1 CSS px at z = 0
+    const FOV = 30;
+    const camera = new THREE.PerspectiveCamera(FOV, window.innerWidth / window.innerHeight, 1, 10000);
+
+    function updateCamera() {
+      const vFovRad = (FOV * Math.PI) / 180;
+      camera.position.set(0, 0, (window.innerHeight / 2) / Math.tan(vFovRad / 2));
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    }
+    updateCamera();
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.05;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // PMREM RoomEnvironment
+    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+    pmremGenerator.compileEquirectangularShader();
+    const roomEnv = new RoomEnvironment();
+    scene.environment = pmremGenerator.fromScene(roomEnv, 0.04).texture;
+    scene.environmentIntensity = 0.42;
+
+    // Key light (soft white-blue from top-left)
+    const keyLight = new THREE.DirectionalLight(0xd8e8ff, 1.9);
+    keyLight.position.set(-600, 750, 900);
+    scene.add(keyLight);
+
+    const fillLight = new THREE.DirectionalLight(0x525670, 0.7);
+    fillLight.position.set(650, -350, 500);
+    scene.add(fillLight);
+
+    // Root Group for Global Tilt
+    const stageGroup = new THREE.Group();
+    scene.add(stageGroup);
+
+    // --------------------------------------------------------
+    // 2. LAYOUT SCALE & DIMENSIONS
+    // --------------------------------------------------------
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    let isPortrait = H > W;
+
+    let marginX, marginY, blockWidth, blockHeight, S;
+    let navHeight, gap, panelHeight, panelWidth;
+    let navTop, navBottom, panelTop, panelBottom, pLeft, pRight;
+
+    function computeDimensions() {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      isPortrait = H > W;
+
+      marginX = isPortrait ? 16 : W * 0.055;
+      marginY = isPortrait ? 16 : H * 0.085;
+      blockWidth = W - 2 * marginX;
+      blockHeight = H - 2 * marginY;
+      S = blockWidth / 1730;
+
+      navHeight = blockHeight * 0.108;
+      gap = 14 * S;
+      panelHeight = blockHeight - navHeight - gap;
+      panelWidth = blockWidth;
+
+      navTop = blockHeight / 2;
+      navBottom = navTop - navHeight;
+      panelTop = navBottom - gap;
+      panelBottom = -blockHeight / 2;
+      pLeft = -panelWidth / 2;
+      pRight = panelWidth / 2;
+    }
+    computeDimensions();
+
+    // --------------------------------------------------------
+    // 3. CURSOR & POINTER INTERACTION
+    // --------------------------------------------------------
+    const pointer = {
+      x: W / 2,
+      y: H / 2,
+      normX: 0.5,
+      normY: 0.5,
+      worldPos: new THREE.Vector3(),
+      targetWorldPos: new THREE.Vector3(),
+      inside: true,
+      glowFade: 0
+    };
+
+    let targetTiltX = 0;
+    let targetTiltY = 0;
+    let currentTiltX = 0;
+    let currentTiltY = 0;
+
+    const raycaster = new THREE.Raycaster();
+    const mouseNDC = new THREE.Vector2(-999, -999);
+
+    let isShattered = false;
+    let shatterDirection = 0; // 0: idle, 1: shattering, -1: assembling
+    let shatterTime = 0;
+    const SHATTER_DURATION = 0.72;
+
+    let hoveredInteractive = null;
+
+    // --------------------------------------------------------
+    // 4. GLASS SHADER WITH CURSOR GLOW
+    // --------------------------------------------------------
+    const cursorGlowUniforms = {
+      uPointerWorld: { value: new THREE.Vector3(0, 0, 0) },
+      uCursorGlowIntensity: { value: 0.0 },
+      uLayoutScale: { value: S }
+    };
+
+    function injectCursorGlow(shader) {
+      shader.uniforms.uPointerWorld = cursorGlowUniforms.uPointerWorld;
+      shader.uniforms.uCursorGlowIntensity = cursorGlowUniforms.uCursorGlowIntensity;
+      shader.uniforms.uLayoutScale = cursorGlowUniforms.uLayoutScale;
+
+      shader.vertexShader = `
+        varying vec3 vWorldPosition;
+      ` + shader.vertexShader;
+
+      shader.vertexShader = shader.vertexShader.replace(
+        '#include <worldpos_vertex>',
+        `
+        #include <worldpos_vertex>
+        vWorldPosition = (modelMatrix * vec4(transformed, 1.0)).xyz;
+        `
+      );
+
+      shader.fragmentShader = `
+        uniform vec3 uPointerWorld;
+        uniform float uCursorGlowIntensity;
+        uniform float uLayoutScale;
+        varying vec3 vWorldPosition;
+      ` + shader.fragmentShader;
+
+      shader.fragmentShader = shader.fragmentShader.replace(
+        '#include <dithering_fragment>',
+        `
+        #include <dithering_fragment>
+        float dCursor = length(vWorldPosition - uPointerWorld);
+        float glowSpread = 300.0 * max(uLayoutScale, 0.4);
+        float glowFactor = exp(-1.6 * pow(dCursor / glowSpread, 2.0));
+        vec3 lavender = vec3(0.42, 0.37, 0.62) * 0.16 * glowFactor * uCursorGlowIntensity;
+        gl_FragColor.rgb += lavender;
+        `
+      );
+    }
+
+    function createGlassMaterial(options = {}) {
+      const mat = new THREE.MeshPhysicalMaterial({
+        color: options.color || 0x17171b,
+        roughness: options.roughness !== undefined ? options.roughness : 0.36,
+        clearcoat: 0.7,
+        clearcoatRoughness: 0.12,
+        specularIntensity: 0.7,
+        iridescence: options.iridescence !== undefined ? options.iridescence : 0.55,
+        iridescenceIOR: 1.3,
+        iridescenceThicknessRange: [250, 650],
+        envMapIntensity: 1.0,
+        metalness: 0.04,
+        transparent: false,
+        side: THREE.DoubleSide
+      });
+
+      if (!options.noGlow) {
+        mat.onBeforeCompile = injectCursorGlow;
+      }
+      return mat;
+    }
+
+    // --------------------------------------------------------
+    // 5. 2D CANVAS CONTENT ENGINE (PAGE & NAV)
+    // --------------------------------------------------------
+    const panelCanvas = document.createElement('canvas');
+    const panelCtx = panelCanvas.getContext('2d');
+    const panelTexture = new THREE.CanvasTexture(panelCanvas);
+    panelTexture.colorSpace = THREE.SRGBColorSpace;
+    panelTexture.minFilter = THREE.LinearMipmapLinearFilter;
+    panelTexture.generateMipmaps = true;
+
+    const navCanvas = document.createElement('canvas');
+    const navCtx = navCanvas.getContext('2d');
+    const navTexture = new THREE.CanvasTexture(navCanvas);
+    navTexture.colorSpace = THREE.SRGBColorSpace;
+
+    function renderPanelCanvas() {
+      const dpr = Math.max(window.devicePixelRatio, 2.0);
+      panelCanvas.width = Math.round(panelWidth * dpr);
+      panelCanvas.height = Math.round(panelHeight * dpr);
+      panelCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      panelCtx.clearRect(0, 0, panelWidth, panelHeight);
+
+      const leftPad = 48 * S;
+
+      // Eyebrow "REAL-TIME MATERIAL STUDIO" (11·S px, tracking .2em, 38% white)
+      const eyebrowSize = 11 * S;
+      panelCtx.font = `600 ${eyebrowSize}px 'Inter', sans-serif`;
+      panelCtx.fillStyle = 'rgba(255, 255, 255, 0.38)';
+      panelCtx.letterSpacing = '0.2em';
+      panelCtx.textBaseline = 'top';
+      const eyebrowY = panelHeight * 0.135;
+      panelCtx.fillText('REAL-TIME MATERIAL STUDIO', leftPad, eyebrowY);
+
+      // Headline "Designed / in glass."
+      const headlineSize = Math.min(panelWidth * 0.078, panelHeight * 0.20);
+      panelCtx.font = `500 ${headlineSize}px 'Inter', sans-serif`;
+      panelCtx.letterSpacing = '-0.045em';
+      const headlineY = eyebrowY + eyebrowSize + 22 * S;
+      const leading = headlineSize * 0.97;
+
+      const grad = panelCtx.createLinearGradient(0, headlineY, 0, headlineY + leading * 2);
+      grad.addColorStop(0, '#dcdce0');
+      grad.addColorStop(1, '#bdbdc3');
+      panelCtx.fillStyle = grad;
+      panelCtx.fillText('Designed', leftPad, headlineY);
+      panelCtx.fillText('in glass.', leftPad, headlineY + leading);
+
+      // Subtitle
+      const subSize = Math.max(14 * S, 12);
+      panelCtx.font = `400 ${subSize}px 'Inter', sans-serif`;
+      panelCtx.letterSpacing = '0em';
+      panelCtx.fillStyle = 'rgba(255, 255, 255, 0.55)';
+      const subY = headlineY + leading * 2 + 28 * S;
+      const subLeading = subSize * 1.5;
+      panelCtx.fillText('Author dispersion, transmission, and refraction in the browser. Live', leftPad, subY);
+      panelCtx.fillText('previews, real materials.', leftPad, subY + subLeading);
+
+      // "Open studio" Light Pill Button
+      const btnW = 116 * S;
+      const btnH = 40 * S;
+      const btnX = leftPad;
+      const btnY = subY + subLeading * 2 + 34 * S;
+      const btnRadius = 6 * S;
+
+      const isBtnHover = hoveredInteractive === 'open-studio';
+      panelCtx.beginPath();
+      panelCtx.roundRect(btnX, btnY, btnW, btnH, btnRadius);
+      panelCtx.fillStyle = isBtnHover ? '#36d67e' : 'rgba(255, 255, 255, 0.95)';
+      panelCtx.fill();
+
+      panelCtx.font = `500 ${13 * S}px 'Inter', sans-serif`;
+      panelCtx.fillStyle = '#050507';
+      panelCtx.textAlign = 'center';
+      panelCtx.textBaseline = 'middle';
+      panelCtx.fillText('Open studio', btnX + btnW / 2, btnY + btnH / 2);
+
+      // "Read paper →" Link
+      const linkX = btnX + btnW + 28 * S;
+      const linkY = btnY + btnH / 2;
+      const isLinkHover = hoveredInteractive === 'read-paper';
+      panelCtx.textAlign = 'left';
+      panelCtx.font = `500 ${14 * S}px 'Inter', sans-serif`;
+      panelCtx.fillStyle = isLinkHover ? '#ffffff' : 'rgba(255, 255, 255, 0.85)';
+      panelCtx.fillText('Read paper →', linkX, linkY);
+
+      if (isLinkHover) {
+        const textMetrics = panelCtx.measureText('Read paper →');
+        panelCtx.strokeStyle = '#ffffff';
+        panelCtx.lineWidth = 1.2 * S;
+        panelCtx.beginPath();
+        panelCtx.moveTo(linkX, linkY + 9 * S);
+        panelCtx.lineTo(linkX + textMetrics.width, linkY + 9 * S);
+        panelCtx.stroke();
+      }
+
+      // Metadata Bottom Row
+      panelCtx.textAlign = 'left';
+      panelCtx.font = `400 ${11 * S}px 'Inter', sans-serif`;
+      panelCtx.fillStyle = 'rgba(255, 255, 255, 0.34)';
+      panelCtx.textBaseline = 'bottom';
+      panelCtx.fillText('© Facet Lab', leftPad, panelHeight - 24 * S);
+
+      panelCtx.textAlign = 'right';
+      panelCtx.fillText('KHR_materials_dispersion', panelWidth - 48 * S, panelHeight - 24 * S);
+
+      panelTexture.needsUpdate = true;
+    }
+
+    function renderNavCanvas() {
+      const dpr = Math.max(window.devicePixelRatio, 2.0);
+      navCanvas.width = Math.round(panelWidth * dpr);
+      navCanvas.height = Math.round(navHeight * dpr);
+      navCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      navCtx.clearRect(0, 0, panelWidth, navHeight);
+
+      const midY = navHeight / 2;
+      const padX = 32 * S;
+
+      // Mark + Facet
+      const markSize = 16 * S;
+      const isBrandHover = hoveredInteractive === 'nav-brand';
+      navCtx.fillStyle = isBrandHover ? '#ffffff' : 'rgba(255, 255, 255, 0.9)';
+      navCtx.beginPath();
+      navCtx.roundRect(padX, midY - markSize / 2, markSize, markSize, 3 * S);
+      navCtx.fill();
+
+      navCtx.font = `600 ${15 * S}px 'Inter', sans-serif`;
+      navCtx.fillStyle = isBrandHover ? '#ffffff' : 'rgba(255, 255, 255, 0.95)';
+      navCtx.textAlign = 'left';
+      navCtx.textBaseline = 'middle';
+      navCtx.fillText('Facet', padX + markSize + 10 * S, midY);
+
+      // Links: Studio · Materials · Pricing
+      navCtx.textAlign = 'center';
+      navCtx.font = `500 ${13 * S}px 'Inter', sans-serif`;
+      const isLinksHover = hoveredInteractive && hoveredInteractive.startsWith('nav-link');
+      navCtx.fillStyle = isLinksHover ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.6)';
+      navCtx.fillText('Studio  ·  Materials  ·  Pricing', panelWidth / 2, midY);
+
+      // Sign in Right
+      navCtx.textAlign = 'right';
+      const isSignHover = hoveredInteractive === 'nav-signin';
+      navCtx.fillStyle = isSignHover ? '#ffffff' : 'rgba(255, 255, 255, 0.8)';
+      navCtx.fillText('Sign in', panelWidth - padX, midY);
+
+      navTexture.needsUpdate = true;
+    }
+
+    // --------------------------------------------------------
+    // 6. ROBUST INSET & ROUNDED POLYGON GENERATOR
+    // --------------------------------------------------------
+    function buildRoundedInsetShape(rawPts, inset, radius) {
+      if (rawPts.length < 3) return new THREE.Shape();
+
+      // 1. Ensure Counter-Clockwise (CCW) Order for Three.js
+      let pts = rawPts.slice();
+      let area = 0;
+      const n = pts.length;
+      for (let i = 0; i < n; i++) {
+        const j = (i + 1) % n;
+        area += pts[i].x * pts[j].y - pts[j].x * pts[i].y;
+      }
+      if (area < 0) {
+        pts.reverse();
+      }
+
+      // 2. Inset edges by half the gap
+      const shiftedLines = [];
+      for (let i = 0; i < n; i++) {
+        const p1 = pts[i];
+        const p2 = pts[(i + 1) % n];
+        const dx = p2.x - p1.x;
+        const dy = p2.y - p1.y;
+        const len = Math.hypot(dx, dy) || 1;
+        const ux = dx / len;
+        const uy = dy / len;
+        // Inward normal for CCW polygon: (-uy, ux)
+        const nx = -uy;
+        const ny = ux;
+        shiftedLines.push({
+          sp: { x: p1.x + nx * inset, y: p1.y + ny * inset },
+          dir: { x: ux, y: uy }
+        });
+      }
+
+      // 3. Intersect adjacent shifted lines to find true inset vertices
+      const insetVerts = [];
+      for (let i = 0; i < n; i++) {
+        const prev = shiftedLines[(i - 1 + n) % n];
+        const curr = shiftedLines[i];
+
+        const det = prev.dir.x * (-curr.dir.y) - prev.dir.y * (-curr.dir.x);
+        if (Math.abs(det) < 1e-5) {
+          insetVerts.push(pts[i]);
+        } else {
+          const dx = curr.sp.x - prev.sp.x;
+          const dy = curr.sp.y - prev.sp.y;
+          const t = (dx * (-curr.dir.y) - dy * (-curr.dir.x)) / det;
+          insetVerts.push({
+            x: prev.sp.x + t * prev.dir.x,
+            y: prev.sp.y + t * prev.dir.y
+          });
+        }
+      }
+
+      // 4. Construct Rounded Contour with Arc/Bevel
+      const shape = new THREE.Shape();
+      const m = insetVerts.length;
+
+      for (let i = 0; i < m; i++) {
+        const pPrev = insetVerts[(i - 1 + m) % m];
+        const pCurr = insetVerts[i];
+        const pNext = insetVerts[(i + 1) % m];
+
+        const d1x = pPrev.x - pCurr.x;
+        const d1y = pPrev.y - pCurr.y;
+        const l1 = Math.hypot(d1x, d1y) || 1;
+
+        const d2x = pNext.x - pCurr.x;
+        const d2y = pNext.y - pCurr.y;
+        const l2 = Math.hypot(d2x, d2y) || 1;
+
+        const r = Math.min(radius, l1 * 0.42, l2 * 0.42);
+
+        const startX = pCurr.x + (d1x / l1) * r;
+        const startY = pCurr.y + (d1y / l1) * r;
+        const endX = pCurr.x + (d2x / l2) * r;
+        const endY = pCurr.y + (d2y / l2) * r;
+
+        if (i === 0) {
+          shape.moveTo(startX, startY);
+        } else {
+          shape.lineTo(startX, startY);
+        }
+        shape.quadraticCurveTo(pCurr.x, pCurr.y, endX, endY);
+      }
+      shape.closePath();
+      return shape;
+    }
+
+    // --------------------------------------------------------
+    // 7. CUT PATTERN CELLS (A, B, C, D, E) & PHYSICAL SPRINGS
+    // --------------------------------------------------------
+    class ShardSpring {
+      constructor() {
+        this.z = 0;
+        this.vz = 0;
+        this.rotX = 0;
+        this.vRotX = 0;
+        this.rotY = 0;
+        this.vRotY = 0;
+      }
+      update(targetZ, targetRotX, targetRotY, dt) {
+        const k = 170;
+        const c = 19;
+        const az = (targetZ - this.z) * k - this.vz * c;
+        this.vz += az * dt;
+        this.z += this.vz * dt;
+
+        const aRotX = (targetRotX - this.rotX) * k - this.vRotX * c;
+        this.vRotX += aRotX * dt;
+        this.rotX += this.vRotX * dt;
+
+        const aRotY = (targetRotY - this.rotY) * k - this.vRotY * c;
+        this.vRotY += aRotY * dt;
+        this.rotY += this.vRotY * dt;
+      }
+    }
+
+    const baseCutPoints = {
+      tAB: { x: 0.22, y: 0.0, ox: 0, oy: 0, period: 13.5, phase: 0.4 },
+      tBC: { x: 0.515, y: 0.0, ox: 0, oy: 0, period: 16.2, phase: 1.2 },
+      tCE: { x: 0.84, y: 0.0, ox: 0, oy: 0, period: 18.7, phase: 2.1 },
+      bAD: { x: 0.34, y: 1.0, ox: 0, oy: 0, period: 14.1, phase: 3.5 },
+      bDE: { x: 0.865, y: 1.0, ox: 0, oy: 0, period: 15.8, phase: 4.8 },
+      J0: { x: 0.385, y: 0.72, ox: 0, oy: 0, period: 11.3, phase: 0.7 },
+      J1: { x: 0.48, y: 0.62, ox: 0, oy: 0, period: 12.9, phase: 2.4 },
+      J2: { x: 0.716, y: 0.49, ox: 0, oy: 0, period: 17.4, phase: 3.9 }
+    };
+
+    function updatePointDrift(time) {
+      const pNormX = pointer.normX;
+      const pNormY = pointer.normY;
+
+      for (const [key, p] of Object.entries(baseCutPoints)) {
+        const dx = Math.sin(time / p.period + p.phase) * 0.03;
+        let dy = 0;
+        if (key.startsWith('J')) {
+          dy = Math.cos(time / (p.period * 0.9) + p.phase) * 0.05;
+        }
+
+        let currX = p.x + dx;
+        let currY = p.y + dy;
+
+        // Cursor push (within 0.6 of cursor pushed by up to 0.05)
+        const dist = Math.hypot(currX - pNormX, currY - pNormY);
+        if (dist < 0.6) {
+          const push = (1 - dist / 0.6) * 0.05;
+          const angle = Math.atan2(currY - pNormY, currX - pNormX);
+          currX += Math.cos(angle) * push;
+          currY += Math.sin(angle) * push;
+        }
+
+        currX = Math.max(0.01, Math.min(0.99, currX));
+        currY = Math.max(0.0, Math.min(1.0, currY));
+
+        p.ox = pLeft + currX * panelWidth;
+        p.oy = panelTop - currY * panelHeight;
+      }
+    }
+
+    class ShardPiece {
+      constructor(id, name, getVerticesFn) {
+        this.id = id;
+        this.name = name;
+        this.getVerticesFn = getVerticesFn;
+        this.spring = new ShardSpring();
+        this.group = new THREE.Group();
+        stageGroup.add(this.group);
+
+        this.glassMaterial = createGlassMaterial();
+        this.textMaterial = new THREE.MeshBasicMaterial({
+          map: panelTexture,
+          transparent: true,
+          depthWrite: false,
+          polygonOffset: true,
+          polygonOffsetFactor: -1,
+          polygonOffsetUnits: -1
+        });
+
+        this.glassMesh = null;
+        this.textMesh = null;
+        this.isHovered = false;
+
+        // Shatter velocities
+        this.shatterVx = (Math.random() - 0.5) * 620 * S;
+        this.shatterVy = (Math.random() * -320 - 160) * S;
+        this.shatterVz = (420 + Math.random() * 380) * S;
+        this.shatterRotAxis = new THREE.Vector3(
+          Math.random() - 0.5,
+          Math.random() - 0.5,
+          Math.random() - 0.5
+        ).normalize();
+        this.shatterTotalRot = 2.0 + Math.random() * 1.6;
+        this.stagger = id * 0.035;
+      }
+
+      rebuildGeometry() {
+        const rawVerts = this.getVerticesFn();
+        const cornerR = 20 * S;
+        const depth = 13 * S;
+        const bevel = 2.6 * S;
+        const inset = 7 * S; // 14·S gap -> 7·S half-gap inset
+
+        const shape = buildRoundedInsetShape(rawVerts, inset, cornerR);
+
+        if (this.glassMesh) {
+          this.glassMesh.geometry.dispose();
+          this.group.remove(this.glassMesh);
+        }
+        if (this.textMesh) {
+          this.textMesh.geometry.dispose();
+          this.group.remove(this.textMesh);
+        }
+
+        const extrudeSettings = {
+          steps: 1,
+          depth: depth,
+          bevelEnabled: true,
+          bevelThickness: bevel,
+          bevelSize: bevel,
+          bevelOffset: 0,
+          bevelSegments: 3
+        };
+
+        const glassGeom = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+        glassGeom.computeVertexNormals();
+
+        this.glassMesh = new THREE.Mesh(glassGeom, this.glassMaterial);
+        this.glassMesh.userData.shard = this;
+        this.group.add(this.glassMesh);
+
+        // Text Printed Surface
+        const textGeom = new THREE.ShapeGeometry(shape);
+        const posAttr = textGeom.attributes.position;
+        const uvs = new Float32Array(posAttr.count * 2);
+
+        for (let i = 0; i < posAttr.count; i++) {
+          const vx = posAttr.getX(i);
+          const vy = posAttr.getY(i);
+          // Map to original panel coordinates: u: [0..1], v: [0..1]
+          const u = (vx - pLeft) / panelWidth;
+          const v = (vy - panelBottom) / panelHeight;
+          uvs[i * 2] = u;
+          uvs[i * 2 + 1] = v;
+        }
+        textGeom.setAttribute('uv', new THREE.BufferAttribute(uvs, 2));
+
+        this.textMesh = new THREE.Mesh(textGeom, this.textMaterial);
+        this.textMesh.position.z = depth + bevel + 0.15;
+        this.group.add(this.textMesh);
+      }
+    }
+
+    const shardPieces = [];
+    let navSlabMesh = null;
+    let backSliverMesh = null;
+
+    function initShards() {
+      // Clear old
+      while (stageGroup.children.length > 0) {
+        stageGroup.remove(stageGroup.children[0]);
+      }
+      shardPieces.length = 0;
+
+      updatePointDrift(0);
+
+      const TL = () => ({ x: pLeft, y: panelTop });
+      const TR = () => ({ x: pRight, y: panelTop });
+      const BL = () => ({ x: pLeft, y: panelBottom });
+      const BR = () => ({ x: pRight, y: panelBottom });
+
+      // Cell A (Hero): TL · tAB · J0 · bAD · BL
+      const shardA = new ShardPiece(1, 'Cell A (Hero)', () => [
+        TL(),
+        { x: baseCutPoints.tAB.ox, y: baseCutPoints.tAB.oy },
+        { x: baseCutPoints.J0.ox, y: baseCutPoints.J0.oy },
+        { x: baseCutPoints.bAD.ox, y: baseCutPoints.bAD.oy },
+        BL()
+      ]);
+
+      // Cell B: tAB · tBC · J1 · J0
+      const shardB = new ShardPiece(2, 'Cell B', () => [
+        { x: baseCutPoints.tAB.ox, y: baseCutPoints.tAB.oy },
+        { x: baseCutPoints.tBC.ox, y: baseCutPoints.tBC.oy },
+        { x: baseCutPoints.J1.ox, y: baseCutPoints.J1.oy },
+        { x: baseCutPoints.J0.ox, y: baseCutPoints.J0.oy }
+      ]);
+
+      // Cell C: tBC · tCE · J2 · J1
+      const shardC = new ShardPiece(3, 'Cell C', () => [
+        { x: baseCutPoints.tBC.ox, y: baseCutPoints.tBC.oy },
+        { x: baseCutPoints.tCE.ox, y: baseCutPoints.tCE.oy },
+        { x: baseCutPoints.J2.ox, y: baseCutPoints.J2.oy },
+        { x: baseCutPoints.J1.ox, y: baseCutPoints.J1.oy }
+      ]);
+
+      // Cell D: J0 · J1 · J2 · bDE · bAD
+      const shardD = new ShardPiece(4, 'Cell D', () => [
+        { x: baseCutPoints.J0.ox, y: baseCutPoints.J0.oy },
+        { x: baseCutPoints.J1.ox, y: baseCutPoints.J1.oy },
+        { x: baseCutPoints.J2.ox, y: baseCutPoints.J2.oy },
+        { x: baseCutPoints.bDE.ox, y: baseCutPoints.bDE.oy },
+        { x: baseCutPoints.bAD.ox, y: baseCutPoints.bAD.oy }
+      ]);
+
+      // Cell E: tCE · TR · BR · bDE · J2
+      const shardE = new ShardPiece(5, 'Cell E', () => [
+        { x: baseCutPoints.tCE.ox, y: baseCutPoints.tCE.oy },
+        TR(),
+        BR(),
+        { x: baseCutPoints.bDE.ox, y: baseCutPoints.bDE.oy },
+        { x: baseCutPoints.J2.ox, y: baseCutPoints.J2.oy }
+      ]);
+
+      shardPieces.push(shardA, shardB, shardC, shardD, shardE);
+
+      // Rebuild initial shard geometries
+      for (const shard of shardPieces) {
+        shard.rebuildGeometry();
+      }
+
+      // Nav Slab
+      initNavSlab();
+
+      // Back Sliver
+      initBackSliver();
+    }
+
+    function initNavSlab() {
+      const cornerR = 20 * S;
+      const depth = 13 * S;
+      const bevel = 2.6 * S;
+
+      const pts = [
+        { x: pLeft, y: navTop },
+        { x: pRight, y: navTop },
+        { x: pRight, y: navBottom },
+        { x: pLeft, y: navBottom }
+      ];
+
+      const shape = buildRoundedInsetShape(pts, 0, cornerR);
+      const geom = new THREE.ExtrudeGeometry(shape, {
+        steps: 1,
+        depth: depth,
+        bevelEnabled: true,
+        bevelThickness: bevel,
+        bevelSize: bevel,
+        bevelSegments: 3
+      });
+
+      const navMat = createGlassMaterial();
+      navSlabMesh = new THREE.Mesh(geom, navMat);
+
+      // Text Printed Surface
+      const textGeom = new THREE.ShapeGeometry(shape);
+      const posAttr = textGeom.attributes.position;
+      const uvs = new Float32Array(posAttr.count * 2);
+
+      for (let i = 0; i < posAttr.count; i++) {
+        const vx = posAttr.getX(i);
+        const vy = posAttr.getY(i);
+        uvs[i * 2] = (vx - pLeft) / panelWidth;
+        uvs[i * 2 + 1] = (vy - navBottom) / navHeight;
+      }
+      textGeom.setAttribute('uv', new THREE.BufferAttribute(uvs, 2));
+
+      const textMat = new THREE.MeshBasicMaterial({
+        map: navTexture,
+        transparent: true,
+        depthWrite: false
+      });
+      const textMesh = new THREE.Mesh(textGeom, textMat);
+      textMesh.position.z = depth + bevel + 0.15;
+
+      const navGroup = new THREE.Group();
+      navGroup.add(navSlabMesh);
+      navGroup.add(textMesh);
+      navGroup.userData.isNav = true;
+      navGroup.userData.spring = new ShardSpring();
+
+      navSlabMesh.userData.navGroup = navGroup;
+      stageGroup.add(navGroup);
+    }
+
+    function initBackSliver() {
+      // Outline: (.147,.243) (.252,.169) (.287,.277) (.151,.258)
+      const k = W / 1918;
+      const ptsFrac = [
+        [0.147, 0.243],
+        [0.252, 0.169],
+        [0.287, 0.277],
+        [0.151, 0.258]
+      ];
+
+      const pts = ptsFrac.map(([fx, fy]) => ({
+        x: fx * W - W / 2,
+        y: (1 - fy) * H - H / 2
+      }));
+
+      const shape = buildRoundedInsetShape(pts, 0, 8 * k);
+      const geom = new THREE.ExtrudeGeometry(shape, {
+        steps: 1,
+        depth: 11 * k,
+        bevelEnabled: true,
+        bevelThickness: 2.2 * k,
+        bevelSize: 2.2 * k,
+        bevelSegments: 3
+      });
+
+      const sliverMat = createGlassMaterial({
+        iridescence: 0.35,
+        noGlow: true
+      });
+      const mesh = new THREE.Mesh(geom, sliverMat);
+
+      // Canvas for "← Back"
+      const sCanvas = document.createElement('canvas');
+      sCanvas.width = 512;
+      sCanvas.height = 256;
+      const sCtx = sCanvas.getContext('2d');
+      const sTexture = new THREE.CanvasTexture(sCanvas);
+      sTexture.colorSpace = THREE.SRGBColorSpace;
+
+      function renderSliver(isHover) {
+        sCtx.clearRect(0, 0, 512, 256);
+        sCtx.font = `500 48px 'Inter', sans-serif`;
+        sCtx.fillStyle = isHover ? '#b9abff' : '#ffffff';
+        sCtx.textAlign = 'center';
+        sCtx.textBaseline = 'middle';
+        sCtx.fillText('← Back', 256, 128);
+        sTexture.needsUpdate = true;
+      }
+      renderSliver(false);
+
+      const textGeom = new THREE.ShapeGeometry(shape);
+      const posAttr = textGeom.attributes.position;
+      const uvs = new Float32Array(posAttr.count * 2);
+      let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+      for (let i = 0; i < posAttr.count; i++) {
+        minX = Math.min(minX, posAttr.getX(i));
+        maxX = Math.max(maxX, posAttr.getX(i));
+        minY = Math.min(minY, posAttr.getY(i));
+        maxY = Math.max(maxY, posAttr.getY(i));
+      }
+      for (let i = 0; i < posAttr.count; i++) {
+        uvs[i * 2] = (posAttr.getX(i) - minX) / (maxX - minX || 1);
+        uvs[i * 2 + 1] = (posAttr.getY(i) - minY) / (maxY - minY || 1);
+      }
+      textGeom.setAttribute('uv', new THREE.BufferAttribute(uvs, 2));
+
+      const textMat = new THREE.MeshBasicMaterial({
+        map: sTexture,
+        transparent: true,
+        depthWrite: false
+      });
+      const textMesh = new THREE.Mesh(textGeom, textMat);
+      textMesh.position.z = 11 * k + 2.2 * k + 0.15;
+
+      const group = new THREE.Group();
+      group.add(mesh);
+      group.add(textMesh);
+
+      group.rotation.y = -0.16;
+      group.rotation.x = 0.08;
+      group.visible = false;
+      group.scale.set(0.001, 0.001, 0.001);
+
+      mesh.userData.isBackSliver = true;
+      mesh.userData.group = group;
+      mesh.userData.renderText = renderSliver;
+
+      scene.add(group);
+      backSliverMesh = mesh;
+    }
+
+    // --------------------------------------------------------
+    // 8. INTERACTION & DOM HOMOGRAPHY
+    // --------------------------------------------------------
+    function updateDOMHomography() {
+      const leftPad = 48 * S;
+      const eyebrowSize = 11 * S;
+      const headlineSize = Math.min(panelWidth * 0.078, panelHeight * 0.20);
+      const leading = headlineSize * 0.97;
+      const subSize = Math.max(14 * S, 12);
+      const subLeading = subSize * 1.5;
+
+      const eyebrowY = panelHeight * 0.135;
+      const headlineY = eyebrowY + eyebrowSize + 22 * S;
+      const subY = headlineY + leading * 2 + 28 * S;
+      const btnY = subY + subLeading * 2 + 34 * S;
+
+      const panelScreenX = marginX;
+      const panelScreenY = marginY + navHeight + gap;
+
+      const btnW = 116 * S;
+      const btnH = 40 * S;
+
+      const btnEl = document.getElementById('hit-open-studio');
+      btnEl.style.left = (panelScreenX + leftPad) + 'px';
+      btnEl.style.top = (panelScreenY + btnY) + 'px';
+      btnEl.style.width = btnW + 'px';
+      btnEl.style.height = btnH + 'px';
+
+      const readPaperEl = document.getElementById('hit-read-paper');
+      readPaperEl.style.left = (panelScreenX + leftPad + btnW + 28 * S) + 'px';
+      readPaperEl.style.top = (panelScreenY + btnY) + 'px';
+      readPaperEl.style.width = (140 * S) + 'px';
+      readPaperEl.style.height = btnH + 'px';
+
+      btnEl.onmouseenter = () => { hoveredInteractive = 'open-studio'; renderPanelCanvas(); };
+      btnEl.onmouseleave = () => { hoveredInteractive = null; renderPanelCanvas(); };
+      btnEl.onclick = () => { triggerShatter(); };
+
+      const backSliverEl = document.getElementById('btn-back-sliver');
+      if (backSliverEl) {
+        backSliverEl.onmouseenter = () => {
+          if (backSliverMesh && backSliverMesh.userData.renderText) backSliverMesh.userData.renderText(true);
+        };
+        backSliverEl.onmouseleave = () => {
+          if (backSliverMesh && backSliverMesh.userData.renderText) backSliverMesh.userData.renderText(false);
+        };
+        backSliverEl.onclick = () => { triggerAssemble(); };
+      }
+    }
+
+    function triggerShatter() {
+      if (shatterDirection !== 0 || isShattered) return;
+      isShattered = true;
+      shatterDirection = 1;
+      shatterTime = 0;
+      domLayer.style.display = 'none';
+
+      setTimeout(() => {
+        if (backSliverMesh && backSliverMesh.userData.group) {
+          backSliverMesh.userData.group.visible = true;
+        }
+        const backEl = document.getElementById('hit-back-sliver');
+        if (backEl) {
+          backEl.style.display = 'block';
+          domLayer.style.display = 'block';
+        }
+      }, 300);
+
+      setTimeout(() => {
+        defOverlay.classList.add('active');
+      }, 280);
+    }
+
+    function triggerAssemble() {
+      if (shatterDirection !== 0 && shatterDirection !== 1 && !isShattered) return;
+      shatterDirection = -1;
+      shatterTime = 0;
+      defOverlay.classList.remove('active');
+
+      const backEl = document.getElementById('hit-back-sliver');
+      if (backEl) backEl.style.display = 'none';
+
+      if (backSliverMesh && backSliverMesh.userData.group) {
+        backSliverMesh.userData.group.visible = false;
+        backSliverMesh.userData.group.scale.set(0.001, 0.001, 0.001);
+      }
+    }
+
+    window.addEventListener('pointermove', (e) => {
+      pointer.x = e.clientX;
+      pointer.y = e.clientY;
+      pointer.normX = e.clientX / window.innerWidth;
+      pointer.normY = e.clientY / window.innerHeight;
+      pointer.inside = true;
+
+      mouseNDC.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseNDC.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+      // Global Tilt Target: rotateY = x*7° - 1.2°, rotateX = -y*5.5° + .8°
+      const xC = (pointer.normX - 0.5) * 2;
+      const yC = (pointer.normY - 0.5) * 2;
+      targetTiltY = xC * (7 * Math.PI / 180) - (1.2 * Math.PI / 180);
+      targetTiltX = -yC * (5.5 * Math.PI / 180) + (0.8 * Math.PI / 180);
+
+      // Unproject pointer to stage z=0 plane for soft lavender cursor glow
+      const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+      raycaster.setFromCamera(mouseNDC, camera);
+      raycaster.ray.intersectPlane(plane, pointer.targetWorldPos);
+    });
+
+    window.addEventListener('pointerleave', () => {
+      pointer.inside = false;
+      targetTiltX = 0;
+      targetTiltY = 0;
+      mouseNDC.set(-999, -999);
+    });
+
+    window.addEventListener('click', () => {
+      if (isShattered && backSliverMesh) {
+        raycaster.setFromCamera(mouseNDC, camera);
+        const hits = raycaster.intersectObject(backSliverMesh, true);
+        if (hits.length > 0) {
+          triggerAssemble();
+        }
+      } else if (!isShattered) {
+        if (hoveredInteractive === 'open-studio' || hoveredInteractive === 'read-paper') {
+          triggerShatter();
+        }
+      }
+    });
+
+    // --------------------------------------------------------
+    // 9. ANIMATION LOOP & PHYSICS TICK
+    // --------------------------------------------------------
+    let lastTime = performance.now();
+    let rebuildTimer = 0;
+
+    function animate(now) {
+      window.triggerShatter = triggerShatter;
+    window.triggerAssemble = triggerAssemble;
+    Object.defineProperty(window, 'isShattered', { get: () => isShattered });
+    Object.defineProperty(window, 'shatterDirection', { get: () => shatterDirection });
+    Object.defineProperty(window, 'shatterTime', { get: () => shatterTime });
+
+    requestAnimationFrame(animate);
+
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
+      lastTime = now;
+      const timeSec = now / 1000;
+
+      // 1. Smooth Global Tilt (0.3s exponential)
+      const tiltFactor = 1 - Math.exp(-dt / 0.3);
+      currentTiltX += (targetTiltX - currentTiltX) * tiltFactor;
+      currentTiltY += (targetTiltY - currentTiltY) * tiltFactor;
+
+      if (!isShattered) {
+        stageGroup.rotation.x = currentTiltX;
+        stageGroup.rotation.y = currentTiltY;
+      }
+
+      // 2. Cursor Glow Smooth Tracking
+      pointer.worldPos.lerp(pointer.targetWorldPos, 0.25);
+      cursorGlowUniforms.uPointerWorld.value.copy(pointer.worldPos);
+
+      const targetGlow = pointer.inside ? 1.0 : 0.0;
+      pointer.glowFade += (targetGlow - pointer.glowFade) * (dt * 6.0);
+      cursorGlowUniforms.uCursorGlowIntensity.value = pointer.glowFade;
+      cursorGlowUniforms.uLayoutScale.value = S;
+
+      // 3. Cut Pattern Drift
+      updatePointDrift(timeSec);
+
+      rebuildTimer += dt;
+      if (rebuildTimer >= 1 / 45 && !isShattered && shatterDirection === 0) {
+        rebuildTimer = 0;
+        for (const shard of shardPieces) {
+          shard.rebuildGeometry();
+        }
+      }
+
+      // 4. Raycast Hover Picking
+      raycaster.setFromCamera(mouseNDC, camera);
+      let hoveredShard = null;
+      let isNavHovered = false;
+
+      if (!isShattered && shatterDirection === 0) {
+        const shardMeshes = shardPieces.map(s => s.glassMesh).filter(Boolean);
+        const hits = raycaster.intersectObjects(shardMeshes, false);
+        if (hits.length > 0) {
+          hoveredShard = hits[0].object.userData.shard;
+        }
+
+        if (navSlabMesh) {
+          const navHits = raycaster.intersectObject(navSlabMesh, false);
+          if (navHits.length > 0) isNavHovered = true;
+        }
+      }
+
+      // Shard Springs (k=170, c=19) & Visual Iridescence
+      for (const shard of shardPieces) {
+        const isHover = (shard === hoveredShard);
+        let targetZ = 0;
+        let targetRotX = 0;
+        let targetRotY = 0;
+
+        if (isHover && !isShattered && shatterDirection === 0) {
+          targetZ = 50 * S;
+          targetRotX = (pointer.normY - 0.5) * 0.48;
+          targetRotY = -(pointer.normX - 0.5) * 0.48;
+        }
+
+        if (shatterDirection === 0 && !isShattered) {
+          shard.spring.update(targetZ, targetRotX, targetRotY, dt);
+          shard.group.position.z = shard.spring.z;
+          shard.group.rotation.x = shard.spring.rotX;
+          shard.group.rotation.y = shard.spring.rotY;
+
+          // Iridescence 0.55 -> 1.0, envMapIntensity 1.0 -> 1.9
+          const targetIridescence = isHover ? 1.0 : 0.55;
+          const targetEnv = isHover ? 1.9 : 1.0;
+          shard.glassMaterial.iridescence += (targetIridescence - shard.glassMaterial.iridescence) * (dt * 8);
+          shard.glassMaterial.envMapIntensity += (targetEnv - shard.glassMaterial.envMapIntensity) * (dt * 8);
+        }
+      }
+
+      // Nav Slab Spring (32·S)
+      if (navSlabMesh && navSlabMesh.userData.navGroup && shatterDirection === 0 && !isShattered) {
+        const navGroup = navSlabMesh.userData.navGroup;
+        const targetNavZ = isNavHovered ? 32 * S : 0;
+        navGroup.userData.spring.update(targetNavZ, 0, 0, dt);
+        navGroup.position.z = navGroup.userData.spring.z;
+      }
+
+      // 5. Shatter & Reassembly Physics
+      if (shatterDirection !== 0) {
+        shatterTime += dt;
+        const rawProgress = Math.min(shatterTime / SHATTER_DURATION, 1.0);
+
+        for (let i = 0; i < shardPieces.length; i++) {
+          const shard = shardPieces[i];
+          const localProgress = Math.max(0, Math.min(1, (rawProgress - shard.stagger) / (1 - shard.stagger)));
+
+          if (shatterDirection === 1) {
+            // Fly off with ease-in cubic
+            const ease = localProgress * localProgress * localProgress;
+            shard.group.position.x = shard.shatterVx * ease;
+            shard.group.position.y = (shard.shatterVy - 950 * S * ease * 0.5) * ease;
+            shard.group.position.z = shard.shatterVz * ease;
+
+            shard.group.rotation.x = shard.shatterRotAxis.x * shard.shatterTotalRot * ease;
+            shard.group.rotation.y = shard.shatterRotAxis.y * shard.shatterTotalRot * ease;
+            shard.group.rotation.z = shard.shatterRotAxis.z * shard.shatterTotalRot * ease;
+          } else {
+            // Assemble back with ease-out-back
+            const c1 = 1.70158;
+            const c3 = c1 + 1;
+            const t = 1 - localProgress;
+            const ease = 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+
+            shard.group.position.x = shard.shatterVx * ease;
+            shard.group.position.y = (shard.shatterVy - 950 * S * ease * 0.5) * ease;
+            shard.group.position.z = shard.shatterVz * ease;
+
+            shard.group.rotation.x = shard.shatterRotAxis.x * shard.shatterTotalRot * ease;
+            shard.group.rotation.y = shard.shatterRotAxis.y * shard.shatterTotalRot * ease;
+            shard.group.rotation.z = shard.shatterRotAxis.z * shard.shatterTotalRot * ease;
+          }
+        }
+
+        // Check completion of shatter or assemble
+        if (shatterTime >= SHATTER_DURATION) {
+          if (shatterDirection === 1) {
+            shatterDirection = 0;
+            isShattered = true;
+          } else if (shatterDirection === -1) {
+            shatterDirection = 0;
+            isShattered = false;
+            domLayer.style.display = 'block';
+            for (let i = 0; i < shardPieces.length; i++) {
+              shardPieces[i].group.position.set(0, 0, 0);
+              shardPieces[i].group.rotation.set(0, 0, 0);
+            }
+            if (navSlabMesh && navSlabMesh.userData.navGroup) {
+              navSlabMesh.userData.navGroup.position.set(0, 0, 0);
+              navSlabMesh.userData.navGroup.rotation.set(0, 0, 0);
+            }
+          }
+        }
+      }
+
+      // 6. Back Sliver Idle Wobble & Hover Tip
+      if (backSliverMesh && backSliverMesh.userData.group && backSliverMesh.userData.group.visible) {
+        const bGroup = backSliverMesh.userData.group;
+        if (bGroup.scale.x < 1.0) {
+          bGroup.scale.addScalar(dt * 3.5);
+          if (bGroup.scale.x > 1.0) bGroup.scale.set(1, 1, 1);
+        }
+
+        const hits = raycaster.intersectObject(backSliverMesh, true);
+        const isSliverHover = hits.length > 0;
+        backSliverMesh.userData.renderText(isSliverHover);
+
+        const wobble = Math.sin(timeSec * 2 * Math.PI * 1.0) * 0.035;
+        bGroup.rotation.y = -0.16 + wobble + (isSliverHover ? 0.14 : 0);
+        bGroup.rotation.x = 0.08 + Math.cos(timeSec * 2 * Math.PI * 1.0) * 0.02;
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    // --------------------------------------------------------
+    // 10. RESIZE & INITIAL LOAD FLY-IN
+    // --------------------------------------------------------
+    function handleResize() {
+      computeDimensions();
+      updateCamera();
+      renderer.setSize(W, H);
+
+      renderPanelCanvas();
+      renderNavCanvas();
+      initShards();
+      updateDOMHomography();
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    // Initial setup: clean assembled state
+    renderPanelCanvas();
+    renderNavCanvas();
+    initShards();
+    updateDOMHomography();
+
+    shatterDirection = 0;
+    shatterTime = 0;
+    isShattered = false;
+    domLayer.style.display = 'block';
+
+    window.triggerShatter = triggerShatter;
+    window.triggerAssemble = triggerAssemble;
+    Object.defineProperty(window, 'isShattered', { get: () => isShattered });
+    Object.defineProperty(window, 'shatterDirection', { get: () => shatterDirection });
+    Object.defineProperty(window, 'shatterTime', { get: () => shatterTime });
+
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
