@@ -1054,7 +1054,7 @@
     }
 
     function triggerShatter() {
-      if (shatterDirection !== 0 || isShattered) return;
+      if (shatterDirection === 1 || isShattered) return;
       isShattered = true;
       shatterDirection = 1;
       shatterTime = 0;
@@ -1077,7 +1077,7 @@
     }
 
     function triggerAssemble() {
-      if (shatterDirection !== 0 && shatterDirection !== 1 && !isShattered) return;
+      if (shatterDirection === -1 || !isShattered) return;
       shatterDirection = -1;
       shatterTime = 0;
       defOverlay.classList.remove('active');
