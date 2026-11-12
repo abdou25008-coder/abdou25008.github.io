@@ -1037,6 +1037,10 @@
       btnEl.onmouseleave = () => { hoveredInteractive = null; renderPanelCanvas(); };
       btnEl.onclick = () => { triggerShatter(); };
 
+      readPaperEl.onmouseenter = () => { hoveredInteractive = 'read-paper'; renderPanelCanvas(); };
+      readPaperEl.onmouseleave = () => { hoveredInteractive = null; renderPanelCanvas(); };
+      readPaperEl.onclick = () => { triggerShatter(); };
+
       const backSliverEl = document.getElementById('btn-back-sliver');
       if (backSliverEl) {
         backSliverEl.onmouseenter = () => {
@@ -1137,13 +1141,11 @@
     let rebuildTimer = 0;
 
     function animate(now) {
-      window.triggerShatter = triggerShatter;
-    window.triggerAssemble = triggerAssemble;
-    Object.defineProperty(window, 'isShattered', { get: () => isShattered });
-    Object.defineProperty(window, 'shatterDirection', { get: () => shatterDirection });
-    Object.defineProperty(window, 'shatterTime', { get: () => shatterTime });
+      window.isShattered = isShattered;
+      window.shatterDirection = shatterDirection;
+      window.shatterTime = shatterTime;
 
-    requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
 
       const dt = Math.min((now - lastTime) / 1000, 0.1);
       lastTime = now;
@@ -1338,9 +1340,9 @@
 
     window.triggerShatter = triggerShatter;
     window.triggerAssemble = triggerAssemble;
-    Object.defineProperty(window, 'isShattered', { get: () => isShattered });
-    Object.defineProperty(window, 'shatterDirection', { get: () => shatterDirection });
-    Object.defineProperty(window, 'shatterTime', { get: () => shatterTime });
+    window.isShattered = isShattered;
+    window.shatterDirection = shatterDirection;
+    window.shatterTime = shatterTime;
 
     requestAnimationFrame(animate);
   </script>
