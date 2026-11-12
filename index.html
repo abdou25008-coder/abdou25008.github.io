@@ -6,14 +6,12 @@
   <title>عبده علي موسى | Abdou Ali Mousa - خبير المنظومات الذكية وهندسة الميديا المؤتمتة</title>
   <meta name="description" content="الموقع الرسمي للمهندس عبده علي موسى - خبير برمجيات متخصص في بناء المنظومات الذكية، أتمتة المهام، وهندسة خطوط إنتاج السوشيال ميديا المؤتمتة بالكامل." />
   
-  <!-- Theme & Mobile Web App Settings -->
   <meta name="theme-color" content="#030306" />
   <meta name="color-scheme" content="dark" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Preconnect High-Performance Arabic & Latin Fonts -->
+  <!-- Preconnect High-Performance Arabic Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900;1000&family=Tajawal:wght@300;400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,81 +28,55 @@
         extend: {
           colors: {
             obsidian: "#030306",
-            darkBase: "#07070b",
-            darkSurface: "#0d0d14",
-            cardBg: "#12121c",
-            cardBorder: "#1e1e2d",
-            cardBorderHover: "#a855f7",
+            darkBase: "#07070c",
+            darkCard: "#0f0f18",
+            darkBorder: "#1e1e2f",
             neonPurple: "#a855f7",
             vibrantPurple: "#9333ea",
             accentPurple: "#8b5cf6",
-            lightPurple: "#c084fc",
             primaryCyan: "#06b6d4",
-            lightCyan: "#38bdf8",
             emeraldBeacon: "#10b981",
             warmGold: "#f59e0b",
-            mutedText: "#94a3b8",
+            goldLight: "#fbbf24",
           },
           fontFamily: {
-            sans: ["'Tajawal'", "'Cairo'", "'Plus Jakarta Sans'", "sans-serif"],
-            heading: ["'Cairo'", "'Tajawal'", "'Plus Jakarta Sans'", "sans-serif"],
-            mono: ["'Fira Code'", "'Courier New'", "monospace"],
+            sans: ["'Tajawal'", "'Cairo'", "sans-serif"],
+            heading: ["'Cairo'", "'Tajawal'", "sans-serif"],
+            mono: ["'Fira Code'", "monospace"],
           },
           boxShadow: {
-            'glow-purple': '0 0 35px -5px rgba(168, 85, 247, 0.45)',
-            'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.45)',
+            'glow-purple': '0 0 35px -5px rgba(168, 85, 247, 0.4)',
+            'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.4)',
             'glow-emerald': '0 0 25px rgba(16, 185, 129, 0.4)',
-            'glow-gold': '0 0 30px rgba(245, 158, 11, 0.35)',
-            'card-lux': '0 20px 45px -15px rgba(0, 0, 0, 0.9)',
-            'floating-dock': '0 10px 40px -5px rgba(0, 0, 0, 0.95), 0 0 25px rgba(168, 85, 247, 0.3)',
+            'glow-gold': '0 0 35px -5px rgba(245, 158, 11, 0.35)',
+            'card-lux': '0 15px 35px -10px rgba(0, 0, 0, 0.85)',
           }
         }
       }
     }
   </script>
 
-  <!-- Three.js 0.169.0 from jsDelivr via Import Map -->
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-    }
-  }
-  </script>
-
   <style>
-    /* ====================================================
-       WORLD-CLASS OBSIDIAN GLASS & KINETIC MICRO-INTERACTIONS
-       ==================================================== */
-    :root {
-      --bg-color: #030306;
-      --card-bg: rgba(18, 18, 28, 0.75);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --primary-accent: #a855f7;
-      --cyan-accent: #06b6d4;
-    }
-
     * {
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      background-color: var(--bg-color);
+      background-color: #030306;
       color: #f1f5f9;
       font-family: 'Tajawal', 'Cairo', sans-serif;
-      overflow-x: clip;
+      overflow-x: hidden;
       margin: 0;
       padding: 0;
     }
 
     /* Ambient Subtle Studio Grid Background */
-    .studio-grid-bg {
+    .studio-bg {
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(147, 51, 234, 0.18) 0%, transparent 60%),
-        radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 15% 70%, rgba(16, 185, 129, 0.09) 0%, transparent 50%),
+        radial-gradient(circle at 50% 0%, rgba(147, 51, 234, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 90% 25%, rgba(6, 182, 212, 0.10) 0%, transparent 50%),
+        radial-gradient(circle at 10% 70%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
         linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
@@ -120,62 +92,85 @@
       0% { --beam-angle: 0deg; }
       100% { --beam-angle: 360deg; }
     }
-    .vengeance-beam-card {
+    .beam-card {
       position: relative;
       background-clip: padding-box;
       isolation: isolate;
     }
-    .vengeance-beam-card::before {
+    .beam-card::before {
       content: '';
       position: absolute;
-      inset: -1px;
+      inset: -1.5px;
       border-radius: inherit;
       padding: 1.5px;
-      background: conic-gradient(from var(--beam-angle, 0deg) at 50% 50%, transparent 60%, rgba(168, 85, 247, 0.9) 85%, rgba(56, 189, 248, 0.9) 100%);
+      background: conic-gradient(from var(--beam-angle, 0deg) at 50% 50%, transparent 60%, rgba(168, 85, 247, 0.85) 85%, rgba(6, 182, 212, 0.95) 100%);
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       pointer-events: none;
       animation: beamSpin 6s linear infinite;
-      opacity: 0.75;
+      opacity: 0.8;
       z-index: 2;
       transition: opacity 0.3s ease;
     }
-    .vengeance-beam-card:hover::before {
+    .beam-card:hover::before {
       opacity: 1;
       animation-duration: 3s;
     }
 
-    /* Glass Panels with Backdrop Blur */
+    /* Crown Jewel Gold Beam */
+    .gold-beam-card {
+      position: relative;
+      background-clip: padding-box;
+      isolation: isolate;
+    }
+    .gold-beam-card::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: conic-gradient(from var(--beam-angle, 0deg) at 50% 50%, transparent 55%, rgba(245, 158, 11, 0.9) 85%, rgba(251, 191, 36, 1) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      animation: beamSpin 5s linear infinite;
+      opacity: 0.85;
+      z-index: 2;
+    }
+
+    /* Glass Panels */
     .glass-panel {
-      background: rgba(18, 18, 28, 0.72);
+      background: rgba(15, 15, 24, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-panel:hover {
       border-color: rgba(168, 85, 247, 0.4);
+      transform: translateY(-4px);
     }
 
-    /* Crown Jewel Gold Glow for Channels */
-    .crown-jewel-card {
-      position: relative;
-      background: linear-gradient(135deg, rgba(22, 20, 36, 0.85) 0%, rgba(14, 14, 22, 0.95) 100%);
+    /* Channel Cards */
+    .channel-card {
+      background: linear-gradient(135deg, rgba(18, 16, 28, 0.85) 0%, rgba(11, 11, 18, 0.95) 100%);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(245, 158, 11, 0.1);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .crown-jewel-card:hover {
+    .channel-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(245, 158, 11, 0.8);
-      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95), 0 0 45px rgba(245, 158, 11, 0.35);
+      border-color: rgba(245, 158, 11, 0.7);
+      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95), 0 0 40px rgba(245, 158, 11, 0.25);
     }
 
-    /* High-Contrast Gradient Typography */
+    /* Gradients */
     .purple-gradient-text {
-      background: linear-gradient(135deg, #f3e8ff 0%, #c084fc 45%, #a855f7 100%);
+      background: linear-gradient(135deg, #f3e8ff 0%, #c084fc 50%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -190,15 +185,13 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* Interactive Tactile Buttons */
-    .tactile-btn {
+    .btn-tactile {
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .tactile-btn:active {
+    .btn-tactile:active {
       transform: scale(0.97);
     }
 
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 7px;
     }
@@ -212,37 +205,14 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #8b5cf6;
     }
-
-    /* WebGL Canvas Container */
-    #hero-canvas-container {
-      position: relative;
-      width: 100%;
-      height: 580px;
-      overflow: hidden;
-      border-radius: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95), 0 0 40px rgba(168, 85, 247, 0.25);
-      background-color: #050507;
-    }
-    @media (max-width: 768px) {
-      #hero-canvas-container {
-        height: 480px;
-        border-radius: 20px;
-      }
-    }
-    @media (max-width: 480px) {
-      #hero-canvas-container {
-        height: 420px;
-      }
-    }
   </style>
 </head>
-<body class="studio-grid-bg text-zinc-100 antialiased min-h-screen flex flex-col justify-between">
+<body class="studio-bg text-zinc-100 antialiased min-h-screen">
 
   <!-- ==================================================== -->
   <!-- 1. SOVEREIGN TOP NAVIGATION BAR                      -->
   <!-- ==================================================== -->
-  <header id="main-header" class="sticky top-0 z-50 w-full bg-[#030306]/85 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+  <header id="main-header" class="sticky top-0 z-50 w-full bg-[#030306]/90 backdrop-blur-xl border-b border-white/10 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
       
       <!-- Brand & Architect Title -->
@@ -261,17 +231,20 @@
       </a>
 
       <!-- Desktop Nav Tabs -->
-      <nav class="hidden lg:flex items-center gap-1.5 bg-[#0f0f18]/80 border border-white/10 rounded-full px-3 py-1.5 shadow-inner backdrop-blur-md">
+      <nav class="hidden md:flex items-center gap-1.5 bg-[#0f0f18]/80 border border-white/10 rounded-full px-3 py-1.5 shadow-inner backdrop-blur-md">
         <a href="#hero" class="px-4 py-1.5 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all" data-i18n="nav_home">الرئيسية</a>
-        <a href="#media-network" class="px-4 py-1.5 text-xs font-bold text-amber-300 hover:text-amber-200 hover:bg-amber-500/20 rounded-full transition-all flex items-center gap-1.5 border border-amber-500/30 shadow-glow-gold">
-          <i class="fa-solid fa-crown text-[11px] text-amber-400"></i>
+        
+        <!-- CROWN JEWEL CHANNELS TAB -->
+        <a href="#media-network" class="px-4 py-1.5 text-xs font-black text-amber-300 hover:text-amber-200 hover:bg-amber-500/20 rounded-full transition-all flex items-center gap-1.5 border border-amber-500/40 shadow-glow-gold">
+          <i class="fa-solid fa-crown text-[11px] text-amber-400 animate-bounce"></i>
           <span data-i18n="nav_media">شبكة القنوات الكبرى</span>
         </a>
+
         <a href="#platforms" class="px-4 py-1.5 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all" data-i18n="nav_platforms">المنظومات الحية</a>
         <a href="#services" class="px-4 py-1.5 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all" data-i18n="nav_services">الخبرات والحلول</a>
-        <a href="#terminal-section" class="px-4 py-1.5 text-xs font-bold text-cyan-300 hover:text-white hover:bg-cyan-950/60 rounded-full transition-all flex items-center gap-1.5">
+        <a href="#terminal-section" class="px-4 py-1.5 text-xs font-bold text-cyan-300 hover:text-white hover:bg-cyan-950/60 rounded-full transition-all flex items-center gap-1">
           <i class="fa-solid fa-terminal text-[10px]"></i>
-          <span>لوحة التحكم</span>
+          <span>التحكم الحي</span>
         </a>
       </nav>
 
@@ -279,13 +252,13 @@
       <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
         
         <!-- Language Switcher -->
-        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#161624] hover:bg-[#202035] border border-white/10 text-xs font-bold text-zinc-300 hover:text-white flex items-center gap-1 tactile-btn">
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#161624] hover:bg-[#202035] border border-white/10 text-xs font-bold text-zinc-300 hover:text-white flex items-center gap-1 btn-tactile">
           <i class="fa-solid fa-globe text-purple-400 text-xs"></i>
           <span id="langLabel">EN</span>
         </button>
 
         <!-- Direct WhatsApp CTA Button -->
-        <a href="https://wa.me/201092519210?text=مرحباً%20مهندس%20عبده%2C%20أرغب%20في%20استشارة%20برمجية%20وبناء%20منظومة%20ذكية" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-xs sm:text-sm shadow-glow-emerald transition-all tactile-btn">
+        <a href="https://wa.me/201092519210?text=مرحباً%20مهندس%20عبده%2C%20أرغب%20في%20استشارة%20برمجية%20وبناء%20منظومة%20ذكية" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-xs sm:text-sm shadow-glow-emerald transition-all btn-tactile">
           <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
           <span class="hidden sm:inline" data-i18n="btn_header_cta">تواصل مهني مباشر</span>
           <span class="sm:hidden">واتساب</span>
@@ -296,68 +269,108 @@
   </header>
 
   <!-- ==================================================== -->
-  <!-- 2. HERO: 3D WEBGL SMOKED GLASS HERO ENGINE           -->
+  <!-- 2. HIGH-IMPACT PRESTIGIOUS HERO SECTION              -->
   <!-- ==================================================== -->
-  <section id="hero" class="relative pt-6 sm:pt-10 pb-12 sm:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="hero" class="relative pt-8 sm:pt-16 pb-12 sm:pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- Hero Status Pill -->
-    <div class="flex items-center justify-center sm:justify-start gap-2 mb-4">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 text-xs font-mono">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        <span data-i18n="hero_pill">متاح حالياً لاستشارات المنظومات الذكية وتطوير خطوط الميديا 2026</span>
-      </div>
-    </div>
-
-    <!-- Main Headline & Subtitle -->
-    <div class="text-right align-start-dir mb-6 sm:mb-8">
-      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-3">
-        <span data-i18n="hero_h1_part1">نعمل على تصميم وبناء</span>
-        <span class="purple-gradient-text block sm:inline" data-i18n="hero_h1_part2">منظومات ذكية فائقة الأداء والإنتاجية وتوفير الوقت</span>
-      </h1>
-      <p class="text-xs sm:text-base text-zinc-300 max-w-3xl leading-relaxed" data-i18n="hero_bio">
-        أهلاً بك، أنا عبده علي — خبير برمجيات متخصص في بناء المنظومات الذكية وأتمتة المهمات المتكررة بأحدث أدوات التكنولوجيا والذكاء الاصطناعي. مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة؛ من المنصات الإلكترونية والتطبيقات البرمجية، حتى خطوط إنتاج الميديا المؤتمتة بالكامل. أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.
-      </p>
-    </div>
-
-    <!-- 3D WebGL Glass Shards Interactive Canvas -->
-    <div id="hero-canvas-container" class="relative mb-6">
-      <canvas id="webgl-hero-canvas" class="w-full h-full block"></canvas>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
       
-      <!-- Interactive Glass Canvas Controls Overlay -->
-      <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 pointer-events-auto">
-        <div class="flex items-center gap-2">
-          <button id="btnShatterHero" onclick="triggerHeroShatter()" class="px-3.5 py-1.5 rounded-lg bg-black/75 hover:bg-black/90 backdrop-blur-md border border-white/20 text-white font-mono text-xs flex items-center gap-2 tactile-btn">
-            <i class="fa-solid fa-burst text-purple-400"></i>
-            <span id="shatterHeroText">تفتيت الزجاج الثلاثي الأبعاد (Shatter 3D)</span>
-          </button>
-          <span class="hidden md:inline-flex text-[11px] font-mono text-zinc-400 bg-black/60 px-2.5 py-1 rounded-md border border-white/10">
-            حرك الفأرة لميلان وارتفاع الشظايا مع توهج اللافندر
-          </span>
+      <!-- Right Column: Powerful Value Proposition & Bio -->
+      <div class="lg:col-span-7 text-right align-start-dir">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-purple-500/30 text-purple-300 text-xs font-mono mb-4 sm:mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span data-i18n="hero_pill">متاح حالياً لاستشارات المنظومات الذكية وتطوير خطوط الميديا 2026</span>
         </div>
-        <div class="flex items-center gap-2">
-          <span class="px-2.5 py-1 rounded-md bg-purple-950/80 border border-purple-500/40 text-[10px] font-mono text-purple-200">
-            WebGL 0.169 // Smoked Glass Physics
-          </span>
+
+        <!-- H1 Monumental Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6">
+          <span data-i18n="hero_h1_part1">نعمل على تصميم وبناء</span><br />
+          <span class="purple-gradient-text" data-i18n="hero_h1_part2">منظومات ذكية فائقة الأداء</span><br />
+          <span class="cyan-gradient-text">والإنتاجية وتوفير الوقت</span>
+        </h1>
+
+        <!-- Executive Narrative Bio -->
+        <p class="text-sm sm:text-base text-zinc-300 max-w-2xl leading-relaxed mb-6 sm:mb-8 font-normal" data-i18n="hero_bio">
+          أهلاً بك، أنا عبده علي — خبير برمجيات متخصص في بناء المنظومات الذكية وأتمتة المهمات المتكررة بأحدث أدوات التكنولوجيا والذكاء الاصطناعي. مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة؛ من المنصات الإلكترونية والتطبيقات البرمجية، حتى خطوط إنتاج الميديا المؤتمتة بالكامل. أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.
+        </p>
+
+        <!-- Fast Action Buttons Group -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+          
+          <!-- Crown Jewel Media Jump Button -->
+          <a href="#media-network" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-400 text-black font-black text-sm shadow-glow-gold transition-all btn-tactile">
+            <i class="fa-solid fa-crown text-base"></i>
+            <span data-i18n="hero_btn_crown">استكشف شبكة القنوات الكبرى <span dir="ltr" class="inline-block text-xs font-mono font-bold opacity-90">(The Crown Jewel)</span></span>
+          </a>
+
+          <!-- Live Platforms Jump Button -->
+          <a href="#platforms" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#161626] hover:bg-[#202035] border border-purple-500/40 text-purple-300 font-bold text-sm shadow-glow-purple transition-all btn-tactile">
+            <i class="fa-solid fa-cube text-sm"></i>
+            <span data-i18n="hero_btn_platforms">معاينة المنظومات والتطبيقات الحية</span>
+          </a>
+
+          <!-- Direct WhatsApp Button -->
+          <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#12121e] hover:bg-[#1a1a2c] border border-white/10 text-zinc-300 hover:text-white font-medium text-sm transition-all btn-tactile">
+            <i class="fa-solid fa-comments text-emerald-400"></i>
+            <span data-i18n="hero_btn_consult">استشارة مباشرة</span>
+          </a>
+
         </div>
+
       </div>
-    </div>
 
-    <!-- Hero Fast Action Buttons -->
-    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 w-full">
-      <a href="#media-network" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-400 text-black font-black text-sm shadow-glow-gold transition-all tactile-btn">
-        <i class="fa-solid fa-crown text-base"></i>
-        <span data-i18n="hero_btn_crown">استكشف شبكة القنوات الكبرى (The Crown Jewel)</span>
-      </a>
+      <!-- Left Column: Architect Executive Profile Showcase Card -->
+      <div class="lg:col-span-5 flex justify-center">
+        
+        <div class="beam-card w-full max-w-md rounded-3xl p-6 sm:p-7 bg-[#0c0c16]/90 border border-white/10 shadow-2xl">
+          
+          <!-- Profile Image & Presence Badge -->
+          <div class="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden mb-5 border border-white/10 shadow-inner group">
+            <img src="assets/abdou_real_portrait.jpg" alt="عبده علي موسى" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c16] via-transparent to-transparent"></div>
+            
+            <!-- Verified Architect Badge -->
+            <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-purple-400/40 text-purple-200 text-xs font-mono font-bold flex items-center gap-1.5 shadow-lg">
+              <i class="fa-solid fa-certificate text-purple-400"></i>
+              <span>Verified Pro // Systems Architect</span>
+            </div>
 
-      <a href="#platforms" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#161624] hover:bg-[#202035] border border-purple-500/40 text-purple-300 font-bold text-sm shadow-glow-purple transition-all tactile-btn">
-        <i class="fa-solid fa-cube text-sm"></i>
-        <span data-i18n="hero_btn_platforms">معاينة المنظومات والتطبيقات الحية</span>
-      </a>
+            <!-- Availability Status -->
+            <div class="absolute bottom-3 right-3 left-3 flex items-center justify-between text-xs font-mono bg-black/85 backdrop-blur-md p-2.5 rounded-xl border border-white/10">
+              <span class="text-emerald-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>جاهز للتعاقد والمشاريع</span>
+              </span>
+              <span class="text-zinc-400">مصر / دولي</span>
+            </div>
+          </div>
 
-      <a href="https://wa.me/201092519210" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#12121e] hover:bg-[#1a1a2c] border border-white/10 text-zinc-300 hover:text-white font-medium text-sm transition-all tactile-btn">
-        <i class="fa-solid fa-comments text-emerald-400"></i>
-        <span data-i18n="hero_btn_consult">طلب استشارة فنية مباشرة</span>
-      </a>
+          <!-- Technical Identity Pillars -->
+          <div class="space-y-2.5 text-right font-mono text-xs">
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-black/40 border border-white/5">
+              <span class="text-zinc-400">تخصص النظم:</span>
+              <span class="text-white font-bold">Autonomous Multi-Agent AI</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-black/40 border border-white/5">
+              <span class="text-zinc-400">محركات الميديا:</span>
+              <span class="text-cyan-300 font-bold">Google Flow AI & Remotion</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-black/40 border border-white/5">
+              <span class="text-zinc-400">معالجة الصوت:</span>
+              <span class="text-purple-300 font-bold">DSP Sidechain & Samri Bed</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-black/40 border border-white/5">
+              <span class="text-zinc-400">منظومة النشر:</span>
+              <span class="text-amber-300 font-bold">YouTube API & Buffer Vault</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
   </section>
@@ -370,9 +383,9 @@
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 text-right">
         
         <!-- Metric 1: Channels -->
-        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-amber-500/25 hover:border-amber-500/60 transition-all flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-amber-500/25 flex flex-col justify-between">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono text-amber-400/90 font-bold">CHANNELS</span>
+            <span class="text-xs font-mono text-amber-400 font-bold">CHANNELS</span>
             <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-sm">
               <i class="fa-solid fa-play"></i>
             </div>
@@ -383,9 +396,9 @@
         </div>
 
         <!-- Metric 2: Views -->
-        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-cyan-500/25 hover:border-cyan-500/60 transition-all flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-cyan-500/25 flex flex-col justify-between">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono text-cyan-400/90 font-bold">IMPRESSIONS</span>
+            <span class="text-xs font-mono text-cyan-400 font-bold">IMPRESSIONS</span>
             <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-sm">
               <i class="fa-solid fa-eye"></i>
             </div>
@@ -396,9 +409,9 @@
         </div>
 
         <!-- Metric 3: Automation -->
-        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-purple-500/25 hover:border-purple-500/60 transition-all flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-purple-500/25 flex flex-col justify-between">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono text-purple-400/90 font-bold">AUTONOMOUS</span>
+            <span class="text-xs font-mono text-purple-400 font-bold">AUTONOMOUS</span>
             <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-sm">
               <i class="fa-solid fa-robot"></i>
             </div>
@@ -409,9 +422,9 @@
         </div>
 
         <!-- Metric 4: Cloud Uptime -->
-        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-emerald-500/25 hover:border-emerald-500/60 transition-all flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-emerald-500/25 flex flex-col justify-between">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono text-emerald-400/90 font-bold">RELIABILITY</span>
+            <span class="text-xs font-mono text-emerald-400 font-bold">RELIABILITY</span>
             <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-sm">
               <i class="fa-solid fa-server"></i>
             </div>
@@ -428,13 +441,13 @@
   <!-- ==================================================== -->
   <!-- 4. CROWN JEWEL: EMPIRE MEDIA NETWORK SHOWROOM        -->
   <!-- ==================================================== -->
-  <section id="media-network" class="py-12 sm:py-20 relative bg-gradient-to-b from-[#050509] via-[#090913] to-[#050509] border-b border-white/10">
+  <section id="media-network" class="py-12 sm:py-20 relative bg-gradient-to-b from-[#050509] via-[#090915] to-[#050509] border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Crown Badge & Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 text-right align-start-dir">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 font-mono text-xs font-bold mb-2">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 font-mono text-xs font-bold mb-2.5 shadow-glow-gold">
             <i class="fa-solid fa-crown text-amber-400 text-xs"></i>
             <span data-i18n="crown_badge">شبكة الإنتاج الرقمي والقنوات الدولية // THE CROWN JEWEL</span>
           </div>
@@ -447,13 +460,13 @@
         </p>
       </div>
 
-      <!-- Channels Grid: 3 Main Channels + Scalable Expansion Card -->
+      <!-- Channels Grid: 3 Main Prominent Channels -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-10">
 
         <!-- ============================================== -->
         <!-- CHANNEL 1: FATHOM X (Deep Sea Documentaries)   -->
         <!-- ============================================== -->
-        <div class="crown-jewel-card rounded-3xl p-5 sm:p-6 border border-cyan-500/40 flex flex-col justify-between group">
+        <div class="channel-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group">
           <div>
             <!-- Channel Header & Official Logo -->
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
@@ -517,16 +530,16 @@
           <div class="pt-3 border-t border-white/10 flex items-center justify-between">
             <span class="text-[11px] font-mono text-zinc-400">المنصات الرسمية:</span>
             <div class="flex items-center gap-2">
-              <a href="https://www.youtube.com/@FathomX-1" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 flex items-center justify-center transition-all tactile-btn" title="YouTube">
+              <a href="https://www.youtube.com/@FathomX-1" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 flex items-center justify-center transition-all btn-tactile" title="YouTube">
                 <i class="fa-brands fa-youtube text-sm"></i>
               </a>
-              <a href="https://www.tiktok.com/@fathom_x" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-black text-zinc-300 hover:text-white border border-white/20 flex items-center justify-center transition-all tactile-btn" title="TikTok">
+              <a href="https://www.tiktok.com/@fathom_x" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-black text-zinc-300 hover:text-white border border-white/20 flex items-center justify-center transition-all btn-tactile" title="TikTok">
                 <i class="fa-brands fa-tiktok text-sm"></i>
               </a>
-              <a href="https://www.instagram.com/fathomx_official" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 flex items-center justify-center transition-all tactile-btn" title="Instagram">
+              <a href="https://www.instagram.com/fathomx_official" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 flex items-center justify-center transition-all btn-tactile" title="Instagram">
                 <i class="fa-brands fa-instagram text-sm"></i>
               </a>
-              <a href="https://www.facebook.com/fathomx.official" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 flex items-center justify-center transition-all tactile-btn" title="Facebook">
+              <a href="https://www.facebook.com/fathomx.official" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 flex items-center justify-center transition-all btn-tactile" title="Facebook">
                 <i class="fa-brands fa-facebook-f text-sm"></i>
               </a>
             </div>
@@ -536,7 +549,7 @@
         <!-- ============================================== -->
         <!-- CHANNEL 2: SMART HEALTH USA (Health & Science) -->
         <!-- ============================================== -->
-        <div class="crown-jewel-card rounded-3xl p-5 sm:p-6 border border-emerald-500/40 flex flex-col justify-between group">
+        <div class="channel-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group">
           <div>
             <!-- Channel Header & Official Logo -->
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
@@ -600,16 +613,16 @@
           <div class="pt-3 border-t border-white/10 flex items-center justify-between">
             <span class="text-[11px] font-mono text-zinc-400">المنصات الرسمية:</span>
             <div class="flex items-center gap-2">
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 flex items-center justify-center transition-all tactile-btn" title="YouTube">
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 flex items-center justify-center transition-all btn-tactile" title="YouTube">
                 <i class="fa-brands fa-youtube text-sm"></i>
               </a>
-              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-black text-zinc-300 hover:text-white border border-white/20 flex items-center justify-center transition-all tactile-btn" title="TikTok">
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-black text-zinc-300 hover:text-white border border-white/20 flex items-center justify-center transition-all btn-tactile" title="TikTok">
                 <i class="fa-brands fa-tiktok text-sm"></i>
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 flex items-center justify-center transition-all tactile-btn" title="Instagram">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 flex items-center justify-center transition-all btn-tactile" title="Instagram">
                 <i class="fa-brands fa-instagram text-sm"></i>
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 flex items-center justify-center transition-all tactile-btn" title="Facebook">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 flex items-center justify-center transition-all btn-tactile" title="Facebook">
                 <i class="fa-brands fa-facebook-f text-sm"></i>
               </a>
             </div>
@@ -619,7 +632,7 @@
         <!-- ============================================== -->
         <!-- CHANNEL 3: META LAPSE (Cinematic ASMR & Time)  -->
         <!-- ============================================== -->
-        <div class="crown-jewel-card rounded-3xl p-5 sm:p-6 border border-purple-500/40 flex flex-col justify-between group">
+        <div class="channel-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group">
           <div>
             <!-- Channel Header & Official Logo -->
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
@@ -683,16 +696,16 @@
           <div class="pt-3 border-t border-white/10 flex items-center justify-between">
             <span class="text-[11px] font-mono text-zinc-400">المنصات الرسمية:</span>
             <div class="flex items-center gap-2">
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 flex items-center justify-center transition-all tactile-btn" title="YouTube">
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 flex items-center justify-center transition-all btn-tactile" title="YouTube">
                 <i class="fa-brands fa-youtube text-sm"></i>
               </a>
-              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-black text-zinc-300 hover:text-white border border-white/20 flex items-center justify-center transition-all tactile-btn" title="TikTok">
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-black text-zinc-300 hover:text-white border border-white/20 flex items-center justify-center transition-all btn-tactile" title="TikTok">
                 <i class="fa-brands fa-tiktok text-sm"></i>
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 flex items-center justify-center transition-all tactile-btn" title="Instagram">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 flex items-center justify-center transition-all btn-tactile" title="Instagram">
                 <i class="fa-brands fa-instagram text-sm"></i>
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 flex items-center justify-center transition-all tactile-btn" title="Facebook">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 flex items-center justify-center transition-all btn-tactile" title="Facebook">
                 <i class="fa-brands fa-facebook-f text-sm"></i>
               </a>
             </div>
@@ -704,7 +717,7 @@
       <!-- ============================================== -->
       <!-- EXPANSION DOCK: UPCOMING CHANNELS IN THE PIPELINE -->
       <!-- ============================================== -->
-      <div class="vengeance-beam-card glass-panel rounded-3xl p-6 sm:p-8 border border-amber-500/30">
+      <div class="gold-beam-card glass-panel rounded-3xl p-6 sm:p-8 border border-amber-500/35">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="text-right">
             <div class="inline-flex items-center gap-2 text-xs font-mono font-bold text-amber-400 mb-2">
@@ -734,7 +747,7 @@
 
           <!-- Action to Launch a Channel with Abdou -->
           <div class="flex-shrink-0 w-full md:w-auto">
-            <a href="https://wa.me/201092519210?text=مرحباً%20مهندس%20عبده%2C%20أود%20بناء%20قناة%20سوشيال%20ميديا%20مؤتمتة%20بالكامل%20لشركتي" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm shadow-glow-purple transition-all tactile-btn">
+            <a href="https://wa.me/201092519210?text=مرحباً%20مهندس%20عبده%2C%20أود%20بناء%20قناة%20سوشيال%20ميديا%20مؤتمتة%20بالكامل%20لشركتي" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-300 text-black font-black text-sm shadow-glow-gold transition-all btn-tactile">
               <i class="fa-solid fa-rocket text-base"></i>
               <span>اطلب بناء وإطلاق قناة مؤتمتة لمشروعك</span>
             </a>
@@ -752,7 +765,7 @@
     
     <!-- Section Header -->
     <div class="text-right align-start-dir mb-8 sm:mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono text-xs font-bold mb-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono text-xs font-bold mb-2.5">
         <i class="fa-solid fa-cube text-purple-400"></i>
         <span data-i18n="plat_badge">المنظومات والتطبيقات البرمجية التشغيلية</span>
       </div>
@@ -768,9 +781,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
       
       <!-- Platform 1: MoneyPrinter Pro -->
-      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-purple-500/30 hover:border-purple-500/70 transition-all flex flex-col justify-between group">
+      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-purple-500/30 flex flex-col justify-between group">
         <div>
-          <div class="relative w-full h-52 sm:h-60 rounded-2xl overflow-hidden mb-5 border border-white/10 group-hover:border-purple-500/50 transition-colors cursor-pointer" onclick="openImageModal('assets/moneyprinter_pro_preview.jpg', 'MoneyPrinter Pro - Automated Viral Video Engine')">
+          <div class="relative w-full h-52 sm:h-60 rounded-2xl overflow-hidden mb-5 border border-white/10 group-hover:border-purple-500/50 transition-colors cursor-pointer" onclick="openImageModal('assets/moneyprinter_pro_preview.jpg', 'MoneyPrinter Pro - Automated Viral Video Multiplier')">
             <img src="assets/moneyprinter_pro_preview.jpg" alt="MoneyPrinter Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
             <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-purple-900/80 backdrop-blur-md text-white font-mono text-[10px] border border-purple-400/40">
@@ -794,14 +807,14 @@
         </div>
         <div class="pt-4 border-t border-white/10 flex items-center justify-between">
           <span class="text-xs font-mono text-zinc-400">الحالة: إنتاج حي نشط</span>
-          <button onclick="openImageModal('assets/moneyprinter_pro_preview.jpg', 'MoneyPrinter Pro')" class="px-3.5 py-1.5 rounded-lg bg-purple-600/20 hover:bg-purple-600 text-purple-300 hover:text-white font-bold text-xs transition-all tactile-btn">
+          <button onclick="openImageModal('assets/moneyprinter_pro_preview.jpg', 'MoneyPrinter Pro')" class="px-3.5 py-1.5 rounded-lg bg-purple-600/20 hover:bg-purple-600 text-purple-300 hover:text-white font-bold text-xs transition-all btn-tactile">
             معاينة لقطات الشاشة
           </button>
         </div>
       </div>
 
       <!-- Platform 2: Voice Studio 16-Engine -->
-      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-cyan-500/30 hover:border-cyan-500/70 transition-all flex flex-col justify-between group">
+      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-cyan-500/30 flex flex-col justify-between group">
         <div>
           <div class="relative w-full h-52 sm:h-60 rounded-2xl overflow-hidden mb-5 border border-white/10 group-hover:border-cyan-500/50 transition-colors cursor-pointer" onclick="openImageModal('assets/voice_studio_preview.jpg', 'Voice Studio - 16 TTS Engines Audio Hub')">
             <img src="assets/voice_studio_preview.jpg" alt="Voice Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -827,14 +840,14 @@
         </div>
         <div class="pt-4 border-t border-white/10 flex items-center justify-between">
           <span class="text-xs font-mono text-zinc-400">الحالة: معالجة فورية</span>
-          <button onclick="openImageModal('assets/voice_studio_preview.jpg', 'Voice Studio Pro')" class="px-3.5 py-1.5 rounded-lg bg-cyan-600/20 hover:bg-cyan-600 text-cyan-300 hover:text-white font-bold text-xs transition-all tactile-btn">
+          <button onclick="openImageModal('assets/voice_studio_preview.jpg', 'Voice Studio Pro')" class="px-3.5 py-1.5 rounded-lg bg-cyan-600/20 hover:bg-cyan-600 text-cyan-300 hover:text-white font-bold text-xs transition-all btn-tactile">
             معاينة لقطات الشاشة
           </button>
         </div>
       </div>
 
       <!-- Platform 3: TeacherOS -->
-      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-emerald-500/30 hover:border-emerald-500/70 transition-all flex flex-col justify-between group">
+      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-emerald-500/30 flex flex-col justify-between group">
         <div>
           <div class="relative w-full h-52 sm:h-60 rounded-2xl overflow-hidden mb-5 border border-white/10 group-hover:border-emerald-500/50 transition-colors cursor-pointer" onclick="openImageModal('assets/teacheros_preview.jpg', 'TeacherOS - Education Management System')">
             <img src="assets/teacheros_preview.jpg" alt="TeacherOS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -860,14 +873,14 @@
         </div>
         <div class="pt-4 border-t border-white/10 flex items-center justify-between">
           <span class="text-xs font-mono text-zinc-400">الحالة: خدمة مئات المعلمين</span>
-          <button onclick="openImageModal('assets/teacheros_preview.jpg', 'TeacherOS')" class="px-3.5 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white font-bold text-xs transition-all tactile-btn">
+          <button onclick="openImageModal('assets/teacheros_preview.jpg', 'TeacherOS')" class="px-3.5 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white font-bold text-xs transition-all btn-tactile">
             معاينة لقطات الشاشة
           </button>
         </div>
       </div>
 
       <!-- Platform 4: LogiFlow Logistics -->
-      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-amber-500/30 hover:border-amber-500/70 transition-all flex flex-col justify-between group">
+      <div class="glass-panel rounded-3xl p-5 sm:p-7 border border-amber-500/30 flex flex-col justify-between group">
         <div>
           <div class="relative w-full h-52 sm:h-60 rounded-2xl overflow-hidden mb-5 border border-white/10 group-hover:border-amber-500/50 transition-colors cursor-pointer" onclick="openImageModal('assets/logistics_preview.jpg', 'Logistics Supply Chain Engine')">
             <img src="assets/logistics_preview.jpg" alt="Logistics Engine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -893,7 +906,7 @@
         </div>
         <div class="pt-4 border-t border-white/10 flex items-center justify-between">
           <span class="text-xs font-mono text-zinc-400">الحالة: ربط فوري</span>
-          <button onclick="openImageModal('assets/logistics_preview.jpg', 'Logistics Engine')" class="px-3.5 py-1.5 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white font-bold text-xs transition-all tactile-btn">
+          <button onclick="openImageModal('assets/logistics_preview.jpg', 'Logistics Engine')" class="px-3.5 py-1.5 rounded-lg bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white font-bold text-xs transition-all btn-tactile">
             معاينة لقطات الشاشة
           </button>
         </div>
@@ -910,7 +923,7 @@
       
       <!-- Section Header -->
       <div class="text-right align-start-dir mb-8 sm:mb-12">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 font-mono text-xs font-bold mb-2">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 font-mono text-xs font-bold mb-2.5">
           <i class="fa-solid fa-code text-cyan-400"></i>
           <span>المهارات والخبرات الهندسية</span>
         </div>
@@ -926,7 +939,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         
         <!-- Pillar 1 -->
-        <div class="glass-panel rounded-2xl p-5 border border-white/10 hover:border-purple-500/50 transition-all text-right flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-5 border border-white/10 text-right flex flex-col justify-between">
           <div>
             <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg mb-4">
               <i class="fa-solid fa-brain"></i>
@@ -942,7 +955,7 @@
         </div>
 
         <!-- Pillar 2 -->
-        <div class="glass-panel rounded-2xl p-5 border border-white/10 hover:border-cyan-500/50 transition-all text-right flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-5 border border-white/10 text-right flex flex-col justify-between">
           <div>
             <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg mb-4">
               <i class="fa-solid fa-clapperboard"></i>
@@ -958,7 +971,7 @@
         </div>
 
         <!-- Pillar 3 -->
-        <div class="glass-panel rounded-2xl p-5 border border-white/10 hover:border-emerald-500/50 transition-all text-right flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-5 border border-white/10 text-right flex flex-col justify-between">
           <div>
             <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg mb-4">
               <i class="fa-solid fa-cloud"></i>
@@ -974,7 +987,7 @@
         </div>
 
         <!-- Pillar 4 -->
-        <div class="glass-panel rounded-2xl p-5 border border-white/10 hover:border-amber-500/50 transition-all text-right flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-5 border border-white/10 text-right flex flex-col justify-between">
           <div>
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg mb-4">
               <i class="fa-solid fa-chart-pie"></i>
@@ -998,7 +1011,7 @@
   <!-- 7. LIVE SYSTEM ARCHITECT TERMINAL (INTERACTIVE)      -->
   <!-- ==================================================== -->
   <section id="terminal-section" class="py-12 sm:py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="vengeance-beam-card glass-panel rounded-3xl p-6 sm:p-8 border border-white/10">
+    <div class="beam-card glass-panel rounded-3xl p-6 sm:p-8 border border-white/10">
       
       <!-- Terminal Window Bar -->
       <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10 text-xs">
@@ -1044,7 +1057,7 @@
   <!-- 8. VIP DIRECT CONTACT & CONSULTATION CARD            -->
   <!-- ==================================================== -->
   <section id="contact" class="py-12 sm:py-20 relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="crown-jewel-card rounded-3xl p-8 sm:p-12 border border-purple-500/40">
+    <div class="gold-beam-card glass-panel rounded-3xl p-8 sm:p-12 border border-purple-500/40">
       
       <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-purple-600 to-cyan-500 mx-auto flex items-center justify-center text-white text-2xl shadow-glow-purple mb-5">
         <i class="fa-solid fa-handshake"></i>
@@ -1060,12 +1073,12 @@
 
       <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-        <a href="https://wa.me/201092519210?text=مرحباً%20مهندس%20عبده%2C%20أرغب%20في%20بدء%20مشروع%20جديد" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-sm shadow-glow-emerald transition-all tactile-btn">
+        <a href="https://wa.me/201092519210?text=مرحباً%20مهندس%20عبده%2C%20أرغب%20في%20بدء%20مشروع%20جديد" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black text-sm shadow-glow-emerald transition-all btn-tactile">
           <i class="fa-brands fa-whatsapp text-lg"></i>
           <span>محادثة واتساب فورية (+20 109 251 9210)</span>
         </a>
 
-        <a href="mailto:abdou25008@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#161626] hover:bg-[#202035] border border-white/10 text-white font-bold text-sm transition-all tactile-btn">
+        <a href="mailto:abdou25008@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#161626] hover:bg-[#202035] border border-white/10 text-white font-bold text-sm transition-all btn-tactile">
           <i class="fa-solid fa-envelope text-purple-400"></i>
           <span>إرسال بريد إلكتروني</span>
         </a>
@@ -1109,45 +1122,11 @@
   </footer>
 
   <!-- ==================================================== -->
-  <!-- 10. ULTRA-SLEEK FLOATING NAVIGATION DOCK (MOBILE/DESK)-->
-  <!-- ==================================================== -->
-  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[420px] pointer-events-auto">
-    <div class="glass-panel rounded-full px-4 py-2 flex items-center justify-around shadow-floating-dock border border-purple-500/30">
-      
-      <a href="#hero" class="p-2 text-zinc-400 hover:text-white flex flex-col items-center gap-0.5 text-[10px] tactile-btn">
-        <i class="fa-solid fa-house text-sm"></i>
-        <span>الرئيسية</span>
-      </a>
-
-      <a href="#media-network" class="p-2 text-amber-400 hover:text-amber-300 flex flex-col items-center gap-0.5 text-[10px] font-bold tactile-btn">
-        <i class="fa-solid fa-crown text-sm"></i>
-        <span>القنوات</span>
-      </a>
-
-      <a href="#platforms" class="p-2 text-zinc-400 hover:text-white flex flex-col items-center gap-0.5 text-[10px] tactile-btn">
-        <i class="fa-solid fa-cube text-sm"></i>
-        <span>المنظومات</span>
-      </a>
-
-      <a href="#services" class="p-2 text-zinc-400 hover:text-white flex flex-col items-center gap-0.5 text-[10px] tactile-btn">
-        <i class="fa-solid fa-code text-sm"></i>
-        <span>الخبرات</span>
-      </a>
-
-      <a href="https://wa.me/201092519210" target="_blank" class="p-2 text-emerald-400 hover:text-emerald-300 flex flex-col items-center gap-0.5 text-[10px] font-bold tactile-btn">
-        <i class="fa-brands fa-whatsapp text-sm"></i>
-        <span>تواصل</span>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- ==================================================== -->
-  <!-- 11. IMAGE LIGHTBOX MODAL                             -->
+  <!-- 10. IMAGE LIGHTBOX MODAL                             -->
   <!-- ==================================================== -->
   <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4" onclick="closeImageModal()">
     <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeImageModal()" class="absolute -top-10 right-0 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all tactile-btn">
+      <button onclick="closeImageModal()" class="absolute -top-10 right-0 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all btn-tactile">
         <i class="fa-solid fa-xmark text-sm"></i>
       </button>
       <img id="modalImg" src="" alt="Preview" class="max-w-full max-h-[80vh] rounded-2xl border border-white/20 shadow-2xl object-contain mb-3" />
@@ -1156,241 +1135,9 @@
   </div>
 
   <!-- ==================================================== -->
-  <!-- 12. THREE.JS 3D GLASS SHARDS SCRIPT & CLIENT LOGIC   -->
-  <!-- ==================================================== -->
-  <script type="module">
-    import * as THREE from 'three';
-    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-
-    // ----------------------------------------------------
-    // THREE.JS 3D SMOKED GLASS HERO ENGINE
-    // ----------------------------------------------------
-    const container = document.getElementById('hero-canvas-container');
-    const canvas = document.getElementById('webgl-hero-canvas');
-    if (container && canvas) {
-      let width = container.clientWidth;
-      let height = container.clientHeight;
-
-      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-      renderer.setSize(width, height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.0;
-
-      const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x050507);
-
-      const pmrem = new THREE.PMREMGenerator(renderer);
-      const roomEnv = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-      scene.environment = roomEnv;
-
-      const camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 10000);
-      const targetZ = (height / 2) / Math.tan((30 * Math.PI / 180) / 2);
-      camera.position.set(0, 0, targetZ);
-
-      const keyLight = new THREE.DirectionalLight(0xe0f2fe, 1.4);
-      keyLight.position.set(-600, 800, 1000);
-      scene.add(keyLight);
-
-      const stageGroup = new THREE.Group();
-      scene.add(stageGroup);
-
-      // Glass Physical Material with Green/Violet Iridescence
-      const glassMat = new THREE.MeshPhysicalMaterial({
-        color: new THREE.Color(0x17171b),
-        roughness: 0.36,
-        clearcoat: 0.7,
-        clearcoatRoughness: 0.12,
-        specularIntensity: 0.7,
-        iridescence: 0.55,
-        iridescenceIOR: 1.3,
-        iridescenceThicknessRange: [250, 650],
-        envMapIntensity: 1.2
-      });
-
-      // 5 Glass Shards Layout (Cells A, B, C, D, E)
-      const shards = [];
-      const numShards = 5;
-      const shardColors = [0x17171b, 0x141418, 0x181820, 0x15151c, 0x191924];
-
-      const shardWidths = [width * 0.38, width * 0.32, width * 0.35, width * 0.45, width * 0.35];
-      const shardHeights = [height * 0.52, height * 0.48, height * 0.50, height * 0.44, height * 0.46];
-      const shardPositions = [
-        [-width * 0.28, height * 0.12, 0],
-        [width * 0.10, height * 0.18, 0],
-        [width * 0.34, -height * 0.05, 0],
-        [-width * 0.12, -height * 0.22, 0],
-        [width * 0.26, -height * 0.24, 0]
-      ];
-
-      for (let i = 0; i < numShards; i++) {
-        const w = shardWidths[i];
-        const h = shardHeights[i];
-        const shape = new THREE.Shape();
-        const r = 16;
-        shape.moveTo(-w/2 + r, -h/2);
-        shape.lineTo(w/2 - r, -h/2);
-        shape.quadraticCurveTo(w/2, -h/2, w/2, -h/2 + r);
-        shape.lineTo(w/2, h/2 - r);
-        shape.quadraticCurveTo(w/2, h/2, w/2 - r, h/2);
-        shape.lineTo(-w/2 + r, h/2);
-        shape.quadraticCurveTo(-w/2, h/2, -w/2, h/2 - r);
-        shape.lineTo(-w/2, -h/2 + r);
-        shape.quadraticCurveTo(-w/2, -h/2, -w/2 + r, -h/2);
-
-        const geom = new THREE.ExtrudeGeometry(shape, {
-          depth: 14,
-          bevelEnabled: true,
-          bevelSegments: 3,
-          steps: 1,
-          bevelSize: 3,
-          bevelThickness: 3
-        });
-
-        const mat = glassMat.clone();
-        mat.color.setHex(shardColors[i]);
-        const mesh = new THREE.Mesh(geom, mat);
-        
-        const group = new THREE.Group();
-        group.position.set(shardPositions[i][0], shardPositions[i][1], shardPositions[i][2]);
-        group.add(mesh);
-        stageGroup.add(group);
-
-        shards.push({
-          group,
-          mesh,
-          basePos: new THREE.Vector3().copy(group.position),
-          targetZ: 0,
-          currentZ: 0,
-          rotX: 0,
-          rotY: 0,
-          shatterVx: (Math.random() - 0.5) * 800,
-          shatterVy: (Math.random() - 0.7) * 900,
-          shatterVz: 400 + Math.random() * 450,
-          rotSpeed: (Math.random() - 0.5) * 4
-        });
-      }
-
-      // Pointer Interactivity (Tilt & Hover Lift)
-      let mouseX = 0, mouseY = 0;
-      let targetTiltX = 0, targetTiltY = 0;
-      let currentTiltX = 0, currentTiltY = 0;
-      let isHeroShattered = false;
-      let shatterProgress = 0;
-      let shatterDir = 0; // 0: idle, 1: shattering, -1: assembling
-
-      window.triggerHeroShatter = function() {
-        if (shatterDir !== 0) return;
-        if (!isHeroShattered) {
-          shatterDir = 1;
-          isHeroShattered = true;
-          document.getElementById('shatterHeroText').innerText = 'إعادة تجميع الزجاج (Reassemble)';
-        } else {
-          shatterDir = -1;
-          isHeroShattered = false;
-          document.getElementById('shatterHeroText').innerText = 'تفتيت الزجاج الثلاثي الأبعاد (Shatter 3D)';
-        }
-      };
-
-      container.addEventListener('pointermove', (e) => {
-        const rect = container.getBoundingClientRect();
-        mouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-        mouseY = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
-        targetTiltY = mouseX * 0.15;
-        targetTiltX = -mouseY * 0.12;
-
-        // Lift closest shard
-        const raycaster = new THREE.Raycaster();
-        raycaster.setFromCamera(new THREE.Vector2(mouseX, mouseY), camera);
-        for (let i = 0; i < shards.length; i++) {
-          const hits = raycaster.intersectObject(shards[i].mesh);
-          if (hits.length > 0 && !isHeroShattered) {
-            shards[i].targetZ = 45;
-            shards[i].mesh.material.envMapIntensity = 1.9;
-            shards[i].mesh.material.iridescence = 1.0;
-          } else {
-            shards[i].targetZ = 0;
-            shards[i].mesh.material.envMapIntensity = 1.2;
-            shards[i].mesh.material.iridescence = 0.55;
-          }
-        }
-      });
-
-      container.addEventListener('pointerleave', () => {
-        targetTiltX = 0;
-        targetTiltY = 0;
-        for (let i = 0; i < shards.length; i++) {
-          shards[i].targetZ = 0;
-          shards[i].mesh.material.envMapIntensity = 1.2;
-          shards[i].mesh.material.iridescence = 0.55;
-        }
-      });
-
-      // Resize Handler
-      window.addEventListener('resize', () => {
-        width = container.clientWidth;
-        height = container.clientHeight;
-        camera.aspect = width / height;
-        camera.position.z = (height / 2) / Math.tan((30 * Math.PI / 180) / 2);
-        camera.updateProjectionMatrix();
-        renderer.setSize(width, height);
-      });
-
-      // 60fps Animation Loop
-      let lastTime = performance.now();
-      function animate(now) {
-        requestAnimationFrame(animate);
-        const dt = Math.min((now - lastTime) / 1000, 0.1);
-        lastTime = now;
-
-        // Smooth Tilt
-        currentTiltX += (targetTiltX - currentTiltX) * 0.1;
-        currentTiltY += (targetTiltY - currentTiltY) * 0.1;
-        stageGroup.rotation.x = currentTiltX;
-        stageGroup.rotation.y = currentTiltY;
-
-        // Shatter & Assemble Physics
-        if (shatterDir !== 0) {
-          shatterProgress += dt * 1.5 * shatterDir;
-          if (shatterProgress >= 1.0) {
-            shatterProgress = 1.0;
-            shatterDir = 0;
-          } else if (shatterProgress <= 0.0) {
-            shatterProgress = 0.0;
-            shatterDir = 0;
-          }
-        }
-
-        // Shard Updates
-        for (let i = 0; i < shards.length; i++) {
-          const s = shards[i];
-          s.currentZ += (s.targetZ - s.currentZ) * 0.15;
-          
-          if (shatterProgress > 0) {
-            const p = shatterProgress * shatterProgress;
-            s.group.position.x = s.basePos.x + s.shatterVx * p;
-            s.group.position.y = s.basePos.y + (s.shatterVy - 400 * p) * p;
-            s.group.position.z = s.basePos.z + s.shatterVz * p;
-            s.group.rotation.x = s.rotSpeed * p * 2.5;
-            s.group.rotation.y = s.rotSpeed * p * 1.8;
-          } else {
-            s.group.position.copy(s.basePos);
-            s.group.position.z += s.currentZ;
-            s.group.rotation.set(0, 0, 0);
-          }
-        }
-
-        renderer.render(scene, camera);
-      }
-      requestAnimationFrame(animate);
-    }
-  </script>
-
-  <!-- ==================================================== -->
-  <!-- 13. UI CONTROLS & UTILITIES (BILINGUAL & MODAL)      -->
+  <!-- 11. BILINGUAL & TERMINAL SCRIPT                      -->
   <!-- ==================================================== -->
   <script>
-    // Bilingual Translation Dictionary
     const translations = {
       ar: {
         brand_name: "عبده علي موسى",
@@ -1402,11 +1149,11 @@
         btn_header_cta: "تواصل مهني مباشر",
         hero_pill: "متاح حالياً لاستشارات المنظومات الذكية وتطوير خطوط الميديا 2026",
         hero_h1_part1: "نعمل على تصميم وبناء",
-        hero_h1_part2: "منظومات ذكية فائقة الأداء والإنتاجية وتوفير الوقت",
+        hero_h1_part2: "منظومات ذكية فائقة الأداء",
         hero_bio: "أهلاً بك، أنا عبده علي — خبير برمجيات متخصص في بناء المنظومات الذكية وأتمتة المهمات المتكررة بأحدث أدوات التكنولوجيا والذكاء الاصطناعي. مساحتي هنا توثيق حي وعملي لمشروعات حقيقية صممتها ونفذتها خطوة بخطوة؛ من المنصات الإلكترونية والتطبيقات البرمجية، حتى خطوط إنتاج الميديا المؤتمتة بالكامل. أهلاً وسهلاً بتبادل الخبرات والاستشارات في أي وقت.",
         hero_btn_crown: "استكشف شبكة القنوات الكبرى (The Crown Jewel)",
         hero_btn_platforms: "معاينة المنظومات والتطبيقات الحية",
-        hero_btn_consult: "طلب استشارة فنية مباشرة",
+        hero_btn_consult: "استشارة مباشرة",
         m1_title: "قنوات ميديا دولية نشطة",
         m1_sub: "شبكة إعلامية ذكية ذاتية القيادة بالكامل",
         m2_title: "مشاهدات وتفاعل دولي",
@@ -1434,11 +1181,11 @@
         btn_header_cta: "Direct Consultation",
         hero_pill: "Available for AI Systems & Autonomous Media Engineering 2026",
         hero_h1_part1: "We Design and Engineer",
-        hero_h1_part2: "High-Performance Autonomous AI & Media Systems",
+        hero_h1_part2: "High-Performance Autonomous AI",
         hero_bio: "Welcome, I am Abdou Ali — software engineer specializing in autonomous AI architectures, process automation, and zero-touch generative media production. This space documents battle-tested production platforms and multi-channel networks built end-to-end.",
         hero_btn_crown: "Explore Flagship Media Network (Crown Jewel)",
         hero_btn_platforms: "Explore Live Software Ecosystem",
-        hero_btn_consult: "Direct Technical Consultation",
+        hero_btn_consult: "Direct Consultation",
         m1_title: "Active Global Media Channels",
         m1_sub: "Autonomous multi-platform publishing network",
         m2_title: "Global Reach & Impressions",
@@ -1474,7 +1221,6 @@
       });
     }
 
-    // Terminal Tab Switcher
     function switchTerminalTab(tab) {
       const output = document.getElementById('terminal-output');
       const tabs = ['flow', 'youtube', 'buffer'];
@@ -1514,7 +1260,6 @@
       }
     }
 
-    // Image Modal Lightbox
     function openImageModal(src, caption) {
       const modal = document.getElementById('imageModal');
       const img = document.getElementById('modalImg');
