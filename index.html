@@ -242,10 +242,6 @@
 
         <a href="#platforms" class="px-4 py-1.5 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all" data-i18n="nav_platforms">المنظومات الحية</a>
         <a href="#services" class="px-4 py-1.5 text-xs font-bold text-zinc-300 hover:text-white hover:bg-purple-950/60 rounded-full transition-all" data-i18n="nav_services">الخبرات والحلول</a>
-        <a href="#terminal-section" class="px-4 py-1.5 text-xs font-bold text-cyan-300 hover:text-white hover:bg-cyan-950/60 rounded-full transition-all flex items-center gap-1">
-          <i class="fa-solid fa-terminal text-[10px]"></i>
-          <span>التحكم الحي</span>
-        </a>
       </nav>
 
       <!-- Quick Action Group (WhatsApp + Language Switcher) -->
@@ -327,8 +323,8 @@
         <div class="beam-card w-full max-w-md rounded-3xl p-6 sm:p-7 bg-[#0c0c16]/90 border border-white/10 shadow-2xl">
           
           <!-- Profile Image & Presence Badge -->
-          <div class="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden mb-5 border border-white/10 shadow-inner group">
-            <img src="assets/abdou_real_portrait.jpg" alt="عبده علي موسى" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden mb-5 border border-white/10 shadow-inner group">
+            <img src="assets/abdou_real_portrait.jpg" alt="عبده علي موسى" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c16] via-transparent to-transparent"></div>
             
             <!-- Verified Architect Badge -->
@@ -1008,52 +1004,6 @@
   </section>
 
   <!-- ==================================================== -->
-  <!-- 7. LIVE SYSTEM ARCHITECT TERMINAL (INTERACTIVE)      -->
-  <!-- ==================================================== -->
-  <section id="terminal-section" class="py-12 sm:py-16 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="beam-card glass-panel rounded-3xl p-6 sm:p-8 border border-white/10">
-      
-      <!-- Terminal Window Bar -->
-      <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10 text-xs">
-        <div class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-          <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-          <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-          <span class="font-mono text-zinc-400 mr-2">abdou-core-engine://live-dispatcher</span>
-        </div>
-        <div class="flex items-center gap-2 font-mono text-zinc-400">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>ONLINE // 0ms LATENCY</span>
-        </div>
-      </div>
-
-      <!-- Terminal Tabs -->
-      <div class="flex items-center gap-2 mb-4 overflow-x-auto pb-1 text-xs font-mono">
-        <button onclick="switchTerminalTab('flow')" id="tab-flow" class="px-3 py-1.5 rounded-lg bg-purple-950/80 text-purple-300 border border-purple-500/40">
-          Flow AI Video Pipeline
-        </button>
-        <button onclick="switchTerminalTab('youtube')" id="tab-youtube" class="px-3 py-1.5 rounded-lg bg-black/40 text-zinc-400 hover:text-white border border-white/5">
-          YouTube Direct Dispatcher
-        </button>
-        <button onclick="switchTerminalTab('buffer')" id="tab-buffer" class="px-3 py-1.5 rounded-lg bg-black/40 text-zinc-400 hover:text-white border border-white/5">
-          Buffer Rolling Replenisher
-        </button>
-      </div>
-
-      <!-- Terminal Console Output Window -->
-      <div id="terminal-output" class="bg-[#050508] rounded-xl p-4 font-mono text-[11px] sm:text-xs text-zinc-300 leading-relaxed min-h-[160px] max-h-[220px] overflow-y-auto border border-white/5 text-left" dir="ltr">
-        <!-- Default Live Flow Logs -->
-        <div class="text-emerald-400">[SYSTEM READY] Autonomous Pipeline initialized on Drive D:\\</div>
-        <div class="text-cyan-400">[FLOW ENGINE] Verified accounts registry (Pool of 10 Google accounts active)</div>
-        <div class="text-zinc-400">[SCENE RENDER] Aspect ratio 9:16 (720x1280) @ 24fps | Duration: 10.0s</div>
-        <div class="text-purple-400">[AUDIO DSP] Sidechain ducking engaged (ratio=8.0, Samri Bed @ 1800Hz notch -5dB)</div>
-        <div class="text-emerald-400">[SUCCESS] Asset registered in dispatch intake hub. Ready for distribution.</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================================================== -->
   <!-- 8. VIP DIRECT CONTACT & CONSULTATION CARD            -->
   <!-- ==================================================== -->
   <section id="contact" class="py-12 sm:py-20 relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1221,44 +1171,7 @@
       });
     }
 
-    function switchTerminalTab(tab) {
-      const output = document.getElementById('terminal-output');
-      const tabs = ['flow', 'youtube', 'buffer'];
-      tabs.forEach(t => {
-        const el = document.getElementById('tab-' + t);
-        if (t === tab) {
-          el.className = 'px-3 py-1.5 rounded-lg bg-purple-950/80 text-purple-300 border border-purple-500/40';
-        } else {
-          el.className = 'px-3 py-1.5 rounded-lg bg-black/40 text-zinc-400 hover:text-white border border-white/5';
-        }
-      });
-
-      if (tab === 'flow') {
-        output.innerHTML = `
-          <div class="text-emerald-400">[SYSTEM READY] Autonomous Pipeline initialized on Drive D:\\</div>
-          <div class="text-cyan-400">[FLOW ENGINE] Verified accounts registry (Pool of 10 Google accounts active)</div>
-          <div class="text-zinc-400">[SCENE RENDER] Aspect ratio 9:16 (720x1280) @ 24fps | Duration: 10.0s</div>
-          <div class="text-purple-400">[AUDIO DSP] Sidechain ducking engaged (ratio=8.0, Samri Bed @ 1800Hz notch -5dB)</div>
-          <div class="text-emerald-400">[SUCCESS] Asset registered in dispatch intake hub. Ready for distribution.</div>
-        `;
-      } else if (tab === 'youtube') {
-        output.innerHTML = `
-          <div class="text-emerald-400">[OAUTH CHECK] fathom_youtube_token.json verified. Token active.</div>
-          <div class="text-cyan-400">[YOUTUBE API v3] Ready for unrestricted long-form & shorts uploads.</div>
-          <div class="text-zinc-400">[EST/PST CADENCE] Slot 1 scheduled for 08:00 PM EST (Prime Night).</div>
-          <div class="text-purple-400">[METADATA ENGINE] SEO titles, chapters & Nano Banana thumbnails injected.</div>
-          <div class="text-emerald-400">[UPLOAD STATUS] Direct headless publish complete. Status: 200 OK.</div>
-        `;
-      } else if (tab === 'buffer') {
-        output.innerHTML = `
-          <div class="text-emerald-400">[BUFFER VAULT] SQLite vault unlimited_social_vault.db connected ($0 plan).</div>
-          <div class="text-cyan-400">[ROLLING SCHEDULER] Auto-intake active. Maintaining 10/10 slots filled per channel.</div>
-          <div class="text-zinc-400">[MULTI-NETWORK] Dispatching to TikTok, Instagram Reels, Facebook & X.</div>
-          <div class="text-purple-400">[FAILOVER MONITOR] Fail-fast active with instant Telegram alerting.</div>
-          <div class="text-emerald-400">[REPLENISHER] Semi-weekly cycle executed successfully. Queue healthy.</div>
-        `;
-      }
-    }
+    
 
     function openImageModal(src, caption) {
       const modal = document.getElementById('imageModal');
